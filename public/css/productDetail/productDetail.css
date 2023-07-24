@@ -74,9 +74,11 @@
 }
 .product__main__box_producto{
     margin: 15px;
+    margin-top: 50px;
 }
 .product__main__box_producto__pagos{
     margin: 15px;
+    margin-top: 40px;
 }
 .product__main__box_producto__pagos__box-tarjetas p{
      font-size: 20px;
