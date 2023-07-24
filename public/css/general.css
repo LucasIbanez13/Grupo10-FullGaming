@@ -19,12 +19,12 @@ body {
     font-weight: 300;
 }
 
-h1{
+/* h1{
     font-family: var(--tipografiatitulos);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 65px;
-}
+} */
 
 ul, li {
     list-style: none ;

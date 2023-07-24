@@ -4,4 +4,5 @@
 @import "./home/home.css";
 @import "./home/header.css";
 @import "./home/footer.css";
-@import "./productDetail/productDetail.css";
+@import"./productDetail/productDetail.css";
+@import "./formularios/forms.css";

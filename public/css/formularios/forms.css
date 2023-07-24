@@ -1,0 +1,95 @@
+@import url('login.css');
+
+@import url('register.css');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 6 rem 1rem;
+    background: linear-gradient(rgb(201, 28, 187),white);
+    height: 100vh;
+}
+
+a{
+    color: darkblue;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+hr {
+    background: linear-gradient(90deg, black, white);
+    height: 3px;
+    margin-bottom: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem ;
+    width: 30%;
+}
+
+span.error-message {
+    color:rgb(252, 39, 2);
+    font-size: .7rem;
+    display: none;
+}
+
+
+input.input-style {
+    border: none;
+    border-radius: 0.2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+    outline: none;
+    color:rgb(255, 255, 255);  
+
+}
+
+input.input-style::placeholder {
+    color: lightgray;
+}
+.button-container{
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem ;
+    width: 30%;
+}
+
+  input:hover{
+    background-color: rgb(132, 24, 234); 
+}   
+
+input.input-style:focus{
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+.form-container {
+    padding: 1rem;
+    border-radius: 0.9rem;
+    box-shadow: 5px 5px 15px rgba (0,0,0,0.)
+
+}

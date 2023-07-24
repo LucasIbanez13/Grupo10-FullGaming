@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full gaming</title>
     <script src="https://kit.fontawesome.com/0a4608b12c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
+    <title>Registro</title>
 </head>
 <body>
     <header class="home-header">
@@ -19,7 +19,7 @@
                 <a href=""><i class="fa-solid fa-magnifying-glass fa-2xl"></i></a>
             </form>
 
-            <a href="/login"><i class="fa-solid fa-user"></i>
+            <a href="/register"><i class="fa-solid fa-user"></i>
             <span>ingresá</span>
             </a>
 
@@ -29,25 +29,36 @@
         <a href=""></a>
 
     </header>
-    <nav class="home-nav-header">
-        <ul>
-            <li><a href="">pc armadas</a></li>
-            <li><a href="">hardware</a></li>
-            <li><a href="">notebook</a></li>
-            <li><a href="">placas de video</a></li>
-            <li><a href="">monitores</a></li>
-            <li><a href="">sillas gamer</a></li>
-            <li><a href="">accesorios</a></li>
-            <li><a href="">tecnologia</a></li>
-            <li><a href="">perifericos</a></li>
-            <li><a href="">conectividad</a></li>
-            <li><a href="">arma tu pc</a></li>
-            <li><a href="">marcas</a></li>
-        </ul>
-    </nav>
-    <main>
-
-    </main>
+        <div class="for-container">
+            <h2>Registro</h2>
+            <hr>
+            <form action="post" method="">
+            <div class="form">
+                <div class="input-container">
+                        <input class="input-style" type="email" name="email" placeholder="Ingrese su email">
+                        <span class="error-message">Dede ingresar su email</span>
+                </div>
+                <div class="input-container">
+                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
+                        <span class="error-message">Dede ingresar su contraseña</span>
+                </div>
+                <div class="input-container">
+                        <input class="input-style" type="password" name="pass2" placeholder="Re-ingrese su contraseña">
+                        <span class="error-message">Debe re-ingresar su contraseña</span>
+                </div>
+                <div class="check">
+                       <label for="recordar">Acepto los <a href="">terminos y condiciones </a> </label>
+                       <input type="checkbox" name="terms" id="recordar">
+                       <span class="error-message">Debe aceptar los terminos y condiciones</span>
+                </div>
+                <div class="button-container">
+                      <span class="error-message">Credenciales invalidas</span>
+                      <button type="submit" class="btn btn-submit">Registrarme</button>
+                </div>
+                <span><a href="/login">Ya tengo cuenta</a></span>
+            </div>    
+            </form>
+        </div>
     <footer class="home__footer">
         <div class="home__footer__description">
             <h4>FULL GAMING</h4>
@@ -96,5 +107,6 @@
             </div>
         </div>
     </footer>
+    
 </body>
 </html>
