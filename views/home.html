@@ -23,7 +23,7 @@
                 </form>
             
         <div class="fonta">
-            <a href="login"><i class="fa-solid fa-user"></i>
+            <a href="#modal" class="open-modal-button"><i class="fa-solid fa-user"></i>
             <span>Login</span>
             </a>
 
@@ -50,10 +50,90 @@
             <li><a href="">marcas</a></li>
         </ul>
     </nav>
+
+
+    <!--login------------------------------------->
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal">
+            <a href="#" class="close-modal-button"><i class="fa-solid fa-times"></i></a>
+            <div class="form-container">
+                <form action="post" method="">
+                    <div class="contenedor">
+
+                        <div class="img-container"><img src="/img/logonav.png" alt=""></div>
+                            <h3>Login</h3>
+                        <div class="input-padre">
+                            <input class="input-style" type="email, text" name="email" placeholder="Ingrese su email o usuario" required>
+                
+                        </div>
+                        <div class="input-padre">
+                            <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña" required>
+                
+                        </div>
+                
+                        <div class="check">
+                            <input type="checkbox" neme="recordar" id="recordar">
+                            <label form="recordar">Recordarme</label>
+                        </div>
+                        <div class="input-padre">
+                            <button type="submit" class="boton-login">Login</button>
+                        </div>
+                        <a href="#register">No tengo cuenta</a>
+                    </div>
+                </form>      
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!--------------------------REGISTRO------------------>
+    <div id="register" class="modal-overlay">
+        <div class="modal">
+            <a href="#" class="close-modal-button"><i class="fa-solid fa-times"></i></a>
+            <div class="form-container">
+                <form action="post" method="">
+                    <div class="contenedor">
+
+                        <div class="img-container"><img src="/img/logonav.png" alt=""></div>
+                            <h3>registro</h3>
+
+                            <div class="input-padre">
+                                <input class="input-style" type="text" name="email" placeholder="crea usuario" required>
+                    
+                            </div>
+
+                        <div class="input-padre">
+                            <input class="input-style" type="email" name="email" placeholder="Ingrese su email" required>
+                
+                        </div>
+                        <div class="input-padre">
+                            <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña" required>
+                
+                        </div>
+
+                        <div class="input-padre">
+                            <input class="input-style" type="password" name="pass" placeholder="Repita su contrasena" required>
+                
+                        </div>
+                
+                    
+                        <div class="input-padre">
+                            <button type="submit" class="boton-login">Registrate</button>
+                        </div>
+                    </div>
+                </form>      
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-------------------------------------------->
     <!--nav-bar -->
     <nav class="nav-bar">
         <a href=""><i class="fa-solid fa-bars"></i></a>
-        <a href=""><i class="fa-regular fa-user"></i></a>
+        <a href="#modal"><i class="fa-regular fa-user"></i></a>
         <div class="logo-nav">
         <a href=""> <img src="/img/logonav.png" alt=""></a>
         </div>
@@ -71,7 +151,13 @@
         </div>
     </div>
 
+    
+
     <main class="home">
+
+
+
+
             <aside class="banner-izquierdo">
                 <img src="/img/banner-vertical-1.png" alt="">
             </aside>
@@ -116,7 +202,7 @@
             <h2>PRODUCTOS DESTACADOS</h2>
             <div class="padre-articulos">
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/proceamd.png" alt="">
                     <p>microprocesador ryzen 5 5600x am4</p>
                     <p>$160.000</p>
@@ -124,7 +210,7 @@
                 </a>
             </div>
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/auricular.png" alt="">
                     <p>auricular hyper x cloud || 7.1</p>
                     <p>$80.000</p>
@@ -132,7 +218,7 @@
                 </a>
             </div>
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/monitor.png" alt="">
                     <p>monitor gamer lg ultragear 24"</p>
                     <p>$115.000</p>
@@ -140,7 +226,7 @@
                 </a>
             </div>
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/notebook.png" alt="">
                     <p>notebook gigabyte g5 intel i5 11400 16gb</p>
                     <p>$690.000</p>
@@ -148,7 +234,7 @@
                 </a>
             </div>
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/rtx.png" alt="">
                     <p>placa de video rtx 2060 6gb evga</p>
                     <p>$210.000</p>
@@ -156,7 +242,7 @@
                 </a>
             </div>
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/gtx.png" alt="">
                     <p>placa de video gtx 1660 asus 6gb</p>
                     <p>$210.000</p>
@@ -164,7 +250,7 @@
                 </a>
             </div>
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/rtx4000.png" alt="">
                     <p>placa de video gtx 1660 asus 6gb</p>
                     <p>$210.000</p>
@@ -172,7 +258,7 @@
                 </a>
             </div>
             <div class="home-main-articulos">
-                <a href="/productDetail">
+                <a href="">
                     <img src="/img/fuente.png" alt="">
                     <p>placa de video gtx 1660 asus 6gb</p>
                     <p>$210.000</p>
