@@ -4,6 +4,6 @@
 @import "./home/home.css";
 @import "./home/header.css";
 @import "./home/footer.css";
-@import "./formularios/forms.css";
 @import "./productDetail/productDetail.css";
 @import "./carritoDeCompras/shoppingCart.css";
+@import "./formularios/loginandregister.css";
