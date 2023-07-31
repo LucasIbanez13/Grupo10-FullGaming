@@ -109,6 +109,11 @@
     text-transform: uppercase;
 }
 
+.total p {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
 .botones {
     display: flex;
     margin: 10px 0 10px;
