@@ -321,7 +321,7 @@ main section h2 {
         overflow: hidden;
     }
     #content__puntos{
-        width: 400px;
+        width: 300px;
         display: flex;
         justify-content: center;
         background-color: white;
