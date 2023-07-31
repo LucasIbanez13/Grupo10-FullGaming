@@ -89,7 +89,7 @@
 }
 .product__main__box_producto__pagos__box-tarjetas-cars{
     display: flex;
-    width: 360px;
+    width: 100%;
     
 }
 .product__main__box_producto__pagos__box-tarjetas-cars-box{
@@ -233,7 +233,7 @@ main section h2 {
 }
 @media(min-width: 480px) {
     .body_box{
-        width: 768px;
+        width: 100%;
     }
     .product__main{
         width: 100%;
@@ -300,6 +300,7 @@ main section h2 {
         margin-top: 10px;
         text-align: left;
     }
+    
 }
 @media(min-width: 768px) {
     .body_box{
@@ -308,9 +309,15 @@ main section h2 {
     .product__main{
         width: 100%;
     }
+    .product__main__box{
+        width: 100%;
+    }
+    .content{
+        width: 300px;
+    }
     #content__item{
-        height: 400px;
-        width: 400px;
+        height: 300px;
+        width: 300px;
         overflow: hidden;
     }
     #content__puntos{

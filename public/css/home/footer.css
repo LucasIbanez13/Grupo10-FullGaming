@@ -32,6 +32,9 @@
 }
 
 @media(min-width: 480px) {
+    .home__footer{
+        width: 100%;
+    }
     .home__footer__info__box{
         display: flex;
         padding: 0px;
@@ -48,10 +51,14 @@
         display: flex;
         height: 200px;
     }
+    .noseq{
+        width: 100%;
+    }
 }
 @media(min-width: 768px) {
     .home__footer{
         justify-content: space-around;
+        width: 100%;
     }
     .home__footer__info__box{
         display: flex;
