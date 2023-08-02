@@ -169,15 +169,6 @@
 main section h2 {
     margin-top: 10px;
     margin-bottom: 10px;
-
-}
-
-.padre-articulos {
-    padding: 4%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
-
 }
 .product__main__otrosProductos{
     margin: auto;
