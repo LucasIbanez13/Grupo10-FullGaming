@@ -143,6 +143,8 @@ main section h2 {
 .mensaje-comprar {
     opacity: 0;
     position: absolute;
+    font-size: 15px;
+    width: 100%;
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
@@ -151,16 +153,16 @@ main section h2 {
     padding: 8px 12px;
     border-radius: 25px;
     transition: bottom 0.3s ease, opacity 0.3s ease;
+
 }
   
 .home-main-articulos:hover .mensaje-comprar {
     opacity: 1;
     bottom: 0;
     border: 3px solid #572364;
-    transform: translateX(-50%) translateY(-100%)
-    margin-top: 50px;
-    /**/
+    transform: translateX(-50%) translateY(0%);
 }
+
 
 .home-main-articulos:hover {
     transform: translateY(-10px);
