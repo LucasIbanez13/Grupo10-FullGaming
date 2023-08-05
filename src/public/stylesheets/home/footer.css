@@ -1,0 +1,114 @@
+.home__footer{
+    color: whitesmoke;
+    background-image: url("/img/fondo.png");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    padding: 20px 5px;
+    margin-top: 40px;
+    font-family: var(--tipografiatitulos);
+    font-weight: 200;
+}
+.home__footer h4 {
+    text-transform: uppercase;
+    margin: 3px;
+}
+
+.home__footer li {
+    margin: 2px;
+}
+
+.home__footer__info__box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.home__footer__box__soport--logo img{
+    display: none;
+}
+.home__footer__box__promo--logo{
+    display: none;
+}
+
+@media(min-width: 480px) {
+    .home__footer__info__box{
+        display: flex;
+        padding: 0px;
+        flex-direction: row;
+    }
+    .home__footer__box__soport--logo img{
+        display: flex;
+        width: 100%;
+    }
+    .home__footer__box__promos{
+        display: none;
+    }
+    .home__footer__box__promo--logo img{
+        display: flex;
+        height: 200px;
+    }
+    .noseq{
+        width: 100%;
+    }
+    .home__footer__box__info{
+        margin-top: 0;
+    }
+    .home__footer__box__soport{
+        margin-top: 0;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .home__footer__box__soport--logo{
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+    }
+    .home__footer__box__soport--logo img{
+        margin-top: 20px;
+       height: 150px;
+    }
+    .home__footer__description{
+        width: 100%;
+    }
+}
+@media(min-width: 1023px) {
+    .home__footer{
+        justify-content: space-around;
+        height: 100%;
+    }
+    .home__footer__info__box{
+        display: flex;
+        flex-direction: row;
+    }
+    .home__footer__description{
+        width: 40%;
+    }
+    .home__footer__box__soport--logo img{
+        display: none;
+    }
+    .home__footer__box__promos{
+        display: block;
+    }
+    .home__footer__box__promo--logo{
+        display: flex;
+        height: 150px;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .home__footer__box__promo--logo img{
+        display: flex;
+        margin-top: 20px;
+        height: 200px;
+    }
+    .home__footer__box__info{
+        margin-top: 40px;
+    }
+    .home__footer__box__soport{
+        margin-top: 40px;
+    }
+ 
+}

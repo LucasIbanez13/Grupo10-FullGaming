@@ -1,0 +1,41 @@
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'work Sans', sans-serif;
+font-family: 'Lato', sans-serif;*/
+
+.root {
+    --tipografiageneral : 'Open Sans', sans-serif;
+    --tipografiatitulos : 'Work Sans', sans-serif;
+    --tipografiaadicional : 'Lato', 'sans-serif',
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--tipografiageneral);
+    font-weight: 300;
+    background-color: #ebebeb;
+}
+
+h1{
+    font-family: var(--tipografiatitulos);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 65px;
+}
+
+ul, li {
+    list-style: none ;
+}
+
+ul{
+    padding-left: 0%;
+}
+
+a {
+    text-decoration: none;
+}

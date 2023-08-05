@@ -1,0 +1,90 @@
+.modal-overlay {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-overlay:target {
+    display: flex;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: 50px;
+    left: 49.5%;
+    transform: translate(-50%, -30%);
+    overflow: hidden;
+}
+
+.close-modal-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+/*contenido*/
+
+.form-container {
+
+
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.contenedor h3 {
+    text-transform: uppercase;
+}
+.contenedor a {
+    color: silver
+}
+
+.input-padre {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+}
+.input-padre input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.boton-login{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #7a2416;
+    background-color: #ab341b;
+}
+
+
+@media (min-width:480px){
+    .modal{
+        left: 27.5%;
+    }
+}
+
+@media (min-width:1200px){
+    .modal{
+        left: 15%;
+    }
+}

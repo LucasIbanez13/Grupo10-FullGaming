@@ -1,0 +1,335 @@
+.body_box{
+    background-color: white;
+}
+.product__header__icons{
+
+    margin: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.product__header__icons a{
+    font-size: 25px;
+    color: black;
+}
+#content__item{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+.product__main__box_producto__carrusel{
+    height: 100%;
+    position: relative;
+}
+.tarjetaCarrusel{
+    height: 100%;
+}
+.flechasCarrusel{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.flechasCarrusel a{
+    color: black;
+}
+#tarjeta-1 img{
+    width: 100%;
+    height: 100%;    
+}
+#tarjeta-2 img{
+    width: 100%;
+    height: 100%; 
+}
+#tarjeta-3 img{
+    width: 100%;
+    height: 100%; 
+}
+#content__puntos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+#content__puntos a{
+    padding: 5px;
+    color: black;
+    background-color: white;
+}
+.product__main__box_producto h1{
+    text-align: left;
+    font-size: 45px;
+}
+
+.product__main__box_producto__article--description{
+    display: none;
+}
+.product__main__box_producto__pagos h1{
+    display: none;
+}
+.product__main__box_producto__pagos h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.product__main__box_producto__pagos__box-precio{
+    display: flex;
+    width: 100%;
+    
+}
+.product__main__box_producto__pagos__box-precio p{
+    margin-left: 10px;
+    width: 40%;
+}
+.product__main__box_producto__pagos__box-precio h4{
+    font-size: 40px;
+}
+.product__main__box_producto__pagos__box-tarjetas-cars{
+    display: flex;
+    width: 100%;
+    
+}
+.product__main__box_producto__pagos__box-tarjetas-cars-box{
+    display: flex;
+    
+}
+.product__main__box_producto__pagos__box-tarjetas-cars-box a{
+    font-size: 30px;
+    margin: 10px;
+}
+.product__main__box_producto{
+    margin: 15px;
+}
+.product__main__box_producto h2{
+    margin: 15px;
+}
+.product__main__box_producto__article{
+    text-transform: uppercase;
+}
+.product__main__box_producto__pagos__box-tarjetas p{
+     font-size: 20px;
+     margin-top: 10px;
+}
+.product__main__box_producto__pagos__box-tarjetas-cars h4{
+    font-size: 25px;
+    margin-top: 15px;
+}
+.product__main__box_producto__pagos__box-tarjetas-cars-box-cuotas{
+    display: flex;
+    margin-bottom: 15px;
+}
+.product__main__carrito{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    width: 100%;
+    margin-top: 40px;
+}
+.product__main__carrito-menos a{
+    font-size: 40px;
+    color: black;
+}
+.product__main__carrito-mas a{
+    font-size: 50px;
+    color: black;
+}
+.product__main__carrito-number{
+    font-size: 50px;
+}
+.product__main__carrito-comprar{
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.product__main__carrito-comprar a{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+.product__main__article{
+    margin-top: 55px;
+    margin-right: 20px;
+    text-align: center;
+}
+.product__main__article p{
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: left;
+}
+.product__main__otrosProductos h3{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+main section h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.product__main__otrosProductos{
+    margin: auto;
+    width: 80%;
+}
+.home-main-articulos {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.home-main-articulos img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 7px;
+}
+
+.home-main-articulos p {
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.mensaje-comprar {
+    opacity: 0;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #572364;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 25px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+  
+  .home-main-articulos:hover .mensaje-comprar {
+    opacity: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    bottom: 0;
+}
+.banner__bottom{
+    display: none;
+}
+@media(min-width: 480px) {
+    .body_box{
+        width: 100%;
+    }
+    .product__main{
+        width: 100%;
+    }
+    .product__main__box_producto{
+        display: flex;
+        flex-direction: row;
+    }
+    .product__main__box_producto h1{
+        display: none;
+    }
+    .product__main__box_producto__article{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .product__main__box_producto__article h2{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .description{
+        display: flex;
+        margin-top: 20px;
+    }
+    .description p{
+        font-size: 23px;
+        margin-left: 10px;
+    }
+    .description i{
+        font-size: 7px;
+        margin: auto 0;
+    }
+    .product__main__box_producto__article--description{
+        display: flex;
+    }
+    .product__main__box_producto__article--description{
+        display: flex;
+        flex-direction: column;
+    }
+    .product__main__box_producto__pagos{
+        width: 40%;
+    }
+    #content__item{
+        height: 230px;
+        width: 230px;
+        overflow: hidden;
+    }
+    #content__puntos{
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+    .flechasCarrusel{
+        height: 100%;
+        width: 80%;
+    }
+    
+    .product__main__box_producto{
+        margin: 0;
+    }
+    .product__main__article p{
+        font-size: 13px;
+        margin-top: 10px;
+        text-align: left;
+    }
+    
+}
+@media(min-width: 768px) {
+    .body_box{
+        width: 100%;
+    }
+    .product__main{
+        width: 100%;
+    }
+    .product__main__box{
+        width: 100%;
+    }
+    .content{
+        width: 300px;
+    }
+    #content__item{
+        height: 300px;
+        width: 300px;
+        overflow: hidden;
+    }
+    #content__puntos{
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+    .flechasCarrusel{
+        height: 100%;
+        width: 85%;
+    }
+    .banner__bottom{
+        width: 100%;
+        display: flex;
+    }
+    .banner__bottom img{
+        margin: 0 60px;
+        width: 95%;
+        height: 300px;
+        margin-bottom: 80px;
+    }
+}
+
