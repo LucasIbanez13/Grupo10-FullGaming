@@ -1,0 +1,176 @@
+.create__main{
+    margin: 30px 20px;
+}
+.create__main--title{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.create__main__section__creacion--title{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.create__main__section__precio--title{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.create__main__section__envio--title{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.create__main__section__creacion{
+    border-bottom: 2px solid gray;
+    padding-bottom: 30px;
+}
+.create__main__section__creacion__form__categoria{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.create__main__section__creacion__form__product__name{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.create__main__section__creacion__form__product__products{
+    margin: 20px 0;
+}
+.create__main__section__creacion__form__product__products__marca{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.create__main__section__creacion__form__product__products__modelo{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.create__main__section__creacion__form__product__products__estado{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.create__main__section__creacion__form__product__description{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.create__main__section__creacion__form__product__description input {
+    height: 150px;
+    width: 90%;
+}
+/*precio*/
+.create__main__section__precio{
+    border-bottom: 2px solid gray;
+    padding-bottom: 30px;
+}
+.create__main__section__precio__formulario__money{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.create__main__section__precio__formulario__contado{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.create__main__section__precio__formulario__descuento{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.create__main__section__precio__formulario__cuotas{
+    margin: 20px 0;
+}
+.create__main__section__precio__formulario__cantidad{
+    margin: 20px 0;
+}
+/*Envio*/
+.create__main__section__envio__formu__donde{
+    margin: 20px 0;
+}
+.create__main__button{
+    display: flex;
+    justify-content: right;
+}
+.create__main__button__cancelar{
+    margin: 10px 5px;
+    background-image: url("/img/fondo.png");
+    background-position: center;
+    background-size: cover;
+    border: 1px black solid;
+    border-radius: 8%;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+}
+.create__main__button__guardar{
+    margin: 10px 5px;
+    background-image: url("/img/fondo.png");
+    background-position: center;
+    background-size: cover;
+    border: 1px black solid;
+    border-radius: 8%;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+}
+.create__main__button__editar{
+    margin: 10px 5px;
+    background-image: url("/img/fondo.png");
+    background-position: center;
+    background-size: cover;
+    border: 1px black solid;
+    border-radius: 8%;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+}
+.create__main a{
+    color: white;
+}
+.create__main input{
+    border: none;
+    margin: 5px 0;
+    padding: 7px;
+    border-bottom: 1px solid gray;
+}
+@media(min-width: 480px) {
+    .create__main__section__creacion__form__categoria{
+        display: flex;
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+    .create__main__section__creacion__form__categoria select{
+        margin: 0 10px;
+    }
+    .create__main__section__creacion__form__product__products__estado{
+        width: 20%;
+    }
+}
+@media(min-width: 1023px) {
+    .create__main__section__creacion__form__product__products{
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .create__main__section__creacion__form__product__products__estado label{
+        padding: 0 69px;
+    }
+    .create__main__section__creacion__form__product__description{
+        text-align: center;
+    }
+    .create__main__section__creacion__form__product__description input{
+        margin: 10px auto;
+        width: 80%;
+        height: 300px;
+    }
+    .create__main__section__precio--title{
+        text-align: center;
+    }
+    .create__main__section__precio__formulario--box{
+        display: flex;
+        justify-content: space-around;
+    }
+}
