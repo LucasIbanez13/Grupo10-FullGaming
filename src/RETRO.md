@@ -5,20 +5,20 @@
 
 <h4>Seguir haciendo:</h4>  
 
-<p>Trabajo en equipo y ser activo.
-Mantener el respeto grupal.</p>
+<p>Trabajo en equipo y ser activo.</p>
+<p>Mantener el respeto grupal.</p>
 
 
 <h4>Hacer mas:</h4>
 
-<p>Tener mas comunicacion.
-Ser mas eficiente las entregas de sprint.</p>
+<p>Tener mas comunicacion.</p>
+<p>Ser mas eficiente las entregas de sprint.</p>
 
 
 <h4>Empezar a hacer:</h4> 
 
-<p>Mejorar la comunicacion y organizacion del grupo.
-Mas reuniones grupales.</p>
+<p>Mejorar la comunicacion y organizacion del grupo.</p>
+<p>Mas reuniones grupales.</p>
 
 
 <h4>Dejar de hacer:</h4> 
@@ -37,14 +37,14 @@ Mas reuniones grupales.</p>
 
 <h4>Seguir haciendo:</h4> 
 
-<p>Cumpliendo con las entregas de TP en tiempo y forma.
-Mantener el respeto grupal.</p>  
+<p>Cumpliendo con las entregas de TP en tiempo y forma.</p>
+<p>Mantener el respeto grupal.</p>  
 
 
 <h4>Hacer mas:</h4>
 
-<p>Comunicar al grupo cualquier duda o inpedimento para completar la tarea asignada.
-Reuniones de equipo.</p>
+<p>Comunicar al grupo cualquier duda o inpedimento para completar la tarea asignada.</p>
+<p>Reuniones de equipo.</p>
 
 
 <h4>Empezar a hacer:</h4> 
@@ -67,21 +67,21 @@ Reuniones de equipo.</p>
 
 <h4>Seguir haciendo:</h4> 
 
-<p>Mantener el respeto grupal.
-Pausa de nivelacion de equipo.
-Espacios en las agendas personales.</p>
+<p>Mantener el respeto grupal.</p>
+<p>Pausa de nivelacion de equipo.</p>
+<p>Espacios en las agendas personales.</p>
 
 
 <h4>Hacer mas:</h4>  
 
-<p>Reuniones para toma de decisiones para mejorar el trabajo en equipo.
-Motivacion e incentivar al equipo para que no deje el curso de programacion.</p>
+<p>Reuniones para toma de decisiones para mejorar el trabajo en equipo.</p>
+<p>Motivacion e incentivar al equipo para que no deje el curso de programacion.</p>
 
 
 <h4>Empezar a hacer:</h4> 
 
-<p>Adelantar las tareas asignadas
-Mas reuniones daily.</p>
+<p>Adelantar las tareas asignadas</p>
+<p>Mas reuniones daily.</p>
 
 
 <h4>Dejar de hacer:</h4>
