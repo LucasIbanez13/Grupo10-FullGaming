@@ -24,7 +24,7 @@ En Fullgaming encontrarás todo lo que compone la PC Gamers de tus sueños. Cono
 <p>Estos sitios los tomamos de referecias por el diseño que tienen las paginas, nos parecio lo mas completos con respecto al proyecto</p>
 
 <h5>Integrantes</h5>
-<p>Nuestro equipo de trabajo esta conformado por cuatro personas</p>
+<p>Nuestro equipo de trabajo esta conformado por tres personas</p>
 <p>Lucas Ibañez, San Miguel de Tucuman,Tucuman.</p>
 <p>Juan Vega, Moron, Buenos Aires.</p>
 <p>Juan Gomez, San Miguel, Buenos Aires.</p>
