@@ -1,95 +1,97 @@
-SPRINT 1:
+<h1 align="center">Retrospectiva</h1>
+
+<h3>SPRINT 1:</h3>
 
 
-Seguir haciendo:  
+<h4>Seguir haciendo:</h4>  
 
-Trabajo en equipo y ser activo.
-Mantener el respeto grupal.
-
-
-Hacer mas:
-
-Tener mas comunicacion.
-Ser mas eficiente las entregas de sprint.
+<p>Trabajo en equipo y ser activo.
+Mantener el respeto grupal.</p>
 
 
-Empezar a hacer: 
+<h4>Hacer mas:</h4>
 
-Mejorar la comunicacion y organizacion del grupo.
-Mas reuniones grupales.
-
-
-Dejar de hacer: 
-
-Reuniones muy extensas.
+<p>Tener mas comunicacion.
+Ser mas eficiente las entregas de sprint.</p>
 
 
-Hacer menos: 
+<h4>Empezar a hacer:</h4> 
 
-Dejar las tareas para ultimo momento.
-
-
-
-SPRINT 2:
+<p>Mejorar la comunicacion y organizacion del grupo.
+Mas reuniones grupales.</p>
 
 
-Seguir haciendo: 
+<h4>Dejar de hacer:</h4> 
 
-Cumpliendo con las entregas de TP en tiempo y forma.
-Mantener el respeto grupal.  
-
-
-Hacer mas: 
-
-Comunicar al grupo cualquier duda o inpedimento para completar la tarea asignada.
-Reuniones de equipo.
+<p>Reuniones muy extensas.</p>
 
 
-Empezar a hacer: 
+<h4>Hacer menos:</h4> 
 
-Daily diarias.
-
-
-Dejar de hacer: 
-
-Dejar las tareas para ultimo momento.
-
-
-Hacer menos:
-
-Brainstorming y ser mas productivos.
+<p>Dejar las tareas para ultimo momento.</p>
 
 
 
-SPRINT 3:
+<h3>SPRINT 2:</h3>
 
-Seguir haciendo: 
 
-Mantener el respeto grupal.
+<h4>Seguir haciendo:</h4> 
+
+<p>Cumpliendo con las entregas de TP en tiempo y forma.
+Mantener el respeto grupal.</p>  
+
+
+<h4>Hacer mas:</h4>
+
+<p>Comunicar al grupo cualquier duda o inpedimento para completar la tarea asignada.
+Reuniones de equipo.</p>
+
+
+<h4>Empezar a hacer:</h4> 
+
+<p>Daily diarias.</p>
+
+
+<h4>Dejar de hacer:</h4> 
+
+<p>Dejar las tareas para ultimo momento.</p>
+
+
+<h4>Hacer menos:</h4>
+
+<p>Brainstorming y ser mas productivos.</p>
+
+
+
+<h3>SPRINT 3:</h3>
+
+<h4>Seguir haciendo:</h4> 
+
+<p>Mantener el respeto grupal.
 Pausa de nivelacion de equipo.
-Espacios en las agendas personales.
+Espacios en las agendas personales.</p>
 
 
-Hacer mas:  
+<h4>Hacer mas:</h4>  
 
-Reuniones para toma de decisiones para mejorar el trabajo en equipo.
-Motivacion e incentivar al equipo para que no deje el curso de programacion.
-
-
-Empezar a hacer: 
-
-Adelantar las tareas asignadas
-Mas reuniones daily.
+<p>Reuniones para toma de decisiones para mejorar el trabajo en equipo.
+Motivacion e incentivar al equipo para que no deje el curso de programacion.</p>
 
 
-Dejar de hacer:
+<h4>Empezar a hacer:</h4> 
 
-Limitarnos en solo lo visto en clases y seguir investigando.
+<p>Adelantar las tareas asignadas
+Mas reuniones daily.</p>
 
 
-Hacer menos:
+<h4>Dejar de hacer:</h4>
 
-Que las Frustacion no nos gane al no lograr lo esperado.
+<p>Limitarnos en solo lo visto en clases y seguir investigando.</p>
+
+
+<h4>Hacer menos:</h4>
+
+<p>Que las Frustacion no nos gane al no lograr lo esperado.</p>
 
 
 
