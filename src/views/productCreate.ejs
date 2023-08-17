@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('partials/head') %>
-<body>
+<body class="create__body">
     <%- include('partials/header') %>
     <%- include('partials/header-nav') %>
 <main class="create__main">
@@ -9,6 +9,7 @@
     <section class="create__main__section__creacion">
         <h2 class="create__main__section__creacion--title">Producto</h2>
         <form class="create__main__section__creacion__form" action="">
+        <div class="create__main__section__creacion__contiene">
             <div class="create__main__section__creacion__form__categoria">
                 <label for="categoria">Seleccione Categoria</label>
                 <select class="create__main__section__creacion__form__categoria__items">
@@ -27,14 +28,15 @@
                     <option value="audio">Placa de audio</option>
                 </select>
             </div>
-            <div>
+            <div class="create__main__section__creacion__form__images">
                 <label for="imagen">Agregar imagen</label>
                 <input type="file">
             </div>
+        </div>
             <div class="create__main__section__creacion__form__product">
                 <div class="create__main__section__creacion__form__product__name">
                     <label for="name">Nombre del producto</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" >
                 </div>
                 <div class="create__main__section__creacion__form__product__products">
                     <div class="create__main__section__creacion__form__product__products__marca">

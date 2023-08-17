@@ -1,4 +1,4 @@
-.create__main{
+/*.create__main{
     margin: 30px 20px;
 }
 .create__main--title{
@@ -136,6 +136,10 @@ Envio/
     padding: 7px;
     border-bottom: 1px solid gray;
 }
+.create__main__section__creacion__form__images input{
+    border: none;
+}
+
 @media(min-width: 480px) {
     .create_mainsectioncreacionform_categoria{
         display: flex;
@@ -173,4 +177,4 @@ Envio/
         display: flex;
         justify-content: space-around;
     }
-}
+}*/
