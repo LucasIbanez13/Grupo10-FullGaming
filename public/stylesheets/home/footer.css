@@ -75,7 +75,7 @@
         width: 100%;
     }
 }
-@media(min-width: 1023px) {
+@media(min-width: 1200px) {
     .home__footer{
         justify-content: space-around;
         height: 100%;
