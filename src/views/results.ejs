@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+
+
+<body>
+    <%- include("partials/header") %>
+			
+
+<h1>Resultado de la busqueda : <%= keywords %></h1>
+
+<% if (results.length) { %>
+
+    <% results.forEach(product => { %>
+        <div>
+            <%- include('partials/productfilter', {
+                product
+            }) %>
+        </div>
+    <% }) %>
+<% } else { %>
+    <h2>no se encontraron resultados</h2>
+<% } %>
+
+
+
+
+	<%- include('partials/footer') %>
+</body>	
+
+
+</html>

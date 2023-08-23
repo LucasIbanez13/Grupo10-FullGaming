@@ -18,6 +18,7 @@
     },
     {
         "id" :2,
+        "name" : "auricular",
         "description" :"auricular hyper x cloud || 7.1 GAY-MER",
         "price" :80.000,
         "image" :"auricular.png",
@@ -26,6 +27,7 @@
     },
     {
         "id" :3,
+        "name" : "monitor",
         "description" :"monitor gamer lg ultragear 24",
         "price" : 115.000,
         "image" :"monitor.png",
@@ -34,6 +36,7 @@
     },
     {
         "id" :4,
+        "name" : "notebook",
         "description" :"notebook gigabyte g5 intel i5 11400 16gb",
         "price" : 690.000,
         "image" :"notebook.png",
@@ -42,6 +45,7 @@
     },
     {
         "id" :5,
+        "name" : "gpu",
         "description" :"placa de video rtx 2060 6gb evga",
         "price" : 210.000,
         "image" :"rtx.png",
@@ -50,6 +54,7 @@
     },
     {
         "id" :6,
+        "name" : "gpu",
         "description" :"placa de video gtx 1660 asus 6gb",
         "price" :210.000,
         "image" :"gtx.png",
@@ -58,6 +63,7 @@
     },
     {
         "id" :7,
+        "name" : "gpu",
         "description" :"placa de video gtx 1660 asus 6gb",
         "price" : 210.000,
         "image" :"rtx4000.png",
@@ -66,9 +72,27 @@
     },
     {
         "id" :8,
+        "name" : "gpu",
         "description" :"placa de video gtx 1660 asus 6gb",
         "price" :210.000,
         "image" :"fuente.png",
+        "message" :"Comprar ahora"
+
+    },
+    {
+        "id" :8,
+        "name" :"fuente",
+        "price" :210.000,
+        "image" :"fuente.png",
+        "message" :"Comprar ahora"
+
+    },
+    {
+        "id" :4,
+        "name" : "notebook",
+        "description" :"notebook gigabyte g5 intel i5 11400 16gb",
+        "price" : 690.000,
+        "image" :"notebook.png",
         "message" :"Comprar ahora"
 
     }
