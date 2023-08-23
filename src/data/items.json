@@ -1,7 +1,16 @@
 [
     {
         "id" :1,
-        "description" :"microprocesador ryzen 5 5600x am4",
+        "name" :"PC Gamer",
+        "description": [
+            { "name": "Descripción 1", "content": "microprocesador ryzen 5 5600x am4" },
+            { "name": "Descripción 2", "content": "MEMORIA 8GB 3200MHZ" },
+            { "name": "Descripción 3", "content": "DISCO SSD 240 GB" },
+            { "name": "Descripción 4", "content": "FUENTE GENERICA" },
+            { "name": "Descripción 5", "content": "GABINETE KIT (INCLUYE TECLADO Y MOUSE)" },
+            { "name": "Descripción 6", "content": "LED" }
+        ],
+        "others" :"Armar una PC gamer con un procesador Ryzen 5 5600G ofrece varias ventajas:",
         "price" :160.000,
         "image" :"proceamd.png",
         "message" :"Comprar ahora"

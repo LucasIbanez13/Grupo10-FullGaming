@@ -59,31 +59,30 @@
                     </div>
                 </div>
                 <div class="product__main__box_producto">
-                    <h1>Pc Gamer</h1>
                     <article class="product__main__box_producto__article">
-                        <h2>Pc gamer amd ryzen 3 3200g a320 8gb 480gb gabinete kit</h2>
+                        <h2><%= product.name %></h2>
                         <div class="product__main__box_producto__article--description">
-                            <div class="description"><i class="fa-solid fa-circle"></i><p>1 | PROCESADOR AMD RYZEN 5 5600G 4.4GHZ AM4</p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p>1 | MOTHER A520M</p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p>2 | MEMORIA 8GB 3200 MHZ</p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p>1 | DISCO SSD 240 GB</p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p>1 | FUENTE GENERICA</p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p>1 | GABINETE KIT (INCLUYE TECLADO Y MOUSE)</p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description[0].content %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description[1].content %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description[2].content %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description[3].content %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description[4].content %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description[5].content %></p></div>
                         </div>
                     </article>
                 </div>
                 <div class="product__main__box_producto__pagos">
-                    <h1>Pc gamer</h1>
+                    <h1><%= product.name %></h1>
                     <h2>¡Promo especial!</h2>
                     <div class="product__main__box_producto__pagos__box">
                         <div class="product__main__box_producto__pagos__box-precio">
-                            <h4>$123.123</h4>
+                            <h4>$<%= product.price.toFixed(3) %></h4>
                             <p>Con efectivo, transferencia o tarjeta de debito</p>
                         </div>
                         <div class="product__main__box_producto__pagos__box-tarjetas">
                             <p>o llevalo en 12 cuotas fijas de:</p>
                             <div class="product__main__box_producto__pagos__box-tarjetas-cars">
-                                <h4>$123.123</h4>
+                                <h4>$<%= (product.price / 12).toFixed(3) %></h4>
                             </div>
                             <div class="product__main__box_producto__pagos__box-tarjetas-cars-box-cuotas">
                                 <p>Paga en 3, 12, 18 y hasta 24 CUOTAS!</p>
