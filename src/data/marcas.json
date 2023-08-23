@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "image" : "aorus.webp"
+    },
+    {
+        "id" : 2,
+        "image" : "razer.webp"
+    },
+    {
+        "id" : 3,
+        "image" : "corsair.webp"
+    },
+    {
+        "id" : 4,
+        "image" : "logitech-logo.png"
+    },
+    {
+        "id" : 5,
+        "image" : "wd.webp"
+    },
+    {
+        "id" : 6,
+        "image" : "elgato.webp"
+    },
+    {
+        "id" : 7,
+        "image" : "amd.webp"
+    },
+    {
+        "id" : 8,
+        "image" : "intel.webp"
+    }
+]
