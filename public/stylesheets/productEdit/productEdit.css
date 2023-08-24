@@ -1,4 +1,4 @@
-/*.edit__main{
+.edit__main{
     margin: 30px 20px;
 }
 .edit__main--title{
@@ -177,4 +177,4 @@ Envio/
         display: flex;
         justify-content: space-around;
     }
-}*/
+}
