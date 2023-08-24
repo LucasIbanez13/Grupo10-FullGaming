@@ -1,98 +1,74 @@
 <h1 align="center">Retrospectiva</h1>
 
-<h3>SPRINT 1:</h3>
+# RESTROSPECTIVA DEL SPRINT 1 y 2.
+
+- Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir haciendo, hecer mas, hacer menos o empeza a hacer.
+
+### Seguir Haciendo:
+
+- Seguir con la reuniones grupales y entre llegar a un acuerdo sobre los temas organizativos.
+- Mantener una comunicación fluida (WhatsApp) asi vemos el continuo avanze del proyecto y las tareas.
+
+### Hacer mas:
+
+- Realizar mas reuniones diarias de 10” a 15” tipo dailys
+
+### Empezar a hacer:
+
+- Mejor organizacion en trello(cambio de posicion de las tarjetas).
+- Plantear los temas que vamos a revisar en la reunion, asi aprovechamos mas el tiempo y vamos directo a lo que tenemos que hacer.
+
+### Hacer menos:
+
+- Hacer reuniones largas.
+
+### Dejar de hacer:
+
+- Ser menos desordenados.
+
+***********************************************************************************************************
+
+# RESTROSPECTIVA DEL SPRINT 3.
+
+### Seguir haciendo:
+- Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
+  Tomar inspiración y referencia de otras páginas para mejorar nuestro proyecto.git 
+
+### Hacer más:
+- Organizarnos mejor al momento de repartir tareas.
+  Como grupo estamos en contacto continuo (vía whatsapp) pero, nos faltarían más reuniones tipo daily.
+
+### Empezar a hacer:
+- Modificar algunas vistas del proyecto original, que al principio desconocemos el funcionamiento.
+  Al ser menos integrantes en el equipo, organizarnos de mejor manera, e ir adelantando trabajo a futuro.
+
+### Hacer menos:
+- Modificaciones en el proyecto sin consultar previamente con todo el equipo.
+
+### Dejar de hacer:
+- Dejar las tarjetas de trello estaticas (sin moverlas una vez terminadas las tareas).
 
 
-<h4>Seguir haciendo:</h4>  
+**********************************************************************************************************
 
-<p>Trabajo en equipo y ser activo.</p>
-<p>Mantener el respeto grupal.</p>
+# RESTROSPECTIVA DEL SPRINT 4.
 
+### Seguir haciendo:
+- Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
+- En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
 
-<h4>Hacer mas:</h4>
+### Hacer más:
+- Mantenerce mas comunicados, al momento de hacer push a la rama develop, para evitar conflictos.
+     
 
-<p>Tener mas comunicacion.</p>
-<p>Ser mas eficiente las entregas de sprint.</p>
+### Empezar a hacer:
+- Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
+       
+### Hacer menos:
+- Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas.
 
+### Dejar de hacer:
+- Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
 
-<h4>Empezar a hacer:</h4> 
-
-<p>Mejorar la comunicacion y organizacion del grupo.</p>
-<p>Mas reuniones grupales.</p>
-
-
-<h4>Dejar de hacer:</h4> 
-
-<p>Reuniones muy extensas.</p>
-
-
-<h4>Hacer menos:</h4> 
-
-<p>Dejar las tareas para ultimo momento.</p>
-
-
-
-<h3>SPRINT 2:</h3>
-
-
-<h4>Seguir haciendo:</h4> 
-
-<p>Cumpliendo con las entregas de TP en tiempo y forma.</p>
-<p>Mantener el respeto grupal.</p>  
-
-
-<h4>Hacer mas:</h4>
-
-<p>Comunicar al grupo cualquier duda o inpedimento para completar la tarea asignada.</p>
-<p>Reuniones de equipo.</p>
-
-
-<h4>Empezar a hacer:</h4> 
-
-<p>Daily diarias.</p>
-
-
-<h4>Dejar de hacer:</h4> 
-
-<p>Dejar las tareas para ultimo momento.</p>
-
-
-<h4>Hacer menos:</h4>
-
-<p>Brainstorming y ser mas productivos.</p>
-
-
-
-<h3>SPRINT 3:</h3>
-
-<h4>Seguir haciendo:</h4> 
-
-<p>Mantener el respeto grupal.</p>
-<p>Pausa de nivelacion de equipo.</p>
-<p>Espacios en las agendas personales.</p>
-
-
-<h4>Hacer mas:</h4>  
-
-<p>Reuniones para toma de decisiones para mejorar el trabajo en equipo.</p>
-<p>Motivacion e incentivar al equipo para que no deje el curso de programacion.</p>
-
-
-<h4>Empezar a hacer:</h4> 
-
-<p>Adelantar las tareas asignadas</p>
-<p>Mas reuniones daily.</p>
-
-
-<h4>Dejar de hacer:</h4>
-
-<p>Limitarnos en solo lo visto en clases y seguir investigando.</p>
-
-
-<h4>Hacer menos:</h4>
-
-<p>Que las Frustacion no nos gane al no lograr lo esperado.</p>
-
-
-
+*********************************************************************************************************
 

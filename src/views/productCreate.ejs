@@ -14,11 +14,11 @@
     <h1  class="create__main--title">Creacion de productos</h1>
     <section class="create__main__section__creacion">
         <h2 class="create__main__section__creacion--title">Producto</h2>
-        <form class="create__main__section__creacion__form" action="">
+        <form class="create__main__section__creacion__form" action="productCreate" method="POST">
         <div class="create__main__section__creacion__contiene">
             <div class="create__main__section__creacion__form__categoria">
-                <label for="categoria">Seleccione Categoria</label>
-                <select class="create__main__section__creacion__form__categoria__items">
+                <label for="category">Seleccione Categoria</label>
+                <select class="create__main__section__creacion__form__categoria__items" name="category">
                     <option value="mouse">Mouse</option>
                     <option value="teclado">Teclado</option>
                     <option value="auriculares">Auriculares</option>
@@ -35,111 +35,112 @@
                 </select>
             </div>
             <div class="create__main__section__creacion__form__images">
-                <label for="imagen">Agregar imagen</label>
-                <input type="file">
+                <label for="image">Agregar imagen</label>
+                <input type="file" id="image" name="image">
             </div>
         </div>
-            <div class="create__main__section__creacion__form__product">
-                <div class="create__main__section__creacion__form__product__name">
-                    <label for="name">Nombre del producto</label>
-                    <input type="text" id="name" name="name" >
-                </div>
-                <div class="create__main__section__creacion__form__product__products">
-                    <div class="create__main__section__creacion__form__product__products__marca">
-                        <label for="marca">Marca</label>
-                        <input type="text" id="marca" name="marca">
-                    </div>
-                    <div class="create__main__section__creacion__form__product__products__modelo">
-                        <label for="modelo">Modelo</label>
-                        <input type="text" id="modelo" name="modelo">
-                    </div>
-                    <div class="create__main__section__creacion__form__product__products__estado">
-                        <label for="estado">Estado</label>
-                        <select>
-                            <option value="usado">Usado</option>
-                            <option value="nuevo">Nuevo</option>
-                        </select>
-                    </div>
-                </div>
+        <div class="create__main__section__creacion__form__product">
+            <div class="create__main__section__creacion__form__product__name">
+                <label for="name">Nombre del producto</label>
+                <input type="text" id="name" name="name">
             </div>
-            <div class="create__main__section__creacion__form__product__description">
-                <label for="descripcion">Descripcion</label>
-                <input type="text" id="descripcion" name="descripcion">
-            </div>
-            <div class="create__main__section__creacion__form__product__garantia">
-                <label for="garatia">Garantia</label>
-                <div>
-                    <input type="radio" id="garatia" name="garatia">Si
-                    <input type="radio" id="garatia" name="garatia">No
+            <div class="create__main__section__creacion__form__product__products">
+                <div class="create__main__section__creacion__form__product__products__marca">
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" name="marca">
+                </div>
+                <div class="create__main__section__creacion__form__product__products__modelo">
+                    <label for="modelo">Modelo</label>
+                    <input type="text" id="modelo" name="modelo">
+                </div>
+                <div class="create__main__section__creacion__form__product__products__estado">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado">
+                        <option value="usado">Usado</option>
+                        <option value="nuevo">Nuevo</option>
+                    </select>
                 </div>
             </div>
-        </form>
-    </section>
-    <section class="create__main__section__precio">
-        <h2 class="create__main__section__precio--title">Precio</h2>
-        <form class="create__main__section__precio__formulario" action="">
-            <div class="create__main__section__precio__formulario--box">
-                <div class="create__main__section__precio__formulario__money">
-                    <label for="precio">Precio producto</label>
-                    <input type="number" id="precio" name="precio">
-            </div>
-            <div class="create__main__section__precio__formulario__contado">
-                    <label for="precio-contado">Precio contado</label>
-                    <input type="number" id="precio-contado" name="precio-contado">
-            </div>
-            <div class="create__main__section__precio__formulario__descuento">
-                <label for="descuento">Descuento</label>
-                <input type="number" id="descuento" name="descuento">
-            </div>
-            </div>
-            <div class="create__main__section__precio__formulario__cuotas">
-                <label for="cuotas">Cuotas</label>
-                <div class="create__main__section__precio__formulario__cuotas__items">
-                    <input type="radio" id="cuotas" name="cuotas">Si
-                    <input type="radio" id="cuotas" name="cuotas">No
-                </div>
-            </div>
-            <div class="create__main__section__precio__formulario__cantidad">
-                <label for="cantidad-cuotas">Cantidad de cuotas</label>
-                <div class="create__main__section__precio__formulario__cantidad__items">
-                    <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">3
-                    <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">12
-                    <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">18
-                    <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">24
-                </div>
-            </div>
-            <div class="create__main__section__precio__formulario__tarjetas">
-                <label for="tarjetas">Seleccione las tarjetas</label>
-                <div class="create__main__section__precio__formulario__tarjetas__items">
-                    <input type="radio" id="tarjetas" name="tarjetas">Visa
-                    <input type="radio" id="tarjetas" name="tarjetas">Paypal
-                    <input type="radio" id="tarjetas" name="tarjetas">HSBC
-                    <input type="radio" id="tarjetas" name="tarjetas">Mastercard
-                </div>
-            </div>
-        </form>
-    </section>
-    <section class="create__main__section__envio">
-        <form class="create__main__section__envio__formu" action="">
-            <h2 class="create__main__section__envio--title">Envio</h2>
-            <div class="create__main__section__envio__formu__donde">
-                <label for="envio">Envio</label>
-                <div class="create__main__section__envio__formu__donde__items">
-                    <input type="radio" id="envio" name="envio">Caba
-                    <input type="radio" id="envio" name="envio">GBA
-                    <input type="radio" id="envio" name="envio">INTERIOR
-                </div>
-            </div>
-        </form>
-    </section>
-    <div class="create__main__button">
-        <div class="create__main__button__cancelar">
-            <a href="">Cancelar</a>
         </div>
-        <div class="create__main__button__guardar">
-            <a href="">Guardar</a>
+        <div class="create__main__section__creacion__form__product__description">
+            <label for="description">Descripcion</label>
+            <input type="text" id="description" name="description">
         </div>
-    </div>
+        <div class="create__main__section__creacion__form__product__garantia">
+            <label>Garantia</label>
+            <div>
+                <input type="radio" id="garantia_si" name="garantia" value="si">
+                <label for="garantia_si">Si</label>
+                <input type="radio" id="garantia_no" name="garantia" value="no">
+                <label for="garantia_no">No</label>
+            </div>
+        </div>
+        <section class="create__main__section__precio">
+            <h2 class="create__main__section__precio--title">Precio</h2>
+                <div class="create__main__section__precio__formulario--box">
+                    <div class="create__main__section__precio__formulario__money">
+                        <label for="price">Precio producto</label>
+                        <input type="number" id="price" name="price">
+                </div>
+                <div class="create__main__section__precio__formulario__contado">
+                        <label for="price2">Precio contado</label>
+                        <input type="number" id="price2" name="price2">
+                </div>
+                <div class="create__main__section__precio__formulario__descuento">
+                    <label for="descuento">Descuento</label>
+                    <input type="number" id="descuento" name="descuento">
+                </div>
+                </div>
+                <div class="create__main__section__precio__formulario__cuotas">
+                    <label for="cuotas">Cuotas</label>
+                    <div class="create__main__section__precio__formulario__cuotas__items">
+                        <input type="radio" id="cuotas" name="cuotas">Si
+                        <input type="radio" id="cuotas" name="cuotas">No
+                    </div>
+                </div>
+                <div class="create__main__section__precio__formulario__cantidad">
+                    <label for="cantidad-cuotas">Cantidad de cuotas</label>
+                    <div class="create__main__section__precio__formulario__cantidad__items">
+                        <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">3
+                        <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">12
+                        <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">18
+                        <input type="radio" id="cantidad-cuotas" name="cantidad-cuotas">24
+                    </div>
+                </div>
+                <div class="create__main__section__precio__formulario__tarjetas">
+                    <label for="tarjetas">Seleccione las tarjetas</label>
+                    <div class="create__main__section__precio__formulario__tarjetas__items">
+                        <input type="radio" id="tarjetas" name="tarjetas">Visa
+                        <input type="radio" id="tarjetas" name="tarjetas">Paypal
+                        <input type="radio" id="tarjetas" name="tarjetas">HSBC
+                        <input type="radio" id="tarjetas" name="tarjetas">Mastercard
+                    </div>
+                </div>
+
+        </section>
+        <section class="create__main__section__envio">
+                <h2 class="create__main__section__envio--title">Envio</h2>
+                <div class="create__main__section__envio__formu__donde">
+                    <label for="envio">Envio</label>
+                    <div class="create__main__section__envio__formu__donde__items">
+                        <input type="radio" id="envio" name="envio">Caba
+                        <input type="radio" id="envio" name="envio">GBA
+                        <input type="radio" id="envio" name="envio">INTERIOR
+                    </div>
+                </div>
+                <div class="create__main__button">
+                    <div class="create__main__button__cancelar">
+                        <button href="/users/admin" type="submit">eliminar</button>
+                    </div>
+                    <div class="create__main__button__guardar">
+                        <button type="submit">Guardar</button>
+                    </div>
+                </div>
+        </section>
+        </form>
+    </section>
+    
+    
 </main>    
 <%- include('partials/footer') %>
 

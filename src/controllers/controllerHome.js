@@ -9,9 +9,15 @@ const jsonarchivos = {};
 
 archivos.forEach(archivo =>{
      
-    const rutasjson = path.join(rutadata,archivo);
-    const leerjson = fs.readFileSync(rutasjson, "utf-8");
-    jsonarchivos[archivo] = JSON.parse(leerjson); 
+    if (path.extname(archivo) === ".json") {
+        const rutasjson = path.join(rutadata, archivo);
+        const leerjson = fs.readFileSync(rutasjson, "utf-8");
+        try {
+            jsonarchivos[archivo] = JSON.parse(leerjson);
+        } catch (error) {
+            console.error(`Error parsing JSON file ${archivo}: ${error.message}`);
+        }
+    } 
     
 })
 
