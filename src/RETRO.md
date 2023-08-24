@@ -30,9 +30,10 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 # RESTROSPECTIVA DEL SPRINT 3.
 
+
 ### Seguir haciendo:
      - Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
-     - Tomar inspiración y referencia de otras páginas para mejorar nuestro proyecto.
+     - Tomar inspiración y referencia de otras páginas para mejorar nuestro proyecto.git 
 
 ### Hacer más:
      - Organizarnos mejor al momento de repartir tareas.
