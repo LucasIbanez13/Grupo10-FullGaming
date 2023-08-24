@@ -30,9 +30,6 @@
 
 # RESTROSPECTIVA DEL SPRINT 3.
 
-### Seguir haciendo: 
-  - Seguir con la comunicacion activa (via whastsapp) y pequeñas reuniones
-    cuando surge algun problema. 
 ### Seguir haciendo:
 - Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
   Tomar inspiración y referencia de otras páginas para mejorar nuestro proyecto.git 
@@ -57,21 +54,21 @@
 # RESTROSPECTIVA DEL SPRINT 4.
 
 ### Seguir haciendo:
-Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
-En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
+- Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
+- En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
 
 ### Hacer más:
-Mantenerce mas comunicados, al momento de hacer push a la rama develop, para evitar conflictos.
+- Mantenerce mas comunicados, al momento de hacer push a la rama develop, para evitar conflictos.
      
 
 ### Empezar a hacer:
-Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
+- Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
        
 ### Hacer menos:
-Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas.
+- Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas.
 
 ### Dejar de hacer:
-Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
+- Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
 
 *********************************************************************************************************
 
