@@ -1,100 +1,100 @@
-/*.create__main{
+/*.edit__main{
     margin: 30px 20px;
 }
-.create__main--title{
+.edit__main--title{
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
 }
-.create_mainsection_creacion--title{
+.edit_mainsection_creacion--title{
     font-size: 18px;
     text-transform: uppercase;
 }
-.create_mainsection_precio--title{
+.edit_mainsection_precio--title{
     font-size: 18px;
     text-transform: uppercase;
 }
-.create_mainsection_envio--title{
+.edit_mainsection_envio--title{
     font-size: 18px;
     text-transform: uppercase;
 }
-.create_mainsection_creacion{
+.edit_mainsection_creacion{
     border-bottom: 2px solid gray;
     padding-bottom: 30px;
 }
-.create_mainsectioncreacionform_categoria{
+.edit_mainsectioncreacionform_categoria{
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
 }
-.create_mainsectioncreacionformproduct_name{
+.edit_mainsectioncreacionformproduct_name{
     display: flex;
     flex-direction: column;
     margin: 20px 0;
 }
-.create_mainsectioncreacionformproduct_products{
+.edit_mainsectioncreacionformproduct_products{
     margin: 20px 0;
 }
-.create_mainsectioncreacionformproductproducts_marca{
+.edit_mainsectioncreacionformproductproducts_marca{
     display: flex;
     flex-direction: column;
     margin: 15px 0;
 }
-.create_mainsectioncreacionformproductproducts_modelo{
+.edit_mainsectioncreacionformproductproducts_modelo{
     display: flex;
     flex-direction: column;
     margin: 15px 0;
 }
-.create_mainsectioncreacionformproductproducts_estado{
+.edit_mainsectioncreacionformproductproducts_estado{
     display: flex;
     flex-direction: column;
     margin: 15px 0;
 }
-.create_mainsectioncreacionformproduct_description{
+.edit_mainsectioncreacionformproduct_description{
     margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
-.create_mainsectioncreacionformproduct_description input {
+.edit_mainsectioncreacionformproduct_description input {
     height: 150px;
     width: 90%;
 }
 precio/
-.create_mainsection_precio{
+.edit_mainsection_precio{
     border-bottom: 2px solid gray;
     padding-bottom: 30px;
 }
-.create_mainsectionprecioformulario_money{
+.edit_mainsectionprecioformulario_money{
     margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
-.create_mainsectionprecioformulario_contado{
+.edit_mainsectionprecioformulario_contado{
     margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
-.create_mainsectionprecioformulario_descuento{
+.edit_mainsectionprecioformulario_descuento{
     margin: 20px 0;
     display: flex;
     flex-direction: column;
 }
-.create_mainsectionprecioformulario_cuotas{
+.edit_mainsectionprecioformulario_cuotas{
     margin: 20px 0;
 }
-.create_mainsectionprecioformulario_cantidad{
+.edit_mainsectionprecioformulario_cantidad{
     margin: 20px 0;
 }
 Envio/
-.create_mainsectionenvioformu_donde{
+.edit_mainsectionenvioformu_donde{
     margin: 20px 0;
 }
-.create_main_button{
+.edit_main_button{
     display: flex;
     justify-content: right;
 }
-.create_mainbutton_cancelar{
+.edit_mainbutton_cancelar{
     margin: 10px 5px;
     background-image: url("/img/fondo.png");
     background-position: center;
@@ -105,7 +105,7 @@ Envio/
     text-align: center;
     padding: 10px;
 }
-.create_mainbutton_guardar{
+.edit_mainbutton_guardar{
     margin: 10px 5px;
     background-image: url("/img/fondo.png");
     background-position: center;
@@ -116,7 +116,7 @@ Envio/
     text-align: center;
     padding: 10px;
 }
-.create_mainbutton_editar{
+.edit_mainbutton_editar{
     margin: 10px 5px;
     background-image: url("/img/fondo.png");
     background-position: center;
@@ -127,53 +127,53 @@ Envio/
     text-align: center;
     padding: 10px;
 }
-.create__main a{
+.edit__main a{
     color: white;
 }
-.create__main input{
+.edit__main input{
     border: none;
     margin: 5px 0;
     padding: 7px;
     border-bottom: 1px solid gray;
 }
-.create__main__section__creacion__form__images input{
+.edit__main__section__creacion__form__images input{
     border: none;
 }
 
 @media(min-width: 480px) {
-    .create_mainsectioncreacionform_categoria{
+    .edit_mainsectioncreacionform_categoria{
         display: flex;
         justify-content: flex-start;
         margin: 20px 0;
     }
-    .create_mainsectioncreacionform_categoria select{
+    .edit_mainsectioncreacionform_categoria select{
         margin: 0 10px;
     }
-    .create_mainsectioncreacionformproductproducts_estado{
+    .edit_mainsectioncreacionformproductproducts_estado{
         width: 20%;
     }
 }
 @media(min-width: 1023px) {
-    .create_mainsectioncreacionformproduct_products{
+    .edit_mainsectioncreacionformproduct_products{
         display: flex;
         text-align: center;
         justify-content: space-around;
     }
-    .create_mainsectioncreacionformproductproducts_estado label{
+    .edit_mainsectioncreacionformproductproducts_estado label{
         padding: 0 69px;
     }
-    .create_mainsectioncreacionformproduct_description{
+    .edit_mainsectioncreacionformproduct_description{
         text-align: center;
     }
-    .create_mainsectioncreacionformproduct_description input{
+    .edit_mainsectioncreacionformproduct_description input{
         margin: 10px auto;
         width: 80%;
         height: 300px;
     }
-    .create_mainsection_precio--title{
+    .edit_mainsection_precio--title{
         text-align: center;
     }
-    .create_mainsectionprecio_formulario--box{
+    .edit_mainsectionprecio_formulario--box{
         display: flex;
         justify-content: space-around;
     }
