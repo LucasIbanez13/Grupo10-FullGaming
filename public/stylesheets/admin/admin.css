@@ -10,6 +10,7 @@
 .admin-main-box{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 .admin-main-box-boxOne{
     display: flex;

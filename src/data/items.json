@@ -1,99 +1,92 @@
 [
-    {
-        "id" :1,
-        "name" :"PC Gamer",
-        "description": [
-            { "name": "Descripción 1", "content": "microprocesador ryzen 5 5600x am4" },
-            { "name": "Descripción 2", "content": "MEMORIA 8GB 3200MHZ" },
-            { "name": "Descripción 3", "content": "DISCO SSD 240 GB" },
-            { "name": "Descripción 4", "content": "FUENTE GENERICA" },
-            { "name": "Descripción 5", "content": "GABINETE KIT (INCLUYE TECLADO Y MOUSE)" },
-            { "name": "Descripción 6", "content": "LED" }
-        ],
-        "others" :"Armar una PC gamer con un procesador Ryzen 5 5600G ofrece varias ventajas:",
-        "price" :160.000,
-        "image" :"proceamd.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :2,
-        "name" : "auricular",
-        "description" :"auricular hyper x cloud || 7.1 GAY-MER",
-        "price" :80.000,
-        "image" :"auricular.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :3,
-        "name" : "monitor",
-        "description" :"monitor gamer lg ultragear 24",
-        "price" : 115.000,
-        "image" :"monitor.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :4,
-        "name" : "notebook",
-        "description" :"notebook gigabyte g5 intel i5 11400 16gb",
-        "price" : 690.000,
-        "image" :"notebook.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :5,
-        "name" : "gpu",
-        "description" :"placa de video rtx 2060 6gb evga",
-        "price" : 210.000,
-        "image" :"rtx.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :6,
-        "name" : "gpu",
-        "description" :"placa de video gtx 1660 asus 6gb",
-        "price" :210.000,
-        "image" :"gtx.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :7,
-        "name" : "gpu",
-        "description" :"placa de video gtx 1660 asus 6gb",
-        "price" : 210.000,
-        "image" :"rtx4000.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :8,
-        "name" : "gpu",
-        "description" :"placa de video gtx 1660 asus 6gb",
-        "price" :210.000,
-        "image" :"fuente.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :8,
-        "name" :"fuente",
-        "price" :210.000,
-        "image" :"fuente.png",
-        "message" :"Comprar ahora"
-
-    },
-    {
-        "id" :4,
-        "name" : "notebook",
-        "description" :"notebook gigabyte g5 intel i5 11400 16gb",
-        "price" : 690.000,
-        "image" :"notebook.png",
-        "message" :"Comprar ahora"
-
-    }
+  {
+    "id": 1,
+    "name": "PC Gamer",
+    "description": [
+      {
+        "name": "Descripción 1",
+        "content": "microprocesador ryzen 5 5600x am4"
+      },
+      {
+        "name": "Descripción 2",
+        "content": "MEMORIA 8GB 3200MHZ"
+      },
+      {
+        "name": "Descripción 3",
+        "content": "DISCO SSD 240 GB"
+      },
+      {
+        "name": "Descripción 4",
+        "content": "FUENTE GENERICA"
+      },
+      {
+        "name": "Descripción 5",
+        "content": "GABINETE KIT (INCLUYE TECLADO Y MOUSE)"
+      },
+      {
+        "name": "Descripción 6",
+        "content": "LED"
+      }
+    ],
+    "others": "Armar una PC gamer con un procesador Ryzen 5 5600G ofrece varias ventajas:",
+    "price": 160,
+    "image": "proceamd.png",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": 2,
+    "name": "auricular",
+    "description": "auricular hyper x cloud || 7.1 GAY-MER",
+    "price": 80,
+    "image": "auricular.png",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": 3,
+    "name": "monitor",
+    "description": "monitor gamer lg ultragear 24",
+    "price": 115,
+    "image": "monitor.png",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": 4,
+    "name": "gpu",
+    "description": "placa de video gtx 1660 asus 6gb",
+    "price": 210,
+    "image": "rtx4000.png",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": 5,
+    "name": "gpu",
+    "description": "placa de video gtx 1660 asus 6gb",
+    "price": 210,
+    "image": "rtx4000.png",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": 6,
+    "name": "gpu",
+    "description": "placa de video gtx 1660 asus 6gb",
+    "price": 210,
+    "image": "gtx.png",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": 7,
+    "name": "gpu",
+    "description": "placa de video gtx 1660 asus 6gb",
+    "price": 210,
+    "image": "rtx4000.png",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": 8,
+    "name": "gpu",
+    "description": "placa de video gtx 1660 asus 6gb",
+    "price": 210,
+    "image": "rtx4000.png",
+    "message": "Comprar ahora"
+  }
 ]

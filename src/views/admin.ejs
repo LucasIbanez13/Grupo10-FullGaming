@@ -3,97 +3,75 @@
 <head>
     <%- include("partials/head") %>
 </head>
-<%- include("partials/header") %>
+
 <body>
+
+    <%- include("partials/header") %>
+    <%- include("partials/header-nav") %>
+
+
     <main class="admin-main">
         <h1 class="admin-main-h1">Admin Panel</h1>
-    <div class="admin-main-box">
-        <a href="#modal-admin" class="admin-main-box-boxOne">
-                <div><i class="fa-solid fa-circle"></i></div>
-                <h3>Product Name</h3>
-        </a>
-        <div class="admin-main-box-boxDos">
-                <section class="admin-main-box-boxDos-section">
-                    <nav class="admin-main-box-boxDos-section-divDos">
-                        <a class="action-link" href="/products/productCreate"><i class="fa-solid fa-plus"></i></a>
-                        <a class="action-link" href="/products/productEdit"><i class="fa-regular fa-pen-to-square action-icon"></i></a>
-                        <a class="action-link" href="#modal-remove"><i class="fa-regular fa-trash-can action-icon"></i></a>
-                    </nav>
-                </section>
-        </div>
-    </div>
 
-    <div id="modal-admin" class="modal-overlay">
-        <div class="modal">
-            <a href="#" class="close-modal-button"><i class="fa-solid fa-times"></i></a>
-            <div class="form-container">
-                <form action="post" method="">
-                    <div class="contenedor">
-    
-                        <div class="img-container"><img src="/img/logonav.png" alt=""></div>
-                            <h3>Login</h3>
-                        <div class="input-padre">
-                            <input class="input-style" type="email, text" name="email" placeholder="Ingrese su email o usuario" required>
-                
-                        </div>
-                        <div class="input-padre">
-                            <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña" required>
-                
-                        </div>
-                
-                        <div class="check">
-                            <input type="checkbox" neme="recordar" id="recordar">
-                            <label form="recordar">Recordarme</label>
-                        </div>
-                        <div class="input-padre">
-                            <button type="submit" class="boton-login">Login</button>
-                        </div>
-                        <a href="#register">No tengo cuenta</a>
-                    </div>
-                </form>      
+        <% products.forEach(element => { %>
+            <div class="admin-main-box">
+                <a href="#modal-admin" class="admin-main-box-boxOne">
+                    <div><i class="fa-solid fa-circle"></i></div>
+                    <h3><%= element.name %></h3>
+                </a>
+                <div class="admin-main-box-boxDos">
+                    <section class="admin-main-box-boxDos-section">
+                        <nav class="admin-main-box-boxDos-section-divDos">
+                            <a class="action-link" href="/products/productCreate"><i class="fa-solid fa-plus"></i></a>
+                            <a class="action-link" href="/products/productEdit"><i class="fa-regular fa-pen-to-square action-icon"></i></a>
+                            <a class="action-link" href="#modal-remove<%= element.id %>"><i class="fa-regular fa-trash-can action-icon"></i></a>
+                        </nav>
+                    </section>
+                </div>
             </div>
+
+        <% }) %>
+
+        <div id="modal-admin" class="modal-overlay">
+            <!-- Contenido del modal de administración -->
         </div>
-    </div>
-    </div>
-    
-
-
-
-
-    <div id="modal-remove" class="modal-overlay">
-        <div class="modal">
-            <a href="#" class="close-modal-button"><i class="fa-solid fa-times"></i></a>
-            <div class="form-container">
-                <form action="post" method="">
-                    <div class="contenedor">
-    
-                        <div class="img-container"><img src="/img/logonav.png" alt=""></div>
-                            <h3>Login</h3>
-                        <div class="input-padre">
-                            <input class="input-style" type="email, text" name="email" placeholder="Ingrese su email o usuario" required>
+        
+        <% products.forEach(element => { %>
+            <div id="modal-remove<%= element.id %>" class="modal-overlay">
                 
-                        </div>
-                        <div class="input-padre">
-                            <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña" required>
-                
-                        </div>
-                
-                        <div class="check">
-                            <input type="checkbox" neme="recordar" id="recordar">
-                            <label form="recordar">Recordarme</label>
-                        </div>
-                        <div class="input-padre">
-                            <button type="submit" class="boton-login">Login</button>
-                        </div>
-                        <a href="#register">No tengo cuenta</a>
+                <div class="modal">
+
+                    <h2>¿Estás seguro de eliminar este producto?</h2>
+                    
+                    <div class="padre-articulos-modal">
+                        
+                                <div class="home-main-articulos-modal">
+                                    <a class="home-main-articulos-a" href="/products/productDetail/<%= element.id%>">
+                                        <img src="/img/<%= element.image %>" alt="">
+                                        <div class="envio"> <p class="envio-p">envio gratis</p></div>
+                                        <p class="home-main-articulos-p"><%= element.name %></p>
+                                        <span>$<%= element.price %></span>
+                                </div>
+                    
                     </div>
-                </form>      
+                    
+                    <div class="form-container">
+
+                    
+                        <form action="/products/remove/<%= element.id %>?_method=DELETE" method="POST">
+                
+                                <button type="submit" name="delete">Aceptar</button>
+                        </form>
+
+                        <a href="#" class="close-modal"><p>Cancelar</p></a>
+                    
+                    </div>  
+
+                </div>
             </div>
-        </div>
-    </div>
-    </div>
+        <% }) %>
+        
     </main>
-
 
 </body>
 </html>

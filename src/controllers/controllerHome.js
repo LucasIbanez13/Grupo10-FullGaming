@@ -18,7 +18,11 @@ archivos.forEach(archivo =>{
 const products = jsonarchivos["items.json"]
 const marcas = jsonarchivos["marcas.json"]
 
+
+
 module.exports = {
+    products,
+
     home : (req,res) => {
         return res.render('home',{
             products,
@@ -26,7 +30,7 @@ module.exports = {
         })
     },
     
-        search : (req,res) => {
+    search : (req,res) => {
             const keywords = req.query.keywords
             
             const results = products.filter(item => 
@@ -37,7 +41,7 @@ module.exports = {
                 return res.render("results",{
                 results,
                 keywords
-            })
-        }
+        })
+    }
     
 }

@@ -1,4 +1,4 @@
-const products = require("../data/items.json")
+
 
 module.exports = {
     create : (req,res) => {
