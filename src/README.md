@@ -1,9 +1,6 @@
 # Grupo10-integrador
 <h1 align="center">Fullgaming</h1>
 
-<img alt="logo" public="./img/logo.png">
-
-
 <h2>Quienes somos</h2>
 <p>Fullgaming es una tienda con más de 10 años dentro del rubro tecnológico en Argentina. Nos dedicamos a la venta de computadoras, notebooks, hardware y productos periféricos para consumidores particulares, empresas o revendedores.
 Marcas como Asus, MSI, Gigabyte, Kingston, Intel, AMD, Nvidia, HP, Lenovo, Dell, Hacer, Samsung, JBL, Aerocool, Razer,Corsair nos han hecho sus representantes oficiales en el país.
