@@ -28,6 +28,11 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 ***********************************************************************************************************
 
+
+# RESTROSPECTIVA DEL SPRINT 1 y 2.
+
+     - Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir haciendo, hecer mas, hacer menos o empeza a hacer.
+
 # RESTROSPECTIVA DEL SPRINT 3.
 
 ### Seguir haciendo: 
