@@ -51,31 +51,18 @@
   },
   {
     "id": 4,
-<<<<<<< HEAD
-    "name": "gpu",
-    "description": "placa de video gtx 1660 asus 6gb",
-    "price": 210,
-    "image": "rtx4000.png",
-=======
     "name": "notebook",
     "description": "notebook gigabyte g5 intel i5 11400 16gb",
     "price": 690,
     "image": "notebook.png",
->>>>>>> 0284461e5674ecd45ae3de3e398fb0d2d391a3c9
     "message": "Comprar ahora"
   },
   {
     "id": 5,
     "name": "gpu",
-<<<<<<< HEAD
-    "description": "placa de video gtx 1660 asus 6gb",
-    "price": 210,
-    "image": "rtx4000.png",
-=======
     "description": "placa de video rtx 2060 6gb evga",
     "price": 210,
     "image": "rtx.png",
->>>>>>> 0284461e5674ecd45ae3de3e398fb0d2d391a3c9
     "message": "Comprar ahora"
   },
   {
@@ -99,9 +86,6 @@
     "name": "gpu",
     "description": "placa de video gtx 1660 asus 6gb",
     "price": 210,
-<<<<<<< HEAD
-    "image": "rtx4000.png",
-=======
     "image": "fuente.png",
     "message": "Comprar ahora"
   },
@@ -118,7 +102,6 @@
     "description": "notebook gigabyte g5 intel i5 11400 16gb",
     "price": 690,
     "image": "notebook.png",
->>>>>>> 0284461e5674ecd45ae3de3e398fb0d2d391a3c9
     "message": "Comprar ahora"
   }
 ]
