@@ -28,33 +28,28 @@ Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir 
 
 ***********************************************************************************************************
 
-
-# RESTROSPECTIVA DEL SPRINT 1 y 2.
-
-Restrospectiva que realizamos en el primer sprint, que deberiamos hacer, seguir haciendo, hecer mas, hacer menos o empeza a hacer.
-
 # RESTROSPECTIVA DEL SPRINT 3.
 
 ### Seguir haciendo: 
-Seguir con la comunicacion activa (via whastsapp) y pequeñas reuniones
-cuando surge algun problema. 
+- Seguir con la comunicacion activa (via whastsapp) y pequeñas reuniones
+  cuando surge algun problema. 
 ### Seguir haciendo:
-     - Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
-     - Tomar inspiración y referencia de otras páginas para mejorar nuestro proyecto.git 
+Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
+Tomar inspiración y referencia de otras páginas para mejorar nuestro proyecto.git 
 
 ### Hacer más:
-     - Organizarnos mejor al momento de repartir tareas.
-     - Como grupo estamos en contacto continuo (vía whatsapp) pero, nos faltarían más reuniones tipo daily.
+Organizarnos mejor al momento de repartir tareas.
+Como grupo estamos en contacto continuo (vía whatsapp) pero, nos faltarían más reuniones tipo daily.
 
 ### Empezar a hacer:
-     - Modificar algunas vistas del proyecto original, que al principio desconocemos el funcionamiento.
-     - Al ser menos integrantes en el equipo, organizarnos de mejor manera, e ir adelantando trabajo a futuro.
+Modificar algunas vistas del proyecto original, que al principio desconocemos el funcionamiento.
+Al ser menos integrantes en el equipo, organizarnos de mejor manera, e ir adelantando trabajo a futuro.
 
 ### Hacer menos:
-     - Modificaciones en el proyecto sin consultar previamente con todo el equipo.
+Modificaciones en el proyecto sin consultar previamente con todo el equipo.
 
 ### Dejar de hacer:
-     - Dejar las tarjetas de trello estaticas (sin moverlas una vez terminadas las tareas).
+Dejar las tarjetas de trello estaticas (sin moverlas una vez terminadas las tareas).
 
 
 **********************************************************************************************************
@@ -62,21 +57,21 @@ cuando surge algun problema.
 # RESTROSPECTIVA DEL SPRINT 4.
 
 ### Seguir haciendo:
-       - Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
-       - En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
+Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
+En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
 
 ### Hacer más:
-       - Mantenerce mas comunicados, al momento de hacer push a la rama develop, para evitar conflictos.
+Mantenerce mas comunicados, al momento de hacer push a la rama develop, para evitar conflictos.
      
 
 ### Empezar a hacer:
-       - Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
+Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
        
 ### Hacer menos:
-      - Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas.
+Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas.
 
 ### Dejar de hacer:
-      - Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
+Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
 
 *********************************************************************************************************
 
