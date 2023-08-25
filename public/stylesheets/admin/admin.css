@@ -1,97 +1,49 @@
-.admin-main {
-    
-    width: 100%;
-}
-.admin-main-h1{
-    font-size: 40px;
-    border-bottom: 1px solid black;
-    padding: 5px 5px 10px 5px;
-}
-.admin-main-box{
+.admin-main-box {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-.admin-main-box-boxOne{
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .admin-main-box-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .admin-main-box-boxOne {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
-    margin-left: 10px;
-}
-.admin-main-box-boxOne p{
-    margin-left: 15px;
-}
-.admin-main-box-boxOne h3{
-    margin-left: 15px;
-}
-.admin-main-box-boxDos{
-    border-left: 1px solid black;
-    padding: 20px 2px 20px 2px;
-}
-.admin-main-box-boxDos-section-divDos{
+    color: #333;
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.fa-plus {
-    color: green;
-    margin-left: 5px;
-}
-
-.fa-pen-to-square{
-    color: blue;
-}
-
-.fa-trash-can {
-    color: red;
-}
-
-.action-link {
     margin-right: 10px;
-    color: #666;
-    transition: color 0.3s;
-}
-.action-link:hover {
-    color: #f44336;
-}
-.action-icon {
-    font-size: 20px; 
-}
-
-@media (min-width: 480px){
-    .fa-plus {
-        color: green;
-        font-size: 30px;
-        margin-left: 10px;
-    }
-    .fa-pen-to-square{
-        color: blue;
-        font-size: 30px;
-    }
-    
-    .fa-trash-can {
-        color: red;
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .admin-main {
-        width: 80%;
-        margin: 0 auto;
-        background-color: #ffffff;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-        margin-top: 30px;
-    }
-
-
-    .action-link {
-        margin-right: 30px;
-        
-    }
-    .fa-plus {
-        color: green;
-        font-size: 30px;
-        margin-left: 20px;
-    }
-}
+  }
+  
+  .admin-main-box h3 {
+    margin: 0;
+  }
+  
+  .admin-main-box-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .action-link {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .action-icon {
+    font-size: 18px;
+  }

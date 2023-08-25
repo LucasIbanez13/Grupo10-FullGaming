@@ -5,7 +5,7 @@
     background-size: cover;
     text-align: center;
     display: flex;
-    padding: 20px 5px;
+    padding: 20px 5px 0px 0px;
     margin-top: 40px;
     font-family: var(--tipografiatitulos);
     font-weight: 200;
@@ -47,7 +47,7 @@
     }
     .home__footer__box__promo--logo img{
         display: flex;
-        height: 200px;
+        height: 100px;
     }
     .noseq{
         width: 100%;
@@ -73,6 +73,7 @@
     }
     .home__footer__description{
         width: 100%;
+        height: 20%;
     }
 }
 @media(min-width: 1200px) {
@@ -95,14 +96,14 @@
     }
     .home__footer__box__promo--logo{
         display: flex;
-        height: 150px;
+        height: 100px;
         overflow: hidden;
         justify-content: center;
     }
     .home__footer__box__promo--logo img{
         display: flex;
         margin-top: 20px;
-        height: 200px;
+        height: 100px;
     }
     .home__footer__box__info{
         margin-top: 40px;

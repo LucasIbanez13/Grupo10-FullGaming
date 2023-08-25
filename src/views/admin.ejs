@@ -15,22 +15,24 @@
 
         <% products.forEach(element => { %>
             <div class="admin-main-box">
+              <div class="admin-main-box-left">
                 <a href="#modal-admin" class="admin-main-box-boxOne">
-                    <div><i class="fa-solid fa-circle"></i></div>
-                    <h3><%= element.name %></h3>
+                  <div class="circle"><i class="fa-solid fa-circle"></i></div>
+                  <h3><%= element.name %></h3>
+                  <img src="<%= element.image %>" alt="<%= element.name %>">
                 </a>
-                <div class="admin-main-box-boxDos">
-                    <section class="admin-main-box-boxDos-section">
-                        <nav class="admin-main-box-boxDos-section-divDos">
-                            <a class="action-link" href="/products/productCreate"><i class="fa-solid fa-plus"></i></a>
-                            <a class="action-link" href="/products/productEdit"><i class="fa-regular fa-pen-to-square action-icon"></i></a>
-                            <a class="action-link" href="#modal-remove<%= element.id %>"><i class="fa-regular fa-trash-can action-icon"></i></a>
-                        </nav>
-                    </section>
-                </div>
+              </div>
+              <div class="admin-main-box-right">
+                <section class="admin-main-box-boxDos-section">
+                  <nav class="admin-main-box-boxDos-section-divDos">
+                    <a class="action-link" href="/products/productCreate"><i class="fa-solid fa-plus"></i></a>
+                    <a class="action-link" href="/products/productEdit"><i class="fa-regular fa-pen-to-square action-icon"></i></a>
+                    <a class="action-link" href="#modal-remove<%= element.id %>"><i class="fa-regular fa-trash-can action-icon"></i></a>
+                  </nav>
+                </section>
+              </div>
             </div>
-
-        <% }) %>
+          <% }) %>
 
         <div id="modal-admin" class="modal-overlay">
             <!-- Contenido del modal de administración -->
