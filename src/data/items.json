@@ -50,14 +50,6 @@
     "message": "Comprar ahora"
   },
   {
-    "id": 4,
-    "name": "notebook",
-    "description": "notebook gigabyte g5 intel i5 11400 16gb",
-    "price": 690,
-    "image": "notebook.png",
-    "message": "Comprar ahora"
-  },
-  {
     "id": 5,
     "name": "gpu",
     "description": "placa de video rtx 2060 6gb evga",
@@ -95,25 +87,5 @@
     "price": 210,
     "image": "fuente.png",
     "message": "Comprar ahora"
-  },
-  {
-    "id": 4,
-    "name": "notebook",
-    "description": "notebook gigabyte g5 intel i5 11400 16gb",
-    "price": 690,
-    "image": "notebook.png",
-    "message": "Comprar ahora"
-  },
-  {
-    "id": "da779e40-cc7e-4cc5-80f5-f0dac6e348d9",
-    "category": "auriculares",
-    "marca": "safasf",
-    "estado": "nuevo",
-    "cantidades": null,
-    "name": "asfasfsafasfsaffaswqr",
-    "image": null,
-    "description": "safasfafasf",
-    "price": 1123421,
-    "discount": null
   }
 ]

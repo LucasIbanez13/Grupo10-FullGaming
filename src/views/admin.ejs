@@ -40,35 +40,21 @@
         
         <% products.forEach(element => { %>
             <div id="modal-remove<%= element.id %>" class="modal-overlay">
-                
-                <div class="modal">
-
-                    <h2>¿Estás seguro de eliminar este producto?</h2>
-                    
-                    <div class="padre-articulos-modal">
-                        
-                                <div class="home-main-articulos-modal">
-                                    <a class="home-main-articulos-a" href="/products/productDetail/<%= element.id%>">
-                                        <img src="/img/<%= element.image %>" alt="">
-                                        <div class="envio"> <p class="envio-p">envio gratis</p></div>
-                                        <p class="home-main-articulos-p"><%= element.name %></p>
-                                        <span>$<%= element.price %></span>
-                                </div>
-                    
+                <div class="modal-remove-admin">
+                    <div class="modal-admin-hijo">
+                        <img src="/img/<%= element.image %>" alt="">
+                        <div class="product-details">
+                            <h2><%= element.name %></h2>
+                            <span>$<%= element.price %></span>
+                        </div>
                     </div>
-                    
-                    <div class="form-container">
-
-                    
-                        <form action="/products/remove/<%= element.id %>?_method=DELETE" method="POST">
-                
-                                <button type="submit" name="delete">Aceptar</button>
-                        </form>
-
-                        <a href="#" class="close-modal"><p>Cancelar</p></a>
-                    
-                    </div>  
-
+                    <h3>¿Estás seguro de eliminar este producto?</h3>
+                    <form action="/products/remove/<%= element.id %>?_method=DELETE" method="POST">
+                        <div class="button-container">
+                            <button type="submit" name="delete">Aceptar</button>
+                            <a href="#" class="close-modal">Cancelar</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         <% }) %>
