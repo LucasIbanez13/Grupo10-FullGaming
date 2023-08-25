@@ -15,6 +15,14 @@ module.exports = {
             product
         })
     },
+    productList: (req, res) => {
+        const { category } = req.params
+        const productsFilter = products.filter(p => p.category === category)
+        res.render('productList', {
+            products: productsFilter,
+            category
+        })
+    },
     shoppingCart : (req,res) => {
         return res.render('shoppingCart')
     },

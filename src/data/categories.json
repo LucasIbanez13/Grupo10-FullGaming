@@ -1,0 +1,92 @@
+[
+    {
+        "id":1,
+        "name":"Almacenamiento",
+        "image": "public (7).webp"
+    },
+    {
+        "id":2,
+        "name":"Ram",
+        "image": "public (12).webp"
+    },
+    {
+        "id":3,
+        "name":"CPU",
+        "image": "public (14).webp"
+    },
+    {
+        "id":4,
+        "name":"Motherboard",
+        "image": "public (18).webp"
+    },
+    {
+        "id":5,
+        "name":"cpu cooling",
+        "image": "public (10).webp"
+    },
+    {
+        "id":6,
+        "name":"otro",
+        "image": "public (19).webp"
+    },
+    {
+        "id":7,
+        "name":"teclado",
+        "image": "public (21).webp"
+    },
+    {
+        "id":8,
+        "name":"notebook",
+        "image": "public (17).webp"
+    },
+    {
+        "id":9,
+        "name":"gabinete",
+        "image": "public (13).webp"
+    },
+    {
+        "id":10,
+        "name":"sillas gamer",
+        "image": "public (23).webp"
+    },
+    {
+        "id":11,
+        "name":"Placa de video",
+        "image": "public (24).webp"
+    },
+    {
+        "id":12,
+        "name":"conectividad",
+        "image": "public (11).webp"
+    },
+    {
+        "id":13,
+        "name":"parlante",
+        "image": "public (20).webp"
+    },
+    {
+        "id":14,
+        "name":"camara web",
+        "image": "public (22).webp"
+    },
+    {
+        "id":15,
+        "name":"fuentes",
+        "image": "public (9).webp"
+    },
+    {
+        "id":16,
+        "name":"auriculares",
+        "image": "public (8).webp"
+    },
+    {
+        "id":17,
+        "name":"microfono",
+        "image": "public (15) 1.png"
+    },
+    {
+        "id":18,
+        "name":"mouse",
+        "image": "public (16).webp"
+    }
+]

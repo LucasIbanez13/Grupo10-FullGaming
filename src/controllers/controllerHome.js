@@ -23,6 +23,7 @@ archivos.forEach(archivo =>{
 
 const products = jsonarchivos["items.json"]
 const marcas = jsonarchivos["marcas.json"]
+const categories = jsonarchivos["categories.json"]
 
 
 
@@ -32,7 +33,8 @@ module.exports = {
     home : (req,res) => {
         return res.render('home',{
             products,
-            marcas
+            marcas,
+            categories
         })
     },
     

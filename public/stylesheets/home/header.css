@@ -156,6 +156,16 @@
         display: grid;
     }
 
+    .home-header-logo{
+       
+        width: 100%;
+    }
+    
+    .loguito{
+       
+        width: 7%;
+    }
+
     .fonta a {
         margin-right: 2px;
     }
@@ -170,6 +180,15 @@
         color: #ffffff;
     }
 
+    .home-header-logo{
+       
+        width: 100%;
+    }
+    
+    .loguito{
+       
+        width: 6%;
+    }
 
     .fonta a {
         margin-right: 15px;

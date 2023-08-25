@@ -76,116 +76,20 @@
             <h2>CATEGORIAS</h2>
             
             <article class="padre-carrusel">
+                <!-- <div class="carrusel"-->
+
             <div class="carrusel">
 
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (7).webp" alt="">
-                    <p>almacenamiento</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (12).webp" alt="">
-                    <p>ram</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (14).webp" alt="">
-                    <p>cpu</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (18).webp" alt="">
-                    <p>motherboard</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (10).webp" alt="">
-                    <p>cpu cooling</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (19).webp" alt="">
-                    <p>mouse</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (21).webp" alt="">
-                    <p>teclado</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (17).webp" alt="">
-                    <p>notebook</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (13).webp" alt="">
-                    <p>gabinete</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (23).webp" alt="">
-                    <p>sillas gamer</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (24).webp" alt="">
-                    <p>microfonos</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (11).webp" alt="">
-                    <p>conectividad</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (20).webp" alt="">
-                    <p>parlante</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (22).webp" alt="">
-                    <p>camara web</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (9).webp" alt="">
-                    <p>fuentes</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (8).webp" alt="">
-                    <p>auriculares</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (15) 1.png" alt="">
-                    <p>microfono</p>
-                    </a>
-                </div>
-                <div class="categoria">
-                    <a href="">
-                    <img src="/img/public (16).webp" alt="">
-                    <p>mouse</p>
-                    </a>
-                </div>
+                <% categories.forEach(c => { %>
+            
+           
+                    <div class="categoria">
+                        <a href="/products/productList/<% c.name %>">
+                        <img src="/img/<%=c.image%>" alt="">
+                        <p><%=c.name%></p>
+                        </a>
+                    </div>
+                    <% }) %>
             
             </div>
             </article>
