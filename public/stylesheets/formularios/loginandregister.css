@@ -76,6 +76,13 @@
     background-color: #ab341b;
 }
 
+.boton-admin {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+
 
 @media (min-width:480px){
     .modal{
