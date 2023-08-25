@@ -1,34 +1,42 @@
 [
     {
         "id" : 1,
-        "image" : "aorus.webp"
+        "image" : "aorus.webp",
+        "name" : "gigabyte"
     },
     {
         "id" : 2,
-        "image" : "razer.webp"
+        "image" : "razer.webp",
+        "name" : "amd"
     },
     {
         "id" : 3,
-        "image" : "corsair.webp"
+        "image" : "corsair.webp",
+        "name" : "corsair"
     },
     {
         "id" : 4,
-        "image" : "logitech-logo.png"
+        "image" : "logitech-logo.png",
+        "name" : "logitech"
     },
     {
         "id" : 5,
-        "image" : "wd.webp"
+        "image" : "wd.webp",
+        "name" : "western digital"
     },
     {
         "id" : 6,
-        "image" : "elgato.webp"
+        "image" : "elgato.webp",
+        "name" : "elgato"
     },
     {
         "id" : 7,
-        "image" : "amd.webp"
+        "image" : "amd.webp",
+        "name" : "amd"
     },
     {
         "id" : 8,
-        "image" : "intel.webp"
+        "image" : "intel.webp",
+        "name" : "intel"
     }
 ]

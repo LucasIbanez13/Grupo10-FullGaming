@@ -15,15 +15,27 @@ module.exports = {
             product
         })
     },
+
     productList: (req, res) => {
         const { category } = req.params
-        const productsFilter = products.filter(p => p.category === +category)
+        const productsFilter = products.filter(p => p.category === category)
         
-        res.render('productList', {
+        return res.render('productList', {
             products: productsFilter,
             category
         })
     },
+
+    productMarc: (req, res) => {
+        const { marca } = req.params
+        const productsFilter = products.filter(p => p.marca === marca)
+        
+        return res.render('productMarc', {
+            products: productsFilter,
+            marca : marca
+        })
+    },
+    
     shoppingCart : (req,res) => {
         return res.render('shoppingCart')
     },

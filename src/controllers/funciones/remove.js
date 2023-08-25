@@ -7,7 +7,7 @@ module.exports = {
     remove : (req,res) => {
         const id = req.params.id
 
-        productsmodify = products.filter(product => product.id !== +id);
+        productsmodify = products.filter(product => product.id !== id);
 
         const rutadata = path.join(__dirname, "../../data");
         const filepath = path.join(rutadata, "items.json");
