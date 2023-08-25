@@ -5,6 +5,8 @@ const Product = require('../data/Products');
 const productsFilePath = path.join(__dirname, '../data/items.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
+
 module.exports = {
     productDetail : (req,res) => {
         const id = req.params.id
@@ -20,26 +22,17 @@ module.exports = {
         return res.render('productCreate')
     },
     productUpdate : (req,res) => {
-        const { category, marca, estado, garantia, cuotas, cantidades, cards, envio, name, price, description, others } = req.body;
-        const product = {
-            id: uuidv4(),
-            category: category.trim(),
-            marca: marca,
-            estado: estado,
-            garantia: garantia,
-            cuotas: cuotas,
-            cantidades: +cantidades,
-            cards: cards,
-            envio: envio,
-            name: name.trim(),
-            image: null,
-            description: description,
-            others: others,
-            price: +price,
-        };
-        products.push(product)
+        const data = {
+            ...req.body,
+            image : req.file ? req.file.filename : null
+          }
+        let newProduct = new Product(data);
+        products.push(newProduct);
 		fs.writeFileSync(path.join(__dirname, '../data/items.json'),JSON.stringify(products,null,2))
-		return res.redirect('/products')
+		return res.redirect('/users/admin')
+    },
+    upload : (req,res) => {
+        return res.render('subido')
     },
     productEdit : (req,res) => {
         return res.render('productEdit')
