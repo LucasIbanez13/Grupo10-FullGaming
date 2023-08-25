@@ -1,91 +1,93 @@
 [
   {
-    "id": 1,
-    "name": "PC Gamer",
-    "description": [
-      {
-        "name": "Descripción 1",
-        "content": "microprocesador ryzen 5 5600x am4"
-      },
-      {
-        "name": "Descripción 2",
-        "content": "MEMORIA 8GB 3200MHZ"
-      },
-      {
-        "name": "Descripción 3",
-        "content": "DISCO SSD 240 GB"
-      },
-      {
-        "name": "Descripción 4",
-        "content": "FUENTE GENERICA"
-      },
-      {
-        "name": "Descripción 5",
-        "content": "GABINETE KIT (INCLUYE TECLADO Y MOUSE)"
-      },
-      {
-        "name": "Descripción 6",
-        "content": "LED"
-      }
-    ],
-    "others": "Armar una PC gamer con un procesador Ryzen 5 5600G ofrece varias ventajas:",
-    "price": 160,
-    "image": "proceamd.png",
-    "message": "Comprar ahora"
+      "id": "496ed513-f56f-4c0a-a888-66949e7cdb09",
+      "category": "pc",
+      "marca": "ryzen",
+      "estado": "nuevo",
+      "cantidades": null,
+      "name": "PC Gamer",
+      "image": "proceamd.png",
+      "description": "microprocesador ryzen 5 5600x am4",
+      "price": 160,
+      "discount": null,
+      "message": "Comprar ahora"
   },
   {
-    "id": 2,
-    "name": "auricular",
-    "description": "auricular hyper x cloud || 7.1 GAY-MER",
-    "price": 80,
-    "image": "auricular.png",
-    "message": "Comprar ahora"
+      "id": "496ed513-f56f-4c0a-a888-66949e7cdb19",
+      "category": "monitor",
+      "marca": "ryzen",
+      "estado": "nuevo",
+      "cantidades": null,
+      "name": "monitor gamer lg ultragear 24",
+      "image": "monitor.png",
+      "description": "curvado",
+      "price": 115,
+      "discount": null,
+      "message": "Comprar ahora"
   },
   {
-    "id": 3,
-    "name": "monitor",
-    "description": "monitor gamer lg ultragear 24",
-    "price": 115,
-    "image": "monitor.png",
-    "message": "Comprar ahora"
+      "id": "496ed513-f56f-4c0a-a888-66949e7cdb29",
+      "category": "notebook",
+      "marca": "ryzen",
+      "estado": "nuevo",
+      "cantidades": null,
+      "name": "notebook",
+      "image": "notebook.png",
+      "description": "microprocesador ryzen 5 5600x am4",
+      "price": 160,
+      "discount": null,
+      "message": "Comprar ahora"
   },
   {
-    "id": 5,
-    "name": "gpu",
-    "description": "placa de video rtx 2060 6gb evga",
-    "price": 210,
-    "image": "rtx.png",
-    "message": "Comprar ahora"
+      "id": "496ed513-f56f-4c0a-a888-66949e7cdb39",
+      "category": "video",
+      "marca": "ryzen",
+      "estado": "nuevo",
+      "cantidades": null,
+      "name": "placa de video rtx 2060 6gb evga",
+      "image": "rtx.png",
+      "description": "6gb evga",
+      "price": 160,
+      "discount": null,
+      "message": "Comprar ahora"
   },
   {
-    "id": 6,
-    "name": "gpu",
-    "description": "placa de video gtx 1660 asus 6gb",
-    "price": 210,
-    "image": "gtx.png",
-    "message": "Comprar ahora"
+      "id": "496ed513-f56f-4c0a-a888-66949e7cdb49",
+      "category": "video",
+      "marca": "ryzen",
+      "estado": "nuevo",
+      "cantidades": null,
+      "name": "placa de video gtx 1660 asus 6gb",
+      "image": "gtx.png",
+      "description": "6gb",
+      "price": 160,
+      "discount": null,
+      "message": "Comprar ahora"
   },
   {
-    "id": 7,
-    "name": "gpu",
-    "description": "placa de video gtx 1660 asus 6gb",
-    "price": 210,
-    "image": "rtx4000.png",
-    "message": "Comprar ahora"
+      "id": "496ed513-f56f-4c0a-a888-66949e7cdb59",
+      "category": "video",
+      "marca": "ryzen",
+      "estado": "nuevo",
+      "cantidades": null,
+      "name": "placa de video gtx 1660 asus 6gb",
+      "image": "rtx4000.png",
+      "description": "6gb",
+      "price": 160,
+      "discount": null,
+      "message": "Comprar ahora"
   },
   {
-    "id": 8,
-    "name": "gpu",
-    "description": "placa de video gtx 1660 asus 6gb",
-    "price": 210,
-    "image": "fuente.png",
-    "message": "Comprar ahora"
-  },
-  {
-    "id": 8,
-    "name": "fuente",
-    "price": 210,
-    "image": "fuente.png",
-    "message": "Comprar ahora"
+      "id": "496ed513-f56f-4c0a-a888-66949e7cdb69",
+      "category": "notebook",
+      "marca": "ryzen",
+      "estado": "nuevo",
+      "cantidades": null,
+      "name": "notebook gigabyte g5 intel i5 11400 16gb",
+      "image": "notebook.png",
+      "description": "intel i5 11400 16gb",
+      "price": 160,
+      "discount": null,
+      "message": "Comprar ahora"
   }
 ]

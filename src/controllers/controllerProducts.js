@@ -10,14 +10,15 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
     productDetail : (req,res) => {
         const id = req.params.id
-        const product = products.find(product => product.id === +id)
+        const product = products.find(product => product.id === id)
         return res.render('productDetail',{
             product
         })
     },
     productList: (req, res) => {
         const { category } = req.params
-        const productsFilter = products.filter(p => p.category === category)
+        const productsFilter = products.filter(p => p.category === +category)
+        
         res.render('productList', {
             products: productsFilter,
             category
