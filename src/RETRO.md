@@ -55,17 +55,17 @@
 
 ### Seguir haciendo:
 - Seguir con la comunicación activa (vía whatsapp) y pequeñas reuniones cuando surge algún problema.
-- En este Sprint nos juntamos cuando surgio alguna dudas y nos ayudamos para resolver los conflictos.
 
 ### Hacer más:
 - Mantenerce mas comunicados, al momento de hacer push a la rama develop, para evitar conflictos.
      
 
 ### Empezar a hacer:
-- Adelantar lo que vamos viendo en clase para adelantar mas el proyecto. 
+- Adelantar lo que vamos viendo en clase para adelantar mas el proyecto.
+- Tratar de organizar las carpetas del proyecto para evitar conflictos a la hora de subir cambios. 
        
 ### Hacer menos:
-- Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas.
+- Dejar tareas de sprint anteriores, para evitar atrazarse con las tareas nuevas y los sprint que vienen a futuros.
 
 ### Dejar de hacer:
 - Prestar atencion a las ramas en donde estamos trabajando. A veces trabajamos en la rama develop y generamos conflictos.
