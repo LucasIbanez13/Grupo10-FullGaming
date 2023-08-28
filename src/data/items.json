@@ -89,17 +89,5 @@
     "price": 160,
     "discount": null,
     "message": "Comprar ahora"
-  },
-  {
-    "id": "db381904-54fc-4df0-9039-ee95f552370d",
-    "category": "mouse",
-    "marca": "fasf",
-    "estado": "nuevo",
-    "cantidades": null,
-    "name": "afasdgfafgas",
-    "image": "1693001006721_products_.webp",
-    "description": "fasfas",
-    "price": 2141,
-    "discount": null
   }
 ]

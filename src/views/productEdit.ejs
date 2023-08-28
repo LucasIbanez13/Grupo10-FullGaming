@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('partials/head') %>
-<body>
+<body class="create__body">
     <%- include('partials/header') %>
     <%- include('partials/header-nav') %>
     <!----------------------------login-------------------------------------------------->
@@ -11,14 +11,16 @@
     <!--------------------------REGISTRO------------------------------------------------->
     <%- include("partials/register") %>
 <main class="create__main">
-    <h1  class="create__main--title">Edicion de productos</h1>
-    <section class="create_mainsection_creacion">
-        <h2 class="create_mainsection_creacion--title">Producto</h2>
-        <form class="create_mainsectioncreacion_form" action="">
-            <div class="create_mainsectioncreacionform_categoria">
-                <label for="categoria">Seleccione Categoria</label>
-                <select class="create_mainsectioncreacionformcategoria_items">
+    <h1  class="create__main--title">Editar productos</h1>
+    <section class="create__main__section__creacion">
+        <h2 class="create__main__section__creacion--title">Producto</h2>
+        <form class="create__main__section__creacion__form" action="/products/productEdit/<%= id %>?_method=put" method="POST" enctype="multipart/form-data">
+        <div class="create__main__section__creacion__contiene">
+            <div class="create__main__section__creacion__form__categoria">
+                <label for="category">Seleccione Categoria</label>
+                <select class="create__main__section__creacion__form__categoria__items" name="category">
                     <option value="mouse">Mouse</option>
+                    <option value="pc">Pc</option>
                     <option value="teclado">Teclado</option>
                     <option value="auriculares">Auriculares</option>
                     <option value="microfonos">Microfonos</option>
@@ -33,68 +35,53 @@
                     <option value="audio">Placa de audio</option>
                 </select>
             </div>
-            <div class="create_mainsectioncreacionform_product">
-                <div class="create_mainsectioncreacionformproduct_name">
-                    <label for="name">Nombre del producto</label>
-                    <input type="text" id="name" name="name">
+        </div>
+        <div class="create__main__section__creacion__form__product">
+            <div class="create__main__section__creacion__form__product__name">
+                <label for="name">Nombre del producto</label>
+                <input type="text" id="name" name="name" value="<%= name %>">
+            </div>
+            <div class="create__main__section__creacion__form__product__products">
+                <div class="create__main__section__creacion__form__product__products__marca">
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" name="marca" value="<%= marca %>">
                 </div>
-                <div class="create_mainsectioncreacionformproduct_products">
-                    <div class="create_mainsectioncreacionformproductproducts_marca">
-                        <label for="marca">Marca</label>
-                        <input type="text" id="marca" name="marca">
-                    </div>
-                    <div class="create_mainsectioncreacionformproductproducts_modelo">
-                        <label for="modelo">Modelo</label>
-                        <input type="text" id="modelo" name="modelo">
-                    </div>
-                    <div class="create_mainsectioncreacionformproductproducts_estado">
-                        <label for="estado">Estado</label>
-                        <select>
-                            <option value="usado">Usado</option>
-                            <option value="nuevo">Nuevo</option>
-                        </select>
-                    </div>
+                <div class="create__main__section__creacion__form__product__products__estado">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado">
+                        <option value="usado">Usado</option>
+                        <option value="nuevo">Nuevo</option>
+                    </select>
                 </div>
             </div>
-            <div class="create_mainsectioncreacionformproduct_description">
-                <label for="descripcion">Descripcion</label>
-                <input type="text" id="descripcion" name="descripcion">
-            </div>
-            <div class="create_mainsectioncreacionformproduct_garantia">
-                <label for="garatia">Garantia</label>
-                <div>
-                    <input type="radio" id="garatia" name="garatia">Si
-                    <input type="radio" id="garatia" name="garatia">No
+        </div>
+        <div class="create__main__section__creacion__form__product__description">
+            <label for="description">Descripcion</label>
+            <input type="text" id="description" name="description" value="<%= description %>">
+        </div>
+        <section class="create__main__section__precio">
+            <h2 class="create__main__section__precio--title">Precio</h2>
+                <div class="create__main__section__precio__formulario--box">
+                    <div class="create__main__section__precio__formulario__money">
+                        <label for="price">Precio</label>
+                        <input type="number" id="price" name="price" value="<%= price %>">
                 </div>
-            </div>
+                <div class="create__main__section__precio__formulario__descuento">
+                    <label for="descuento">Descuento</label>
+                    <input type="number" id="descuento" name="discount"value="<%= discount %>" >
+                </div>
+        </section>
+        <section class="create__main__section__envio">
+                <div class="create__main__button">
+                    <div class="create__main__button__guardar">
+                        <button type="submit">Guardar</button>
+                    </div>
+                </div>
+        </section>
         </form>
     </section>
-    <section class="create_mainsection_precio">
-        <h2 class="create_mainsection_precio--title">Precio</h2>
-        <form class="create_mainsectionprecio_formulario" action="">
-            <div class="create_mainsectionprecio_formulario--box">
-                <div class="create_mainsectionprecioformulario_money">
-                    <label for="precio">Precio producto</label>
-                    <input type="number" id="precio" name="precio">
-            </div>
-            <div class="create_mainsectionprecioformulario_contado">
-                    <label for="precio-contado">Precio contado</label>
-                    <input type="number" id="precio-contado" name="precio-contado">
-            </div>
-            <div class="create_mainsectionprecioformulario_descuento">
-                <label for="descuento">Descuento</label>
-                <input type="number" id="descuento" name="descuento">
-            </div>
-            </div>
-    <div class="create_main_button">
-        <div class="create_mainbutton_cancelar">
-            <a href="">Cancelar</a>
-        </div>
-        <div class="create_mainbutton_guardar">
-            <a href="">Guardar</a>
-        </div>
-        
-    </div>
+    
+    
 </main>    
 <%- include('partials/footer') %>
 

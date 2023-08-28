@@ -52,10 +52,34 @@ module.exports = {
 		fs.writeFileSync(path.join(__dirname, '../data/items.json'),JSON.stringify(products,null,2))
 		return res.redirect('/users/admin')
     },
-    upload : (req,res) => {
-        return res.render('subido')
+     update: (req, res) => {
+        const productId = req.params.id;
+        products.forEach(product => {
+
+            if (product.id == productId) {
+                // Actualizar las propiedades del producto
+                product.name = req.body.name,
+                product.category = req.body.category,
+                product.marca = req.body.marca,
+                product.estado = req.body.estado,
+                product.description = req.body.description,
+                product.price = req.body.price,
+                product.discount =req.body. discount
+        
+                // Escribir los productos actualizados en el archivo JSON si es necesario
+            }
+
+        });
+        fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+    
+        // Redirigir al usuario después de la actualización
+        res.redirect('/users/admin');
     },
+
     productEdit : (req,res) => {
-        return res.render('productEdit')
+        const product = products.find(product => product.id === req.params.id )
+        return res.render('productEdit', {
+            ...product
+        } )
     }
 }
