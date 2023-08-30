@@ -26,7 +26,7 @@
                     <div id="content__item">
                         <div class="product__main__box_producto__carrusel" id="item-1">
                             <div class="tarjetaCarrusel" id="tarjeta-1">
-                                <img src="/img/public (13).webp" alt="">
+                                <img src="/img/<%= image %>" alt="">
                             </div>
                             <div class="flechasCarrusel">
                                 <a href="#item-3"><i class="fa-solid fa-angle-left"></i></a>
@@ -35,7 +35,7 @@
                         </div>
                         <div class="product__main__box_producto__carrusel" id="item-2">
                             <div class="tarjetaCarrusel" id="tarjeta-2">
-                                <img src="/img/public (14).webp" alt="">
+                                <img src="/img/<%= image %>" alt="">
                             </div>
                             <div class="flechasCarrusel">
                                 <a href="#item-1"><i class="fa-solid fa-angle-left"></i></a>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="product__main__box_producto__carrusel" id="item-3">
                             <div class="tarjetaCarrusel" id="tarjeta-3">
-                                <img src="/img/public (12).webp" alt="">
+                                <img src="/img/<%= image %>" alt="">
                             </div>
                             <div class="flechasCarrusel">
                                 <a href="#item-2"><i class="fa-solid fa-angle-left"></i></a>
@@ -60,29 +60,34 @@
                 </div>
                 <div class="product__main__box_producto">
                     <article class="product__main__box_producto__article">
-                        <h2><%= product.name %></h2>
+                        <h2><%= name %></h2>
                         <div class="product__main__box_producto__article--description">
-                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description %></p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description %></p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description %></p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description %></p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description %></p></div>
-                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= product.description %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= description %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= model %></p></div>
+                            <div class="description"><i class="fa-solid fa-circle"></i><p> <%= brand %></p></div>
                         </div>
                     </article>
                 </div>
                 <div class="product__main__box_producto__pagos">
-                    <h1><%= product.name %></h1>
+                    <h1><%= name %></h1>
                     <h2>¡Promo especial!</h2>
                     <div class="product__main__box_producto__pagos__box">
                         <div class="product__main__box_producto__pagos__box-precio">
-                            <h4>$<%= product.price.toFixed(3) %></h4>
+                            <% if (discount) { %>
+                                <h4>$<%= toThousand(price) %></h4>
+                                <p><b><%= discount %>% OFF</b></p>
+                                
+                            <% } else { %>
+                                <!-- Esto despues preguntar en un futuro, ya que la idea seria, si tiene descuento tachar ese precio y que se muestre el descuento abajo, pero si lo pongo ahora no me muestra el precio por eso lo pongo aqui  -->
+                                $<%= toThousand(price - (price * discount / 100)) %>
+                            <% } %>
+                            
                             <p>Con efectivo, transferencia o tarjeta de debito</p>
                         </div>
                         <div class="product__main__box_producto__pagos__box-tarjetas">
                             <p>o llevalo en 12 cuotas fijas de:</p>
                             <div class="product__main__box_producto__pagos__box-tarjetas-cars">
-                                <h4>$<%= (product.price / 12).toFixed(3) %></h4>
+                                <h4>$<%= (price / 12).toFixed(3) %></h4>
                             </div>
                             <div class="product__main__box_producto__pagos__box-tarjetas-cars-box-cuotas">
                                 <p>Paga en 3, 12, 18 y hasta 24 CUOTAS!</p>

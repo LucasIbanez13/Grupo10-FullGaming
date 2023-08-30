@@ -5,6 +5,8 @@ const Product = require('../data/Products');
 const productsFilePath = path.join(__dirname, '../data/items.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 
 module.exports = {
@@ -12,7 +14,8 @@ module.exports = {
         const id = req.params.id
         const product = products.find(product => product.id === id)
         return res.render('productDetail',{
-            product
+            ...product,
+            toThousand
         })
     },
 
