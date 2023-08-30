@@ -89,22 +89,5 @@
     "price": 160,
     "discount": null,
     "message": "Comprar ahora"
-  },
-  {
-    "id": "a13ef3ca-ecca-4035-87bd-eafe0f5e9bd1",
-    "category": "auriculares",
-    "image": null,
-    "name": "hola",
-    "brand": "corsair",
-    "model": "wea2",
-    "stock": "si",
-    "description": "afasfas",
-    "price": 141,
-    "discount": 15,
-    "amountDues": "24",
-    "cards": "americanExpress",
-    "shipment": "si",
-    "location": "interior",
-    "message": "Comprar ahora"
   }
 ]

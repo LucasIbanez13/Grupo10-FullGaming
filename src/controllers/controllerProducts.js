@@ -39,19 +39,6 @@ module.exports = {
     shoppingCart : (req,res) => {
         return res.render('shoppingCart')
     },
-    productCreate : (req,res) => {
-        return res.render('productCreate')
-    },
-    productUpdate : (req,res) => {
-        const data = {
-            ...req.body,
-            image : req.file ? req.file.filename : null
-          }
-        let newProduct = new Product(data);
-        products.push(newProduct);
-		fs.writeFileSync(path.join(__dirname, '../data/items.json'),JSON.stringify(products,null,2))
-		return res.redirect('/users/admin')
-    },
      update: (req, res) => {
         const productId = req.params.id;
         products.forEach(product => {

@@ -1,14 +1,17 @@
 const express = require('express');
 const upload = require('../middlewares/upload');
-const {shoppingCart,productDetail,productCreate,productEdit,productUpdate,productList,productMarc,update} = require('../controllers/controllerProducts');
+const {shoppingCart,productDetail,productEdit,productList,productMarc,update} = require('../controllers/controllerProducts');
 const { remove } = require('../controllers/funciones/remove');
+const { create } = require('../controllers/funciones/create');
+const { productUpdate } = require('../controllers/funciones/productUpdate');
+
 
 const router = express.Router();
 
 /* /products */
 router.get('/shoppingCart', shoppingCart);
 router.get('/productDetail/:id/',productDetail)
-router.get('/productCreate',productCreate)
+router.get('/productCreate',create)
 router.post('/productCreate',upload.single('image'),productUpdate)
 router.get('/productList/:category?',productList)
 router.get('/productMarc/:marca',productMarc)
