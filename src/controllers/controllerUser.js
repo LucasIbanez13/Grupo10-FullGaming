@@ -15,5 +15,8 @@ module.exports = {
         return res.render("admin",{
             products
         })
+    },
+    nose : (req,res) => {
+        return res.render("nose")
     }
 }
