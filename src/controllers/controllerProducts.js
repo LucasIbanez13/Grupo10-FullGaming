@@ -71,5 +71,9 @@ module.exports = {
         return res.render('productEdit', {
             ...product
         } )
+    },
+
+    productprueba : (req,res) => {
+        return res.render("admin2")
     }
 }

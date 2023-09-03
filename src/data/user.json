@@ -1,29 +1,3 @@
 [
-    {
-        "id": 0,
-        "name": "Lucas ",
-        "lastname": "Ibañez",
-        "email": "LucasIbañez@mail.com",
-        "pass": "grupo10",
-        "avatar": "default-image.png",
-        "category": "admin"
-    },
-    {
-        "id": 2,
-        "name": "Juan",
-        "lastname": "Vega",
-        "email": "JuanVega@mail.com",
-        "pass": "grupo10",
-        "avatar": "default-image.png",
-        "category": "admin"
-    },
-    {
-        "id": 3,
-        "name": "Juan",
-        "lastname": "Gomez",
-        "email": "JuanGomez@mail.com",
-        "pass": "grupo 10",
-        "avatar": "default-image.png",
-        "category": "admin"
-    }
+
 ]
