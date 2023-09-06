@@ -1,10 +1,24 @@
 const fs = require("fs");
 const path = require("path");
 const{products}= require("./controllerHome")
+const {validationResult} =require("express-validator");
 
 module.exports = {
     register : (req,res) => {
-        return res.render('register')
+        return res.render('partials/register')
+    },
+    
+    processregister : (req,res) => {
+        const  resultValidation = validationResult(req);
+
+        
+        if (resultValidation.errors.length > 0 ) {
+            return res.render("register", {
+                errors: resultValidation.mapped(),
+            });
+        } else{
+            return res.send("hola")
+        }
     },
     login : (req,res) => {
         return res.render('login')
@@ -19,4 +33,5 @@ module.exports = {
     nose : (req,res) => {
         return res.render("nose")
     }
+    
 }

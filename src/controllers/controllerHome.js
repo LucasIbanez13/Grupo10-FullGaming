@@ -31,10 +31,13 @@ module.exports = {
     products,
 
     home : (req,res) => {
+
         return res.render('home',{
             products,
             marcas,
-            categories
+            categories,
+    
+            
         })
     },
     
