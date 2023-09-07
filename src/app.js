@@ -9,6 +9,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productsRouter = require("./routes/products")
 const methodOverride = require("method-override");
+const session = require("express-session")
+const checkSessionErrorRegister = require("./middlewares/checkSessionErrorRegister");
 
 var app = express();
 
@@ -22,6 +24,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
+app.use(session({
+  secret: 'fullgaming',
+  resave: false,
+  saveUninitialized: true
+}))
+
+app.use(checkSessionErrorRegister);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -4,10 +4,28 @@ var router = express.Router();
 const {body} =require("express-validator");
 
 const validations = [
-    body("name").notEmpty(). withMessage("escribe un nombre"),
-    body("email").notEmpty(). withMessage("escribe un correo valido"),
-    body("pass").notEmpty(). withMessage("caracter minimo de 6 digitos"),
-    body("passz").notEmpty(). withMessage("caracter minimo de 6 digitos")
+    body("name").notEmpty(). withMessage("escribe un usuario"),
+    body("emailRegister").notEmpty() .withMessage("escribe un correo") .bail()
+    .isEmail() .withMessage("escribe un correo valido").bail()
+    .custom((value) => {
+        const users = readJSON("user.json")
+        const user = users.find(user => user.email === value);
+
+        if (user) {
+            return false
+        }
+        return true
+    }).withMessage("email ya registrado"),
+    body("pass").isLength({
+        min:6
+    }). withMessage("minimo de 6 caracteres"),
+    body("passz")
+    .custom((value, {req}) =>{
+        if (value !== req.body.pass) {
+            return false
+        }
+        return true
+    }). withMessage("contrasenas no coinciden")
 ]
 
 /* users */
@@ -15,7 +33,7 @@ const validations = [
 //mostrar login
 router.get('/login', login);
 //mostrar registro
-router.get('/register', register);
+router.get('partials/register', register);
 //procesar registro
 router.post("/register", validations, processregister);
 //mostrar admin

@@ -9,13 +9,13 @@ module.exports = {
     },
     
     processregister : (req,res) => {
-        const  resultValidation = validationResult(req);
-
-        
-        if (resultValidation.errors.length > 0 ) {
-            return res.render("register", {
-                errors: resultValidation.mapped(),
-            });
+        const  errors = validationResult(req);
+        const {viewError} =req.query
+        if (!errors.isEmpty()) {
+            req.session.errorsRegister = errors.mapped()
+            req.session.old = { ...req.body }
+            res.redirect(viewError);
+            return
         } else{
             return res.send("hola")
         }

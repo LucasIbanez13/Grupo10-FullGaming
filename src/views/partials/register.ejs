@@ -1,29 +1,32 @@
 <div id="register" class="modal-overlay">
     <div class="modal">
-        <a href="#" class="close-modal-button"><i class="fa-solid fa-times"></i></a>
+        <a href="#" class="close-modal-button" id="closeModal"><i class="fa-solid fa-times"></i></a>
         <div class="form-container">
-            <form action="/users/register" method="POST">
+            <form action="/users/register/?viewError=<%= locals?.view %>" method="POST">
                 <div class="contenedor">
 
                     <div class="img-container"><img src="/img/logonav.png" alt=""></div>
                         <h3>registro</h3>
 
                         <div class="input-padre">
-                            <input class="input-style" type="text" name="name" placeholder="crea usuario">
-                
+                            <input class="input-style" type="text" name="name" placeholder="crea usuario" value="<%= locals.old && locals.old.name%>">
+                            <span style="color: red" class="error-message"><%= locals?.errorsRegister?.name?.msg %></span>
                         </div>
 
                     <div class="input-padre">
-                        <input class="input-style" type="email" name="email" placeholder="Ingrese su email" >
+                        <input class="input-style" type="email" name="emailRegister" placeholder="Ingrese su email" value="<%= locals.old && locals.old.emailRegister%>" >
+                        <span style="color: red" class="error-message"><%= locals?.errorsRegister?.emailRegister?.msg %></span>
             
                     </div>
                     <div class="input-padre">
-                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña" >
+                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
+                        <span style="color: red" class="error-message"><%= locals?.errorsRegister?.pass?.msg %></span>
             
                     </div>
 
                     <div class="input-padre">
-                        <input class="input-style" type="password" name="passz" placeholder="Repita su contrasena" >
+                        <input class="input-style" type="password" name="passz" placeholder="Repita su contrasena">
+                        <span style="color: red" class="error-message"><%= locals?.errorsRegister?.passz?.msg %></span>
             
                     </div>
             
@@ -36,4 +39,22 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const closeModalButton = document.querySelector("#closeModal");
+    const nameInput = document.querySelector("input[name='name']");
+    const emailInput = document.querySelector("input[name='emailRegister']");
+    const errorMessages = document.querySelectorAll(".error-message");
+           
+    console.log(emailInput);
+
+    closeModalButton.addEventListener("click", function() {
+        nameInput.value = "";
+        emailInput.value = "";
+        errorMessages.forEach(function(errorMessage) {
+            errorMessage.style.display = "none";
+        });
+    });
+});
+</script>
 </div>

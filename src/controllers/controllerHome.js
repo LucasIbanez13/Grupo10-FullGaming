@@ -35,7 +35,7 @@ module.exports = {
         return res.render('home',{
             products,
             marcas,
-            categories,
+            categories
     
             
         })
