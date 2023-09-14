@@ -14,8 +14,8 @@
                         </div>
 
                     <div class="input-padre">
-                        <input class="input-style" type="email" name="emailRegister" placeholder="Ingrese su email" value="<%= locals.old && locals.old.emailRegister%>" >
-                        <span style="color: red" class="error-message"><%= locals?.errorsRegister?.emailRegister?.msg %></span>
+                        <input class="input-style" type="email" name="email" placeholder="Ingrese su email" value="<%= locals.old && locals.old.email%>" >
+                        <span style="color: red" class="error-message"><%= locals?.errorsRegister?.email?.msg %></span>
             
                     </div>
                     <div class="input-padre">
@@ -43,7 +43,7 @@
     document.addEventListener("DOMContentLoaded", function() {
     const closeModalButton = document.querySelector("#closeModal");
     const nameInput = document.querySelector("input[name='name']");
-    const emailInput = document.querySelector("input[name='emailRegister']");
+    const emailInput = document.querySelector("input[name='email']");
     const errorMessages = document.querySelectorAll(".error-message");
            
     console.log(emailInput);

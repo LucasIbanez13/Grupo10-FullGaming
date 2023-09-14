@@ -1,14 +1,18 @@
 var express = require('express');
-const {login, register, admin,nose,processregister} = require('../controllers/controllerUser');
+const {login, register, admin,nose,processregister,processLogin} = require('../controllers/controllerUser');
 var router = express.Router();
 const {body} =require("express-validator");
+const{userRead}= require("../controllers/controllerHome");
+const validationsLogin = require("../validations/validationLogin");
+
+
 
 const validations = [
     body("name").notEmpty(). withMessage("escribe un usuario"),
-    body("emailRegister").notEmpty() .withMessage("escribe un correo") .bail()
+    body("email").notEmpty() .withMessage("escribe un correo") .bail()
     .isEmail() .withMessage("escribe un correo valido").bail()
     .custom((value) => {
-        const users = readJSON("user.json")
+        const users = userRead
         const user = users.find(user => user.email === value);
 
         if (user) {
@@ -31,15 +35,23 @@ const validations = [
 /* users */
 
 //mostrar login
-router.get('/login', login);
+router.get('/partials/login', login);
+
+//procesar login
+router.post("/login",validationsLogin, processLogin);
+
 //mostrar registro
 router.get('partials/register', register);
+
 //procesar registro
 router.post("/register", validations, processregister);
+
 //mostrar admin
 router.get('/admin', admin);
+
 //no se xd
 router.get('/nose', nose);
 
 
 module.exports = router;
+

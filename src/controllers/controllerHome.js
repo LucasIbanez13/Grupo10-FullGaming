@@ -24,11 +24,13 @@ archivos.forEach(archivo =>{
 const products = jsonarchivos["items.json"]
 const marcas = jsonarchivos["marcas.json"]
 const categories = jsonarchivos["categories.json"]
+const userRead = jsonarchivos["user.json"]
 
 
 
 module.exports = {
     products,
+    userRead,
 
     home : (req,res) => {
 

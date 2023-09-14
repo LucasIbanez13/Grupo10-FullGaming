@@ -111,6 +111,27 @@
 
 }
 
+/* iconos login*/
+.user-avatar {
+    display: inline-block;
+    width: 20px; /* Ajusta el tamaño del círculo según tus preferencias */
+    height: 20px;
+    margin-right: 5px; /* Espaciado entre la imagen y el nombre */
+    vertical-align: middle; /* Alinea verticalmente con el texto del nombre */
+  }
+  
+  /* Estilo para el círculo (solo cuando hay una imagen) */
+  .user-avatar img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* Esto crea un círculo solo cuando hay una imagen */
+  }
+  
+  /* Estilo para el nombre de usuario */
+  .user-name {
+    vertical-align: middle; /* Alinea verticalmente con la imagen o el icono */
+  }
+
 /*navegacion*/
 .home-nav-header {
     background-image: url(/img/fondo.png);

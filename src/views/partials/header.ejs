@@ -13,10 +13,25 @@
             </form>
 
     <div class="fonta">
-        <a href="#modal" class="open-modal-button"><i class="fa-solid fa-user"></i>
-        <span>Login</span>
-        </a>
 
+        <% if (!locals.userLogin) { %>
+            <a href="#modal" class="open-modal-button"><i class="fa-solid fa-user"></i>
+                <span>Login</span>
+                </a>
+        <% }else { %>
+            <a href="/users/profile" class="open-modal-button-login">
+                <div class="user-avatar">
+                  <% if (userLogin.image) { %>
+                    <img src="img/<%= userLogin.image %>">
+                  <% } else { %>
+                    <i class="fa-solid fa-user"></i>
+                  <% } %>
+                </div>
+                <span><%= userLogin.name %></span>
+              </a>
+
+        <% } %>
+        
         <a href="#"><i class="fa-regular fa-bell fa-lg"></i></a>
         <a href="/products/shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a>
     </div>

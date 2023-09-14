@@ -11,6 +11,8 @@ const productsRouter = require("./routes/products")
 const methodOverride = require("method-override");
 const session = require("express-session")
 const checkSessionErrorRegister = require("./middlewares/checkSessionErrorRegister");
+const checkSessionErrorLogin = require("./middlewares/checkSessionErrorLogin");
+const localsCheck = require('./middlewares/localsCheck');
 
 var app = express();
 
@@ -30,7 +32,10 @@ app.use(session({
   saveUninitialized: true
 }))
 
+app.use(localsCheck);
+
 app.use(checkSessionErrorRegister);
+app.use(checkSessionErrorLogin)
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

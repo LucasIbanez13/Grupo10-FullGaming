@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const{products}= require("./controllerHome")
+const{products, userRead}= require("./controllerHome")
 const {validationResult} =require("express-validator");
+const user = require("../data/user");
 
 module.exports = {
     register : (req,res) => {
@@ -10,18 +11,56 @@ module.exports = {
     
     processregister : (req,res) => {
         const  errors = validationResult(req);
-        const {viewError} =req.query
+        const {viewError} = req.query;
+
         if (!errors.isEmpty()) {
-            req.session.errorsRegister = errors.mapped()
-            req.session.old = { ...req.body }
+            req.session.errorsRegister = errors.mapped();
+            req.session.old = { ...req.body };
             res.redirect(viewError);
             return
         } else{
-            return res.send("hola")
+
+            const users = userRead;
+            const newuser = new user(req.body);
+
+            users.push(newuser);
+
+            const rutadata = path.join(__dirname, "../data");
+            const filepath = path.join(rutadata, "user.json");
+
+            fs.writeFileSync(filepath, JSON.stringify(users, null, 2));
+
+            return res.redirect("/");
         }
     },
     login : (req,res) => {
-        return res.render('login')
+        return res.render('partials/login')
+    },
+
+    processLogin: (req,res) => {
+
+        const errors = validationResult(req);
+        const {viewError2} = req.query
+
+        if (!errors.isEmpty()) {
+            req.session.errorsLogin = errors.mapped()
+            res.redirect(viewError2);
+            return 
+            
+        }else{
+            const user = userRead.find(user => user.email === req.body.email2);
+            const {email, image, name,rol} = user;
+
+            req.session.userLogin = {
+                email,
+                image,
+                name,
+                rol
+            }
+            console.log(req.session);
+            return res.redirect("/")
+
+        }
     },
 
     admin : (req,res) => {
