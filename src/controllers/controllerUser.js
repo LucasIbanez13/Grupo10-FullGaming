@@ -49,13 +49,14 @@ module.exports = {
             
         }else{
             const user = userRead.find(user => user.email === req.body.email2);
-            const {email, image, name,rol} = user;
+            const {email, image, name,rol, id} = user;
 
             req.session.userLogin = {
                 email,
                 image,
                 name,
-                rol
+                rol,
+                id
             }
             console.log(req.session);
             return res.redirect("/")
@@ -71,6 +72,17 @@ module.exports = {
     },
     nose : (req,res) => {
         return res.render("nose")
+    },
+    profile : (req,res) => {
+        const profileId = req.params.id;
+        const profile = userRead.find(profile => profile.id == profileId);
+    
+        if (!profile) {
+            return res.status(404).send('Perfil no encontrado');
+        }
+            res.render('profile', {
+            profile: profile
+        });
     }
     
 }

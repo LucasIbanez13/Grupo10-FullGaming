@@ -1,9 +1,12 @@
 var express = require('express');
-const {login, register, admin,nose,processregister,processLogin} = require('../controllers/controllerUser');
+const {login, register, admin,nose,processregister,processLogin,profile} = require('../controllers/controllerUser');
 var router = express.Router();
 const {body} =require("express-validator");
 const{userRead}= require("../controllers/controllerHome");
 const validationsLogin = require("../validations/validationLogin");
+const {profileUpdate} = require('../controllers/funcionesUser/profileUpdate')
+const upload = require('../middlewares/upload');
+
 
 
 
@@ -51,6 +54,10 @@ router.get('/admin', admin);
 
 //no se xd
 router.get('/nose', nose);
+
+//profile
+router.get('/profile/:id' ,profile);
+router.post('/profile/:id',upload.single('image'), profileUpdate);
 
 
 module.exports = router;
