@@ -30,7 +30,7 @@ module.exports = {
 
             fs.writeFileSync(filepath, JSON.stringify(users, null, 2));
 
-            return res.redirect("/");
+            return res.redirect("/#");
         }
     },
     login : (req,res) => {
@@ -38,7 +38,6 @@ module.exports = {
     },
 
     processLogin: (req,res) => {
-
         const errors = validationResult(req);
         const {viewError2} = req.query
 
@@ -49,16 +48,21 @@ module.exports = {
             
         }else{
             const user = userRead.find(user => user.email === req.body.email2);
-            const {email, image, name,rol} = user;
+            const {email2, remember} = req.body
+            const {image, name,rol,email} = user;
 
             req.session.userLogin = {
-                email,
                 image,
                 name,
-                rol
+                rol,
+                email
+
             }
-            console.log(req.session);
-            return res.redirect("/")
+            
+            remember !== undefined && res.cookie("fullgaming20", req.session.userLogin,{
+                maxage : 1000 * 60 * 60 * 24 * 7
+            })
+            return res.redirect("/#")
 
         }
     },

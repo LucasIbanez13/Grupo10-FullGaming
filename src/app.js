@@ -12,7 +12,9 @@ const methodOverride = require("method-override");
 const session = require("express-session")
 const checkSessionErrorRegister = require("./middlewares/checkSessionErrorRegister");
 const checkSessionErrorLogin = require("./middlewares/checkSessionErrorLogin");
+const cookieCheck = require('./middlewares/cookieCheck');
 const localsCheck = require('./middlewares/localsCheck');
+
 
 var app = express();
 
@@ -31,7 +33,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
-
+app.use(cookieCheck);// antes de que haya una session levantada
 app.use(localsCheck);
 
 app.use(checkSessionErrorRegister);
