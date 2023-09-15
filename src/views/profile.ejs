@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") %>
+
+    <body>
+        <%- include("partials/header") %>
+            <div class="profile">
+                <div class="profile_box">
+                    <%- include("partials/profileInit") %> 
+                    <form class="profile_box_form" action="" method="POST" enctype="multipart/profile">
+                                <div class="profile_box_form_boxOne">
+                                    <div>
+                                        <h2>Mis datos</h2>
+                                    </div>
+                                    <div class="profile_box_form_boxOne_image">
+                                        <label for="image" class="form-label">Imagen de perfil</label>
+                                        <input class="form-control" type="file" id="image" name="image" value="">
+                                    </div>
+                                    <div class="profile_box_form_boxOne_name">
+                                        <label for="name" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="name" name="name" value="<%= profile.name %>">
+                                    </div>
+                                    <div class="profile_box_form_boxOne_surname">
+                                        <label for="surname" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" id="surname" name="surname" value="<%= profile.surname %>">
+                                    </div>
+                                    <div class="profile_box_form_boxOne_phone">
+                                        <label for="phone" class="form-label">Celular</label>
+                                        <input type="text" class="form-control" id="phone" name="phone" value="<%= profile.phone %>">
+                                    </div>
+                                    <div class="profile_box_form_boxOne_dni">
+                                        <label for="dni" class="form-label">DNI</label>
+                                        <input type="text" class="form-control" id="dni" name="dni" value="<%= profile.dni %>">
+                                    </div>
+                                </div>
+                                <div class="profile_box_form_boxTwo">
+                                    <div>
+                                        <h2>Mis direcciones</h2>
+                                    </div>
+                                    <div class="profile_box_form_boxTwo_lookfor">
+                                        <label for="lookfor" class="form-label">Buscar dirección en Google Maps</label>
+                                        <input type="text" class="form-control" id="lookfor" name="lookfor" value="<%= profile.lookfor %>">
+                                    </div>
+                                    <div class="profile_box_form_boxTwo_direct">
+                                        <div class="profile_box_form_boxTwo_direct_street">
+                                            <label for="street" class="form-label">Calle</label>
+                                            <input type="text" class="form-control" id="street" name="street" value="<%= profile.street %>">
+                                        </div>
+                                        <div class="profile_box_form_boxTwo_direct_height">
+                                            <label for="height" class="form-label">Altura</label>
+                                            <input type="text" class="form-control" id="height" name="height" value="<%= profile.height %>">
+                                        </div>
+                                    </div>
+                                    <div class="profile_box_form_boxTwo_house">
+                                        <div class="profile_box_form_boxTwo__house_floor">
+                                            <label for="floor" class="form-label">Piso</label>
+                                            <input type="text" class="form-control" id="floor" name="floor" value="<%= profile.floor %>">
+                                        </div>
+                                        <div class="profile_box_form_boxTwo_house_department">
+                                            <label for="department" class="form-label">Departamento</label>
+                                            <input type="text" class="form-control" id="department" name="department" value="<%= profile.department %>">
+                                        </div>
+                                    </div>
+                                    <div class="profile_box_form_boxTwo_referencia">
+                                        <div class="profile_box_form_boxTwo_referencia_reference">
+                                            <label for="references" class="form-label">Referencias</label>
+                                            <input type="text" class="form-control" id="references" name="references" value="<%= profile.references %>">
+                                        </div>
+                                        <div class="profile_box_form_boxTwo_referencia_postalcode">
+                                            <label for="postalcode" class="form-label">Código Postal</label>
+                                            <input type="text" class="form-control" id="postalcode" name="postalcode" value="<%= profile.postalcode %>">
+                                        </div>
+                                    </div>
+                                    <div class="profile_box_form_boxTwo_ciudad">
+                                        <div class="profile_box_form_boxTwo_ciudad_province">
+                                            <label for="provinces" class="form-label">Provincia</label>
+                                            <select class="form-select" id="provinces" name="provinces">
+                                                <option value="buenosAires">Buenos Aires</option>
+                                                <option value="catamarca">Catamarca</option>
+                                                <option value="chaco">Chaco</option>
+                                                <option value="chubut">Chubut</option>
+                                                <option value="cordoba">Córdoba</option>
+                                                <option value="corrientes">Corrientes</option>
+                                                <option value="entreRios">Entre Ríos</option>
+                                                <option value="formosa">Formosa</option>
+                                                <option value="jujuy">Jujuy</option>
+                                                <option value="laPampa">La Pampa</option>
+                                                <option value="laRioja">La Rioja</option>
+                                                <option value="mendoza">Mendoza</option>
+                                                <option value="misiones">Misiones</option>
+                                                <option value="neuquen">Neuquén</option>
+                                                <option value="rio Negro">Río Negro</option>
+                                                <option value="salta">Salta</option>
+                                                <option value="sanJuan">San Juan</option>
+                                                <option value="sanLuis">San Luis</option>
+                                                <option value="santaCruz">Santa Cruz</option>
+                                                <option value="santaFe">Santa Fe</option>
+                                                <option value="santiagoDelEstero">Santiago del Estero</option>
+                                                <option value="tierraDelFuego">Tierra del Fuego</option>
+                                                <option value="tucuman">Tucumán</option>
+                                            </select>
+                                        </div>
+                                        <div class="profile_box_form_boxTwo_ciudad_location">
+                                            <label for="location" class="form-label">Localidad</label>
+                                            <select class="form-select" id="location" name="location">
+                                                <option value="mouse">Mouse</option>
+                                                <option value="pc">Pc</option>
+                                                <option value="teclado">Teclado</option>
+                                                <option value="auriculares">Auriculares</option>
+                                                <option value="microfonos">Microfonos</option>
+                                                <option value="monitor">Monitor</option>
+                                                <option value="gabinete">Gabinete</option>
+                                                <option value="madre">Placa Madre</option>
+                                                <option value="procesador">Procesador</option>
+                                                <option value="ram">Ram</option>
+                                                <option value="coolers">Coolers</option>
+                                                <option value="almacenamiento">Almacenamiento</option>
+                                                <option value="video">Placa de video</option>
+                                                <option value="audio">Placa de audio</option>
+                                            </select>
+                                        </div>
+                                </div>
+                            <button type="submit" class="profile_box_form_button">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </body>
+
+
+</html>
