@@ -95,7 +95,7 @@
         "rol": "user",
         "image": "fondo.png",
         "name": "gabito",
-        "surname": "",
+        "surname": "vega",
         "phone": "",
         "dni": "",
         "lookfor": "",
@@ -105,8 +105,9 @@
         "departament": "",
         "references": "",
         "postalcode": "",
-        "provinces": "",
-        "location": ""
+        "provinces": "buenosAires",
+        "location": "mouse",
+        "department": ""
     },
     {
         "id": "70f3b8c0-1a03-4cf3-bf64-5b991812cc2a",

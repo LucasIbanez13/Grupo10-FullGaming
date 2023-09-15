@@ -49,13 +49,15 @@ module.exports = {
         }else{
             const user = userRead.find(user => user.email === req.body.email2);
             const {email2, remember} = req.body
-            const {image, name,rol,email} = user;
+            
+            const {id,image, name,rol,email} = user;
 
             req.session.userLogin = {
                 image,
                 name,
                 rol,
-                email
+                email,
+                id
 
             }
             
