@@ -72,7 +72,7 @@ module.exports = {
     admin : (req,res) => {
         const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data", "items.json"), "utf-8"));
         return res.render("admin",{
-            products
+            products,
         })
     },
     nose : (req,res) => {
