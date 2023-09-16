@@ -62,7 +62,7 @@ module.exports = {
             }
             
             remember !== undefined && res.cookie("fullgaming20", req.session.userLogin,{
-                maxage : 1000 * 60 * 60 * 24 * 7
+                maxAge : 1000 * 60 * 60 * 24 * 7
             })
             return res.redirect("/#")
 

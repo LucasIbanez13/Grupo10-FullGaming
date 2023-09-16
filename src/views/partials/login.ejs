@@ -9,12 +9,12 @@
                         <h3>Login</h3>
                     <div class="input-padre">
                         <input class="input-style" type="email, text" name="email2" placeholder="Ingrese su email o usuario">
-                        <span style="color: red"> <%= locals?.errorsLogin?.email2?.msg %> </span>
+                        <span class="error-message" style="color: red"> <%= locals?.errorsLogin?.email2?.msg %> </span>
             
                     </div>
                     <div class="input-padre">
                         <input  class="input-style" type="password" name="pass2" placeholder="Ingrese su contraseña">
-                        <span style="color: red"> <%= locals?.errorsLogin?.pass2 && locals.errorsLogin.pass2.msg %> </span>
+                        <span class="error-message" style="color: red"> <%= locals?.errorsLogin?.pass2 && locals.errorsLogin.pass2.msg %> </span>
             
                     </div>
             
@@ -33,11 +33,11 @@
     </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    //document.addEventListener("DOMContentLoaded", function() {
         const closeModalButtonLog = document.querySelector("#closeModalLog");
         const email2Input = document.querySelector("#form-login input[name='email2']");
         const pass2Input = document.querySelector("#form-login input[name='pass2']");
-        const errorMessages = document.querySelectorAll("#form-login .error-message");
+        const errorMessages = Array.from(document.querySelectorAll("#form-login .error-message"));
 
         closeModalButtonLog.addEventListener("click", function() {
             email2Input.value = "";
@@ -46,6 +46,6 @@
                 errorMessage.style.display = "none";
             });
         });
-    });
+    //});
 </script>
 </div>

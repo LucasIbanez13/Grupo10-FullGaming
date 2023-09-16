@@ -44,9 +44,8 @@
     const closeModalButton = document.querySelector("#closeModal");
     const nameInput = document.querySelector("input[name='name']");
     const emailInput = document.querySelector("input[name='email']");
-    const errorMessages = document.querySelectorAll(".error-message");
+    const errorMessages = Array.from(document.querySelectorAll(".error-message"))
            
-    console.log(emailInput);
 
     closeModalButton.addEventListener("click", function() {
         nameInput.value = "";
