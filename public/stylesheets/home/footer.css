@@ -30,6 +30,9 @@
 .footer-contentTwo_otros{
     display: none;
 }
+.footer-contentTwo{
+    padding-bottom: 45px;
+}
 .footer_boxThree_icons{
     display: flex;
     width: 40%;
@@ -71,12 +74,10 @@
     .footer_boxOne{
         width: 80px;
         text-align: left;
-        margin-top: 30px;
     }
     .footer_boxTwo{
         width: 130px;
         text-align: left;
-        margin-top: 30px;
         margin-left: 60px;
     }
     .footer_boxThree{
@@ -117,18 +118,28 @@
     .footer_boxTwo{
         border-bottom: none;
     }
+    .footer-contentTwo{
+        padding-bottom: 0px;
+    }
  }
 
  @media (min-width: 1224px){
     .footer-contentOne{
         justify-content: center;
+        padding: 60px 200px 0px 200px;
     }
     .footer-contentOne_divisor {
 
         display: flex;
         justify-content: space-between;
     }
+    .footer_boxOne{
+        width: 80px;
+        text-align: left;
+    }
     .footer_boxTwo{
+        width: 130px;
+        text-align: left;
         margin-left: 100px;
     }
     .footer-contentOne_divisorDos{
@@ -139,6 +150,10 @@
     }
     .footer_boxThree{
         position: relative;
+        bottom: 20px;
         right: -200px;
+    }
+    .footer_boxThree_icons{
+        top: -20px;
     }
  }
