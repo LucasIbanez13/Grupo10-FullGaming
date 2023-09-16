@@ -6,6 +6,8 @@ const{userRead}= require("../controllers/controllerHome");
 const validationsLogin = require("../validations/validationLogin");
 const {profileUpdate} = require('../controllers/funcionesUser/profileUpdate')
 const upload = require('../middlewares/upload');
+const { isAuthenticated } = require('../middlewares/verify/verifyAuthenticated');
+const isAdmin = require('../middlewares/verify/verifyAdmin');
 
 
 
@@ -50,13 +52,13 @@ router.get('partials/register', register);
 router.post("/register", validations, processregister);
 
 //mostrar admin
-router.get('/admin', admin);
+router.get('/admin',isAdmin ,admin);
 
 //no se xd
 router.get('/nose', nose);
 
 //profile
-router.get('/profile/:id' ,profile);
+router.get('/profile/:id',isAuthenticated ,profile);
 router.post('/profile/:id',upload.single('image'), profileUpdate);
 
 

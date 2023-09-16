@@ -4,6 +4,9 @@ const { v4: uuidv4 } = require('uuid');
 const Product = require('../data/Products');
 const productsFilePath = path.join(__dirname, '../data/items.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const {userRead}= require("./controllerHome")
+
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -67,6 +70,12 @@ module.exports = {
     },
 
     productEdit : (req,res) => {
+        const user = userRead.find(user => user.rol);          
+            const {rol} = user;
+
+            req.session.userLogin = {
+                rol,
+            }
         const product = products.find(product => product.id === req.params.id )
         return res.render('productEdit', {
             ...product

@@ -18,6 +18,14 @@
             <div class="profileInit_contenedor_contenedorButton_button_salir">
                 <a href="" class="">Salir</a>
             </div>
+            
+            <% if (profile.rol === "admin") { %>
+                <div class="profileInit_contenedor_contenedorButton_button_salir">
+                    <a href="/users/admin" class="">Admin</a>
+                </div>
+            <% }else { %> 
+                <p></p> 
+            <% } %>
         </div>
         
     </div>
