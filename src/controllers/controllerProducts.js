@@ -18,6 +18,7 @@ module.exports = {
         const product = products.find(product => product.id === id)
         return res.render('productDetail',{
             ...product,
+            products,
             toThousand
         })
     },

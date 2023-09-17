@@ -1,302 +1,153 @@
 .body_box{
+    background-color: #EDEDED;
+}
+.detail_main_contents_content {
     background-color: white;
 }
-.product__header__icons{
-
-    margin: 5px 20px;
+.detail_main_contents_content_boxOne{
+    display: flex;
+    flex-direction: column;
+}
+.detail_main_contents_content_boxOne_images{
     display: flex;
     justify-content: space-between;
-}
-.product__header__icons a{
-    font-size: 25px;
-    color: black;
-}
-#content__item{
-    height: 400px;
+    flex-direction: column;
     width: 100%;
+}
+.detail_main_contents_content_boxOne_images_muchas{
+    width: 50%;
+    margin: 10px auto;
+    overflow: hidden;
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.detail_main_contents_content_boxOne_images_muchas img{
+    width: 100%;
+}
+.detail_main_contents_content_boxOne_images_una{
+    width: 60%;
+    padding: 40px;
+    margin: auto;
     overflow: hidden;
 }
-.product__main__box_producto__carrusel{
-    height: 100%;
-    position: relative;
+.detail_main_contents_content_boxOne_images_una img{
+    width: 100%;
 }
-.tarjetaCarrusel{
-    height: 100%;
+.detail_main_contents_content_boxOne_product{
+    border-radius: 5%;
+    padding: 30px 15px;
 }
-.flechasCarrusel{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 85%;
+.detail_main_contents_content_boxOne_product_nombre_titulo h4{
+    font-size: 30px;
+}
+.detail_main_contents_content_boxOne_product_precio{
+    margin: 20px 0;
+}
+.detail_main_contents_content_boxOne_product_precio_descuento{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+}
+.detail_main_contents_content_boxOne_product_precio_descuento h3{
+    font-size: 30px;
+}
+.detail_main_contents_content_boxOne_product_precio_price h3{
+    font-size: 35px;
+}
+.detail_main_contents_content_boxOne_product_cuotas{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+.detail_main_contents_content_boxOne_product_cuotas h3{
+    margin: 15px 0;
+}
+.detail_main_contents_content_boxOne_product_cuotas p{
+    margin: 5px 0;
+}
+.detail_main_contents_content_boxOne_product_cuotas_medios{
+    margin-top: 20px;
+}
+.detail_main_contents_content_boxOne_product_envios{
+    margin: 20px 0;
+}
+.detail_main_contents_content_boxOne_product_envios_gratis{
+    display: flex;
+}
+.detail_main_contents_content_boxOne_product_envios_sucursal{
+    display: flex;
+}
+.detail_main_contents_content_boxOne_product_comprar{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none; 
+    border-radius: 2px;
+}
+.detail_main_contents_content_boxOne_product_comprar a{
+    color: white;
+    margin: auto;
+    text-decoration: none;
+}
+.detail_main_contents_content_boxTwo_cajas{
     padding: 20px;
 }
-.flechasCarrusel a{
-    color: black;
-}
-#tarjeta-1 img{
-    width: 100%;
-    height: 100%;    
-}
-#tarjeta-2 img{
-    width: 100%;
-    height: 100%; 
-}
-#tarjeta-3 img{
-    width: 100%;
-    height: 100%; 
-}
-#content__puntos{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-}
-#content__puntos a{
-    padding: 5px;
-    color: black;
-    background-color: white;
-}
-.product__main__box_producto h1{
-    text-align: left;
-    font-size: 30px;
-    width: 100%;
-}
-.product__main__box_producto{
-    overflow: hidden;
-    margin-left: 5px;
-    
-}
-.product__main__box_producto__article--description{
-    display: none;
-}
-.product__main__box_producto__pagos h1{
-    display: none;
-}
-.product__main__box_producto__pagos h2{
-    font-size: 25px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-.product__main__box_producto__pagos__box-precio{
-    display: flex;
-    width: 100%;
-    
-}
-.product__main__box_producto__pagos__box-precio p{
-    margin-left: 10px;
-    width: 40%;
-}
-.product__main__box_producto__pagos__box-precio h4{
-    font-size: 40px;
-}
-.product__main__box_producto__pagos__box-tarjetas-cars{
-    display: flex;
-    width: 100%;
-    
-}
-.product__main__box_producto__pagos__box-tarjetas-cars-box{
-    display: flex;
-    
-}
-.product__main__box_producto__pagos__box-tarjetas-cars-box a{
-    font-size: 30px;
+.padre-articulos2 {
     margin: 10px;
-}
-
-.product__main__box_producto h2{
-    margin: 15px;
-}
-.product__main__box_producto__article{
-    text-transform: uppercase;
-}
-.product__main__box_producto__pagos__box-tarjetas p{
-     font-size: 20px;
-     margin-top: 10px;
-}
-.product__main__box_producto__pagos__box-tarjetas-cars h4{
-    font-size: 25px;
-    margin-top: 15px;
-}
-.product__main__box_producto__pagos__box-tarjetas-cars-box-cuotas{
-    display: flex;
-    margin-bottom: 15px;
-}
-.product__main__carrito{
-    display: flex;
-    justify-content: space-between;
-    margin: 0px auto;
-    width: 100%;
-    margin-top: 40px;
-}
-.product__main__carrito-menos a{
-    font-size: 40px;
-    color: black;
-}
-.product__main__carrito-mas a{
-    font-size: 50px;
-    color: black;
-}
-.product__main__carrito-number{
-    font-size: 50px;
-}
-.product__main__carrito-comprar{
-    margin-top: 10px;
-    margin-right: 20px;
-}
-.product__main__carrito-comprar a{
-    background-color: black;
-    color: white;
-    padding: 10px;
-    font-size: 30px;
-}
-.product__main__article{
-    margin-top: 55px;
-    margin-right: 20px;
-    text-align: center;
-}
-.product__main__article p{
-    font-size: 15px;
-    margin-top: 10px;
-    text-align: left;
-}
-.product__main__otrosProductos h3{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 25px;
-    text-transform: uppercase;
-}
-main section h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.product__main__otrosProductos{
-    margin: auto;
-    width: 80%;
-}
-
-.banner__bottom{
-    display: none;
+    padding:10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    overflow: hidden; /* Oculta los elementos adicionales */
 }
 
 
-@media(min-width: 480px) {
-    .body_box{
-        width: 100%;
+@media (min-width: 480px){
+    .detail_main_contents_content {
+        margin: 30px;
     }
-    .product__main{
-        width: 100%;
-    }
-    .product__main__box_producto{
-        display: flex;
+    .detail_main_contents_content_boxOne{
         flex-direction: row;
     }
-    .product__main__box_producto__article{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    .detail_main_contents_content_boxOne_images{
+        justify-content: space-around;
+        width: 65%;
     }
-    .product__main__box_producto__article h2{
-        font-size: 20px;
-        width: 90%;
-        margin-bottom: 20px;
-        word-wrap: break-word;
+    .detail_main_contents_content_boxOne_images_una{
+        margin: 20px auto;
     }
-    .description{
-        display: flex;
-        margin-top: 20px;
+    .detail_main_contents_content_boxOne_product{
+        width: 45%;
+        border: 2px black solid;
     }
-    .description p{
-        font-size: 20px;
-        margin-left: 10px;
+
+    .detail_main_contents_content_boxOne_product_comprar{
+        width: 100px;
     }
-    .description i{
-        font-size: 7px;
-        margin: auto 0;
-    }
-    .product__main__box_producto__article--description{
-        display: flex;
-    }
-    .product__main__box_producto__article--description{
-        display: flex;
-        flex-direction: column;
-    }
-    .product__main__box_producto__pagos{
-        width: 40%;
-    }
-    #content__item{
-        height: 230px;
-        width: 230px;
-        overflow: hidden;
-    }
-    #content__puntos{
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        background-color: white;
-    }
-    .flechasCarrusel{
-        height: 100%;
-        width: 80%;
-    }
-    .product__main__article p{
-        font-size: 13px;
-        margin-top: 10px;
-        text-align: left;
-    }
-    .product__main__box_producto{
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-}
-@media(min-width: 1000px) {
-    .body_box{
-        width: 100%;
-    }
-    .product__main{
-        width: 100%;
-    }
-    .product__main__box{
-        width: 100%;
-    }
-    .content{
-        width: 300px;
-    }
-    #content__item{
-        height: 300px;
-        width: 300px;
-        overflow: hidden;
-    }
-    #content__puntos{
-        width: 300px;
-        display: flex;
-        justify-content: center;
-        background-color: white;
-    }
-    .flechasCarrusel{
-        height: 100%;
-        width: 85%;
-    }
-    .banner__bottom{
-        width: 100%;
-        display: flex;
-    }
-    .banner__bottom img{
-        margin: 0 60px;
-        width: 95%;
-        height: 300px;
-        margin-bottom: 80px;
-    }
-    .product__main__box_producto{
-        width: 90%;
-    }
-    .product__main__box_producto{
-        margin: 0 auto;
-    }
-    
+
 }
 
+ @media (min-width: 1224px){
+    .detail_main_contents_content_boxOne_images{
+        flex-direction: row-reverse;
+        width: 65%;
+    }
+    .detail_main_contents_content_boxOne_images_muchas{
+        width: 10%;
+        margin: 10px 20px;
+        flex-direction: column;
+        padding: 10px;
+        border-right: 1px solid black;
+    }
+    .detail_main_contents_content_boxOne_images_una img{
+        width: 100%;
+    }
+    .detail_main_contents_content_boxOne_product{
+        width: 35%;
+    }
+    
+    .detail_main_contents_content_boxOne_product_comprar{
+        width: 270px;
+    }
+}

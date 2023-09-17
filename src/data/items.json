@@ -73,8 +73,8 @@
     "name": "placa de video gtx 1660 asus 6gb",
     "image": "rtx4000.png",
     "description": "6gb",
-    "price": 160,
-    "discount": null,
+    "price": 160000,
+    "discount": 17,
     "message": "Comprar ahora"
   },
   {
@@ -88,6 +88,23 @@
     "description": "intel i5 11400 16gb",
     "price": 160,
     "discount": null,
+    "message": "Comprar ahora"
+  },
+  {
+    "id": "9a0139bc-757c-4e8a-8bcc-3f41d1a884ae",
+    "category": "mouse",
+    "image": null,
+    "name": "nose",
+    "brand": "aorus",
+    "model": "fasfasfasf",
+    "stock": "si",
+    "description": "aff",
+    "price": 0,
+    "discount": 14,
+    "amountDues": "1",
+    "cards": "visa",
+    "shipment": "no",
+    "location": "caba",
     "message": "Comprar ahora"
   }
 ]
