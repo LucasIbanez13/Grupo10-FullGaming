@@ -3,11 +3,10 @@
     text-align: center;
     padding: 30px 0 0;
     overflow: hidden;
-    background-color: blue;
+    background-color: #231F20;
     color: white;
 }
 .profileInit_contenedor_email{
-    border: 1px solid blue;
     width: 100%;
     overflow: hidden;
 
@@ -70,10 +69,14 @@
 
 
 @media (min-width:1024px){
+    .profileInit{
+        height: 600px;
+
+    }
     .profileInit_contenedor{
-        height: 450px;
-        border-radius: 0 7% 7% 0;
-        width: 350px;
+        height: 100%;
+        border-radius: 0 10% 10% 0;
+        width: 450px;
     }
     .profileInit_contenedor_contenedorButton_button{
         display: flex;
@@ -102,5 +105,13 @@
         border-radius: 10% ;
         margin: 10px auto;
         overflow: hidden;
+    }
+}
+@media (min-width:1024px){
+    .profileInit{
+        height: 600px;
+    }
+    .profileInit_contenedor{
+        width: 450px;
     }
 }
