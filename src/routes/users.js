@@ -1,5 +1,5 @@
 var express = require('express');
-const {login, register, admin,nose,processregister,processLogin,profile} = require('../controllers/controllerUser');
+const {login, register, admin,nose,processregister,processLogin,profile,logout} = require('../controllers/controllerUser');
 var router = express.Router();
 const {body} =require("express-validator");
 const{userRead}= require("../controllers/controllerHome");
@@ -60,7 +60,8 @@ router.get('/nose', nose);
 //profile
 router.get('/profile/:id',isAuthenticated ,profile);
 router.post('/profile/:id',upload.single('image'), profileUpdate);
-
+//cerrar session
+router.get('/logout',logout);
 
 module.exports = router;
 

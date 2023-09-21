@@ -88,6 +88,14 @@ module.exports = {
             res.render('profile', {
             profile: profile
         });
+    },
+    logout: (req, res) => {
+        req.session.destroy((error) => {
+            if (error) {
+                console.error('Error al cerrar sesión:', error);
+            }
+            res.redirect('/#');
+        });
     }
     
 }
