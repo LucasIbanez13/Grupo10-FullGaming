@@ -18,59 +18,63 @@
         <!----------------------------nav-bar ------------------------------------------------->
         <%- include("partials/header-nav") %>
 
-    <main>
-        <div class="padre-nuestro">
-            <div class="contenedor23">
-                <div class="articulo">
-                    <div class="imagen"><img src="/img/gtx.png" alt=""> 
-                    <p>Placa de video</p>
-                    </div>
-                    <div class="agregar">
-                        <a href="">-</a>
-                        <a href="">1</a>
-                        <a href="">+</a>
-                    </div>
-                    <div class="precio">
-                        <p>precio</p>
-                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                    </div>
-
+    <main class="shopping">
+        <div class="shopping_contenedorOne">
+            <div class="shopping_contenedorOne_box">
+                <div class="shopping_contenedorOne_box_title">
+                    <h3>Tu carrito</h3>
                 </div>
-                <div class="articulo">
-                    <div class="imagen"><img src="/img/gtx.png" alt="">
-                    <p>placa de video</p>
+                <div class="shopping_contenedorOne_box_products">
+                    <div class="shopping_contenedorOne_box_products_images"><img src="/img/auricular.png" alt=""></div>
+                    <div class="shopping_contenedorOne_box_products_product">
+                        <div class="shopping_contenedorOne_box_products_product_boxOne">
+                            <div class="shopping_contenedorOne_box_products_product_boxOne_name">
+                                <h4>Notebook Intel Core I3 8gb Ssd 256gb 14,1 Windows 11 Noblex!</h4>
+                            </div>
+                            <div class="shopping_contenedorOne_box_products_product_boxOne_envio">
+                                <p>Envio Gratis</p>
+                            </div>
+                        </div>
+                        <div class="shopping_contenedorOne_box_products_product_boxtwo">
+                            <div class="shopping_contenedorOne_box_products_product_boxtwo_cantidad">
+                                <p>1u</p>
+                            </div>
+                            <div class="shopping_contenedorOne_box_products_product_boxtwo_money">
+                                <div class="shopping_contenedorOne_box_products_product_boxtwo_money_discount">
+                                    <div><p>-20%</p></div>
+                                    <div><p>500000</p></div>
+                                </div>
+                                <div class="shopping_contenedorOne_box_products_product_boxtwo_money_price">
+                                    <p>$460000</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="agregar">
-                        <a href="">-</a>
-                        <a href="">1</a>
-                        <a href="">+</a>
-                    </div>
-
-                    <div class="precio">
-                        <p>precio</p>
-                        <a href=""><i class="fa-solid fa-trash"></i></a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="resumen-padre">
-            <div class="resumen">
-                <h2>resumen de pedido</h2>
-                <div class="total">
-                    <h3>total</h3>
-                    <p>$1350</p>
                 </div>
             </div>
-
-            <div class="botones">
-                <a href=""><i class="fa-solid fa-trash"></i></a>
-
-                <a href="" class="continuar">continuar</a>
+            <div class="shopping_contenedorOne_button">
+                <div class="shopping_contenedorOne_button_delete"><a href="">Eliminar</a></div>
             </div>
-            </div>
-
         </div>
-</main>    
+        <div class="shopping_contenedorTwo">
+            <div class="shopping_contenedorTwo_envio">
+                <div class="shopping_contenedorTwo_envio_costo"><p>¿Cual es el costo de envio?</p></div>
+                <div class="shopping_contenedorTwo_envio_estado"><p>Gratis</p></div>
+            </div>
+            <div class="shopping_contenedorTwo_total">
+                <div class="shopping_contenedorTwo_total_title"><p>Total</p></div>
+                <div class="shopping_contenedorTwo_total_price"><p>$700000</p></div>
+            </div>
+            <div class="shopping_contenedorTwo_icono">
+                <p>icono</p>
+                <p>El envio gratis esta sujeto al peso, precio y distancia del envio</p>
+            </div>
+            <div class="shopping_contenedorTwo_button">
+                <div class="shopping_contenedorTwo_button_elegir"><a href="">Elegir mas productos</a></div>
+                <div class="shopping_contenedorTwo_button_continuar"><a href="">Continuar compra</a></div>
+            </div>
+        </div>
+    </main>    
 <%- include('partials/footer') %>
 
 

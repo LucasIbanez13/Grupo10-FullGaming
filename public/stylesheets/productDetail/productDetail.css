@@ -71,6 +71,14 @@
 }
 .detail_main_contents_content_boxOne_product_envios_gratis{
     display: flex;
+    margin-bottom: 10px;
+}
+.detail_main_contents_content_boxOne_product_envios_gratis p{
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+.detail_main_contents_content_boxOne_product_envios_sucursal p{
+    margin-left: 10px;
 }
 .detail_main_contents_content_boxOne_product_envios_sucursal{
     display: flex;
@@ -92,6 +100,14 @@
 }
 .detail_main_contents_content_boxTwo_cajas{
     padding: 20px;
+}
+.detail_main_contents_content_boxTwo_cajas_caracte p{
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+.detail_main_contents_content_boxTwo_cajas_caracte_mayus p{
+    text-transform: uppercase;
+    margin-top: 10px;
 }
 .padre-articulos2 {
     margin: 10px;

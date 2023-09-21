@@ -1,166 +1,135 @@
-.padre-nuestro {
+.shopping{
+    background-color: white;
+}
+.shopping_contenedorOne_box_title{
+    padding-top: 25px;
+    margin-left: 40px;
+}
+.shopping_contenedorOne_box_products{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid black;
+}
+.shopping_contenedorOne_box_products_images{
+    padding-top: 7px;
+    width: 40%;
+    height: 45px;
     overflow: hidden;
 }
-
-.contenedor23{
-    display: flex;
-    width: 87%;
-    flex-direction: column;
-    margin: 30px 30px 0 30px;
-
-
+.shopping_contenedorOne_box_products_images img{
+    max-width: 100%;
+}
+.shopping_contenedorOne_box_products_product{
+    padding-left: 8px;
 
 }
-
-.articulo {
-    border: 1px solid #4B4B4B;
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-.imagen {
-    display: flex;
-    flex-direction: row;
-    margin-right: 100px;
-    overflow: hidden;
-    align-items: center;
-    text-align: center;
-    
-}
-
-.imagen img {
-    width: 150px;
-    align-items: right;
-    text-align: left;
-    justify-content: space-between;
-    
-}
-
-.imagen p {
-    text-transform: uppercase;
-    font-size: 20px;
-}
-
-
-.agregar {
-    display: flex;
-    flex-direction: row;
+.shopping_contenedorOne_box_products_product_boxOne_name{
     width: 100%;
-    justify-content: center;
-    margin-top: 10px;
 }
-
-.agregar a {
-    font-size: 30px;
-    padding: 5px 10px;
-    border: 1px solid #4B4B4B;
-    background-color: silver;
-    margin: 1px;
+.shopping_contenedorOne_box_products_product_boxOne_envio{
+    margin-top: 5px;
 }
-
-.precio {
+.shopping_contenedorOne_box_products_product_boxtwo{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+}
+.shopping_contenedorOne_box_products_product_boxtwo_cantidad{
+    border: 1px solid black;
     margin-top: 10px;
+    width: 40%;
+    height: 30px;
+    text-align: center;
+}
+.shopping_contenedorOne_box_products_product_boxtwo_cantidad p{
+    padding: 5px;
+
 }
 
-.precio p{
-    font-size: 30px;
+.shopping_contenedorOne_box_products_product_boxtwo_money_discount{
+    font-size: 10px;
+    width: 10%;
+    margin-bottom: 7px;
 }
-
-.precio a{
-    font-size: 30px;
+.shopping_contenedorOne_box_products_product_boxtwo_money_discount{
+    display: flex;
 }
-
-.fa-trash {
-    color: #4B4B4B;
+.shopping_contenedorOne_button{
+    padding: 15px;
+    border-bottom: 1px solid black;
 }
-
-.resumen h2 {
-    text-transform: uppercase;
-
-
-}
-.resumen-padre {
-    width: 87%;
-    overflow: hidden;
-}
-
-.resumen {
-    border: 1px solid #4B4B4B;
-    width: 94%;
+.shopping_contenedorTwo{
+    margin-top: 10px;
     padding: 10px;
 }
-
-.total{
+.shopping_contenedorTwo_envio{
+    padding: 0px 10px 10px 0px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-
-
+    border-bottom: 1px solid black;
 }
-
-.total h3 {
-    font-size: 25px;
-    text-transform: uppercase;
-}
-
-.total p {
-    font-size: 25px;
-    text-transform: uppercase;
-}
-
-.botones {
+.shopping_contenedorTwo_total{
     display: flex;
-    margin: 10px 0 10px;
-    
+    justify-content: space-between;
+    padding: 15px 0px;
 }
-
-.botones a {
-    margin: 0 30px 0 30px;
-    border: 1px solid #4B4B4B;
+.shopping_contenedorTwo_icono{
+    display: flex;
+}
+.shopping_contenedorTwo_button{
+    margin: 20px 0px;
+    color: wheat;
+}
+.shopping_contenedorTwo_button_elegir{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    padding: 10px 10px;
+}
+.shopping_contenedorTwo_button_continuar{
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #231F20;
+    border-radius: 6%;
+}
+.shopping_contenedorTwo_button_elegir a{
+    color: rgb(0, 110, 255);
+}
+.shopping_contenedorTwo_button_continuar a{
     color: white;
-    border-radius: 5px;
+}
+@media (min-width: 480px) {
+    .shopping{
+        padding: 20px 70px;
+    }
+    .shopping_contenedorOne_box_products_images{
+        width: 20%;
+        height: 60px;
+    }
     
-
-}
-.botones .fa-trash {
-    background-color: red;
-    color: white;
-    padding: 10px 30px;
 }
 
-.continuar {
-    background-color: blue;
-    padding: 5px 15px;
-}
 
-@media (min-width: 480px){
 
-    .padre-nuestro {
+@media (min-width:1024px){
+    .shopping{
+        padding: 20px 70px;
+        margin: 35px 75px;
+    }
+    .shopping_contenedorOne_box_products{
+        margin-top: 20px;
+        border-top: 1px solid black;
+    }
+    .shopping_contenedorOne_box_products{
         display: flex;
-        flex-direction: row;
-        width: 100%;
-        margin: 0;
-        align-items: start;
-    
-
+        justify-content: center;
     }
-
-    .resumen-padre{
+    .shopping_contenedorOne_button{
         display: flex;
-        flex-direction: column;
-        margin-top: 30px;
+        justify-content: center; 
     }
-
-    .resumen {
-        border: 1px solid #4B4B4B;
-        width: 84%;
-        padding: 10px;
+    .shopping_contenedorOne_box_products{
+        border-bottom: none;
     }
-
 }
