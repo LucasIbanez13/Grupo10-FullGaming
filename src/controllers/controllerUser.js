@@ -90,12 +90,17 @@ module.exports = {
         });
     },
     logout: (req, res) => {
-        req.session.destroy((error) => {
-            if (error) {
-                console.error('Error al cerrar sesión:', error);
-            }
+        if (!req.session.userLogin.remember) {
+            req.session.destroy((error) => {
+                if (error) {
+                    console.error('Error al cerrar sesión:', error);
+                }
+                res.clearCookie('fullgaming20');
+                res.redirect('/#');
+            });
+        } else {
             res.redirect('/#');
-        });
+        }
     }
     
 }
