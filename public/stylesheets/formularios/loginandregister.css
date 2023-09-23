@@ -8,7 +8,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 3;
 }
 
 .modal-overlay:target {
@@ -47,6 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    padding-bottom: 20px;
 }
 
 .contenedor h3 {

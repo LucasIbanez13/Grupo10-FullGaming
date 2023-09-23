@@ -8,7 +8,7 @@
                         <div class="carro-item"><a class="carritoto" href="/products/shoppingcart"><i class="fa-solid fa-cart-shopping"></i></a></div>
                         <a class="mensaje-carrito" href="/products/shoppingcart">Agregar al carrito</a>
                         <p class="home-main-articulos-p"><%= product.name %></p>
-                        <span>$<%= product.price %></span>
+                        <span>$<%= toThousand(product.price) %></span>
                         <a class="mensaje-comprar" href="/products/productDetail/<%= product.id %>"><%= product.message %></a>
                     </a>
                 </div>

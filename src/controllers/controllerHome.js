@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 const rutadata = path.join(__dirname, "../data");
 const archivos = fs.readdirSync(rutadata);
@@ -37,7 +39,8 @@ module.exports = {
         return res.render('home',{
             products,
             marcas,
-            categories
+            categories,
+            toThousand
     
             
         })
@@ -53,7 +56,8 @@ module.exports = {
             
                 return res.render("results",{
                 results,
-                keywords
+                keywords,
+                toThousand
         })
     }
     
