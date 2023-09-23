@@ -5,22 +5,38 @@
 
 <body>
     <%- include("partials/header") %>
+    
+    <%- include("partials/header-nav") %>
 			
 
-<h1>Resultado de la busqueda : <%= keywords %></h1>
 
+<section>
+    <h2><%= keywords %></h2>
+
+   
+
+<article class="filtrado-search">
+<div><h2>HOME filtrado</h2></div>
+
+<div class="dentro-search">
 <% if (results.length) { %>
 
     <% results.forEach(product => { %>
-        <div>
+        
             <%- include('partials/productfilter', {
                 product
             }) %>
-        </div>
+        
     <% }) %>
+
+</div>
 <% } else { %>
+
+
     <h2>no se encontraron resultados</h2>
 <% } %>
+</article>
+</section>
 
 
 
