@@ -3,7 +3,7 @@
     "id": "a74e1e55-5755-4b6a-8bda-b54b971a306f",
     "category": "procesador",
     "image": "1695311148467_products_.jpg",
-    "name": "microprocesador pc amd Ryzen 5 4600g 8mb 3.7ghz Socket Am4 100-100000147box 6 Nucleos 12 Hilos",
+    "name": "microprocesador pc amd Ryzen 5 4600g 8mb 3.7ghz Socket Am4 6 Nucleos 12 Hilos",
     "brand": "amd",
     "model": "Amd Ryzen 5 4600g",
     "stock": "si",
@@ -71,7 +71,7 @@
     "id": "ad1c8412-9269-4e52-ac20-e136bebafeec",
     "category": "video",
     "image": "1695312087652_products_.jpg",
-    "name": "placa de video nvidia asus dual geForce GTX 16 series GTX 1660 SUPER DUAL-GTX1660S-O6G-EVO OC Edition 6GB",
+    "name": "placa de video nvidia asus dual geForce GTX 16 series GTX 1660 SUPER DUAL OC Edition 6GB",
     "brand": "razer",
     "model": " GTX 1660 SUPER",
     "stock": "si",
@@ -99,6 +99,23 @@
     "cards": "visa",
     "shipment": "si",
     "location": "interior",
+    "message": "Comprar ahora"
+  },
+  {
+    "id": "709a492a-d4e3-450d-b0f3-ac86bc30ad14",
+    "category": "pc",
+    "image": "1695574911693_products_.jpg",
+    "name": "notebook asus",
+    "brand": "aorus",
+    "model": "ASUS ROG ZEPHYRUS G15 ",
+    "stock": "si",
+    "description": "bueno este es un monitor asus",
+    "price": 0,
+    "discount": 0,
+    "amountDues": "1",
+    "cards": "visa",
+    "shipment": "no",
+    "location": "caba",
     "message": "Comprar ahora"
   }
 ]

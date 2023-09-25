@@ -85,6 +85,7 @@ main aside {
 }
 
 
+
 /*PRODUCTOS DESTACADOS*/
 
 main section h2 {
@@ -106,6 +107,7 @@ main section h2 {
     background-color: #ffffff;
     width: 100%;
     display: flex;
+    
     flex-direction: column;
     text-align: center;
     border-radius: 15px;
@@ -196,6 +198,7 @@ main section h2 {
     color: black;
     text-transform: uppercase;
     font-size: 15px;
+    height: 55px;
     margin-bottom: 17px;
     margin-top: 10px;
     padding: 15px;
@@ -403,9 +406,9 @@ main section h2 {
 
 
     .carrusel {
-        grid-template-columns: repeat(6, 5fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: 180px;
-        gap: 50px;
+        gap: 30px;
         
     }
 
