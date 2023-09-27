@@ -170,5 +170,25 @@
     "postalcode": "",
     "provinces": "",
     "location": ""
+  },
+  {
+    "id": "4b3f80b2-d9b4-4a5c-bcbc-2aa816cda869",
+    "email": "pabloealcaraz@gmail.com",
+    "pass": "$2a$10$lTlw4XQCKSIfnJVceyWF4OulrP8yaqGpvpqJFDLL0DI4enKmCNQHi",
+    "rol": "admin",
+    "image": "",
+    "name": "",
+    "surname": "",
+    "phone": "",
+    "dni": "",
+    "lookfor": "",
+    "street": "",
+    "height": "",
+    "floor": "",
+    "departament": "",
+    "references": "",
+    "postalcode": "",
+    "provinces": "",
+    "location": ""
   }
 ]
