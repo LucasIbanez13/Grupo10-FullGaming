@@ -1,6 +1,9 @@
 .body_box{
     background-color: #EDEDED;
 }
+.detail_main{
+    font-family: 'Montserrat', sans-serif;
+}
 .detail_main_contents_content {
     background-color: white;
 }
@@ -39,7 +42,8 @@
     padding: 30px 15px;
 }
 .detail_main_contents_content_boxOne_product_nombre_titulo h4{
-    font-size: 30px;
+    font-size: 28px;
+    text-transform: uppercase;
 }
 .detail_main_contents_content_boxOne_product_precio{
     margin: 20px 0;
@@ -133,14 +137,16 @@
     .detail_main_contents_content_boxOne_images_una{
         margin: 20px auto;
     }
-    .detail_main_contents_content_boxOne_product{
+    .detail_main_contents_content_boxOne_product {
+        border-radius: 5% 0 0 5%;
         width: 45%;
-        border: 2px black solid;
+        box-shadow: 0 0 10px rgba(102, 101, 101, 0.712);
     }
 
     .detail_main_contents_content_boxOne_product_comprar{
         width: 100px;
     }
+  
 
 }
 
@@ -155,6 +161,7 @@
         flex-direction: column;
         padding: 10px;
         border-right: 1px solid black;
+        
     }
     .detail_main_contents_content_boxOne_images_una img{
         width: 100%;
