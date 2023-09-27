@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 const Product = require('../data/Products');
 const productsFilePath = path.join(__dirname, '../data/items.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const {userRead}= require("./controllerHome")
+
 
 
 
@@ -16,10 +16,13 @@ module.exports = {
     productDetail : (req,res) => {
         const id = req.params.id
         const product = products.find(product => product.id === id)
+        
         return res.render('productDetail',{
             ...product,
             products,
-            toThousand
+            toThousand,
+            
+            
         })
     },
 
