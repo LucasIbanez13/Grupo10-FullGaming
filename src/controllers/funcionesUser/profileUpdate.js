@@ -5,16 +5,15 @@ const usersFilePath = path.join(__dirname, '../../data/user.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
+
 module.exports = {
     profileUpdate: (req, res) => {
         const profileId = req.params.id;
-        const profile = users.find(profile => profile.id == profileId)
-        
         users.forEach(profile => {
-
+            
             if (profile.id == profileId) {
 
-                profile.image = req.body.image,
+                profile.image = req.file ? req.file.filename : 'auricular.png';
                 profile.name = req.body.name,
                 profile.surname = req.body.surname,
                 profile.phone = req.body.phone,

@@ -85,7 +85,7 @@ module.exports = {
         if (!profile) {
             return res.status(404).send('Perfil no encontrado');
         }
-            res.render('profile', {
+            return res.render('profile', {
             profile: profile
         });
     },

@@ -8,14 +8,14 @@
             <div class="profile">
                 <div class="profile_box">
                     <%- include("partials/profileInit") %> 
-                    <form class="profile_box_form" action="" method="POST" enctype="multipart/profile">
+                    <form class="profile_box_form" action="" method="POST" enctype="multipart/form-data">
                                 <div class="profile_box_form_boxOne">
                                     <div>
                                         <h2>Mis datos</h2>
                                     </div>
                                     <div class="profile_box_form_boxOne_image">
                                         <label for="image" class="form-label">Imagen de perfil</label>
-                                        <input class="form-control" type="file" id="image" name="image" value="">
+                                        <input class="form-control" type="file" id="image" name="image" value="<%= profile.image %>">
                                     </div>
                                     <div class="profile_box_form_boxOne_name">
                                         <label for="name" class="form-label">Nombre</label>
