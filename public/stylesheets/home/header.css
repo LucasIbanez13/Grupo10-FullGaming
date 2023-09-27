@@ -1,5 +1,4 @@
 /*header movil*/
-
 .nav-bar {
     position: fixed;
     bottom: 0;
@@ -43,119 +42,170 @@
 
 .home-nav-header{
     display: none;
+    font-family:'Josefin Sans', sans-serif;
 }
 
 .home-header{
     background-color: #231F20;
-    background-size: cover;
-    background-position: center ;
+    background-image: linear-gradient(to bottom, rgba(169, 169, 169, 0), rgba(169, 169, 169, 1));
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: bottom;
     width: 100%;
+    height: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    font-family:'Josefin Sans', sans-serif;
 }
-.home-header-logo{
-    display: flex;
-    justify-content:center;
-    text-align: center;
-    width: 100%;
-}
-.loguito {
-    width: 10%;
-}
-
 .home-header-superior {
     display: none;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 4px;
-    padding-bottom: 10px;
-
 }
-
-
-.fonta {
-    font-size: 100%;
+.loguito img {
+    
+width: 48px;
 }
+.loguito:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
 
-.fonta a {
-    margin-right: 15px;
-}
-
-.fonta .fa-bell {
-    color: white;
-}
-
-.fonta .fa-user {
-    color: #ffffff;
-}
-
-.fonta span {
-    color: #ffffff;
-}
-
-.fonta .fa-cart-shopping {
-    color: #ffffff;
-}
-
-
-.home-header-buscador {
+  .home-header-buscador {
     display: flex;
     position: relative;
-    width: 76%;
+    width: 47%;
     justify-content: center;
+    margin-top: -12px;
+    margin-left: 103px;
 }
 
 .home-header-buscador input[type="text"] {
-    width: 70%;
-    font-size: 20px;
-    padding: 6px 20px;
-    border: none;
+    display: block;
+    color: rgb(34, 34, 34);
+    background: linear-gradient(142.99deg, rgba(217, 217, 217, 0.63) 15.53%, rgba(243, 243, 243, 0.63) 88.19%);
+    box-shadow: 0px 0px 7px 0px #250180;
+    border-color: rgba(39, 0, 131, 0.548);
     border-radius: 50px;
-
+    block-size: 20px;
+    margin: 0 auto;
+    outline: none;
+    text-align: center;
+    width: 299px;
+    transition: 0.5s;
 }
+.home-header-buscador input[type="text"]:hover {
+    width: 440px;
+  }
+
+.home-header-buscador input[type="text"]:focus {
+    width: 280px;
+  }  
+.fonta {
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+    margin: 0 10px 15px 0;
+}
+
+.fonta .fa-regular {
+    color: gray;
+    margin: 10px;
+}
+.fonta .fa-regular:hover{
+    color: #250180;
+}
+
+.fonta .fa-user {
+    color: gray;
+    margin: 10px;
+}
+
+.fonta span {
+    color: gray;
+    margin: 4px;
+    font-weight: 500;
+}
+.open-modal-button span {
+    display: none;
+}
+
+.open-modal-button:hover i.fa-user {
+    color: rgb(20, 0, 94);
+}
+
+.open-modal-button:hover span {
+    display: inline;
+}
+
+.fonta .fa-cart-shopping {
+    color: gray;
+    margin: 10px;
+}
+.fonta .fa-cart-shopping:hover {
+    color: rgb(20, 0, 94);
+}
+
 
 /* iconos login*/
 .user-avatar {
     display: inline-block;
-    width: 35px;
-    height: 20px;
-    margin-right: 9px;
-    vertical-align: middle
   }
+
   
   /* Estilo para el círculo (solo cuando hay una imagen) */
   .user-avatar img {
-    width: 100%;
-    height: auto;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
+    margin: -12px 0 0 -12px;
   }
   
-  /* Estilo para el nombre de usuario */
-  .user-name {
-    vertical-align: middle;
-  }
 
 /*navegacion*/
 .home-nav-header {
     background-color: #231F20;
-    background-size: cover;
-    background-position: center;
-    padding: 16px 10px 10px;
-    box-shadow: 0 -1px 10px rgba(255, 255, 255, 0.5);
-   
+    padding: 7px 0;
 }
 
 .home-nav-header ul {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    padding: 0 30px 0 30px;
+    flex-wrap: nowrap;
 }
 
 .home-nav-header ul li a {
     font-size: 15px;
     color: #ffffff;
+    text-wrap: nowrap;
 }
 
+
+.home-nav-header li {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-nav-header li a {
+    text-decoration: none;
+    color: #250180;
+}
+
+.home-nav-header li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(37, 1, 128, 0.5);
+}
+
+
  @media (min-width: 480px){
+    .loguito img {
+        width: 41px;
+    }
 
     .nav-bar {
 
@@ -165,14 +215,25 @@
     .home-header-superior {
         display: flex;
     }
-
+    .home-nav-header ul {
+        
+justify-content: space-evenly;
+        
+text-transform: none;
+    }
     .home-nav-header ul li a {
-        font-size: 8px;
+        font-size: 12px;
         color: #ffffff;
+        text-wrap: nowrap;
+    }
+    .home-nav-header li {
+        
+margin: 0px 0px;
     }
 
     .home-header {
         display: grid;
+        
     }
     
     .home-nav-header{
@@ -181,7 +242,7 @@
 
     .home-header-logo{
        
-        width: 100%;
+width: 100%;
     }
     
     .loguito{
@@ -189,12 +250,8 @@
         width: 7%;
     }
 
-    .fonta {
-        font-size: 92%;
-    }
-
     .fonta a {
-        margin-right: 2px;
+        /* margin-right: 2px; */
     }
 
     
@@ -202,22 +259,28 @@
 
  @media (min-width: 1200px){
 
+    .home-header-superior {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+}
+
+
     .home-nav-header ul li a {
         font-size: 15px;
         color: #ffffff;
-    }
-
-    .home-header-logo{
-       
-        width: 90%;
+        text-transform: uppercase;
     }
     
-    .loguito{
-       
-        width: 5%;
+    .loguito img {
+        width: 48px;
+        margin-left: 4px;
     }
 
     .fonta a {
-        margin-right: 15px;
+        margin: 0 14px;
     }
  }

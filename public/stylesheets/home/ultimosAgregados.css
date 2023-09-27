@@ -1,0 +1,22 @@
+/* Estilos para el contenedor principal del carrusel */
+.swiper-container3 {
+    /* Ajusta el ancho del contenedor para mostrar solo un elemento a la vez */
+    width: 300px; /* Ajusta el ancho deseado */
+    overflow: hidden; /* Oculta elementos que no caben en el contenedor */
+}
+
+/* Estilos para las diapositivas del carrusel */
+.swiper-slide3 {
+    /* Define un ancho fijo para cada diapositiva */
+    width: 100%; /* Ocupará todo el ancho del contenedor */
+    display: flex; /* Usa flexbox para alinear elementos en línea */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilos para los botones de navegación del carrusel */
+.swiper-button-prev3,
+.swiper-button-next3 {
+    display: block; /* Muestra los botones de navegación */
+    margin-top: 10px; /* Espacio superior (ajusta según tus necesidades) */
+}

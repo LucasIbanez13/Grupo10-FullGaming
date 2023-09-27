@@ -1,16 +1,20 @@
+<div class="padre-articulos">
+    <% let count = 0; %>
+    <% products.forEach(product => { %>
+        <% if (count < 8) { %>
+            <div class="home-main-articulos">
+                <a class="home-main-articulos-a" href="/products/productDetail/<%= product.id %>">
+                    <img src="/img/<%= product.image %>" alt="">
+                    <div class="envio"> <p class="envio-p">envío gratis</p></div>
+                    <div class="carro-item"><a class="carritoto" href="/products/shoppingcart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                    <a class="mensaje-carrito" href="/products/shoppingcart">Agregar al carrito</a>
+                    <p class="home-main-articulos-p"><%= product.name %></p>
+                    <span>$<%= toThousand(product.price) %></span>
+                    <a class="mensaje-comprar" href="/products/productDetail/<%= product.id %>"><%= product.message %></a>
+                </a>
+            </div>
+            <% count++; %>
+        <% } %>
+    <% }) %>
+</div>
 
-    <div class="padre-articulos">
-        <% products.forEach(product => { %>
-                <div class="home-main-articulos">
-                    <a class="home-main-articulos-a" href="/products/productDetail/<%= product.id%>">
-                        <img src="/img/<%= product.image %>" alt="">
-                        <div class="envio"> <p class="envio-p">envio gratis</p></div>
-                        <div class="carro-item"><a class="carritoto" href="/products/shoppingcart"><i class="fa-solid fa-cart-shopping"></i></a></div>
-                        <a class="mensaje-carrito" href="/products/shoppingcart">Agregar al carrito</a>
-                        <p class="home-main-articulos-p"><%= product.name %></p>
-                        <span>$<%= toThousand(product.price) %></span>
-                        <a class="mensaje-comprar" href="/products/productDetail/<%= product.id %>"><%= product.message %></a>
-                    </a>
-                </div>
-        <% }) %>
-    </div>
