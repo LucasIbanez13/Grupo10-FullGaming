@@ -1,8 +1,5 @@
 [
-  {
-    "email": "sadffs@2ffv.com",
-    "rol": "user"
-  },
+  { "email": "sadffs@2ffv.com", "rol": "user" },
   {
     "id": "1601ac5f-deb5-4033-b4bf-77756700e65c",
     "name": "juan gabriel vega",
@@ -94,7 +91,7 @@
     "pass": "$2a$10$dMDoDsb9v//2be/qTBtfXeJ2y.kukqvUcv9Wo25aY8xRX28YdpGzK",
     "rol": "admin",
     "image": "fondo.png",
-    "name": "gabito",
+    "name": "Juan",
     "surname": "vega",
     "phone": "",
     "dni": "",
@@ -189,6 +186,26 @@
     "references": "",
     "postalcode": "",
     "provinces": "",
-    "location": ""
+    "location": ""},
+    {
+    "id": "3791ec09-6314-45ef-9636-f8f5acce3f0a",
+    "email": "sotelo-g@live.com.ar",
+    "pass": "$2a$10$7sv3eQAMpCnkAbksxpo0N.OKxqTPsuycEy8CtVOPSoGavkzGz6vj2",
+    "rol": "admin",
+    "image": "",
+    "name": "Gonzalo",
+    "surname": "sotelo",
+    "phone": "1160013670",
+    "dni": "37674659",
+    "lookfor": "",
+    "street": "llorente",
+    "height": "6870",
+    "floor": "",
+    "departament": "",
+    "references": "",
+    "postalcode": "1759",
+    "provinces": "buenosAires",
+    "location": "mouse",
+    "department": ""
   }
 ]
