@@ -42,6 +42,12 @@ main aside {
     cursor: pointer;
 }
 
+
+.main-contenido {
+    
+}
+
+
 /*CARRUSEL MARCAS*/
 
 .padre-marcas h2 {
@@ -248,7 +254,8 @@ main section h2 {
 .banner-2 img {
     width: 100%;
     filter: brightness(50%);
-    height: auto;
+    height: 700px;
+    margin-bottom: 20px;
 }
 
 .contenido {
@@ -414,7 +421,7 @@ main section h2 {
 
     .home {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
       }
       
     .home aside {
