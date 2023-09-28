@@ -51,38 +51,33 @@ module.exports = {
     },
      update: (req, res) => {
         const productId = req.params.id;
-        products.forEach(product => {
-
+        products.forEach(product => { 
             if (product.id == productId) {
-                // Actualizar las propiedades del producto
-                product.name = req.body.name,
                 product.category = req.body.category,
-                product.marca = req.body.marca,
-                product.estado = req.body.estado,
+                product.image = req.file ? req.file.filename : 'auricular.png';
+                product.name = req.body.name,
+                product.brand = req.body.brand,
+                product.model = req.body.model,
+                product.stock = req.body.stock,
                 product.description = req.body.description,
                 product.price = req.body.price,
-                product.discount =req.body. discount
-        
-                // Escribir los productos actualizados en el archivo JSON si es necesario
+                product.discount =req.body. discount,
+                product.amountDues = req.body.amountDues,
+                product.cards = req.body.cards,
+                product.shipment = req.body.shipment,
+                product.location = req.body.location
             }
 
         });
         fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
-    
-        // Redirigir al usuario después de la actualización
         res.redirect('/users/admin');
     },
 
     productEdit : (req,res) => {
-        const user = userRead.find(user => user.rol);          
-            const {rol} = user;
-
-            req.session.userLogin = {
-                rol,
-            }
-        const product = products.find(product => product.id === req.params.id )
+        const productId = req.params.id;
+        const product = products.find(product => product.id === productId )
         return res.render('productEdit', {
-            ...product
+            product
         } )
     },
 
