@@ -102,23 +102,6 @@
     "message": "Comprar ahora"
   },
   {
-    "id": "709a492a-d4e3-450d-b0f3-ac86bc30ad14",
-    "category": "pc",
-    "image": "1695574911693_products_.jpg",
-    "name": "notebook asus",
-    "brand": "aorus",
-    "model": "ASUS ROG ZEPHYRUS G15 ",
-    "stock": "si",
-    "description": "bueno este es un monitor asus",
-    "price": 0,
-    "discount": 0,
-    "amountDues": "1",
-    "cards": "visa",
-    "shipment": "no",
-    "location": "caba",
-    "message": "Comprar ahora"
-  },
-  {
     "id": "758eb366-6233-43f4-a9fd-2bc28f2544ba",
     "category": "teclado",
     "image": "1695744242438_products_.webp",

@@ -3,13 +3,11 @@
     position: fixed;
     bottom: 0;
     left: 50%;
-    width: 80%;
+    width: 83%;
     transform: translateX(-50%);
-    background-image: url(/img/fondo.png);
-    background-size: cover;
-    background-position: center ;
+    background-color: #231F20;
     color: #fff;
-    padding: 10px;
+    padding: 10px 7px 2px 7px;
     display: flex;
     justify-content: space-around;
     z-index: 1;
@@ -19,7 +17,7 @@
 
 .nav-bar a {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .nav-bar a img {
@@ -151,15 +149,17 @@
 /* iconos login*/
 .user-avatar {
     display: inline-block;
+    overflow: hidden;
+    width: 40px;
   }
 
   
   /* Estilo para el círculo (solo cuando hay una imagen) */
   .user-avatar img {
-    width: 35px;
-    height: 35px;
+    
+    height: 28px;
     border-radius: 50%;
-    margin: -12px 0 0 -12px;
+    
   }
   
 
@@ -216,9 +216,9 @@
     }
     .home-nav-header ul {
         
-justify-content: space-evenly;
+        justify-content: space-evenly;
         
-text-transform: none;
+        text-transform: none;
     }
     .home-nav-header ul li a {
         font-size: 12px;
@@ -227,7 +227,7 @@ text-transform: none;
     }
     .home-nav-header li {
         
-margin: 0px 0px;
+        margin: 0px 0px;
     }
 
     .home-header {
@@ -241,7 +241,7 @@ margin: 0px 0px;
 
     .home-header-logo{
        
-width: 100%;
+        width: 100%;
     }
     
     .loguito{
@@ -253,8 +253,19 @@ width: 100%;
         /* margin-right: 2px; */
     }
 
-    
+    .user-avatar {
+        
+        width: 50px;
+      }
+
+    .open-modal-button-login{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
  }
+
+ 
 
  @media (min-width: 1200px){
 
