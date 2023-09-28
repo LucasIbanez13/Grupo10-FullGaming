@@ -30,6 +30,12 @@
     width: 70px;
     text-align: top;
 }
+.logo-nav img{
+    position: relative;
+    height: 50px;
+    left: 10px;
+    bottom: 15px;
+}
 
 
 

@@ -156,4 +156,7 @@
     .footer_boxThree_icons{
         top: -20px;
     }
+    .footer_img img{
+        width: 150px;
+    }
  }
