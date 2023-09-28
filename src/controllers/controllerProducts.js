@@ -55,7 +55,7 @@ module.exports = {
         products.forEach(product => { 
             if (product.id == productId) {
                 product.category = req.body.category,
-                product.image = req.file ? req.file.filename : 'auricular.png';
+                product.image = req.file ? req.file.filename : null;
                 product.name = req.body.name,
                 product.brand = req.body.brand,
                 product.model = req.body.model,
