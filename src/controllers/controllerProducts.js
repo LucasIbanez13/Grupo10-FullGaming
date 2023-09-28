@@ -5,6 +5,7 @@ const Product = require('../data/Products');
 const productsFilePath = path.join(__dirname, '../data/items.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const{userRead}= require("./controllerHome")
 
 
 

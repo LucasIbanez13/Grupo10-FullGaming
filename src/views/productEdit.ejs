@@ -12,6 +12,7 @@
     <%- include("partials/register", {view:`/productDetail/${product.id}/#register`}) %>
 <main class="create__main">
     <h1  class="create__main--title">Editar productos</h1>
+<<<<<<< HEAD
     <div class="container col-md-8 my-5 text-center" >
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="row" >
@@ -33,6 +34,41 @@
                         <option value="video">Placa de video</option>
                         <option value="audio">Placa de audio</option>
                     </select>
+=======
+    <section class="create__main__section__creacion">
+        <h2 class="create__main__section__creacion--title">Producto</h2>
+        <form class="create__main__section__creacion__form" action="/products/productEdit/<%= id %>?_method=put" method="POST" enctype="multipart/form-data">
+        <div class="create__main__section__creacion__contiene">
+            <div class="create__main__section__creacion__form__categoria">
+                <label for="category">Seleccione Categoria</label>
+                <select class="create__main__section__creacion__form__categoria__items" name="category">
+                    <option value="mouse">Mouse</option>
+                    <option value="pc">Pc</option>
+                    <option value="teclado">Teclado</option>
+                    <option value="auriculares">Auriculares</option>
+                    <option value="microfonos">Microfonos</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="gabinete">Gabinete</option>
+                    <option value="madre">Placa Madre</option>
+                    <option value="procesador">Procesador</option>
+                    <option value="ram">Ram</option>
+                    <option value="coolers">Coolers</option>
+                    <option value="almacenamiento">Almacenamiento</option>
+                    <option value="video">Placa de video</option>
+                    <option value="audio">Placa de audio</option>
+                </select>
+            </div>
+        </div>
+        <div class="create__main__section__creacion__form__product">
+            <div class="create__main__section__creacion__form__product__name">
+                <label for="name">Nombre del producto</label>
+                <input type="text" id="name" name="name" value="<%= name %>">
+            </div>
+            <div class="create__main__section__creacion__form__product__products">
+                <div class="create__main__section__creacion__form__product__products__marca">
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" name="marca" value="<%= brand %>">
+>>>>>>> ae00fa447edcba3fe493d9c067eeac2edaba8d86
                 </div>
                 <div class="col-md-6">
                     <label for="image" class="form-label">Agregar imagen</label>
