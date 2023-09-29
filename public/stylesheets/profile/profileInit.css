@@ -21,7 +21,7 @@
 }
 .profileInit_contenedor_image img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 .profileInit_contenedor_email{
     margin-top: 10px;

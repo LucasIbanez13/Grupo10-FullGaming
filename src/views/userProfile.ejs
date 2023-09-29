@@ -1,0 +1,90 @@
+.admin-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.nombre-admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 5px;
+    margin: 10px 0 20px 8px;
+
+}
+
+
+
+
+.elementos-admin-padre{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.admin-main-box {
+    display: flex;
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    justify-content: space-between;
+    align-items: flex-start; /* Alineación vertical en la parte superior */
+    gap: 5px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.admin-main-box > div {
+    flex-basis: 20%; /* Ancho del elemento (20% del ancho total) */
+    text-align: center; /* Centrar el contenido horizontalmente */
+}
+
+.name-admin {
+    flex-basis: 40%; /* Ancho del elemento de nombre */
+    overflow: hidden;
+}
+
+.imagen-admin {
+    display: none;
+}
+
+.admin-main-box-boxDos-section {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; /* Alineación vertical en el centro */
+    gap: 5px;
+}
+
+.admin-main-box-boxDos-section a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+}
+
+.action-icon {
+    margin-right: 2px; /* Espacio entre los íconos */
+}
+
+  
+.action-link {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+}
+  
+.action-icon {
+    font-size: 18px;
+}
+
+.fa-plus {
+    color: green;
+}
+
+.fa-pen-to-square {
+    color: blue;
+}
+
+.fa-trash-can {
+    color: red;
+}

@@ -110,7 +110,7 @@
     display: flex;
     width: 250px;
     font-size: 15px;
-    margin: 0 10px 15px 0;
+    margin: 10px 10px 15px 0;
 }
 
 .fonta .fa-regular {
@@ -164,6 +164,7 @@
   .user-avatar img {
     
     height: 28px;
+    width: 40px;
     border-radius: 50%;
     
   }
@@ -186,6 +187,7 @@
     font-size: 15px;
     color: #ffffff;
     text-wrap: nowrap;
+    font-weight: 400;
 }
 
 

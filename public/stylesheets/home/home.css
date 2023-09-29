@@ -259,7 +259,7 @@ main section h2 {
 .banner-2 img {
     width: 100%;
     filter: brightness(50%);
-    height: 700px;
+    height: 500px;
     margin-bottom: 20px;
 }
 
@@ -381,6 +381,12 @@ border-radius:  0 10px 10px 10px;
     .carrusel {
         grid-template-columns: repeat(9, 2fr);
         grid-auto-rows: 180px;
+        
+    }
+
+    .banner-2 img {
+        
+        height: 700px;
         
     }
 }

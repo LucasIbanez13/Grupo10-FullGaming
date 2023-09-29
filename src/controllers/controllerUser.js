@@ -4,6 +4,8 @@ const{products, userRead}= require("./controllerHome")
 const {validationResult} =require("express-validator");
 const user = require("../data/user");
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 module.exports = {
     register : (req,res) => {
         return res.render('partials/register')
@@ -74,6 +76,7 @@ module.exports = {
         const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data", "items.json"), "utf-8"));
         return res.render("admin",{
             products,
+            toThousand
         })
     },
     nose : (req,res) => {
