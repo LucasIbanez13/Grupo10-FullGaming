@@ -1,180 +1,43 @@
-.edit__main{
-    margin: 30px 20px;
-}
-.edit__main--title{
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.edit_mainsection_creacion--title{
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.edit_mainsection_precio--title{
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.edit_mainsection_envio--title{
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.edit_mainsection_creacion{
-    border-bottom: 2px solid gray;
-    padding-bottom: 30px;
-}
-.edit_mainsectioncreacionform_categoria{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-.edit_mainsectioncreacionformproduct_name{
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-}
-.edit_mainsectioncreacionformproduct_products{
-    margin: 20px 0;
-}
-.edit_mainsectioncreacionformproductproducts_marca{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-}
-.edit_mainsectioncreacionformproductproducts_modelo{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-}
-.edit_mainsectioncreacionformproductproducts_estado{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-}
-.edit_mainsectioncreacionformproduct_description{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.edit_mainsectioncreacionformproduct_description input {
-    height: 150px;
-    width: 90%;
-}
-precio/
-.edit_mainsection_precio{
-    border-bottom: 2px solid gray;
-    padding-bottom: 30px;
-}
-.edit_mainsectionprecioformulario_money{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.edit_mainsectionprecioformulario_contado{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.edit_mainsectionprecioformulario_descuento{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.edit_mainsectionprecioformulario_cuotas{
-    margin: 20px 0;
-}
-.edit_mainsectionprecioformulario_cantidad{
-    margin: 20px 0;
-}
-Envio/
-.edit_mainsectionenvioformu_donde{
-    margin: 20px 0;
-}
-.edit_main_button{
-    display: flex;
-    justify-content: right;
-}
-.edit_mainbutton_cancelar{
-    margin: 10px 5px;
-    background-image: url("/img/fondo.png");
-    background-position: center;
+.create__body{
+    background-image: url('/img/fondito.jpg');
+    background-repeat: no-repeat ;
     background-size: cover;
-    border: 1px black solid;
-    border-radius: 8%;
-    width: 20%;
-    text-align: center;
-    padding: 10px;
+    font-family: 'Mooli', sans-serif;
+
 }
-.edit_mainbutton_guardar{
-    margin: 10px 5px;
-    background-image: url("/img/fondo.png");
-    background-position: center;
-    background-size: cover;
-    border: 1px black solid;
-    border-radius: 8%;
-    width: 20%;
-    text-align: center;
-    padding: 10px;
-}
-.edit_mainbutton_editar{
-    margin: 10px 5px;
-    background-image: url("/img/fondo.png");
-    background-position: center;
-    background-size: cover;
-    border: 1px black solid;
-    border-radius: 8%;
-    width: 20%;
-    text-align: center;
-    padding: 10px;
-}
-.edit__main a{
-    color: white;
-}
-.edit__main input{
-    border: none;
-    margin: 5px 0;
-    padding: 7px;
-    border-bottom: 1px solid gray;
-}
-.edit__main__section__creacion__form__images input{
-    border: none;
+.create__main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-@media(min-width: 480px) {
-    .edit_mainsectioncreacionform_categoria{
-        display: flex;
-        justify-content: flex-start;
-        margin: 20px 0;
-    }
-    .edit_mainsectioncreacionform_categoria select{
-        margin: 0 10px;
-    }
-    .edit_mainsectioncreacionformproductproducts_estado{
-        width: 20%;
-    }
+.create__main form {
+    background-color: #fff;
+    padding: 25px;
+    width: 100%;
+    margin: 7% 0;
+    border-radius: 0 30px 30px 30px;
 }
-@media(min-width: 1023px) {
-    .edit_mainsectioncreacionformproduct_products{
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-    }
-    .edit_mainsectioncreacionformproductproducts_estado label{
-        padding: 0 69px;
-    }
-    .edit_mainsectioncreacionformproduct_description{
-        text-align: center;
-    }
-    .edit_mainsectioncreacionformproduct_description input{
-        margin: 10px auto;
-        width: 80%;
-        height: 300px;
-    }
-    .edit_mainsection_precio--title{
-        text-align: center;
-    }
-    .edit_mainsectionprecio_formulario--box{
-        display: flex;
-        justify-content: space-around;
-    }
+.create__main--title{
+    margin: 24px 6px -14px 0;
+    font-family: 'FontAwesome';
+    color: #ffffff;
+    letter-spacing: 10px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px;
+}
+
+
+.create__main form:hover {
+    border: solid 4px blue
+}
+
+@media (min-width: 480px) {
+    .create__main form {width: 90%;}
+}
+
+@media (min-width: 1200px) {
+    .create__main form {width: 83%;}
 }
