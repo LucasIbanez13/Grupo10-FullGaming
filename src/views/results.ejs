@@ -18,7 +18,8 @@
 <article class="filtrado-search">
     <div class="section-filtrado">
         <h2>Filtrado Avanzado</h2>
-        <div class="filter-menu">
+        <button id="mostrarFiltro" >Desplegar Filtro</button> 
+        <div class="filter-menu" id="filtro">
             <!-- Botones para filtrar -->
             <h3>Precio</h3>
             <p>Hasta $85.000</p>
@@ -77,6 +78,16 @@
 
 
 	<%- include('partials/footer') %>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#mostrarFiltro").click(function() {
+            $("#filtro").slideToggle(); // Alternar la visibilidad del filtro al hacer clic en el botón
+        });
+    });
+    </script>
 </body>	
 
 
