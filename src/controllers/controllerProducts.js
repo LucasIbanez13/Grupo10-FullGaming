@@ -56,7 +56,7 @@ module.exports = {
         const productsModify = products.map(product => { 
             if (product.id === productId) {
                 product.category = category,
-                product.image = req.file ? req.file.filename : null;
+                product.image = req.file;
                 product.name = name,
                 product.brand = brand,
                 product.model = model,
