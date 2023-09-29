@@ -1,201 +1,43 @@
-.create__main{
-    margin: 30px 20px;
-}
-.create__body {
-    background-color: white;
-}
-.create__main__section__creacion__form__categoria__items{
-    padding: 10px 10px;
-}
-.create__main--title{
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 30px;
-}
-.create__main__section__creacion--title{
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.create__main__section__precio--title{
-    font-size: 18px;
-    text-transform: uppercase;
-}
-.create__main__section__envio--title{
-    font-size: 18px;
-    text-transform: uppercase;
-} 
-.create__main__section__creacion{
-    border-bottom: 2px solid gray;
-    padding-bottom: 30px;
-}
-.create__main__section__creacion__form__categoria{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-.create__main__section__creacion__form__product__name{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-.create__main__section__creacion__form__product__name input{
-    width: 90%;
-    margin: auto;
-}
-.create__main__section__creacion__form__product__products{
-    margin: 20px 0;
-}
-.create__main__section__creacion__form__product__products__marca{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-}
-.create__main__section__creacion__form__product__products__modelo{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-}
-.create__main__section__creacion__form__product__products__estado{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-}
-.create__main__section__creacion__form__product__products__estado select{
-    padding: 10px 10px;
-}
-.create__main__section__creacion__form__product__description{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.create__main__section__creacion__form__product__description input {
-    height: 150px;
-    width: 90%;
-}
-/*precio*/
-.create__main__section__precio{
-    border-bottom: 2px solid gray;
-    padding-bottom: 30px;
-}
-.create__main__section__precio__formulario__money{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.create__main__section__precio__formulario__contado{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.create__main__section__precio__formulario__descuento{
-    margin: 20px 0;
-    display: flex;
-    flex-direction: column;
-}
-.create__main__section__precio__formulario__cuotas{
-    margin: 20px 0;
-}
-.create__main__section__precio__formulario__cantidad{
-    margin: 20px 0;
-}
-/*Envio*/
-.create__main__section__envio__formu__donde{
-    margin: 20px 0;
-}
-.create__main__button{
-    display: flex;
-    justify-content: right;
-}
-.create__main__button__cancelar{
-    margin: 10px 5px;
-    background-color: red;
-    background-position: center;
+.body_add{
+    background-image: url('/img/fondito.jpg');
+    background-repeat: no-repeat ;
     background-size: cover;
-    border-radius: 5%;
-    width: 20%;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, filter 0.3s ease;
+    font-family: 'Mooli', sans-serif;
+
 }
-.create__main__button__cancelar:hover {
-    background-color: #ff5555; 
-    filter: brightness(1.2); 
+.div_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.create__main__button__guardar{
-    margin: 10px 5px;
-    background-color: blue;
-    background-position: center;
-    background-size: cover;
-    border-radius: 5%;
-    width: 20%;
-    text-align: center;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, filter 0.3s ease;
+
+.div_container form {
+    background-color: #fff;
+    padding: 25px;
+    width: 100%;
+    margin: 7% 0;
+    border-radius: 0 30px 30px 30px;
 }
-.create__main__button__guardar:hover {
-    background-color: rgb(50, 50, 252); 
-    filter: brightness(1.2); 
+.add_titulo{
+    margin: 24px 6px -14px 0;
+    font-family: 'FontAwesome';
+    color: #ffffff;
+    letter-spacing: 10px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px;
 }
-.create__main a{
-    color: white;
+
+
+.div_container form:hover {
+    border: solid 4px blue
 }
-.create__main input{
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+
+@media (min-width: 480px) {
+    .div_container form {width: 90%;}
 }
-.create__main input:hover{
-    background-color: #eeeeeeef;
-  }
-@media(min-width: 480px) {
-    .create__main__section__creacion__form__categoria{
-        display: flex;
-        justify-content: flex-start;
-        margin: 20px 0;
-    }
-    .create__main__section__creacion__form__categoria select{
-        margin: 0 10px;
-    }
-    .create__main__section__creacion__form__product__products__estado{
-        width: 20%;
-    }
-    .create__main__section__creacion__contiene {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-@media(min-width: 1023px) {
-    .create__main__section__creacion__form__product__products{
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-    }
-    .create__main__section__creacion__form__product__products__estado label{
-        padding: 0 69px;
-    }
-    .create__main__section__creacion__form__product__description{
-        text-align: center;
-    }
-    .create__main__section__creacion__form__product__description input{
-        margin: 10px auto;
-        width: 80%;
-        height: 300px;
-    }
-    .create__main__section__precio--title{
-        text-align: center;
-    }
-    .create__main__section__precio__formulario--box{
-        display: flex;
-        justify-content: space-around;
-    }
-    .create__main__section__creacion__contiene {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 60px;
-    }
+
+@media (min-width: 1200px) {
+    .div_container form {width: 83%;}
 }
