@@ -47,10 +47,11 @@ module.exports = {
     },
     
     search : (req,res) => {
-            const keywords = req.query.keywords
-            
-            const results = products.filter(item => 
-                item.name.includes(keywords))
+        const keywords = req.query.keywords.toLowerCase();
+    
+        const results = products.filter(item => 
+            item.name.toLowerCase().includes(keywords) 
+        );
                 
             
             
