@@ -52,8 +52,9 @@ module.exports = {
     },
      update: (req, res) => {
         const productId = req.params.id;
+        const productName = req.params.name
         products.forEach(product => { 
-            if (product.id == productId) {
+            if (product.id === productId) {
                 product.category = req.body.category,
                 product.image = req.file ? req.file.filename : null;
                 product.name = req.body.name,
@@ -68,9 +69,9 @@ module.exports = {
                 product.shipment = req.body.shipment,
                 product.location = req.body.location
             }
+            fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
 
         });
-        fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
         res.redirect('/users/admin');
     },
 

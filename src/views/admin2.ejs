@@ -1,64 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("partials/head") %>
 </head>
+
 <body>
 
     <%- include("partials/header") %>
-    <div class="container-fluid bg-white py-5">
-        <div class="container bg-light p-4 rounded">
-            <div class="d-flex justify-content-between align-items-center">
-                <h1>Admin Panel</h1>
-                <form class="form-inline">
-                    <div class="form-group mx-2">
-                        <input type="text" class="form-control" placeholder="Buscar producto">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Buscar</button>
-                </form>
+        <div class="container-fluid bg-white py-5">
+            <div class="container bg-light p-4 rounded">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>Admin Panel</h1>
+                    <form class="form-inline">
+                        <div class="form-group mx-2">
+                            <input type="text" class="form-control" placeholder="Buscar producto">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+                <button class="btn btn-success my-3">Agregar Producto</button>
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th class="text-right">Acciones</th> <!-- Añadido "text-right" aquí -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ejemplo de un producto -->
+                        <tr>
+                            <td>
+                                <img src="ruta_imagen1.jpg" alt="Producto 1" width="100">
+                                Nombre del Producto 1
+                            </td>
+                            <td>$19.99</td>
+                            <td class="text-right"> <!-- Añadido "text-right" aquí -->
+                                <a href="#" class="btn btn-primary">Ver</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                        <!-- Ejemplo de otro producto -->
+                        <tr>
+                            <td>
+                                <img src="ruta_imagen2.jpg" alt="Producto 2" width="100">
+                                Nombre del Producto 2
+                            </td>
+                            <td>$29.99</td>
+                            <td class="text-right"> <!-- Añadido "text-right" aquí -->
+                                <a href="#" class="btn btn-primary">Ver</a>
+                                <a href="#" class="btn btn-warning">Editar</a>
+                                <a href="#" class="btn btn-danger">Eliminar</a>
+                            </td>
+                        </tr>
+                        <!-- Puedes agregar más productos siguiendo la misma estructura -->
+                    </tbody>
+                </table>
             </div>
-            <button class="btn btn-success my-3">Agregar Producto</button>
-            <table class="table ">
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th class="text-right">Acciones</th> <!-- Añadido "text-right" aquí -->
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Ejemplo de un producto -->
-                    <tr>
-                        <td>
-                            <img src="ruta_imagen1.jpg" alt="Producto 1" width="100">
-                            Nombre del Producto 1
-                        </td>
-                        <td>$19.99</td>
-                        <td class="text-right"> <!-- Añadido "text-right" aquí -->
-                            <a href="#" class="btn btn-primary">Ver</a>
-                            <a href="#" class="btn btn-warning">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-                    <!-- Ejemplo de otro producto -->
-                    <tr>
-                        <td>
-                            <img src="ruta_imagen2.jpg" alt="Producto 2" width="100">
-                            Nombre del Producto 2
-                        </td>
-                        <td>$29.99</td>
-                        <td class="text-right"> <!-- Añadido "text-right" aquí -->
-                            <a href="#" class="btn btn-primary">Ver</a>
-                            <a href="#" class="btn btn-warning">Editar</a>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </td>
-                    </tr>
-                    <!-- Puedes agregar más productos siguiendo la misma estructura -->
-                </tbody>
-            </table>
         </div>
-    </div>
 </body>
 </body>
+
 </html>

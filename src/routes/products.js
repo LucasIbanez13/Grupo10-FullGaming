@@ -17,7 +17,7 @@ router.post('/productCreate',upload.single('image'),productUpdate)
 router.get('/productList/:category?',productList)
 router.get('/productMarc/:marca',productMarc)
 router.get('/productEdit/:id/',isAdmin,productEdit)
-router.post('/productEdit/:id/',update)
+router.put('/productEdit/:id/',update)
 router.delete("/remove/:id/",remove);
 router.get("/prueba",productprueba);
 
