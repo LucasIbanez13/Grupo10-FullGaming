@@ -52,26 +52,26 @@ module.exports = {
     },
      update: (req, res) => {
         const productId = req.params.id;
-        const productName = req.params.name
-        products.forEach(product => { 
+        const {category, name, brand, model, stock, description, price,discount, amountDues, cards, shipment, location} = req.body
+        const productsModify = products.map(product => { 
             if (product.id === productId) {
-                product.category = req.body.category,
+                product.category = category,
                 product.image = req.file ? req.file.filename : null;
-                product.name = req.body.name,
-                product.brand = req.body.brand,
-                product.model = req.body.model,
-                product.stock = req.body.stock,
-                product.description = req.body.description,
-                product.price = req.body.price,
-                product.discount =req.body. discount,
-                product.amountDues = req.body.amountDues,
-                product.cards = req.body.cards,
-                product.shipment = req.body.shipment,
-                product.location = req.body.location
+                product.name = name,
+                product.brand = brand,
+                product.model = model,
+                product.stock = stock,
+                product.description = description,
+                product.price = price,
+                product.discount = discount,
+                product.amountDues = amountDues,
+                product.cards = cards,
+                product.shipment = shipment,
+                product.location = location
             }
-            fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
-
+            return product
         });
+        fs.writeFileSync(productsFilePath, JSON.stringify(productsModify, null, 3), 'utf-8');
         res.redirect('/users/admin');
     },
 
