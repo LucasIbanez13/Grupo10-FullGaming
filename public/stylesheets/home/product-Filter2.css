@@ -1,4 +1,11 @@
 
+.search-title {
+    margin-left: 200px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 
 .filtrado-search {
     display: grid;
@@ -202,6 +209,10 @@
 
 
 @media (min-width:1200px){
+
+    .search-title {
+        margin-left: 400px;
+    }
 
     .filtrado-search {
         display: grid;

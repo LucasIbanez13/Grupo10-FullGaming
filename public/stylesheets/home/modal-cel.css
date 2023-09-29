@@ -1,0 +1,57 @@
+.modal-overlay5 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-overlay5:target {
+    display: flex
+    ;
+}
+
+.modal5 {
+    background-color: #fff;
+    padding: 10px 10px 0 0;
+    width: 800px;
+    position: relative;
+    top: 207px;
+    left: 49.5%;
+    transform: translate(-50%, -30%);
+    overflow: hidden;
+}
+
+.modal-cel-padre {
+    display: grid;
+    grid-template-columns: 30% 1fr; /* El primer div ocupa el 30%, el segundo el espacio restante */
+    grid-gap: 0; /* Elimina cualquier espacio entre las columnas */
+}
+  
+.categorias-cel{ 
+    background-color: #F1F1F1; /* Puedes agregar estilos según tus necesidades */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede el alto */   
+}
+
+.categorias-cel-hijo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Comienza desde la parte superior */
+    align-items: center;
+    max-height: 100%; /* Limita la altura máxima del carrusel */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede la altura máxima */
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.categorias-cel-hijo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

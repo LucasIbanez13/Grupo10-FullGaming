@@ -37,6 +37,7 @@ module.exports = {
         return res.render('partials/login')
     },
 
+    
     processLogin: (req,res) => {
         const errors = validationResult(req);
         const {viewError2} = req.query

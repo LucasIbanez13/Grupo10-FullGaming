@@ -11,9 +11,9 @@
 
 
 <section>
-    <h2><%= keywords %></h2>
+    <div class="search-title"><h2>Resultado de la busqueda : <%= keywords %></h2></div>
 
-   
+    
 
 <article class="filtrado-search">
     <div class="section-filtrado">
@@ -51,8 +51,9 @@
 
 
     </div>
-
+    
 <div class="dentro-search">
+    
 <% if (results.length) { %>
 
     <% results.forEach(product => { %>
