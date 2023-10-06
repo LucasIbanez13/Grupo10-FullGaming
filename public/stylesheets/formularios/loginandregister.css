@@ -65,6 +65,9 @@
     width: 90%;
     padding: 10px;
 }
+.input-style:focus {
+    box-shadow: 0 0 10px rgba(19, 0, 66, 0.5); 
+}
 .input-padre input {
     padding: 10px;
     border-radius: 5px;
@@ -74,8 +77,15 @@
 .boton-login{
     padding: 10px;
     border-radius: 20px;
-    border: 1px solid #7a2416;
-    background-color: #ab341b;
+    border: 1px solid #572364;
+    background-color: #250180;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.boton-login p:hover {
+    transform: scale(1.5);
 }
 
 .boton-admin {
