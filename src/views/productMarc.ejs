@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+
+
+<body>
+    <%- include("partials/header") %>
+			
+<% if(locals.marca){ %>
+    <h1><%=locals.marca %></h1>
+<% } else { %>
+    <h1>Todos los productos</h1>
+<% } %>
+
+<% if (products.length) { %>
+
+    <% products.forEach(product => { %>
+        <div>
+            <%- include('partials/productfilter', {
+                product
+            }) %>
+        </div>
+    <% }) %>
+<% } %>
+
+
+
+
+	<%- include('partials/footer') %>
+</body>	
+
+
+</html>

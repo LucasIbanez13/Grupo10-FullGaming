@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+
+    <body class="body_box">
+        
+        <%- include("partials/header") %>
+    
+    
+        <!----------------------------login-------------------------------------------------->
+    <%- include("partials/login") %>
+    
+
+    <!--------------------------REGISTRO------------------------------------------------->
+    <%- include("partials/register") %>
+        
+        
+        <!----------------------------nav-bar ------------------------------------------------->
+        <%- include("partials/header-nav") %>
+
+    
+    <main class="detail_main">
+        <div class="detail_main_content">
+            <div class="detail_main_contents_content">
+                <div class="detail_main_contents_content_boxOne">
+                    <div class="detail_main_contents_content_boxOne_images">
+                        <div class="detail_main_contents_content_boxOne_images_una"><img src="/img/<%= image %>" alt=""></div>
+                        <div class="detail_main_contents_content_boxOne_images_muchas">
+                            <div><a href=""><img src="/img/<%= image %>" alt=""></a></div>
+                            <div><a href=""><img src="/img/<%= image %>" alt=""></a></div>
+                            <div><a href=""><img src="/img/<%= image %>" alt=""></a></div>
+                        </div>
+                    </div>
+                    <div class="detail_main_contents_content_boxOne_product">
+                        <div class="detail_main_contents_content_boxOne_product_nombre">
+                            <div class="detail_main_contents_content_boxOne_product_nombre_titulo">
+                                <h4><%= name %></h4>
+                            </div>
+                            <div class="detail_main_contents_content_boxOne_product_precio">
+                                <div class="detail_main_contents_content_boxOne_product_precio_descuento">
+                                    <% if (discount) { %>
+                                        <h3>$<%= toThousand(price - (price * discount / 100)) %></h3>
+                                        <p><b><%= discount %>% OFF</b></p>
+                                        
+                                    <% } else { %>
+                                        <!-- Esto despues preguntar en un futuro, ya que la idea seria, si tiene descuento tachar ese precio y que se muestre el descuento abajo, pero si lo pongo ahora no me muestra el precio por eso lo pongo aqui  -->
+                                       $<%= toThousand(price - (price * discount / 100)) %>
+                                    <% } %>
+                                </div>
+                                <div class="detail_main_contents_content_boxOne_product_precio_price">
+                                    <h3>$<%= toThousand(price) %></h3>
+                                </div>
+                            </div>
+                            <div class="detail_main_contents_content_boxOne_product_cuotas">
+                                <h3>¡Nuestras promocones bancarias!</h3>
+                                <% if (discount > 0) { %>
+                                    <p>
+                                      Precio con descuento en 3 cuotas sin interés de: $<%= toThousand((price - (price * discount / 100)) / 3) %>
+                                    </p>
+                                  <% } else { %>
+                                    <p>
+                                      Precio en 3 cuotas sin interés de $<%= toThousand(price / 3) %>
+                                    </p>
+                                  <% } %>
+                                <div>
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                    <i class="fa-brands fa-cc-paypal"></i>
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                </div>
+                                <div class="detail_main_contents_content_boxOne_product_cuotas_pagos">
+                                    <p>cantidades de cuotas 3, 6, 9</p>
+                                </div>
+                                <div class="detail_main_contents_content_boxOne_product_cuotas_medios">
+                                    <a href="">Ver todos los medios de pago</a>
+                                </div>
+                            </div>
+                            <div class="detail_main_contents_content_boxOne_product_envios">
+                                <div class="detail_main_contents_content_boxOne_product_envios_gratis">
+                                    <i class="fa-solid fa-truck"></i>
+                                    <p>¿tiene envio gratis?: <b><%= shipment %></b></p>
+                                </div>
+                                <div class="detail_main_contents_content_boxOne_product_envios_sucursal">
+                                    <i class="fa-solid fa-shop"></i>
+                                    <p>Este producto no puede retirarse en sucursales</p>
+                                </div>
+                                
+                            </div>
+                            <div class="detail_main_contents_content_boxOne_product_comprar">
+                                <a href="">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail_main_contents_content_boxTwo">
+                    <div class="detail_main_contents_content_boxTwo_cajas">
+                        <h2>Caracteristicas</h2>
+                        <div class="detail_main_contents_content_boxTwo_cajas_caracte">
+                            <div class="detail_main_contents_content_boxTwo_cajas_caracte_mayus"><p><%= brand %></p></div>
+                            <p>Stock: <%= stock %></p>
+                            <p><%= description %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail_main_contents_content_boxThree">
+                    <div class="detail_main_contents_content_boxThree_carrusel">
+                        
+                        <div class="carrusel2">
+
+                            <%- include("partials/carousel-home") %>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

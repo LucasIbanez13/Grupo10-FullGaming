@@ -1,0 +1,145 @@
+.profileInit_contenedor{
+    border: 1px solid black;
+    text-align: center;
+    padding: 30px 0 0;
+    overflow: hidden;
+    background-color: #231F20;
+    color: white;
+}
+.profileInit_contenedor_email{
+    width: 100%;
+    overflow: hidden;
+
+}
+.profileInit_contenedor_image{
+    margin: auto;
+    border: 1px solid black;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 1px 17px 2px rgb(255 255 255 / 83%);
+}
+.profileInit_contenedor_image img {
+    width: 100%;
+    height: auto;
+  }
+.profileInit_contenedor_email{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+/*buttons*/
+.profileInit_contenedor_contenedorButton_button{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 0 5px;
+    
+}
+.profileInit_contenedor_contenedorButton_button a{
+    color: white;
+}
+.profileInit_contenedor_contenedorButton_button_comprar{
+    width: 27.3333%;
+    padding: 10px 8px;
+    border: 1px solid gray;
+    border-radius: 10% ;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.profileInit_contenedor_contenedorButton_button_configuracion{
+    width: 27.3333%;
+    padding: 10px 8px;
+    border: 1px solid gray;
+    border-radius: 10% ;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.profileInit_contenedor_contenedorButton_button_salir{
+    width: 27.3333%;
+    padding: 10px 8px;
+    border: 1px solid gray;
+    border-radius: 10% ;
+    margin: 10px 0;
+    overflow: hidden;
+}
+@media (min-width: 480px) {
+    
+}
+
+
+
+@media (min-width:1024px){
+    .profileInit{
+        height: 600px;
+
+    }
+    .profileInit_contenedor{
+        height: 100%;
+        border-radius: 0 10% 10% 0;
+        width: 450px;
+    }
+    .profileInit_contenedor_contenedorButton_button{
+        display: flex;
+        flex-direction: column;
+    }
+    .profileInit_contenedor_contenedorButton_button_comprar{
+        width: 80%;
+        padding: 10px 8px;
+        border: 1px solid gray;
+        border-radius: 15px 0 15px 0;
+        margin: 10px auto;
+        overflow: hidden;
+        transition: background-color 0.3s; 
+    }
+    .profileInit_contenedor_contenedorButton_button_comprar:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.608);
+    }
+    .profileInit_contenedor_contenedorButton_button_comprar:active{
+        background-color: rgb(255, 255, 255); 
+        
+    }
+    .profileInit_contenedor_contenedorButton_button_configuracion{
+        width: 80%;
+        padding: 10px 8px;
+        border: 1px solid gray;
+        margin: 10px auto;
+        overflow: hidden;
+        border-radius: 15px 0 15px 0;
+        transition: background-color 0.3s; 
+    }
+    .profileInit_contenedor_contenedorButton_button_configuracion:active{
+        background-color: rgb(255, 255, 255); 
+    }
+    .profileInit_contenedor_contenedorButton_button_configuracion:hover{
+        transform: scale(1.1);
+        box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.608);
+    }
+    .profileInit_contenedor_contenedorButton_button_salir{
+        width: 80%;
+        padding: 10px 8px;
+        border: 1px solid gray;
+        border-radius: 15px 0 15px 0;
+        margin: 10px auto;
+        overflow: hidden;
+        transition: background-color 0.3s; 
+    }
+
+      
+      .profileInit_contenedor_contenedorButton_button_salir:active {
+        background-color: rgb(255, 255, 255); 
+      }
+      .profileInit_contenedor_contenedorButton_button_salir:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 10px 15px -3px rgba(255, 255, 255, 0.608);
+      }
+}
+@media (min-width:1024px){
+    .profileInit{
+        height: 600px;
+    }
+    .profileInit_contenedor{
+        width: 450px;
+    }
+}

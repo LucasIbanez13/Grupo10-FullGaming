@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/headBoost") %>
+
+    <body class="body_add">
+
+        <%- include("partials/header") %>
+            <!-- <div class= "container col-md-8 my-5 text-center" > -->
+                <div class = "div_container">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="row" >
+                        <div class="col-md-6">
+                            <label for="category" class="form-label">Seleccione una categoría</label>
+                            <select class="form-select" id="category" name="category">
+                                <option value="mouse">Mouse</option>
+                                <option value="pc">Pc</option>
+                                <option value="teclado">Teclado</option>
+                                <option value="auriculares">Auriculares</option>
+                                <option value="microfonos">Microfonos</option>
+                                <option value="monitor">Monitor</option>
+                                <option value="gabinete">Gabinete</option>
+                                <option value="madre">Placa Madre</option>
+                                <option value="procesador">Procesador</option>
+                                <option value="ram">Ram</option>
+                                <option value="coolers">Coolers</option>
+                                <option value="almacenamiento">Almacenamiento</option>
+                                <option value="video">Placa de video</option>
+                                <option value="audio">Placa de audio</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="image" class="form-label">Agregar imagen</label>
+                            <input class="form-control" type="file" id="image" name="image">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre del producto</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="brand" class="form-label">Marcas</label>
+                            <select class="form-select" id="brand" name="brand">
+                                <option value="aorus">Aorus</option>
+                                <option value="razer">Razer</option>
+                                <option value="corsair">Corsair</option>
+                                <option value="logitech">Logitech</option>
+                                <option value="westernDigital">Western Digital</option>
+                                <option value="elgato">Elgato</option>
+                                <option value="amd">Amd</option>
+                                <option value="intel">Intel</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="model" class="form-label">Modelo</label>
+                            <input type="text" class="form-control" id="model" name="model">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="stock" class="form-label">Stock</label>
+                            <select class="form-select" id="stock" name="stock">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="description" rows="3" name="description"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="price" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="price" name="price">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="discount" class="form-label">Descuento</label>
+                            <input type="number" class="form-control" id="discount" name="discount">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="amountDues">Cantidad de Cuotas</label>
+                            <select class="form-select" id="amountDues" name="amountDues">
+                                <option value="1">1</option>
+                                <option value="3">3</option>
+                                <option value="6">6</option>
+                                <option value="12">12</option>
+                                <option value="24">24</option>
+                            </select>                        
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cards">Tarjeta</label>
+                            <select class="form-select" id="cards" name="cards">
+                                <option value="visa">visa</option>
+                                <option value="cabal">cabal</option>
+                                <option value="naranja">naranja</option>
+                                <option value="argentcard">argentcard</option>
+                                <option value="americanExpress">american express</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="shipment" class="form-label">Envío gratis</label>
+                            <select class="form-select" id="shipment" name="shipment">
+                                <option value="no">No</option>
+                                <option value="si">Sí</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="location" class="form-label">Lugares de envío</label>
+                            <select class="form-select" id="location" name="location">
+                                <option value="caba">CABA</option>
+                                <option value="gba">GBA</option>
+                                <option value="interior">Interior</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger float-end mt-4">Guardar</button>
+                </form>
+            </div>
+    </body>
+
+</html>

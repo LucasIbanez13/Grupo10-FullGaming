@@ -1,0 +1,17 @@
+   
+                <div class="home-main-articulos3">
+                    <a class="home-main-articulos-a3" href="/products/productDetail/<%= product.id%>">
+                        <div class="home-imagen-filter"><img src="/img/<%= product.image %>" alt="">
+                        </div>
+
+                        <div class="home-description-filter">
+                        <div class="envio3"> <p class="envio-p3">envio gratis</p></div>
+                        <div class="carro-item3"><p class="carritoto3"><i class="fa-solid fa-cart-shopping"></i></p></div>
+                        <p class="mensaje-carrito3" >Agregar al carrito</p>
+                        <p class="home-main-articulos-p3"><%= product.name %></p>
+                        <span>$<%= toThousand(product.price) %></span>
+                        <p class="mensaje-comprar3"><%= product.message %></p>
+                        </div>
+                        
+                    </a>
+                </div>

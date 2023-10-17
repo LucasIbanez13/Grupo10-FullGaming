@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+
+
+<body>
+    <%- include("partials/header") %>
+			
+<% if(locals.category){ %>
+    <h1><%=locals.category %></h1>
+<% } else { %>
+    <h1>Todos los productos</h1>
+<% } %>
+
+<% if (products.length) { %>
+
+    <% products.forEach(product => { %>
+        <div>
+            <%- include('partials/productfilter', {
+                product
+            }) %>
+        </div>
+    <% }) %>
+<% } else { %>
+    <h2>No hay productos <%= locals.category ? "con esa categoria" : "" %></h2>
+<% } %>
+
+
+
+
+	<%- include('partials/footer') %>
+</body>	
+
+
+</html>

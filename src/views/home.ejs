@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") %>
+
+<body>
+    
+    <%- include("partials/header") %>
+     
+
+    <!----------------------------login-------------------------------------------------->
+    <%- include("partials/login", {viewError2:"/#modal"}) %>
+    
+    
+    <!--------------------------REGISTRO------------------------------------------------->
+    <%- include("partials/register", {view:"/#register"}) %>
+    
+    <!----------------------------nav-bar ------------------------------------------------->
+    <%- include("partials/header-nav") %>
+
+    <%- include("partials/modal-cel") %>
+
+    <%- include("partials/banner-swipe") %>
+    
+
+    <main class="home">
+
+
+
+
+            <aside class="banner-izquierdo">
+                <img src="/img/banner-vertical-1.png" alt="">
+            </aside>
+
+            
+
+        <div class="main-contenido">
+        
+
+            <section class="padre-marcas">
+                <h2>NUESTRAS MARCAS</h2>
+                <div class="padre-carrusel-marcas">
+                    <div class="carrusel-marcas">
+                        
+                        
+
+        <%- include("partials/marcas") %>
+
+        </div>
+        </div>
+        </section>
+
+
+        <section>
+            <h2>PRODUCTOS DESTACADOS</h2>
+        
+        <%- include("partials/product") %>
+
+        </section>
+
+
+        <div class="banner-2">
+            <img src="/img/banner2.jpg" alt="">
+            <div class="contenido">
+            <h3>arma tu pc</h3>
+            <p>con la ayuda de nuestros expertos vas a poder armar la pc de tus suenos</p>
+            <button>toma mi dinero</button>
+            </div>
+        </div>
+
+        <h2>LOS MAS VISTOS</h2>
+
+        <%- include("partials/carousel-home") %>
+
+
+
+        <section>
+            <h2>CATEGORIAS</h2>
+            
+            <article class="padre-carrusel">
+                <!-- <div class="carrusel"-->
+
+            <div class="carrusel">
+
+                <% categories.forEach(c => { %>
+            
+           
+                    <div class="categoria">
+                        <a href="/products/productList/<%= c.name %>">
+                        <img src="/img/<%=c.image%>" alt="">
+                        <p><%=c.name%></p>
+                        </a>
+                    </div>
+                    <% }) %>
+            
+            </div>
+            </article>
+            </div>
+        </section>
+        </div>
+            
+                <aside class="banner-izquierdo">
+                    <img src="/img/banner-vertical2222.png" alt="">
+                </aside>
+            
+
+    </main>
+
+
+    <!----------------------------FOOTER-------------------------------------------------->
+    <%- include('partials/footer') %>
+    
+</body>
+</html>

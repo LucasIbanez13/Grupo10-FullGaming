@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head') %>
+
+
+<body>
+    <%- include("partials/header") %>
+    
+    <%- include("partials/header-nav") %>
+			
+
+
+<section>
+    <div class="search-title"><h2>Resultado de la busqueda : <%= keywords %></h2></div>
+
+    
+
+<article class="filtrado-search">
+    <div class="section-filtrado">
+        <h2>Filtrado Avanzado</h2>
+        <button id="mostrarFiltro" >Desplegar Filtro</button> 
+        <div class="filter-menu" id="filtro">
+            <!-- Botones para filtrar -->
+            <h3>Precio</h3>
+            <p>Hasta $85.000</p>
+            <p>$85.000 a $200.000</p>
+            <p>Mas de $200.000</p>
+            <div class="filter-item" id="filtro-precio">Precio</div>
+            <h3>Filtrar por marcas</h3>
+            <p>Asus</p>
+            <p>Samsung</p>
+            <p>Msi</p>
+            <p>Lg</p>
+            <p>Red dragon</p>
+            <p>Gigabyte</p>
+            <p>Bangho</p>
+            <p>Noblex</p>
+            <p>Hp</p>
+            <p>Adata</p>
+            <p>Corsair</p>
+            <p>Dell</p>
+            <p>Acer</p>
+            <p>Intel</p>
+
+
+            <h3>Costo de envio</h3>
+            <p>Envío Gratis</p>
+            <h3>Condicion</h3>
+            <div class="filter-item" id="filtro-nuevo">Nuevo</div>
+            <div class="filter-item" id="filtro-outlet">Outlet</div>
+        </div>
+
+
+    </div>
+    
+<div class="dentro-search">
+    
+<% if (results.length) { %>
+
+    <% results.forEach(product => { %>
+        
+            <%- include('partials/productfilter', {
+                product
+            }) %>
+        
+    <% }) %>
+
+</div>
+<% } else { %>
+
+
+    <h2>no se encontraron resultados</h2>
+<% } %>
+</article>
+</section>
+
+
+
+
+	<%- include('partials/footer') %>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#mostrarFiltro").click(function() {
+            $("#filtro").slideToggle(); // Alternar la visibilidad del filtro al hacer clic en el botón
+        });
+    });
+    </script>
+</body>	
+
+
+</html>

@@ -1,0 +1,24 @@
+<nav class="nav-bar">
+    <a href="#modalcito"><i class="fa-solid fa-bars"></i></a>
+    
+    <% if (!locals.userLogin) { %>
+        <a href="#modal" class="open-modal-button"><i class="fa-solid fa-user"></i>
+            </a>
+    <% }else { %>
+        <a href="/users/profile/<%= userLogin.id %>" class="open-modal-button-login">
+            <div class="user-avatar">
+              <% if (userLogin.image) { %>
+                <img src="/img/<%= userLogin.image %>">
+              <% } else { %>
+                <i class="fa-solid fa-user"></i>
+              <% } %>
+            </div>
+          </a>
+
+    <% } %>
+    <div class="logo-nav">
+    <a href="/"> <img src="/img/logo2.png" alt=""></a>
+    </div>
+    <a href=""><i class="fa-regular fa-bell fa-lg"></i></a>
+    <a href="/products/shoppingCart"><i class="fa-solid fa-cart-shopping"></i></a>
+</nav>

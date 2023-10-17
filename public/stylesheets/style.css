@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@400;700&family=Work+Sans:wght@200;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@100;500&family=Mooli&display=swap');
+
+/* 
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Mooli', sans-serif;
+*/
+
+
+@import "./general.css";
+@import "./home/home.css";
+@import "./home/header.css";
+@import "./home/footer.css";
+@import "./productDetail/productDetail.css";
+@import "./carritoDeCompras/shoppingCart.css";
+@import "./formularios/loginandregister.css";
+@import "./productCreate/productCreate.css";
+@import "./productEdit/productEdit.css";
+@import "./admin/admin.css";
+@import "./formularios/delete.css";
+@import "./profile/profile.css";
+@import "./profile/profileInit.css";
+@import "./home/banner.css";
+@import "./home/product-Filter2.css";
+@import "./home/ultimosAgregados.css";
+@import "./home/modal-cel.css";

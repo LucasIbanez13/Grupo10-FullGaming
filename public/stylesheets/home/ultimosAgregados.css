@@ -1,0 +1,178 @@
+.carousel-container {
+    max-width: 1400px;
+    position: relative;
+    margin: 20px 0 50px 0;
+}
+
+.img-container img {
+    width: 71px;
+}
+.carousel-item2 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+    
+}
+
+.carousel--prev,
+.carousel-next {
+  color: blueviolet;
+  font-size: 30px;
+  cursor: pointer; 
+  width: 25px;
+  position: absolute;
+  top: 50%; /* Centra verticalmente en relación con el contenedor padre */
+  transform: translateY(-50%); /* Ajusta verticalmente según el tamaño del contenedor */
+}
+
+.carousel--prev {
+  left: 50; /* Alinea el botón "Prev" a la izquierda */
+  z-index: 100;
+}
+
+.carousel-next {
+  right: 0; /* Alinea el botón "Next" a la derecha */
+}
+.home-main-articulos4 {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    padding-bottom: 40px;
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+
+}
+
+.home-main-articulos-a4 {
+    width: 100%;
+}
+
+.carro-item4 {
+    background-color: #09072c;
+    border-radius: 50%;
+    height: 37px;
+    width: 37px;
+    display: grid;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.carritoto4 {
+    color: #ffffff;
+}
+.mensaje-carrito4 {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    background-color: #09072c;
+    padding: 7px 1px;
+    border-radius: 25px;
+    display: none;
+    color: #ffffff;
+    width: 70%;
+    text-align: center;
+    z-index: 0;
+}
+
+
+.carro-item4:hover + .mensaje-carrito4, .mensaje-carrito4:hover {
+    display: block;
+}
+
+
+.home-main-articulos4:hover {
+    box-shadow:
+    0 0 2px 2px #bebebe,
+    0 0 20px 10px rgba(0, 0, 0, 0.1);
+
+} 
+
+
+
+.home-main-articulos4 img {
+    width: 60%;
+    height: 200px;
+    object-fit: contain;
+    transition: all 0.5s ease;
+   /*  margin-bottom: 7px; */
+}
+
+.home-main-articulos4:hover img {
+    width: 70%;
+    transition: all 0.5s ease;
+   
+} 
+
+.envio4 {
+    background-color: rgb(0, 207, 97);
+    position: absolute;
+    width: 70%;
+    padding: 3px 1px;
+    top : 180px;
+    border-radius: 0 10px 0 0;
+}
+
+.envio-p4 {
+    font-size: 15px;
+    color: white;
+    font-family: "Roboto", sans-serif;;
+}
+
+.home-main-articulos-p4 {
+    color: black;
+    text-transform: uppercase;
+    font-size: 15px;
+    height: 75px;
+    margin-bottom: 17px;
+    margin-top: 10px;
+    padding: 15px;
+    overflow: hidden;
+
+}
+
+.home-main-articulos4 span {
+    margin-bottom: 40px;
+    font-weight: bolder;
+    color: #09072c;
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+}
+
+.mensaje-comprar4 {
+    opacity: 0;
+    position: absolute;
+    font-size: 15px;
+    width: 90%;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #bebebe;
+    color: black;
+    padding: 8px 12px;
+    transition: bottom 0.4s ease;
+
+}
+  
+.home-main-articulos4:hover .mensaje-comprar4 {    
+    opacity: 1;
+    bottom: 0;
+    border: 3px solid #bebebe;
+    transform: translateX(-50%) translateY(0%);
+}
+
+@media (min-width : 1200px) {
+    .carousel-item2 {
+        width: 95%;
+        
+        
+    }
+}

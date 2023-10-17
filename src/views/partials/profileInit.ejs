@@ -1,0 +1,32 @@
+<div class="profileInit">
+    <div class="profileInit_contenedor">
+        
+        <div class="profileInit_contenedor_image">
+            <img src="/img/<%= profile.image %>" class="" alt="...">
+        </div>
+
+        <div class="profileInit_contenedor_email">
+            <p class=""><%= profile.email %></p>
+        </div>
+        <div class="profileInit_contenedor_contenedorButton_button">
+            <div class="profileInit_contenedor_contenedorButton_button_comprar">
+                <a href="" class="">Mis compras</a>
+            </div>
+            <div class="profileInit_contenedor_contenedorButton_button_configuracion">
+                <a href="/users/profile/<%= profile.id %>" class="">Configuracion</a>
+            </div>
+            <div class="profileInit_contenedor_contenedorButton_button_salir">
+                <a href="/users/logout" class="">Salir</a>
+            </div>
+            
+            <% if (profile.rol === "admin") { %>
+                <div class="profileInit_contenedor_contenedorButton_button_salir">
+                    <a href="/users/admin" class="">Admin</a>
+                </div>
+            <% }else { %> 
+                <p></p> 
+            <% } %>
+        </div>
+        
+    </div>
+</div>

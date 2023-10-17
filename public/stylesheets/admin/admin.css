@@ -1,0 +1,166 @@
+.admin-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.nombre-admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 5px;
+    margin: 10px 0 20px 8px;
+
+}
+
+
+
+
+.elementos-admin-padre{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.admin-main-box {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 5px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.admin-main-box > div {
+    flex-basis: 20%; 
+    text-align: center; 
+}
+
+.name-admin {
+    flex-basis: 40%; 
+    overflow: hidden;
+}
+
+.imagen-admin {
+    display: none
+}
+
+.admin-main-box-boxDos-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+
+.action-icon {
+    margin-right: 2px; 
+}
+
+  
+.action-link {
+    margin-right: 10px;
+    color: #333;
+    text-decoration: none;
+}
+  
+.action-icon {
+    font-size: 18px;
+}
+
+.fa-eye {
+    color: green;
+}
+
+.fa-pen-to-square {
+    color: blue;
+}
+
+.fa-trash-can {
+    color: red;
+}
+
+
+
+.admin-header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    gap: 80px;
+}
+
+.admin-main-h1 {
+    margin: 0; 
+}
+
+.search-bar {
+    display: flex;
+    align-items: center; 
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px; 
+}
+
+.search-button, .add-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 480px) {
+    .nombre-admin{
+        
+        font-size: 15px;
+        
+    
+    }
+    .imagen-admin {
+        display: block;
+    }
+    .elementos-admin-padre{
+        width: 90%;
+        
+    
+    }
+
+    .admin-main-box-boxDos-section {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        
+    }
+}
+
+@media (min-width: 1200px) {
+    .nombre-admin{
+        
+        font-size: 30px;
+        
+    
+    }
+    .elementos-admin-padre{
+        width: 80%;
+        
+    
+    }
+    .admin-main-box-boxDos-section {
+        gap: 20px;
+        
+    }
+}

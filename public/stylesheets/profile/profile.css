@@ -1,0 +1,200 @@
+
+.profile_box_form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px;
+}
+.profile_box_form_boxOne{
+    background-color: white;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px 5px rgba(58, 58, 58, 0.3);
+    padding: 3px;
+}
+.profile_box_form_boxOne_image{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxOne_image input{
+    padding: 8px;
+}
+.profile_box_form_boxOne_name{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxOne_name input{
+    padding: 8px;
+}
+.profile_box_form_boxOne_surname{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxOne_surname input{
+    padding: 8px;
+}
+.profile_box_form_boxOne_phone{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxOne_phone input{
+    padding: 8px;
+}
+.profile_box_form_boxOne_dni{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxOne_dni input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 10px 5px rgba(58, 58, 58, 0.3);
+    padding: 3px;
+
+}
+.profile_box_form_boxTwo_lookfor{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxTwo_lookfor input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_direct_street{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxTwo_direct_street input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_direct_height{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+}
+.profile_box_form_boxTwo_direct_height input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_house{
+    display: flex;
+    flex-direction: row;
+}
+.profile_box_form_boxTwo__house_floor{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+    width: 45%;
+}
+.profile_box_form_boxTwo__house_floor input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_house_department{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+    width: 45%;
+}
+.profile_box_form_boxTwo_house_department input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_referencia{
+    display: flex;
+    flex-direction: row;
+}
+.profile_box_form_boxTwo_referencia_reference{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+    width: 45%;
+}
+.profile_box_form_boxTwo_referencia_reference input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_referencia_postalcode{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+    width: 45%;
+}
+.profile_box_form_boxTwo_referencia_postalcode input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_ciudad{
+    display: flex;
+    flex-direction: row;
+}
+.profile_box_form_boxTwo_ciudad_province{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+    width: 45%;
+}
+.profile_box_form_boxTwo_ciudad_province input{
+    padding: 8px;
+}
+.profile_box_form_boxTwo_ciudad_location{
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px 10px;
+    width: 45%;
+}
+.profile_box_form_button{
+    position: relative;
+    left: 75%;
+    padding: 8px;
+}
+@media (min-width: 480px) {
+    .profile_box_form{
+        margin: 10px 20px;
+    }
+}
+
+
+
+@media (min-width:1024px){
+    .profile_box_form{
+        padding-top: 15px;
+    }
+    .profile_box {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0px;
+        justify-content: space-between;
+    }
+    .profile_box_form {
+        flex-direction: row;
+    }
+    .profile_box_form{
+        margin: 0;
+    }
+    .profile_box_form_boxOne{
+        border-radius: 7%;
+        padding: 30px 20px;
+        margin-right: 50px;
+        width: 300px;
+    }
+    .profile_box_form_boxTwo{
+        border-radius: 7%;
+        padding: 30px 20px;
+        margin-right: 50px;
+        width: 300px;
+    }
+    
+}
+@media (min-width:1440px){
+    .profile_box_form_boxOne{
+        width: 370px;
+    }
+    .profile_box_form_boxTwo{
+        width: 370px;
+    }
+}

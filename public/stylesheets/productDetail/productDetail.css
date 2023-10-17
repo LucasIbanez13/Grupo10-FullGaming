@@ -1,0 +1,176 @@
+.body_box{
+    background-color: #EDEDED;
+}
+.detail_main{
+    font-family: 'Montserrat', sans-serif;
+}
+.detail_main_contents_content {
+    background-color: white;
+}
+.detail_main_contents_content_boxOne{
+    display: flex;
+    flex-direction: column;
+}
+.detail_main_contents_content_boxOne_images{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+.detail_main_contents_content_boxOne_images_muchas{
+    width: 50%;
+    margin: 10px auto;
+    overflow: hidden;
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.detail_main_contents_content_boxOne_images_muchas img{
+    width: 100%;
+}
+.detail_main_contents_content_boxOne_images_una{
+    width: 60%;
+    padding: 40px;
+    margin: auto;
+    overflow: hidden;
+}
+.detail_main_contents_content_boxOne_images_una img{
+    width: 100%;
+}
+.detail_main_contents_content_boxOne_product{
+    border-radius: 5%;
+    padding: 30px 15px;
+}
+.detail_main_contents_content_boxOne_product_nombre_titulo h4{
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.detail_main_contents_content_boxOne_product_precio{
+    margin: 20px 0;
+}
+.detail_main_contents_content_boxOne_product_precio_descuento{
+    display: flex;
+}
+.detail_main_contents_content_boxOne_product_precio_descuento h3{
+    font-size: 30px;
+}
+.detail_main_contents_content_boxOne_product_precio_price h3{
+    font-size: 35px;
+}
+.detail_main_contents_content_boxOne_product_cuotas{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+.detail_main_contents_content_boxOne_product_cuotas h3{
+    margin: 15px 0;
+}
+.detail_main_contents_content_boxOne_product_cuotas p{
+    margin: 5px 0;
+}
+.detail_main_contents_content_boxOne_product_cuotas_medios{
+    margin-top: 20px;
+}
+.detail_main_contents_content_boxOne_product_envios{
+    margin: 20px 0;
+}
+.detail_main_contents_content_boxOne_product_envios_gratis{
+    display: flex;
+    margin-bottom: 10px;
+}
+.detail_main_contents_content_boxOne_product_envios_gratis p{
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+.detail_main_contents_content_boxOne_product_envios_sucursal p{
+    margin-left: 10px;
+}
+.detail_main_contents_content_boxOne_product_envios_sucursal{
+    display: flex;
+}
+.detail_main_contents_content_boxOne_product_comprar{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none; 
+    border-radius: 2px;
+}
+.detail_main_contents_content_boxOne_product_comprar a{
+    color: white;
+    margin: auto;
+    text-decoration: none;
+}
+.detail_main_contents_content_boxTwo_cajas{
+    padding: 20px;
+}
+.detail_main_contents_content_boxTwo_cajas_caracte p{
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+.detail_main_contents_content_boxTwo_cajas_caracte_mayus p{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.padre-articulos2 {
+    margin: 10px;
+    padding:10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    overflow: hidden; /* Oculta los elementos adicionales */
+}
+
+
+@media (min-width: 480px){
+    .detail_main_contents_content {
+        margin: 30px;
+    }
+    .detail_main_contents_content_boxOne{
+        flex-direction: row;
+    }
+    .detail_main_contents_content_boxOne_images{
+        justify-content: space-around;
+        width: 65%;
+    }
+    .detail_main_contents_content_boxOne_images_una{
+        margin: 20px auto;
+    }
+    .detail_main_contents_content_boxOne_product {
+        border-radius: 5% 0 0 5%;
+        width: 45%;
+        box-shadow: 0 0 10px rgba(102, 101, 101, 0.712);
+    }
+
+    .detail_main_contents_content_boxOne_product_comprar{
+        width: 100px;
+    }
+  
+
+}
+
+ @media (min-width: 1224px){
+    .detail_main_contents_content_boxOne_images{
+        flex-direction: row-reverse;
+        width: 65%;
+    }
+    .detail_main_contents_content_boxOne_images_muchas{
+        width: 10%;
+        margin: 10px 20px;
+        flex-direction: column;
+        padding: 10px;
+        border-right: 1px solid black;
+        
+    }
+    .detail_main_contents_content_boxOne_images_una img{
+        width: 100%;
+    }
+    .detail_main_contents_content_boxOne_product{
+        width: 35%;
+    }
+    
+    .detail_main_contents_content_boxOne_product_comprar{
+        width: 270px;
+    }
+}

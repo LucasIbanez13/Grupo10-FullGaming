@@ -1,0 +1,50 @@
+<div id="modal" class="modal-overlay">
+    <div class="modal">  
+        <a href="#" class="close-modal-button" id="closeModalLog" ><i class="fa-solid fa-times"></i></a>
+        <div class="form-container">
+            <form id="form-login" action="/users/login?viewError2=<%= locals?.viewError2 %>" method="POST">
+                <div class="contenedor">
+
+                    <div class="img-container"><img src="/img/logo2.png" alt=""></div>
+                        <h3>Login</h3>
+                    <div class="input-padre">
+                        <input class="input-style" type="email, text" name="email2" placeholder="Ingrese su email o usuario">
+                        <span class="error-message" style="color: red"> <%= locals?.errorsLogin?.email2?.msg %> </span>
+            
+                    </div>
+                    <div class="input-padre">
+                        <input  class="input-style" type="password" name="pass2" placeholder="Ingrese su contraseña">
+                        <span class="error-message" style="color: red"> <%= locals?.errorsLogin?.pass2 && locals.errorsLogin.pass2.msg %> </span>
+            
+                    </div>
+            
+                    <div class="check">
+                        <input type="checkbox" name="remember" id="remember" value="">
+                        <label form="recordar">Recordarme</label>
+                    </div>
+                    <div class="input-padre">
+                        <button type="submit" class="boton-login"><p>Login</p></button>
+                    </div>
+                    <a href="#register">No tengo cuenta</a>
+                </div>
+            </form>      
+        </div>
+    </div>
+</div>
+<script>
+    //document.addEventListener("DOMContentLoaded", function() {
+        const closeModalButtonLog = document.querySelector("#closeModalLog");
+        const email2Input = document.querySelector("#form-login input[name='email2']");
+        const pass2Input = document.querySelector("#form-login input[name='pass2']");
+        const errorMessages = Array.from(document.querySelectorAll("#form-login .error-message"));
+
+        closeModalButtonLog.addEventListener("click", function() {
+            email2Input.value = "";
+            pass2Input.value = "";
+            errorMessages.forEach(function(errorMessage) {
+                errorMessage.style.display = "none";
+            });
+        });
+    //});
+</script>
+</div>
