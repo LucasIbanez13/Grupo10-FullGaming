@@ -72,3 +72,36 @@
 
 *********************************************************************************************************
 
+# RESTROSPECTIVA DEL SPRINT 6.
+## Comenzar a hacer:
+
+Fomentar la comunicación diaria entre los miembros del equipo para mantenerse al tanto de los avances y posibles obstáculos.
+Organizar reuniones más frecuentes para revisar el progreso del proyecto y ajustar la dirección según sea necesario.
+Implementar sesiones de capacitación o talleres para mejorar las habilidades técnicas del equipo en áreas específicas.
+
+## Hacer más:
+
+Promover la colaboración entre los miembros del equipo para aprovechar al máximo las habilidades y conocimientos de cada uno.
+Incentivar la creatividad y la innovación en la resolución de problemas, alentando a los miembros a proponer nuevas ideas y enfoques.
+Realizar pruebas y revisiones más exhaustivas antes de completar una tarea o entregar un producto final.
+
+
+## Continuar haciendo:
+
+Mantener una actitud de apertura y respeto durante las reuniones, permitiendo que todos los miembros del equipo expresen sus opiniones y sugerencias.
+Celebrar los logros y reconocer el arduo trabajo de los miembros del equipo de manera regular.
+Seguir utilizando herramientas y metodologías que han demostrado ser efectivas en la gestión de proyectos.
+
+
+## Hacer menos:
+
+Reducir la dependencia de reuniones largas y centrarse en sesiones más concisas y enfocadas en los temas más importantes.
+Minimizar la duplicación de esfuerzos al asignar tareas y responsabilidades de manera más clara y eficiente.
+Limitar la interrupción de tareas concentradas mediante la implementación de espacios de trabajo sin distracciones.
+
+
+## Dejar de hacer:
+
+Dejar de postergar decisiones importantes, en su lugar, tomar medidas rápidas y efectivas para mantener el impulso del proyecto.
+Evitar la asignación de tareas sin una clara definición de los objetivos y expectativas, para evitar confusiones y malentendidos.
+Dejar de pasar por alto los comentarios y sugerencias de los miembros del equipo, asegurándose de abordarlos de manera adecuada.
