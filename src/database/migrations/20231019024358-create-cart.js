@@ -10,14 +10,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       quantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 1
       },
       date: {
         type: Sequelize.DATE
       },
       userId: {
-        type: Sequelize.INTEGER,
-      
+        type: Sequelize.INTEGER,      
           references : {
             model : {
               tableName: 'Users'

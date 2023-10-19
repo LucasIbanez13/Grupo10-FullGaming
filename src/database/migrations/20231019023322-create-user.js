@@ -10,13 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       email: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       password: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       surname: {
         type: Sequelize.STRING
@@ -44,6 +47,7 @@ module.exports = {
       },
       rolId: {
         type: Sequelize.INTEGER,
+        defaultValue: 1,
         references : {
           model : {
             tableName: 'Rols'

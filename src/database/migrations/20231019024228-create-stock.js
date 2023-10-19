@@ -10,10 +10,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       available: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       amount: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       productId: {
         type: Sequelize.INTEGER,

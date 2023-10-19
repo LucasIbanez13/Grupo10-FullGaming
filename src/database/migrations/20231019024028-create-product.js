@@ -10,22 +10,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull : false
       },
       model: {
         type: Sequelize.STRING
       },
       description: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
+        defaultValue: 0
       },
       price: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER.UNSIGNED
       },
       discount: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER.UNSIGNED,
+
       },
       brandId: {
         type: Sequelize.INTEGER,
+        defaultValue: 1,
         references : {
           model : {
             tableName: 'Brands'
