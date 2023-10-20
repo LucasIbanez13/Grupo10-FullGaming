@@ -1,15 +1,5 @@
 [
   {
-    "email": "sadffs@2ffv.com",
-    "rol": "user"
-  },
-  {
-    "id": "1601ac5f-deb5-4033-b4bf-77756700e65c",
-    "name": "juan gabriel vega",
-    "pass": "$2a$10$J.8cH2h9KY8d3dqx8afShepbDRpM8znMo/5vjFTIIYAXxGjjQ2xXO",
-    "rol": "user"
-  },
-  {
     "id": "7a0e5aa9-d236-4e53-b0ce-ae9d2eb11cfb",
     "name": "juan gabriel vega",
     "email": "gabi_vega123@outlook.com",
@@ -38,45 +28,13 @@
     "rol": "admin"
   },
   {
-    "id": "d694f6c6-5ea1-4d7c-bf7a-9fa7b54e3256",
-    "email": "asfasgf@sgfq.com",
-    "pass": "$2a$10$11D3olB37cx0hnWpJ.Z2de4YHVdJFTckWYmEgTKTznDr5QgBIhCs2",
-    "rol": "user",
-    "name": "elian21"
-  },
-  {
-    "id": "dd2a6c6d-aed5-4b9e-9e08-4b35ef500fbd",
-    "email": "asgdas@fga.com",
-    "pass": "$2a$10$UNyZsBTTAZd.YzIibnZpGuh7uMUooJB9QOm61jmkNNGN1vGpJp.Bm",
-    "rol": "user",
-    "name": "maite123"
-  },
-  {
-    "id": "8f925f10-4917-4cd8-8ef4-3eba1edb724d",
-    "email": "asggsas@asgba.com",
-    "pass": "$2a$10$QNMQ8mO.LLPRyNV9qrpY.eRrgjmFS0P0AYtcmGf4BF2U/jMu7wwga",
-    "rol": "user",
-    "name": "asgasgase"
-  },
-  {
-    "id": "3fab7576-4272-4606-85e7-8c59460e5718",
-    "email": "fgasgf@asf.com",
-    "pass": "$2a$10$5fuBLlkV7PPG4boNeNSzruXIIVc7nCHyI5Zu53hrr54mp25FJCk9S",
-    "rol": "user",
-    "image": "",
-    "name": "",
-    "surname": "",
-    "phone": ""
-  },
-  {
     "id": "bf8e5835-5883-49a2-baba-38370115ab11",
     "email": "erhjh@cas.com",
     "pass": "$2a$10$yhHfVCwbcfowA62bxrWS8eTULZ8ngkd32r3YG0nVtZ4sEgNA1l1Su",
     "rol": "user",
     "image": "",
-    "name": "",
+    "name": "lucas",
     "surname": "",
-    "phone": "",
     "dni": "",
     "lookfor": "",
     "street": "",
@@ -96,7 +54,6 @@
     "image": "1696023325117_products_.jpeg",
     "name": "Juan",
     "surname": "vega",
-    "phone": "",
     "dni": "",
     "lookfor": "",
     "street": "",
@@ -117,7 +74,6 @@
     "image": "1695937763254_products_.jpg",
     "name": "Lucas",
     "surname": "Ibanez",
-    "phone": "3812018090",
     "dni": "12345678",
     "lookfor": "",
     "street": "rutanose14",
@@ -138,7 +94,6 @@
     "image": "1695937726494_products_.jpg",
     "name": "lucas",
     "surname": "ibanez",
-    "phone": "",
     "dni": "",
     "lookfor": "",
     "street": "",
@@ -157,9 +112,8 @@
     "pass": "$2a$10$sa9x/LSkSibOFeGoTImdieYEzC28AudA.PypLCQoQly5CVH8bhV8O",
     "rol": "user",
     "image": "",
-    "name": "",
+    "name": "nose",
     "surname": "",
-    "phone": "",
     "dni": "",
     "lookfor": "",
     "street": "",
@@ -177,9 +131,8 @@
     "pass": "$2a$10$lTlw4XQCKSIfnJVceyWF4OulrP8yaqGpvpqJFDLL0DI4enKmCNQHi",
     "rol": "admin",
     "image": "",
-    "name": "",
+    "name": "pablo",
     "surname": "",
-    "phone": "",
     "dni": "",
     "lookfor": "",
     "street": "",
@@ -199,7 +152,6 @@
     "image": "1695949978890_products_.jpg",
     "name": "Gonzalo",
     "surname": "sotelo",
-    "phone": "1160013670",
     "dni": "37674659",
     "lookfor": "",
     "street": "llorente",
@@ -218,9 +170,8 @@
     "pass": "$2a$10$TSk80hjDuymYPcLu7Ar6xOaAscbMVGru8P.355DcsFttDKyE4S8L.",
     "rol": "user",
     "image": "",
-    "name": "",
+    "name": "eric",
     "surname": "",
-    "phone": "",
     "dni": "",
     "lookfor": "",
     "street": "",
