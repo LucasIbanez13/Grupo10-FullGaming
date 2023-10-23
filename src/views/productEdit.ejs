@@ -9,30 +9,19 @@
     
 
     <!--------------------------REGISTRO------------------------------------------------->
-    <%- include("partials/register", {view:`/productDetail/${product.id}/#register`}) %>
+    
 <main class="create__main">
     <h1  class="create__main--title">Editar productos</h1>
     <section class="create__main__section__creacion">
         <h2 class="create__main__section__creacion--title">Producto</h2>
-        <form class="create__main__section__creacion__form" action="/products/productEdit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="create__main__section__creacion__form" action="/products/update/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="create__main__section__creacion__contiene">
             <div class="create__main__section__creacion__form__categoria">
                 <label for="category">Seleccione Categoria</label>
                 <select class="create__main__section__creacion__form__categoria__items" id="category" name="category">
-                    <option value="mouse">Mouse</option>
-                    <option value="pc">Pc</option>
-                    <option value="teclado">Teclado</option>
-                    <option value="auriculares">Auriculares</option>
-                    <option value="microfonos">Microfonos</option>
-                    <option value="monitor">Monitor</option>
-                    <option value="gabinete">Gabinete</option>
-                    <option value="madre">Placa Madre</option>
-                    <option value="procesador">Procesador</option>
-                    <option value="ram">Ram</option>
-                    <option value="coolers">Coolers</option>
-                    <option value="almacenamiento">Almacenamiento</option>
-                    <option value="video">Placa de video</option>
-                    <option value="audio">Placa de audio</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.id === categoryId && 'selected'%>" value ="<%= category.id %>"><%= category.name %></option>
+                    <% }) %>                    
                 </select>
             </div>
         </div>
@@ -51,27 +40,23 @@
                 <div class="col-md-4">
                     <label for="brand" class="form-label">Marcas</label>
                     <select class="form-select" id="brand" name="brand">
-                        <option value="aorus">Aorus</option>
-                        <option value="razer">Razer</option>
-                        <option value="corsair">Corsair</option>
-                        <option value="logitech">Logitech</option>
-                        <option value="westernDigital">Western Digital</option>
-                        <option value="elgato">Elgato</option>
-                        <option value="amd">Amd</option>
-                        <option value="intel">Intel</option>
+                        <% brands.forEach(brand => { %>
+                            <option <%= brand.id === brandId && 'selected'  %>value="<%= brand.id %>"><%= brand.name %></option>
+                        <% }) %>
+                       
                     </select>
                 </div>
                 <div class="col-md-4">
                     <label for="model" class="form-label">Modelo</label>
                     <input type="text" class="form-control" id="model" name="model" value="<%= product.model %>">
                 </div>
-                <div class="col-md-4">
+               <!--  <div class="col-md-4">
                     <label for="stock" class="form-label">Stock</label>
                     <select class="form-select" id="stock" name="stock">
                         <option value="si">Sí</option>
                         <option value="no">No</option>
                     </select>
-                </div>
+                </div> -->
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descripción</label>
@@ -87,7 +72,7 @@
                     <input type="number" class="form-control" id="discount" name="discount" value="<%= product.discount %>">
                 </div>
             </div>
-            <div class="row">
+           <!--  <div class="row">
                 <div class="col-md-6">
                     <label for="amountDues">Cantidad de Cuotas</label>
                     <select class="form-select" id="amountDues" name="amountDues">
@@ -125,7 +110,7 @@
                         <option value="interior">Interior</option>
                     </select>
                 </div>
-            </div>
+            </div> -->
             <button type="submit" class="btn btn-danger float-end mt-4">Guardar</button>
         </form>
     </div>

@@ -5,6 +5,7 @@ const Product = require('../data/Products');
 const productsFilePath = path.join(__dirname, '../data/items.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const db = require('../database/models')
 const{userRead}= require("./controllerHome")
 
 
@@ -52,35 +53,85 @@ module.exports = {
     },
      update: (req, res) => {
         const productId = req.params.id;
-        const {category, name, brand, model, stock, description, price,discount, amountDues, cards, shipment, location} = req.body
-        const productsModify = products.map(product => { 
-            if (product.id === productId) {
-                product.category = category,
-                product.image = req.file;
-                product.name = name,
-                product.brand = brand,
-                product.model = model,
-                product.stock = stock,
-                product.description = description,
-                product.price = price,
-                product.discount = discount,
-                product.amountDues = amountDues,
-                product.cards = cards,
-                product.shipment = shipment,
-                product.location = location
+        const {category, name, brand, model, description, price,discount} = req.body
+
+        db.Product.findByPk(productId,{
+            include :["image","category"]
+        })
+        .then((product)=>{
+            req.files.image &&
+            fs.existsSync(`./public/img/${product.image}`) &&
+            fs.unlinkSync(`./public/images/${product.image}`);
+        })
+        db.Product.update({
+            category,
+            image : req.file,
+            name: name.trim(),
+            brandId : brand,
+            model,                
+            description : description.trim(),
+            price,
+            discount
+        },
+        {
+           where :{
+             productId
+            },
+        }).then(()=>{
+            if(req.files.image) {
+                product.images.forEach((image)=>{
+                    fs.existsSync(`./public/img/${image.file}`) &&
+            fs.unlinkSync(`./public/images/${image.file}`);
+                });
+                db.Image.destroy({
+                    where :{
+                        productId : productId,
+                    }
+                }).then(()=>{
+                    const images = req.file.images.map((file) =>{
+                        return {
+                            imagePrimary : file.filename,
+                            imageSecondary : file.filename,
+                            productId : product.id
+                        }
+                    })
+                });
+                db.image.blukCreate(images,{
+                    validate:true,
+                }).then((response) =>{
+                    return res.redirect('/users/admin');
+                })
+            } else {
+                return res.redirect('/users/admin');
             }
-            return product
-        });
-        fs.writeFileSync(productsFilePath, JSON.stringify(productsModify, null, 3), 'utf-8');
-        res.redirect('/users/admin');
+            
+        })
+        .catch((error) =>console.log(error))
+       
+       
     },
 
-    productEdit : (req,res) => {
-        const productId = req.params.id;
-        const product = products.find(product => product.id === productId )
-        return res.render('productEdit', {
-            product
-        } )
+    productEdit : (req,res) => {        
+        const product = db.Product.findByPk(req.params.id,{
+            include : ["image"]
+        });
+        console.log(product)
+        const brands = db.Brand.findAll({
+            order : ['name']
+        });
+        const categoryes = db.Category.findAll({
+            order : ['name']
+        })
+        Promise.all([product,brands,categoryes])
+        .then(([product,brands,categories])=>{
+            return res.render('productEdit',{
+                ...product,
+                brands,
+                categories
+            })
+        })
+        .catch(error =>console.log(error))
+       
     },
 
     productprueba : (req,res) => {

@@ -35,15 +35,7 @@ module.exports = {
             tableName: 'Brands'
           }
         }
-      },
-      imageId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName: 'Images'
-          }
-        }
-      },
+      },     
       statusId: {
         type: Sequelize.INTEGER,
         references : {

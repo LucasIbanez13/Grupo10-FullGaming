@@ -15,6 +15,14 @@ module.exports = {
       imageSecondary: {
         type: Sequelize.STRING
       },
+      productId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName:'Products'
+          }
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
