@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../database/models')
 
 
 const rutadata = path.join(__dirname, "../data");
@@ -23,27 +24,26 @@ archivos.forEach(archivo =>{
     
 })
 
-const products = jsonarchivos["items.json"]
-const marcas = jsonarchivos["marcas.json"]
-const categories = jsonarchivos["categories.json"]
-const userRead = jsonarchivos["user.json"]
 
 
 
 module.exports = {
-    products,
-    userRead,
-
-    home : (req,res) => {
-
-        return res.render('home',{
-            products,
-            marcas,
-            categories,
-            toThousand
-    
-            
+    home: (req, res) => {
+        
+        Promise.all([
+            db.Brand.findAll(),
+            db.Category.findAll(),
+            db.Product.findAll()
+        ])
+        .then(function([marca, categorias, productos]) {
+            res.render('home', {
+                productos,
+                marca,
+                categorias,
+                toThousand
+            });
         })
+        .catch(error => console.log(error));
     },
     
     search : (req,res) => {
