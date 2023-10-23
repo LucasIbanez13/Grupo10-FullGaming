@@ -16,16 +16,22 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     productDetail : (req,res) => {
-        const id = req.params.id
-        const product = products.find(product => product.id === id)
+        db.Product.findByPk(req.params.id)
+        .then(function(productos) {
+            res.render('productDetail', {
+                productos,
+                toThousand
+            });
+        })
+        .catch(error => console.log(error));
         
-        return res.render('productDetail',{
+        /*return res.render('productDetail',{
             ...product,
             products,
             toThousand,
             
             
-        })
+        })*/
     },
 
     productList: (req, res) => {
