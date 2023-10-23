@@ -1,9 +1,6 @@
-const fs = require("fs");
-const path = require("path");
-const{products, userRead}= require("./controllerHome")
+const { hashSync } = require('bcryptjs');
+const db = require('../database/models')
 const {validationResult} =require("express-validator");
-const user = require("../data/user");
-
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
@@ -22,17 +19,22 @@ module.exports = {
             return
         } else{
 
-            const users = userRead;
-            const newuser = new user(req.body);
+            
+            const {name, email, pass} = req.body;
 
-            users.push(newuser);
+            db.User.create({
+                name : name.trim(),
+                email : email,
+                password : hashSync(pass,10),
+                rolId : 1
+                
+        })
+            .then(user => {
+                return res.redirect("/#");
+            })
+            .catch(error => console.log(error))
 
-            const rutadata = path.join(__dirname, "../data");
-            const filepath = path.join(rutadata, "user.json");
-
-            fs.writeFileSync(filepath, JSON.stringify(users, null, 2));
-
-            return res.redirect("/#");
+            
         }
     },
     login : (req,res) => {
@@ -41,6 +43,7 @@ module.exports = {
 
     
     processLogin: (req,res) => {
+
         const errors = validationResult(req);
         const {viewError2} = req.query
 
@@ -50,24 +53,34 @@ module.exports = {
             return 
             
         }else{
-            const user = userRead.find(user => user.email === req.body.email2);
+
             const {email2, remember} = req.body
-            
-            const {id,image, name,rol,email} = user;
 
-            req.session.userLogin = {
-                image,
-                name,
-                rol,
-                email,
-                id
 
-            }
-            
-            remember !== undefined && res.cookie("fullgaming20", req.session.userLogin,{
-                maxAge : 1000 * 60 * 60 * 24 * 7
+            db.User.findOne({
+                where : {
+                    email : email2
+                }
             })
-            return res.redirect("/#")
+                .then(user => {
+                    req.session.userLogin = {
+                        image : user.image,
+                        name : user.name,
+                        rol : user.rolId,
+                        email : user.email,
+                        id : user.id
+        
+                    }
+                    
+                    remember !== undefined && res.cookie("fullgaming20", req.session.userLogin,{
+                        maxAge : 1000 * 60 * 60 * 24 * 7
+                    })
+                    return res.redirect("/#")
+                })
+                .catch (error => console.log(error))
+            
+
+            
 
         }
     },

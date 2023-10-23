@@ -1,8 +1,8 @@
+const db = require("../database/models")
 var express = require('express');
 const {login, register, admin,nose,processregister,processLogin,profile,logout} = require('../controllers/controllerUser');
 var router = express.Router();
 const {body} =require("express-validator");
-const{userRead}= require("../controllers/controllerHome");
 const validationsLogin = require("../validations/validationLogin");
 const {profileUpdate} = require('../controllers/funcionesUser/profileUpdate')
 const upload = require('../middlewares/upload');
@@ -16,20 +16,26 @@ const validations = [
     body("name").notEmpty(). withMessage("escribe un usuario"),
     body("email").notEmpty() .withMessage("escribe un correo") .bail()
     .isEmail() .withMessage("escribe un correo valido").bail()
-    .custom((value) => {
-        const users = userRead
-        const user = users.find(user => user.email === value);
-
+    .custom(async (value) => {
+        const user = await db.User.findOne({
+          where: {
+            email: value,
+          },
+        });
+    
         if (user) {
-            return false
+          throw new Error("Email ya registrado");
         }
-        return true
-    }).withMessage("email ya registrado"),
+      }),
+
     body("pass").isLength({
         min:6
     }). withMessage("minimo de 6 caracteres"),
     body("passz")
     .custom((value, {req}) =>{
+
+
+
         if (value !== req.body.pass) {
             return false
         }

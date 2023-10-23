@@ -23,7 +23,34 @@ const usuarios = usuariosJSON.map(({ name, email, pass, surname, image, phone, d
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Users', usuarios, {});
+
+    await queryInterface.bulkInsert('Users', [
+      {
+        name : "juan",
+        surname : "vega",
+        email : "admin@gmail.com",
+        password : "$2a$10$dMDoDsb9v//2be/qTBtfXeJ2y.kukqvUcv9Wo25aY8xRX28YdpGzK",
+        image : "1696023325117_products_.jpeg",
+        rolId : 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+
+      },
+      {
+        name : "lucas",
+        surname : "ibanez",
+        email : "user@gmail.com",
+        password : "$2a$10$dMDoDsb9v//2be/qTBtfXeJ2y.kukqvUcv9Wo25aY8xRX28YdpGzK",
+        image : "1696023325117_products_.jpeg",
+        rolId : 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+
+      }
+    ],
+    
+    
+    {});
   },
 
   async down(queryInterface, Sequelize) {
