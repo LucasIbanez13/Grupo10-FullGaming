@@ -35,14 +35,17 @@ module.exports = {
         Promise.all([
             db.Brand.findAll(),
             db.Category.findAll(),
-            db.Product.findAll()
+            db.Product.findAll({include: ["image"]}),
+            db.Image.findAll()
         ])
-        .then(function([marca, categorias, productos]) {
+        .then(function([marca, categorias, productos,image]) {
+            console.log("Imágenes:", image);
             res.render('home', {
                 productos,
                 marca,
                 categorias,
-                toThousand
+                toThousand,
+                image
             });
         })
         .catch(error => console.log(error));
