@@ -8,9 +8,9 @@ module.exports = {
         db.Category.findAll({
             order : ['name']
         })
-            .then(allCategory => {
+            .then(categories => {
                 return res.render('productCreate',{
-                    allCategory
+                    categories
                 })
             })
         

@@ -9,26 +9,20 @@ const db = require('../../database/models')
 /* Este es parte de creacion de productos esto es la actualizacion */
 module.exports = {
   productUpdate: (req, res) => {
-    const { productId, category, name, brand, model, description, price, discount } = req.body;
+    const {category, name, brand, model, description, price, discount } = req.body;
     
-    db.Product.findByPk(productId)
-      .then((product) => {
-
-        
-        product.category = category;
-        product.image = req.file;
-        product.name = name;
-        product.brandId = brand;
-        product.model = model;
-        product.description = description;
-        product.price = price;
-        product.discount = discount;
-        
-
-        return product.save();
-      })
+    db.Product.create({
+        image: req.file.filename,
+        name: name,
+        model: model,
+        description: description,
+        price: price,
+        discount: discount,
+        brandId: brand,
+        categoryId: category
+    })
       .then(() => {
-        return res.redirect("/admin");
+        return res.redirect("/users/admin");
       })
       .catch((error) => {console.log(error);});
       

@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       available: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.BOOLEAN,
         allowNull: false
       },
       amount: {

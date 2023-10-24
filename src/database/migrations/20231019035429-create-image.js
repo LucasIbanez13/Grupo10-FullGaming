@@ -9,10 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      imagePrimary: {
-        type: Sequelize.STRING
-      },
-      imageSecondary: {
+      file: {
         type: Sequelize.STRING
       },
       productId: {

@@ -17,8 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Image.init({
-    imagePrimary: DataTypes.STRING,
-    imageSecondary: DataTypes.STRING
+    file: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Image',

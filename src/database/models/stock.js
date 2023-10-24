@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Stock.init({
-    available: DataTypes.INTEGER,
+    available: DataTypes.BOOLEAN,
     amount: DataTypes.INTEGER,
     productId: DataTypes.INTEGER
   }, {

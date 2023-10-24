@@ -27,20 +27,15 @@ module.exports = {
         type: Sequelize.INTEGER.UNSIGNED,
 
       },
+      image: {
+        type: Sequelize.STRING,
+      },
       brandId: {
         type: Sequelize.INTEGER,
         defaultValue: 1,
         references : {
           model : {
             tableName: 'Brands'
-          }
-        }
-      },     
-      statusId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName: 'Statuses'
           }
         }
       },

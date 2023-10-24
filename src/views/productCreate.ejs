@@ -13,20 +13,11 @@
                         <div class="col-md-6">
                             <label for="category" class="form-label">Seleccione una categoría</label>
                             <select class="form-select" id="category" name="category">
-                                <option value="mouse">Mouse</option>
-                                <option value="pc">Pc</option>
-                                <option value="teclado">Teclado</option>
-                                <option value="auriculares">Auriculares</option>
-                                <option value="microfonos">Microfonos</option>
-                                <option value="monitor">Monitor</option>
-                                <option value="gabinete">Gabinete</option>
-                                <option value="madre">Placa Madre</option>
-                                <option value="procesador">Procesador</option>
-                                <option value="ram">Ram</option>
-                                <option value="coolers">Coolers</option>
-                                <option value="almacenamiento">Almacenamiento</option>
-                                <option value="video">Placa de video</option>
-                                <option value="audio">Placa de audio</option>
+                                <option value="" selected hidden>seleccione...</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.id %>"><%= category.name %></option>
+                                <% }) %>
+                                
                             </select>
                         </div>
                         <div class="col-md-6">
