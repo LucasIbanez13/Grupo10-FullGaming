@@ -86,25 +86,28 @@ module.exports = {
     },
 
     admin : (req,res) => {
-        const products = JSON.parse(fs.readFileSync(path.join(__dirname, "../data", "items.json"), "utf-8"));
-        return res.render("admin",{
-            products,
-            toThousand
-        })
+        const productos = db.Product.findAll()
+            .then(function(productos){
+                return res.render("admin",{
+                    productos,
+                    toThousand
+                })
+            })
+            .catch(error => console.log(error));
+        
     },
     nose : (req,res) => {
         return res.render("nose")
     },
-    profile : (req,res) => {
-        const profileId = req.params.id;
-        const profile = userRead.find(profile => profile.id == profileId);
-    
-        if (!profile) {
-            return res.status(404).send('Perfil no encontrado');
-        }
-            return res.render('profile', {
-            profile: profile
-        });
+    profile : async (req,res) => {
+        const profile = await db.User.findByPk(req.params.id);
+    if (!profile) {
+    return res.status(404).send('Perfil no encontrado');
+    } else {
+    return res.render('profile', { 
+        profile
+    });
+}
     },
     logout: (req, res) => {
         if (!req.session.userLogin.remember) {

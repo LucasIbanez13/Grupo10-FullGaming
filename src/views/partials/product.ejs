@@ -4,7 +4,9 @@
         <% if (count < 8) { %>
             <div class="home-main-articulos">
                 <a class="home-main-articulos-a" href="/products/productDetail/<%= product.id %>">
-                    <img src="/img/<%= product.image %>" alt="">
+                    <% product.image.forEach(image => { %>
+                        <img src="/img/<%= image.imagePrimary %>" alt="">
+                    <% }) %>
                     <div class="envio"> <p class="envio-p">envío gratis</p></div>
                     <div class="carro-item"><a class="carritoto" href="/products/shoppingcart"><i class="fa-solid fa-cart-shopping"></i></a></div>
                     <a class="mensaje-carrito" href="/products/shoppingcart">Agregar al carrito</a>

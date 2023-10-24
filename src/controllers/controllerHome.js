@@ -3,6 +3,8 @@ const path = require("path");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models')
+const { Op } = require('sequelize');
+
 
 
 const rutadata = path.join(__dirname, "../data");
@@ -29,37 +31,44 @@ archivos.forEach(archivo =>{
 
 module.exports = {
     home: (req, res) => {
-        
+
         Promise.all([
             db.Brand.findAll(),
             db.Category.findAll(),
-            db.Product.findAll()
+            db.Product.findAll({include: ["image"]}),
+            db.Image.findAll()
         ])
-        .then(function([marca, categorias, productos]) {
+        .then(function([marca, categorias, productos,image]) {
+            console.log("Imágenes:", image);
             res.render('home', {
                 productos,
                 marca,
                 categorias,
-                toThousand
+                toThousand,
+                image
             });
         })
         .catch(error => console.log(error));
     },
     
-    search : (req,res) => {
+    search: (req, res) => {
         const keywords = req.query.keywords.toLowerCase();
     
-        const results = products.filter(item => 
-            item.name.toLowerCase().includes(keywords) 
-        );
-                
-            
-            
-                return res.render("results",{
-                results,
+        db.Product.findAll({
+            where: {
+                name: {
+                    [Op.like]: `%${keywords}%`
+                }
+            }
+        })
+        .then(products => {
+            return res.render("results", {
+                results: products,
                 keywords,
                 toThousand
+            });
         })
+        .catch(error => console.log(error));
     }
     
 }

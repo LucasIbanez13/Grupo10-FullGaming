@@ -1,16 +1,18 @@
 const fs = require("fs")
 const {products,userRead}= require("../controllerHome")
+const db = require('../../database/models')
 
 module.exports = {
     create : (req,res) => {
-        const user = userRead.find(user => user.rol);          
-            const {rol} = user;
-
-            req.session.userLogin = {
-                rol,
-            }
-        return res.render('productCreate',{
-            ...products
+        
+        db.Category.findAll({
+            order : ['name']
         })
+            .then(allCategory => {
+                return res.render('productCreate',{
+                    allCategory
+                })
+            })
+        
     }
 }
