@@ -26,7 +26,7 @@ module.exports = {
                 name : name.trim(),
                 email : email,
                 password : hashSync(pass,10),
-                rolId : 1
+                rolId : 2
                 
         })
             .then(user => {

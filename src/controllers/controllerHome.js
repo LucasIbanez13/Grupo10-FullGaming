@@ -7,6 +7,8 @@ const { Op } = require('sequelize');
 
 
 
+/* aca hacemos un foreach de todos los archivos del data que sean json para llamarlos de una forma mas simple solamente con el nombre del mismo 
+
 const rutadata = path.join(__dirname, "../data");
 const archivos = fs.readdirSync(rutadata);
 
@@ -25,7 +27,7 @@ archivos.forEach(archivo =>{
     } 
     
 })
-
+*/
 
 
 

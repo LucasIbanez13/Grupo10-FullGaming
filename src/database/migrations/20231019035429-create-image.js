@@ -17,11 +17,14 @@ module.exports = {
       },
       productId: {
         type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName:'Products'
-          }
-        }
+        references: {
+          model: {
+            tableName: 'Products'
+          },
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       createdAt: {
         allowNull: false,

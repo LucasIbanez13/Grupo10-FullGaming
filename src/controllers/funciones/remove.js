@@ -1,19 +1,25 @@
-const fs = require("fs")
-const path = require("path")
-const {products}= require("../controllerHome")
+const db = require("../../database/models")
 
 module.exports = {
-
-    remove : (req,res) => {
-        const id = req.params.id
-
-        productsmodify = products.filter(product => product.id !== id);
-
-        const rutadata = path.join(__dirname, "../../data");
-        const filepath = path.join(rutadata, "items.json");
-
-        fs.writeFileSync(filepath, JSON.stringify(productsmodify, null, 2))
-
-        res.redirect("/users/admin")
+    remove: (req, res) => {
+      const productId = req.params.id;
+  
+      
+      db.Image.destroy({
+        where: { productId: productId }
+      })
+        .then(() => {
+          
+          db.Product.destroy({
+            where: { id: productId }
+          })
+            .then(() => {
+              res.redirect("/users/admin");
+            })
+            .catch((error) =>
+              console.error("error al eliminar producto:", error));
+        })
+        .catch((error) =>
+          console.error("error al eliminar las imagenes:", error));
     }
-}
+  };
