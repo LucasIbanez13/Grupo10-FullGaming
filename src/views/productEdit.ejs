@@ -16,12 +16,12 @@
         <h2 class="create__main__section__creacion--title">Producto</h2>
         <form class="create__main__section__creacion__form" action="/products/update/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div class="create__main__section__creacion__contiene">
-            <div class="create__main__section__creacion__form__categoria">
+            <div class="createmainsectioncreacionformcategoria">
                 <label for="category">Seleccione Categoria</label>
-                <select class="create__main__section__creacion__form__categoria__items" id="category" name="category">
-                    <% categories.forEach(category => { %>
+                <select class="createmainsectioncreacionformcategoria__items" id="category" name="category">
+                    <% productos.forEach(category => { %>
                         <option value="<%= category.id === categoryId && 'selected'%>" value ="<%= category.id %>"><%= category.name %></option>
-                    <% }) %>                    
+                    <% }) %>
                 </select>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-4">
                     <label for="model" class="form-label">Modelo</label>
-                    <input type="text" class="form-control" id="model" name="model" value="<%= product.model %>">
+                    <input type="text" class="form-control" id="model" name="model" value="<%= productos.model %>">
                 </div>
                <!--  <div class="col-md-4">
                     <label for="stock" class="form-label">Stock</label>
@@ -60,16 +60,16 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descripción</label>
-                <textarea class="form-control" id="description" rows="3" name="description" ><%= product.description %></textarea>
+                <textarea class="form-control" id="description" rows="3" name="description" ><%= productos.description %></textarea>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <label for="price" class="form-label">Precio</label>
-                    <input type="number" class="form-control" id="price" name="price" value="<%= product.price %>">
+                    <input type="number" class="form-control" id="price" name="price" value="<%= productos.price %>">
                 </div>
                 <div class="col-md-6">
                     <label for="discount" class="form-label">Descuento</label>
-                    <input type="number" class="form-control" id="discount" name="discount" value="<%= product.discount %>">
+                    <input type="number" class="form-control" id="discount" name="discount" value="<%= productos.discount %>">
                 </div>
             </div>
            <!--  <div class="row">

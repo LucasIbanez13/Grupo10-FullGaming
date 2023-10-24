@@ -117,28 +117,32 @@ module.exports = {
        
     },
 
-    productEdit : (req,res) => {        
-        const product = db.Product.findByPk(req.params.id,{
-            include : ["image"]
-        });
-        console.log(product)
-        const brands = db.Brand.findAll({
-            order : ['name']
-        });
-        const categoryes = db.Category.findAll({
-            order : ['name']
-        })
-        Promise.all([product,brands,categoryes])
-        .then(([product,brands,categories])=>{
-            return res.render('productEdit',{
-                ...product,
+    productEdit: async (req, res) => {
+        try {
+            const product = await db.Product.findByPk(req.params.id, {
+                include: ["image"]
+            });
+            const productos = await db.Product.findAll();
+            const brands = await db.Brand.findAll({
+                order: ['name']
+            });
+            const categories = await db.Category.findAll({
+                order: ['name']
+            });
+
+            res.render('productEdit', {
+                product,
                 brands,
-                categories
-            })
-        })
-        .catch(error =>console.log(error))
-       
-    },
+                categories,
+                productos,
+                categoryId: product.categoryId, 
+                brandId:product.brandId
+            });
+        } catch (error) {
+            console.log(error);            
+        }
+    },    
+
 
     productprueba : (req,res) => {
         return res.render("admin2")
