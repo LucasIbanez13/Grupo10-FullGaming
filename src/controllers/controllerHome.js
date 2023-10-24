@@ -37,7 +37,7 @@ module.exports = {
         Promise.all([
             db.Brand.findAll(),
             db.Category.findAll(),
-            db.Product.findAll({include: ["image"]}),
+            db.Product.findAll({include: ["images"]}),
             db.Image.findAll()
         ])
         .then(function([marca, categorias, productos,image]) {
