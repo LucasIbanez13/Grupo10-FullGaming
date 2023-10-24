@@ -4,34 +4,34 @@
     "name": "juan gabriel vega",
     "email": "gabi_vega123@outlook.com",
     "pass": "$2a$10$K86RRR0nTyCAfykyc/8cP.btkbwc8MOutDaRh3r0lGLvibh4KxI7i",
-    "rol": "user"
+    "rol": 2
   },
   {
     "id": "3e46a5d5-f1c8-4e16-98d9-46c3474b91df",
     "name": "lucas",
     "email": "asfasd@asgdf.com",
     "pass": "$2a$10$quWhW/0pZIc3/ctX5gQbheVy4y0tAnNr45We1JZ3JTCyKtxBMOfvC",
-    "rol": "user"
+    "rol": 2
   },
   {
     "id": "f70d4e26-6a53-4cf2-b3ca-bf4e45f95cda",
     "name": "juan gomez",
     "email": "dasfas@asfg.com",
     "pass": "$2a$10$gCRWvyX0YN14caiHXho4dOEMH8zqzJNYdLzxj5XFBMYJobfpX86K.",
-    "rol": "user"
+    "rol": 2
   },
   {
     "id": "a2ce70f6-43d3-46f8-a321-3c28ba064f4e",
     "name": "sqfawsg",
     "email": "reherh@sdag.com",
     "pass": "$2a$10$bXwuZ5oaPBY.Ue0Wqfmgp.4pNYAqOtCciGLFfsnGLfFcJWWmfY2Lq",
-    "rol": "admin"
+    "rol": 1
   },
   {
     "id": "bf8e5835-5883-49a2-baba-38370115ab11",
     "email": "erhjh@cas.com",
     "pass": "$2a$10$yhHfVCwbcfowA62bxrWS8eTULZ8ngkd32r3YG0nVtZ4sEgNA1l1Su",
-    "rol": "user",
+    "rol": 2,
     "image": "",
     "name": "lucas",
     "surname": "",
@@ -50,7 +50,7 @@
     "id": "fc18dee8-2b4d-4e3c-9813-947fc0ee4076",
     "email": "nettoo531@gmail.com",
     "pass": "$2a$10$dMDoDsb9v//2be/qTBtfXeJ2y.kukqvUcv9Wo25aY8xRX28YdpGzK",
-    "rol": "admin",
+    "rol": 1,
     "image": "1696023325117_products_.jpeg",
     "name": "Juan",
     "surname": "vega",
@@ -70,7 +70,7 @@
     "id": "70f3b8c0-1a03-4cf3-bf64-5b991812cc2a",
     "email": "lucas@gmail.com",
     "pass": "$2a$10$pcFIceZLPjzSv79UnSMpEucv20JCkPFWlWriCfyidIVrdNva5t3Ay",
-    "rol": "user",
+    "rol": 2,
     "image": "1695937763254_products_.jpg",
     "name": "Lucas",
     "surname": "Ibanez",
@@ -90,7 +90,7 @@
     "id": "83a89311-28e0-447c-9c7b-884e5585a9ff",
     "email": "gabriel@gmail.com",
     "pass": "$2a$10$vA2xxmo92PtLGKpRLdYYqu/VMmmhDBSHMCyfcku.jAzLBcr4pUYEW",
-    "rol": "admin",
+    "rol": 1,
     "image": "1695937726494_products_.jpg",
     "name": "lucas",
     "surname": "ibanez",
@@ -110,7 +110,7 @@
     "id": "190a98da-0529-485a-b907-f17df649b248",
     "email": "nose@gmail.com",
     "pass": "$2a$10$sa9x/LSkSibOFeGoTImdieYEzC28AudA.PypLCQoQly5CVH8bhV8O",
-    "rol": "user",
+    "rol": 2,
     "image": "",
     "name": "nose",
     "surname": "",
@@ -129,7 +129,7 @@
     "id": "4b3f80b2-d9b4-4a5c-bcbc-2aa816cda869",
     "email": "pabloealcaraz@gmail.com",
     "pass": "$2a$10$lTlw4XQCKSIfnJVceyWF4OulrP8yaqGpvpqJFDLL0DI4enKmCNQHi",
-    "rol": "admin",
+    "rol": 1,
     "image": "",
     "name": "pablo",
     "surname": "",
@@ -148,7 +148,7 @@
     "id": "3791ec09-6314-45ef-9636-f8f5acce3f0a",
     "email": "sotelo-g@live.com.ar",
     "pass": "$2a$10$7sv3eQAMpCnkAbksxpo0N.OKxqTPsuycEy8CtVOPSoGavkzGz6vj2",
-    "rol": "admin",
+    "rol": 1,
     "image": "1695949978890_products_.jpg",
     "name": "Gonzalo",
     "surname": "sotelo",
@@ -168,7 +168,7 @@
     "id": "888d29b4-1bed-473c-828b-4ea6d19e8318",
     "email": "mena@gmail.com",
     "pass": "$2a$10$TSk80hjDuymYPcLu7Ar6xOaAscbMVGru8P.355DcsFttDKyE4S8L.",
-    "rol": "user",
+    "rol": 2,
     "image": "",
     "name": "eric",
     "surname": "",
