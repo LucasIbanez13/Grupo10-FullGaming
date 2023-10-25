@@ -13,13 +13,17 @@
 <main class="create__main">
     <h1  class="create__main--title">Editar productos</h1>
     <section class="create__main__section__creacion">
-        <h2 class="create__main__section__creacion--title">Producto</h2>
+        <h2 class="create__main__section__creacion--title"><%= product.name %></h2>
         <form class="create__main__section__creacion__form" action="/products/update/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
+            </div>
         <div class="create__main__section__creacion__contiene">
             <div class="createmainsectioncreacionformcategoria">
                 <label for="category">Seleccione Categoria</label>
                 <select class="createmainsectioncreacionformcategoria__items" id="category" name="category">
-                    <% productos.forEach(category => { %>
+                    <% categories.forEach(category => { %>
                         <option value="<%= category.id === categoryId && 'selected'%>" value ="<%= category.id %>"><%= category.name %></option>
                     <% }) %>
                 </select>
@@ -30,12 +34,10 @@
                 <div class="col-md-6">
                     <label for="image" class="form-label">Agregar imagen</label>
                     <input class="form-control" type="file" id="image" name="image" value="<%= product.image %>">
+                    <img src="/img/<%= product.image  %>" alt="">
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="name" class="form-label"></label>
-                <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
-            </div>
+           
             <div class="row">
                 <div class="col-md-4">
                     <label for="brand" class="form-label">Marcas</label>
@@ -48,7 +50,7 @@
                 </div>
                 <div class="col-md-4">
                     <label for="model" class="form-label">Modelo</label>
-                    <input type="text" class="form-control" id="model" name="model" value="<%= productos.model %>">
+                    <input type="text" class="form-control" id="model" name="model" value="<%= product.model %>">
                 </div>
                <!--  <div class="col-md-4">
                     <label for="stock" class="form-label">Stock</label>
@@ -60,16 +62,16 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Descripción</label>
-                <textarea class="form-control" id="description" rows="3" name="description" ><%= productos.description %></textarea>
+                <textarea class="form-control" id="description" rows="3" name="description" ><%= product.description %></textarea>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <label for="price" class="form-label">Precio</label>
-                    <input type="number" class="form-control" id="price" name="price" value="<%= productos.price %>">
+                    <input type="number" class="form-control" id="price" name="price" value="<%= product.price %>">
                 </div>
                 <div class="col-md-6">
                     <label for="discount" class="form-label">Descuento</label>
-                    <input type="number" class="form-control" id="discount" name="discount" value="<%= productos.discount %>">
+                    <input type="number" class="form-control" id="discount" name="discount" value="<%= product.discount %>">
                 </div>
             </div>
            <!--  <div class="row">

@@ -57,70 +57,51 @@ module.exports = {
     shoppingCart : (req,res) => {
         return res.render('shoppingCart')
     },
-     update: (req, res) => {
-        const productId = req.params.id;
-        const {category, name, brand, model, description, price,discount} = req.body
-
-        db.Product.findByPk(productId,{
-            include :["image","category"]
+    update: (req, res) => {
+        const productUp = req.params.id;
+        const { category, name, brand, model, description, price, discount } = req.body;
+    
+        db.Product.findByPk(productUp, {
+            include: ["images", "category"]
         })
-        .then((product)=>{
-            req.files.image &&
-            fs.existsSync(`./public/img/${product.image}`) &&
-            fs.unlinkSync(`./public/images/${product.image}`);
-        })
-        db.Product.update({
-            category,
-            image : req.file,
-            name: name.trim(),
-            brandId : brand,
-            model,                
-            description : description.trim(),
-            price,
-            discount
-        },
-        {
-           where :{
-             productId
-            },
-        }).then(()=>{
-            if(req.files.image) {
-                product.images.forEach((image)=>{
-                    fs.existsSync(`./public/img/${image.file}`) &&
-            fs.unlinkSync(`./public/images/${image.file}`);
-                });
-                db.Image.destroy({
-                    where :{
-                        productId : productId,
+        .then((product) => {
+            if (product) {
+                
+               /*  req.files.image &&
+                    fs.existsSync(`./public/img/${product.image}`) &&
+                    fs.unlinkSync(`./public/images/${product.image}`);
+     */
+                db.Product.update({
+                    category,
+                    /* image: req.file.filename, */
+                    name: name.trim(),
+                    brandId: brand,
+                    model,
+                    description: description.trim(),
+                    price,
+                    discount
+                },{
+                    where: {
+                        id: productUp
                     }
-                }).then(()=>{
-                    const images = req.file.images.map((file) =>{
-                        return {
-                            imagePrimary : file.filename,
-                            imageSecondary : file.filename,
-                            productId : product.id
-                        }
-                    })
-                });
-                db.image.blukCreate(images,{
-                    validate:true,
-                }).then((response) =>{
-                    return res.redirect('/users/admin');
                 })
+                .then(() => {
+                    return res.redirect('/users/admin')
+                    
+                })
+                .catch((error) => console.log(error));
             } else {
-                return res.redirect('/users/admin');
+                
+                res.status(404).send("El producto no se encuentra en la base de datos");
             }
-            
         })
-        .catch((error) =>console.log(error))
-       
-       
+        .catch((error) => console.log(error));
     },
 
     productEdit: async (req, res) => {
         try {
             const product = await db.Product.findByPk(req.params.id, {
-                include: ["image"]
+                include: ["images"]
             });
             const productos = await db.Product.findAll();
             const brands = await db.Brand.findAll({

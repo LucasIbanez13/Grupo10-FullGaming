@@ -28,6 +28,10 @@
     background-color: rgba(0,0,0,0.5);
     padding: 5px;
 }
+.create__main__section__creacion--title{
+    margin: 10px;
+    color:#fff
+}
 
 
 .create__main form:hover {
