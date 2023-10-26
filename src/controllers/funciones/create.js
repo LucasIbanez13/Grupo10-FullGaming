@@ -4,15 +4,22 @@ const db = require('../../database/models')
 
 module.exports = {
     create : (req,res) => {
-        
-        db.Category.findAll({
-            order : ['name']
-        })
-            .then(categories => {
-                return res.render('productCreate',{
-                    categories
-                })
+        Promise.all([
+            db.Category.findAll({
+                order : ['name']
+            }),
+            db.Brand.findAll({
+                order : ['name']
             })
-        
+
+        ])
+        .then(function([categories,marca ]) {
+            res.render('productCreate', {
+
+                categories,
+                marca
+            });
+        })
+        .catch(error => console.log(error));  
     }
 }

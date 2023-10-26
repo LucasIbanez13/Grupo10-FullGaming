@@ -41,7 +41,6 @@ module.exports = {
             db.Image.findAll()
         ])
         .then(function([marca, categorias, productos,image]) {
-            console.log("Imágenes:", image);
             res.render('home', {
                 productos,
                 marca,

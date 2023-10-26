@@ -33,14 +33,10 @@
                         <div class="col-md-4">
                             <label for="brand" class="form-label">Marcas</label>
                             <select class="form-select" id="brand" name="brand">
-                                <option value="aorus">Aorus</option>
-                                <option value="razer">Razer</option>
-                                <option value="corsair">Corsair</option>
-                                <option value="logitech">Logitech</option>
-                                <option value="westernDigital">Western Digital</option>
-                                <option value="elgato">Elgato</option>
-                                <option value="amd">Amd</option>
-                                <option value="intel">Intel</option>
+                                <option value="" selected hidden>seleccione...</option>
+                                <% marca.forEach(item => { %>
+                                    <option value="<%= item.id %>"><%= item.name %></option>
+                                <% }) %>
                             </select>
                         </div>
                         <div class="col-md-4">
