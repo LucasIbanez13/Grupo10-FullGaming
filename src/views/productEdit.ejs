@@ -11,9 +11,9 @@
     <!--------------------------REGISTRO------------------------------------------------->
     
 <main class="create__main">
-    <h1  class="create__main--title">Editar productos</h1>
+    <h2  class="create__main--title">Editar productos</h2>
     <section class="create__main__section__creacion">
-        <h2 class="create__main__section__creacion--title"><%= product.name %></h2>
+        <h3 class="create__main__section__creacion--title"><%= product.name %></h3>
         <form class="create__main__section__creacion__form" action="/products/update/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
