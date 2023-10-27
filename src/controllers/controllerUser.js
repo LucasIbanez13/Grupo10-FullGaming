@@ -85,17 +85,21 @@ module.exports = {
         }
     },
 
-    admin : (req,res) => {
-        const productos = db.Product.findAll()
-            .then(function(productos){
-                return res.render("admin",{
-                    productos,
-                    toThousand
-                })
-            })
-            .catch(error => console.log(error));
-        
+    admin : async (req, res) => {
+        try {
+          const productos = await db.Product.findAll();
+          const users = await db.User.findAll();
+      
+          return res.render("admin", {
+            productos,
+            users,
+            toThousand,
+          });
+        }catch (error) {
+          console.log(error);
+        }
     },
+      
     nose : (req,res) => {
         return res.render("nose")
     },

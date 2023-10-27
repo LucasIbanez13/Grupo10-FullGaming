@@ -84,6 +84,16 @@
     color: red;
 }
 
+.user-row {
+    border-bottom: 1px solid black; /* Agrega esta regla para el borde inferior */
+}
+
+tr td {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+
 
 
 .admin-header {
@@ -120,6 +130,9 @@
     border-radius: 3px;
     cursor: pointer;
 }
+
+
+
 
 
 
@@ -163,4 +176,5 @@
         gap: 20px;
         
     }
+    
 }
