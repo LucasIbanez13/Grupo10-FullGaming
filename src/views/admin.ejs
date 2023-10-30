@@ -133,36 +133,60 @@
                                         </div>
                                         <% }) %>
 
-                                            <% users.forEach(user=> { %>
-                                                <div id="modal-user" class="modal-overlay">
-                                                    <div class="modal-remove-admin">
-                                                        <div class="modal-admin-hijo">
-                                                            <div class="product-details">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>Nombres</td>
-                                                                        <td>Apellidos</td>
-                                                                        <td>Email</td>
-                                                                        <td>Rol</td>
-                                                                    </tr>
-                                                                    <% users.forEach(user => { %>
-                                                                        <tr>
-                                                                            <td><%= user.name %></td>
-                                                                            <td><%= user.surname %></td>
-                                                                            <td><%= user.email %></td>
-                                                                            <td><%= user.rolId %></td>
-                                                                        </tr>
-                                                                    <% }) %>
-                                                                </table>
+                                            <div id="modal-user" class="modal-overlay">
+                                                <div class="modal-remove-admin">
+
+                                                    <table>
+                                                        <tr>
+                                                            <th>Nombres</th>
+                                                            <th>Apellidos</th>
+                                                            <th>Email</th>
+                                                            <th>Rol</th>
+                                                        </tr>
+                                                        <% users.forEach(user=> { %>
+                                                            <tr>
+                                                                <td>
+                                                                    <%= user.name %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= user.surname %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= user.email %>
+                                                                </td>
+                                                                <td>
+                                                                   
+                                                                            <form
+                                                                                action="/users/updaterol/<%= user.id %>?_method=PUT"
+                                                                                method="post">
+                                                                                <select name="rolId">
+                                                                                    <% roles.forEach(role=> { %>
+                                                                                        <option
+                                                                                            value="<%= role.dataValues.id %>"
+                                                                                            <% if
+                                                                                            (user.rolId===role.dataValues.id){ %>selected<% } %>>
+                                                                                                <%= role.name %>
+                                                                                        </option>
+                                                                                        <% }) %>
+                                                                                </select>
+                                                                                <input type="submit" value="Actualizar Rol">
+                                                                            </form>
+
+                                                                </td>
+                                                            </tr>
+                                                            <% }) %>
+                                                    </table>
+
+                                                    <form action="#" method="POST">
+                                                        <div class="button-container">
+                                                            <a href="#" class="close-modal">Cancelar</a>
                                                         </div>
-                                                        <form action="#" method="POST">
-                                                            <div class="button-container">
-                                                                <a href="#" class="close-modal">Cancelar</a>
-                                                            </div>
-                                                        </form>
-                                                    </div>
+                                                    </form>
+
                                                 </div>
-                                                <% }) %>
+                                            </div>
+
+
 
 
 

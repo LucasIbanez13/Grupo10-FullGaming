@@ -89,14 +89,37 @@ module.exports = {
         try {
           const productos = await db.Product.findAll();
           const users = await db.User.findAll();
-      
+          const roles = await db.Rol.findAll();
+
           return res.render("admin", {
             productos,
             users,
             toThousand,
+            roles
+            
           });
         }catch (error) {
           console.log(error);
+        }
+    },
+
+    updateRol : async (req, res) => {
+        const userId = req.params.id;
+        const nuevoRolId = req.body.rolId; // Asegúrate de que el formulario use 'name="role"'
+        
+        console.log('userId:', userId);
+        console.log('nuevoRolId:', nuevoRolId);
+
+
+
+        try {
+          // Aquí utiliza Sequelize para actualizar el rol del usuario en la base de datos
+          await db.User.update({ rolId: nuevoRolId }, { where: { id: userId } });
+      
+          res.redirect('/users/admin#modal-user'); // Redirige a la página adecuada después de la actualización
+        } catch (error) {
+          console.error(error);
+          // Maneja los errores según tus necesidades
         }
     },
       
