@@ -135,7 +135,10 @@
 
                                             <div id="modal-user" class="modal-overlay">
                                                 <div class="modal-remove-admin">
-
+                                                    <form action="/admin/search" method="GET">
+                                                        <input type="text" name="email" placeholder="Buscar por email">
+                                                        <button type="submit">Buscar</button>
+                                                    </form>
                                                     <table>
                                                         <tr>
                                                             <th>Nombres</th>
@@ -155,31 +158,33 @@
                                                                     <%= user.email %>
                                                                 </td>
                                                                 <td>
-                                                                   
-                                                                            <form
-                                                                                action="/users/updaterol/<%= user.id %>?_method=PUT"
-                                                                                method="post">
-                                                                                <select name="rolId">
-                                                                                    <% roles.forEach(role=> { %>
-                                                                                        <option
-                                                                                            value="<%= role.dataValues.id %>"
-                                                                                            <% if
-                                                                                            (user.rolId===role.dataValues.id){ %>selected<% } %>>
-                                                                                                <%= role.name %>
-                                                                                        </option>
-                                                                                        <% }) %>
-                                                                                </select>
-                                                                                <input type="submit" value="Actualizar Rol">
-                                                                            </form>
+
+                                                                    <form
+                                                                        action="/users/updaterol/<%= user.id %>?_method=PUT"
+                                                                        method="post">
+                                                                        <select name="rolId" onchange="this.form.submit()">
+                                                                            <% roles.forEach(role=> { %>
+                                                                                <option
+                                                                                    value="<%= role.dataValues.id %>" <%
+                                                                                    if
+                                                                                    (user.rolId===role.dataValues.id){
+                                                                                    %>selected<% } %>>
+                                                                                        <%= role.name %>
+                                                                                </option>
+                                                                                <% }) %>
+                                                                        </select>
+                                                                        
+                                                                    </form>
 
                                                                 </td>
                                                             </tr>
                                                             <% }) %>
                                                     </table>
+                                                    
 
                                                     <form action="#" method="POST">
                                                         <div class="button-container">
-                                                            <a href="#" class="close-modal">Cancelar</a>
+                                                            <a href="#" class="close-modal">Cerrar</a>
                                                         </div>
                                                     </form>
 
