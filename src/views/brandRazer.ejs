@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") %>
+
+<body>
+    
+    <%- include("partials/header") %>
+     
+
+    <!----------------------------login-------------------------------------------------->
+    <%- include("partials/login", {viewError2:"/#modal"}) %>
+    
+    
+    <!--------------------------REGISTRO------------------------------------------------->
+    <%- include("partials/register", {view:"/#register"}) %>
+    
+    <!----------------------------nav-bar ------------------------------------------------->
+    <%- include("partials/header-nav") %>
+
+    <%- include("partials/modal-cel") %>
+    
+    <main class="brandRazer_main">
+    
+        <div class="brandRazer_main_banner1"><img src="/brands/razer/razzerBanner1.avif" alt=""></div>
+        <div class="brandRazer_main_banner2"><img src="/brands/razer/imgBannez.avif" alt=""></div>
+        <div class="brandRazer_main_search">
+            <form action="/search" method="GET" class="">
+                <div class="search-container">
+                    <input type="text" name="keywords" placeholder="Buscar...">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </form>
+        </div>
+        <div class="brandRazer_main_boxOne">
+            <div class="brandRazer_main_boxOne_banner">
+                <img src="/brands/razer/fondoimg.avif" alt="">
+            </div>
+            <div class="brandRazer_main_boxOne_primary">
+                <h1>
+                    RAZER HUNTSMAN MINI</h1>
+                <p>Entra a una nueva dimensión con los Razer Humter Mini gaming, teclas innovadoras, totalmente portátil e ideal para una configuración de alto rendimiento. </p>
+                <div class="brandRazer_main_boxOne_primary_info">
+                    <a href="">Más info</a>
+                </div>
+            </div>
+        </div>
+        <div class="brandRazer_main_boxTwo">
+            <p>productos</p>
+        </div>
+        <div class="brandRazer_main_boxtre">
+            <div class="brandRazer_main_boxtre_primary">
+                <h3>PERIFERICOS RAZER</h3>
+                <p>Los Productos Razer están diseñados para brindar el máximo rendimiento para jugar y trabajar. Disfruta de la potencia gamer, hecho para entusiastas, brindando el mejor rendimiento,
+                     la más alta confiabilidad y una administración de energía ultra eficiente.</p>
+            </div>
+            <div class="brandRazer_main_boxtre_secondary">
+                <div class="brandRazer_main_boxtre_secondary_img"> 
+                        <h4>AURICULARES</h4>
+                    <div class="brandRazer_main_boxtre_secondary_img_box">
+                        <img src="/brands/razer/auriculares(1).avif" alt="">
+                    </div>
+                </div>
+
+                <div class="imagenes-caja1">
+                    <div class="brandRazer_main_boxtre_secondary_img">
+                        <h4>MICROFONOS</h4>
+                        <div class="brandRazer_main_boxtre_secondary_img_box">
+                            <img src="/brands/razer/micro.avif" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="brandRazer_main_boxtre_secondary_img">
+                        <h4>MOUSE</h4>
+                        <div class="brandRazer_main_boxtre_secondary_img_box" id="mouseImg">
+                            <img src="/brands/razer/mouse.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagenes-caja2">
+                    <div class="brandRazer_main_boxtre_secondary_img">
+                        <h4>MOUSEPAD</h4>
+                        <div class="brandRazer_main_boxtre_secondary_img_box">
+                            <img src="/brands/razer/mousepad.avif" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="brandRazer_main_boxtre_secondary_img">
+                        <h4>TECLADO</h4>
+                        <div class="brandRazer_main_boxtre_secondary_img_box" id="tecladoImg">
+                            <img  src="/brands/razer/teclado.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagenes-caja3">
+                    <div class="brandRazer_main_boxtre_secondary_img">
+                        <h4>WEBCAMS</h4>
+                        <div class="brandRazer_main_boxtre_secondary_img_box">
+                            <img src="/brands/razer/webcam.avif" alt="">
+                        </div>
+                    </div>
+    
+                    <div class="brandRazer_main_boxtre_secondary_img">
+                        <h4>VARIOS</h4>
+                        <div class="brandRazer_main_boxtre_secondary_img_box" id="variosImg">
+                            <img src="/brands/razer/varios.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <p>video</p>
+        </div>
+
+    </main>
+    
+
+    
+
+
+    <!----------------------------FOOTER-------------------------------------------------->
+    <%- include('partials/footer') %>
+    
+</body>
+</html>

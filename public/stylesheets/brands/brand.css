@@ -1,0 +1,255 @@
+
+.brandRazer_main_banner1 img{
+    display: none;
+}
+.brandRazer_main_banner2{
+    width: 100%;
+}
+.brandRazer_main_banner2 img{
+    display: flex;
+    width: 100%;
+}
+.brandRazer_main_search {
+    position: relative;
+    top: -80px;
+}
+
+.brandRazer_main_search form {
+    position: absolute;
+    width: 100%;
+}
+.search-container {
+    position: relative;
+}
+.search-container a{
+    position: absolute;
+    right: 35px;
+    bottom: 13px;
+    color: rgb(139, 139, 139);
+}
+.brandRazer_main_search input {
+    border: 2px solid rgb(139, 139, 139);
+    width: 90%;
+    margin: 0 auto;
+    padding: 12px 10px;
+    border-radius: 15px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.10);
+    box-sizing: border-box;
+}
+.brandRazer_main_boxOne_primary{
+    padding: 40px 0px;
+    background-color: #111111;
+}
+
+.brandRazer_main_boxOne_primary h1{
+    font-size: 35px;
+    width: 80%;
+    text-align: center;
+    color: white;
+    margin: auto;
+}
+.brandRazer_main_boxOne_primary p{
+    font-size: 30px;
+    color: rgb(190, 190, 190);
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+.brandRazer_main_boxOne_primary_info{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.brandRazer_main_boxOne_primary_info a{
+    font-size: 30px;
+    width: 60%;
+    text-align: center;
+    border: 3px solid #44D62C;
+    padding: 10px 15px;
+    color: #44D62C;
+}
+
+.brandRazer_main_boxOne_banner img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+.brandRazer_main_boxOne_banner{
+    width: 100%;
+}
+.brandRazer_main_boxtre_primary{
+    padding: 30px 0px;
+    background-color: #44D62C;
+}
+.brandRazer_main_boxtre_primary h3{
+    font-size: 35px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+.brandRazer_main_boxtre_primary p{
+    font-size: 20px;
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+.brandRazer_main_boxtre_secondary_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.brandRazer_main_boxtre_secondary{
+    background-color: #44D62C;
+}
+.brandRazer_main_boxtre_secondary_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.brandRazer_main_boxtre_secondary_img_box img {
+    margin: auto;
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s; 
+}
+
+.brandRazer_main_boxtre_secondary_img_box img:hover {
+    transform: scale(1.1);
+}
+.brandRazer_main_boxtre_secondary_img h4 {
+    color: aliceblue;
+    margin: 0px;
+    position: absolute;
+    top: 70px;
+    font-size: 40px;
+    z-index: 2;
+}
+@media (min-width: 480px) {
+    .brandRazer_main_banner2 img {
+        display: none;
+    }
+    .brandRazer_main_boxOne_banner img{
+        display: none;
+    }
+    .brandRazer_main_banner1 img {
+        display: flex;
+        width: 100%;
+    }
+    .brandRazer_main_search {
+        display: flex;
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        background-color: #111111;
+    }
+    .brandRazer_main_search form {
+        display: flex;
+        justify-content: right;
+        position: static;
+        width: 100%;
+    }
+    .brandRazer_main_search input {
+        margin: 40px auto;
+        padding: 12px 107px 12px 10px;
+    }
+    .search-container a{
+        position: absolute;
+        right: 35px;
+        bottom: 50px;
+    }
+    .brandRazer_main_boxOne_primary {
+        background-image: url("/brands/razer/fondoimg.avif"); 
+        background-size: cover;
+        height: 600px;
+        background-position: right;
+    }
+    .brandRazer_main_boxOne_primary h1{
+        font-size: 60px;
+        margin-top: 140px;
+        text-align: left;
+    }
+    .brandRazer_main_boxOne_primary p{
+        width: 80%;
+        text-align: left;
+    }
+    .brandRazer_main_boxtre_primary h3{
+        font-size: 60px;
+    }
+    .brandRazer_main_boxtre_primary p{
+        width: 60%;
+        font-size: 30px;
+    }
+    .brandRazer_main_boxOne_primary_info{
+        justify-content: left;
+        width: 40%;
+        margin-left: 80px;
+        margin-top: 50px;
+    }
+}
+
+
+@media (min-width:1200px){
+    .brandRazer_main_banner2 img{
+        display: none;
+    }
+    .brandRazer_main_banner1 img{
+        display: flex;
+    }
+    .brandRazer_main_boxOne_primary h1{
+        font-size: 60px;
+        margin-top: 140px;
+        width: 90%;
+    }
+    .brandRazer_main_boxOne_primary p{
+        width: 90%;
+    }
+    .brandRazer_main_boxtre_primary p{
+        width: 80%;
+
+    }
+    .brandRazer_main_search input {
+        margin: 40px auto;
+        padding: 12px 140px 12px 10px;
+    }
+    .search-container{
+        margin-right: 40px;
+    }
+    .imagenes-caja1{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0px;
+    }
+    .imagenes-caja2{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0px;
+    }
+    .imagenes-caja3{
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0px;
+    }
+    #mouseImg{
+        margin-left: 20px;
+    }
+    #tecladoImg{
+        margin-left: 20px;
+    }
+    #variosImg{
+        margin-left: 20px;
+    }
+    .brandRazer_main_boxtre_secondary{
+        background-color: #111111;
+    }
+    .brandRazer_main_boxtre_secondary_img_box{
+        border-bottom: 3px solid #44D62C;
+        
+    }
+}

@@ -17,7 +17,7 @@ module.exports = {
         model: model,
         description: description,
         price: price,
-        discount: discount,
+        discount : discount === '' ? 0 : discount,
         brandId: brand,
         categoryId: category
     })
