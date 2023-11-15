@@ -1,0 +1,81 @@
+<div class="carousel-container">
+    
+    <div class="carousel--prev"><i class="fa-solid fa-arrow-left"></i></div>
+    <div class="carousel-item2">
+        <% categorias.forEach(cat => { %>
+            
+                <div class="home-main-articulos4">
+                    <a class="home-main-articulos-a4" href="/products/productDetail/<%= cat.id %>">
+                        <img src="/img/<%= cat.image %>" alt="">
+                        <p class="home-main-articulos-p4"><%= cat.name %></p>
+                    </a>
+                </div>
+            
+        <% }) %>
+    </div>
+    
+    <div class="carousel-next"><i class="fa-solid fa-arrow-right"></i></i></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  let itemsToShow = 5;
+
+  const prevButton = document.querySelector(".carousel--prev");
+  const nextButton = document.querySelector(".carousel-next");
+  const carouselItem2 = document.querySelector(".carousel-item2");
+  const products = document.querySelectorAll(".home-main-articulos4");
+  let currentIndex = 0;
+
+  
+  function showItems() {
+    products.forEach((product, index) => {
+      if (index >= currentIndex && index < currentIndex + itemsToShow) {
+        product.style.display = "block";
+      } else {
+        product.style.display = "none";
+      }
+    });
+  }
+
+  
+  function adjustItemsToShow() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1024) {
+      itemsToShow = 5;
+    } else if (screenWidth >= 768) {
+      itemsToShow = 4;
+    } else {
+      itemsToShow = 2; 
+    }
+
+    showItems(); 
+  }
+
+  
+  showItems();
+
+  
+  nextButton.addEventListener("click", function () {
+    const numProducts = products.length;
+    if (currentIndex + itemsToShow < numProducts) {
+      currentIndex += 1;
+      showItems();
+    }
+  });
+
+  
+  prevButton.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex -= 1;
+      showItems();
+    }
+  });
+
+  window.addEventListener("resize", adjustItemsToShow);
+
+  adjustItemsToShow();
+});
+
+
+</script>

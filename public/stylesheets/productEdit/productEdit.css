@@ -32,8 +32,18 @@
     margin: 10px;
     color:#fff
 }
-
-
+/*img{
+    max-width: 100%;
+    height: auto;
+    overflow: visible
+}
+h2{
+    margin:10px
+}
+h3{
+    margin: 10px;
+    text-align: center;
+}*/
 .create__main form:hover {
     border: solid 4px blue
 }

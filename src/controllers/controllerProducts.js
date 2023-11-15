@@ -74,20 +74,20 @@ productList: (req, res) => {
         const { category, name, brand, model, description, price, discount } = req.body;
     
         db.Product.findByPk(productUp, {
-            include: ["images", "category"]
+            include: ["images", "category","brand"]
         })
         .then((product) => {
             if (product) {
                 
                /*  req.files.image &&
                     fs.existsSync(`./public/img/${product.image}`) &&
-                    fs.unlinkSync(`./public/images/${product.image}`);
+                    fs.unlinkSync(`./public/img/${product.image}`);
      */
                 db.Product.update({
                     category,
                     /* image: req.file.filename, */
                     name: name.trim(),
-                    brandId: brand,
+                    brandId: product.brand,
                     model,
                     description: description.trim(),
                     price,

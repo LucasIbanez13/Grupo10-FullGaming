@@ -1,6 +1,6 @@
 const db = require("../database/models")
 var express = require('express');
-const {login, register, admin,nose,processregister,processLogin,profile,logout} = require('../controllers/controllerUser');
+const {login, register, admin,nose,processregister,processLogin,profile,logout,updateRol} = require('../controllers/controllerUser');
 var router = express.Router();
 const {body} =require("express-validator");
 const validationsLogin = require("../validations/validationLogin");
@@ -59,6 +59,9 @@ router.post("/register", validations, processregister);
 
 //mostrar admin
 router.get('/admin',isAdmin ,admin);
+
+//update roles
+router.put('/updaterol/:id',updateRol);
 
 //no se xd
 router.get('/nose', nose);

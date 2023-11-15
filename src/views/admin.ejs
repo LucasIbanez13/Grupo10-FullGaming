@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include("partials/head") %>
 </head>
@@ -7,116 +8,197 @@
 <body>
 
     <%- include("partials/header") %>
-    <%- include("partials/header-nav") %>
+        <%- include("partials/header-nav") %>
 
 
-    <main class="admin-main">
-        <div class="admin-header">
-            <h1 class="admin-main-h1">Admin Panel</h1>
-            <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
-                <button class="search-button">Buscar</button>
-            </div>
-            <a class="add-button" href="/products/productCreate">Agregar Producto</a>
-
-            <a class="add-button" href="#">Usuarios</a>
-        </div>
-        
-        
-        <div class="elementos-admin-padre">
-            <div class="nombre-admin">
-                <p>NOMBRE</p>
-                <p class="imagen-admin">IMAGEN</p>
-                <p>MARCA</p>
-                <p>PRECIO</p>
-                <p class="imagen-admin">DESCUENTO</p>
-    
-                <p class="imagen-admin">CATEGORIA</p>
-                <p>STOCK</p>
-                <p>ACCION</p>
-            </div>
-            
-        <% productos.forEach(element => { %>
-            <div class="admin-main-box">
-              
-                
-                
-                <div class="name-admin"><h3></h3><%= element.name %></h3></div>
-                <div class="imagen-admin"><img src="/img/<%= element.image %>" alt="" style="width: 70px; height: 65px;"></div>
-                <div><span><%= element.brand %></span></div>
-                <div><span>$<%= toThousand(element.price) %></span></div>
-                <div class="imagen-admin"><span><%= element.discount %></span></div>
-                <div class="imagen-admin"><span><%= element.category %></span></div>
-                <div><span><%= element.stock %></span></div>
-
-
-              
-
-
-
-                <section class="admin-main-box-boxDos-section">
-                  
-                    <a class="action-link" href="#modal-admin<%= element.id %>"><i class="fa-solid fa-eye"></i></a>
-                    <a class="action-link" href="/products/productEdit/<%= element.id %>"><i class="fa-regular fa-pen-to-square action-icon"></i></a>
-                    <a class="action-link" href="#modal-remove<%= element.id %>"><i class="fa-regular fa-trash-can action-icon"></i></a>
-                  
-                </section>
-
-
-              
-            </div>
-          <% }) %>
-
-   
-
-
-
-
-        
-            <% productos.forEach(element => { %>
-                <div id="modal-admin<%= element.id %>" class="modal-overlay">
-                    <div class="modal-remove-admin">
-                        <div class="modal-admin-hijo">
-                            <img src="/img/<%= element.image %>" alt="">
-                            <div class="product-details">
-                                <h2><%= element.name %></h2>
-                                <span>$<%= toThousand(element.price) %></span>
-                            </div>
-                        </div>
-                        <h3>Ver producto?</h3>
-                        <form action="/products/productDetail/<%= element.id %>" method="get">
-                            <div class="button-container">
-                                <button type="submit" name="delete">Aceptar</button>
-                                <a href="#" class="close-modal">Cancelar</a>
-                            </div>
-                        </form>
+            <main class="admin-main">
+                <div class="admin-header">
+                    <h1 class="admin-main-h1">Admin Panel</h1>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar...">
+                        <button class="search-button">Buscar</button>
                     </div>
+                    <a class="add-button" href="/products/productCreate">Agregar Producto</a>
+
+
+                    <a class="add-button" href="#modal-user">Usuarios</a>
                 </div>
-            <% }) %>
-        
-        
-        <% productos.forEach(element => { %>
-            <div id="modal-remove<%= element.id %>" class="modal-overlay">
-                <div class="modal-remove-admin">
-                    <div class="modal-admin-hijo">
-                        <img src="/img/<%= element.image %>" alt="">
-                        <div class="product-details">
-                            <h2><%= element.name %></h2>
-                            <span>$<%= toThousand(element.price) %></span>
-                        </div>
+
+
+                <div class="elementos-admin-padre">
+                    <div class="nombre-admin">
+                        <p>NOMBRE</p>
+                        <p class="imagen-admin">IMAGEN</p>
+                        <p>MARCA</p>
+                        <p>PRECIO</p>
+                        <p class="imagen-admin">DESCUENTO</p>
+
+                        <p class="imagen-admin">CATEGORIA</p>
+                        <p>STOCK</p>
+                        <p>ACCION</p>
                     </div>
-                    <h3>¿Estás seguro de eliminar este producto?</h3>
-                    <form action="/products/remove/<%= element.id %>?_method=DELETE" method="POST">
-                        <div class="button-container">
-                            <button type="submit" name="delete">Aceptar</button>
-                            <a href="#" class="close-modal">Cancelar</a>
+
+                    <% productos.forEach(element=> { %>
+                        <div class="admin-main-box">
+
+
+
+                            <div class="name-admin">
+                                <h3></h3>
+                                <%= element.name %>
+                                    </h3>
+                            </div>
+                            <div class="imagen-admin"><img src="/img/<%= element.image %>" alt=""
+                                    style="width: 70px; height: 65px;"></div>
+                            <div><span>
+                                    <%= element.brand %>
+                                </span></div>
+                            <div><span>$<%= toThousand(element.price) %></span></div>
+                            <div class="imagen-admin"><span>
+                                    <%= element.discount %>
+                                </span></div>
+                            <div class="imagen-admin"><span>
+                                    <%= element.category %>
+                                </span></div>
+                            <div><span>
+                                    <%= element.stock %>
+                                </span></div>
+
+
+
+
+
+
+                            <section class="admin-main-box-boxDos-section">
+
+                                <a class="action-link" href="#modal-admin<%= element.id %>"><i
+                                        class="fa-solid fa-eye"></i></a>
+                                <a class="action-link" href="/products/productEdit/<%= element.id %>"><i
+                                        class="fa-regular fa-pen-to-square action-icon"></i></a>
+                                <a class="action-link" href="#modal-remove<%= element.id %>"><i
+                                        class="fa-regular fa-trash-can action-icon"></i></a>
+
+                            </section>
+
+
+
                         </div>
-                    </form>
+                        <% }) %>
+
+                            <% productos.forEach(element=> { %>
+                                <div id="modal-admin<%= element.id %>" class="modal-overlay">
+                                    <div class="modal-remove-admin">
+                                        <div class="modal-admin-hijo">
+                                            <img src="/img/<%= element.image %>" alt="">
+                                            <div class="product-details">
+                                                <h2>
+                                                    <%= element.name %>
+                                                </h2>
+                                                <span>$<%= toThousand(element.price) %></span>
+                                            </div>
+                                        </div>
+                                        <h3>Ver producto?</h3>
+                                        <form action="/products/productDetail/<%= element.id %>" method="get">
+                                            <div class="button-container">
+                                                <button type="submit" name="delete">Aceptar</button>
+                                                <a href="#" class="close-modal">Cancelar</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <% }) %>
+
+
+                                    <% productos.forEach(element=> { %>
+                                        <div id="modal-remove<%= element.id %>" class="modal-overlay">
+                                            <div class="modal-remove-admin">
+                                                <div class="modal-admin-hijo">
+                                                    <img src="/img/<%= element.image %>" alt="">
+                                                    <div class="product-details">
+                                                        <h2>
+                                                            <%= element.name %>
+                                                        </h2>
+                                                        <span>$<%= toThousand(element.price) %></span>
+                                                    </div>
+                                                </div>
+                                                <h3>¿Estás seguro de eliminar este producto?</h3>
+                                                <form action="/products/remove/<%= element.id %>?_method=DELETE"
+                                                    method="POST">
+                                                    <div class="button-container">
+                                                        <button type="submit" name="delete">Aceptar</button>
+                                                        <a href="#" class="close-modal">Cancelar</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <% }) %>
+
+                                            <div id="modal-user" class="modal-overlay">
+                                                <div class="modal-remove-admin">
+                                                    <form action="/admin/search" method="GET">
+                                                        <input type="text" name="email" placeholder="Buscar por email">
+                                                        <button type="submit">Buscar</button>
+                                                    </form>
+                                                    <table>
+                                                        <tr>
+                                                            <th>Nombres</th>
+                                                            <th>Apellidos</th>
+                                                            <th>Email</th>
+                                                            <th>Rol</th>
+                                                        </tr>
+                                                        <% users.forEach(user=> { %>
+                                                            <tr>
+                                                                <td>
+                                                                    <%= user.name %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= user.surname %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= user.email %>
+                                                                </td>
+                                                                <td>
+
+                                                                    <form
+                                                                        action="/users/updaterol/<%= user.id %>?_method=PUT"
+                                                                        method="post">
+                                                                        <select name="rolId" onchange="this.form.submit()">
+                                                                            <% roles.forEach(role=> { %>
+                                                                                <option
+                                                                                    value="<%= role.dataValues.id %>" <%
+                                                                                    if
+                                                                                    (user.rolId===role.dataValues.id){
+                                                                                    %>selected<% } %>>
+                                                                                        <%= role.name %>
+                                                                                </option>
+                                                                                <% }) %>
+                                                                        </select>
+                                                                        
+                                                                    </form>
+
+                                                                </td>
+                                                            </tr>
+                                                            <% }) %>
+                                                    </table>
+                                                    
+
+                                                    <form action="#" method="POST">
+                                                        <div class="button-container">
+                                                            <a href="#" class="close-modal">Cerrar</a>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+
+
+
+
+
                 </div>
-            </div>
-        <% }) %>
-    </div>
-    </main>
-    <%- include("partials/footer") %>
+
+            </main>
+            <%- include("partials/footer") %>
 </body>
+
 </html>

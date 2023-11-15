@@ -70,6 +70,29 @@ module.exports = {
             });
         })
         .catch(error => console.log(error));
+    },
+    brand: (req, res) => {
+        const marca = req.params.marca;
+        res.render(`brand${marca}`, { marca });
+    },
+    razer: (req, res) => {
+
+        Promise.all([
+            db.Brand.findAll(),
+            db.Category.findAll(),
+            db.Product.findAll({include: ["brand","images"]}),
+            db.Image.findAll()
+        ])
+        .then(function([marca, categorias, productos,image]) {
+            res.render('brandRazer', {
+                productos,
+                marca,
+                categorias,
+                toThousand,
+                image,
+            });
+        })
+        .catch(error => console.log(error));
     }
     
 }

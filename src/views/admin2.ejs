@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <%- include("partials/head") %>
 </head>
@@ -8,59 +7,116 @@
 <body>
 
     <%- include("partials/header") %>
-        <div class="container-fluid bg-white py-5">
-            <div class="container bg-light p-4 rounded">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h1>Admin Panel</h1>
-                    <form class="form-inline">
-                        <div class="form-group mx-2">
-                            <input type="text" class="form-control" placeholder="Buscar producto">
+    <%- include("partials/header-nav") %>
+
+
+    <main class="admin-main">
+        <div class="admin-header">
+            <h1 class="admin-main-h1">Admin Panel</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button class="search-button">Buscar</button>
+            </div>
+            <a class="add-button" href="/products/productCreate">Agregar Producto</a>
+
+            <a class="add-button" href="#">Usuarios</a>
+        </div>
+        
+        
+        <div class="elementos-admin-padre">
+            <div class="nombre-admin">
+                <p>NOMBRE</p>
+                <p class="imagen-admin">IMAGEN</p>
+                <p>MARCA</p>
+                <p>PRECIO</p>
+                <p class="imagen-admin">DESCUENTO</p>
+    
+                <p class="imagen-admin">CATEGORIA</p>
+                <p>STOCK</p>
+                <p>ACCION</p>
+            </div>
+            
+        <% productos.forEach(element => { %>
+            <div class="admin-main-box">
+              
+                
+                
+                <div class="name-admin"><h3></h3><%= element.name %></h3></div>
+                <div class="imagen-admin"><img src="/img/<%= element.image %>" alt="" style="width: 70px; height: 65px;"></div>
+                <div><span><%= element.brand %></span></div>
+                <div><span>$<%= toThousand(element.price) %></span></div>
+                <div class="imagen-admin"><span><%= element.discount %></span></div>
+                <div class="imagen-admin"><span><%= element.category %></span></div>
+                <div><span><%= element.stock %></span></div>
+
+
+              
+
+
+
+                <section class="admin-main-box-boxDos-section">
+                  
+                    <a class="action-link" href="#modal-admin<%= element.id %>"><i class="fa-solid fa-eye"></i></a>
+                    <a class="action-link" href="/products/productEdit/<%= element.id %>"><i class="fa-regular fa-pen-to-square action-icon"></i></a>
+                    <a class="action-link" href="#modal-remove<%= element.id %>"><i class="fa-regular fa-trash-can action-icon"></i></a>
+                  
+                </section>
+
+
+              
+            </div>
+          <% }) %>
+
+   
+
+
+
+
+        
+            <% productos.forEach(element => { %>
+                <div id="modal-admin<%= element.id %>" class="modal-overlay">
+                    <div class="modal-remove-admin">
+                        <div class="modal-admin-hijo">
+                            <img src="/img/<%= element.image %>" alt="">
+                            <div class="product-details">
+                                <h2><%= element.name %></h2>
+                                <span>$<%= toThousand(element.price) %></span>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Buscar</button>
+                        <h3>Ver producto?</h3>
+                        <form action="/products/productDetail/<%= element.id %>" method="get">
+                            <div class="button-container">
+                                <button type="submit" name="delete">Aceptar</button>
+                                <a href="#" class="close-modal">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+        
+        
+        <% productos.forEach(element => { %>
+            <div id="modal-remove<%= element.id %>" class="modal-overlay">
+                <div class="modal-remove-admin">
+                    <div class="modal-admin-hijo">
+                        <img src="/img/<%= element.image %>" alt="">
+                        <div class="product-details">
+                            <h2><%= element.name %></h2>
+                            <span>$<%= toThousand(element.price) %></span>
+                        </div>
+                    </div>
+                    <h3>¿Estás seguro de eliminar este producto?</h3>
+                    <form action="/products/remove/<%= element.id %>?_method=DELETE" method="POST">
+                        <div class="button-container">
+                            <button type="submit" name="delete">Aceptar</button>
+                            <a href="#" class="close-modal">Cancelar</a>
+                        </div>
                     </form>
                 </div>
-                <button class="btn btn-success my-3">Agregar Producto</button>
-                <table class="table ">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th class="text-right">Acciones</th> <!-- Añadido "text-right" aquí -->
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Ejemplo de un producto -->
-                        <tr>
-                            <td>
-                                <img src="ruta_imagen1.jpg" alt="Producto 1" width="100">
-                                Nombre del Producto 1
-                            </td>
-                            <td>$19.99</td>
-                            <td class="text-right"> <!-- Añadido "text-right" aquí -->
-                                <a href="#" class="btn btn-primary">Ver</a>
-                                <a href="#" class="btn btn-warning">Editar</a>
-                                <a href="#" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
-                        <!-- Ejemplo de otro producto -->
-                        <tr>
-                            <td>
-                                <img src="ruta_imagen2.jpg" alt="Producto 2" width="100">
-                                Nombre del Producto 2
-                            </td>
-                            <td>$29.99</td>
-                            <td class="text-right"> <!-- Añadido "text-right" aquí -->
-                                <a href="#" class="btn btn-primary">Ver</a>
-                                <a href="#" class="btn btn-warning">Editar</a>
-                                <a href="#" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
-                        <!-- Puedes agregar más productos siguiendo la misma estructura -->
-                    </tbody>
-                </table>
             </div>
-        </div>
+        <% }) %>
+    </div>
+    </main>
+    <%- include("partials/footer") %>
 </body>
-</body>
-
 </html>
