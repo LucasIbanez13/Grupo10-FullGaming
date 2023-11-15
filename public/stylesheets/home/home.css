@@ -341,6 +341,12 @@ border-radius:  0 10px 10px 10px;
     color: black;
 }
 
+.categoria:hover {
+    box-shadow:
+    0 0 2px 2px #bebebe,
+    0 0 20px 10px rgba(0, 0, 0, 0.1);
+    }
+
 @media (min-width: 480px) {
 
     .padre-articulos {

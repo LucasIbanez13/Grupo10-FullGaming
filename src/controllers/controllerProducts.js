@@ -6,7 +6,8 @@ const productsFilePath = path.join(__dirname, '../data/items.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const db = require('../database/models')
-const{userRead}= require("./controllerHome")
+const{userRead}= require("./controllerHome");
+const category = require('../database/models/category');
 
 
 
@@ -34,16 +35,27 @@ module.exports = {
         })*/
     },
 
-    productList: (req, res) => {
-        const { category } = req.params
-        const productsFilter = products.filter(p => p.category === category)
-        
-        return res.render('productList', {
-            products: productsFilter,
-            category
-        })
-    },
-
+productList: (req, res) => {
+    Promise.all([
+        db.Brand.findAll(),
+        db.Category.findByPk (req.params.id, {
+        include: [
+            "products"
+        ]
+    }),
+        db.Product.findAll({include: ["images"]}),
+        db.Image.findAll(),
+    ])
+    .then(function([marca, category, productos]) {
+        res.render('productList', {
+            productos,
+            marca,
+            category,
+            toThousand,
+        });
+    })
+    .catch(error => console.log(error)); 
+},
     productMarc: (req, res) => {
         const { marca } = req.params
         const productsFilter = products.filter(p => p.marca === marca)

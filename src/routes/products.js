@@ -14,7 +14,7 @@ router.get('/shoppingCart', shoppingCart);
 router.get('/productDetail/:id/',productDetail)
 router.get('/productCreate',isAdmin,create)
 router.post('/productCreate',upload.single('image'),productUpdate)
-router.get('/productList/:category?',productList)
+router.get('/productList/:id',productList)
 router.get('/productMarc/:marca',productMarc)
 router.get('/productEdit/:id/',isAdmin,productEdit)
 router.put('/update/:id',upload.single('image'),update)

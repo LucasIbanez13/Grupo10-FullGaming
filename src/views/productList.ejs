@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('partials/head') %>
+  <%- include('partials/head') %>
 
-
-<body>
+  <body class="productlist">
     <%- include("partials/header") %>
-			
-<% if(locals.category){ %>
-    <h1><%=locals.category %></h1>
-<% } else { %>
-    <h1>Todos los productos</h1>
-<% } %>
 
-<% if (products.length) { %>
+    <div class="banner_categoria">
+      <img src="/img/<%= category.banner %>" alt="" />
+      <h1 class="categoria_titulo"><%= category.name %></h1>
 
-    <% products.forEach(product => { %>
-        <div>
-            <%- include('partials/productfilter', {
-                product
-            }) %>
+      <p class="categoria_parrafo"><%= category.parrafo %></p>
+    </div>
+
+    <div class="categoria_opciones">
+        <div class="categoria_1">
+            <img src="/img/<%= category.image2 %>" alt="" />
         </div>
-    <% }) %>
-<% } else { %>
-    <h2>No hay productos <%= locals.category ? "con esa categoria" : "" %></h2>
-<% } %>
+        
+        <div class="categoria_2">
+            <img src="/img/<%= category.image3 %>" alt="" />
+        </div>
+    </div>
 
+    <div class="categoria_opciones2">
+      <div class="categoria_3">
+        <img src="/img/<%= category.image4 %>" alt="" />
+    </div>
+    <div class="categoria_4">
+      <img src="/img/<%= category.image5 %>" alt="" />
+  </div>
+    </div>
 
-
-
-	<%- include('partials/footer') %>
-</body>	
-
-
+<div class="categoriacarrusel">
+    <%- include("partials/carousel-home") %> <%- include('partials/footer') %>
+</div>
+    
+  </body>
 </html>

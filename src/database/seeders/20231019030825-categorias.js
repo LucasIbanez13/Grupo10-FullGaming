@@ -1,10 +1,16 @@
 'use strict';
 const categoriesJSON = require('../../data/categories.json')
 
-const categories = categoriesJSON.map(({ name, image }) => {
+const categories = categoriesJSON.map(({ name, image, image2, image3, image4, image5, banner, parrafo }) => {
   return {
     name,
     image,
+    image2,
+    image3,
+    image4,
+    image5,
+    banner,
+    parrafo,
     createdAt: new Date(),
     updatedAt: new Date()
   }

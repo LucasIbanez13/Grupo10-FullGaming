@@ -1,93 +1,112 @@
 [
-    {
-        "id":1,
-        "name":"Almacenamiento",
-        "image": "public (7).webp"
-        
-    },
-    {
-        "id":2,
-        "name":"Ram",
-        "image": "public (12).webp"
-    },
-    {
-        "id":3,
-        "name":"CPU",
-        "image": "public (14).webp"
-    },
-    {
-        "id":4,
-        "name":"Motherboard",
-        "image": "public (18).webp"
-    },
-    {
-        "id":5,
-        "name":"cpu cooling",
-        "image": "public (10).webp"
-    },
-    {
-        "id":6,
-        "name":"otro",
-        "image": "public (19).webp"
-    },
-    {
-        "id":7,
-        "name":"teclado",
-        "image": "public (21).webp"
-    },
-    {
-        "id":8,
-        "name":"notebook",
-        "image": "public (17).webp"
-    },
-    {
-        "id":9,
-        "name":"gabinete",
-        "image": "public (13).webp"
-    },
-    {
-        "id":10,
-        "name":"sillas gamer",
-        "image": "public (23).webp"
-    },
-    {
-        "id":11,
-        "name":"Placa de video",
-        "image": "public (24).webp"
-    },
-    {
-        "id":12,
-        "name":"conectividad",
-        "image": "public (11).webp"
-    },
-    {
-        "id":13,
-        "name":"parlante",
-        "image": "public (20).webp"
-    },
-    {
-        "id":14,
-        "name":"camara web",
-        "image": "public (22).webp"
-    },
-    {
-        "id":15,
-        "name":"fuentes",
-        "image": "public (9).webp"
-    },
-    {
-        "id":16,
-        "name":"auriculares",
-        "image": "public (8).webp"
-    },
-    {
-        "id":17,
-        "name":"microfono",
-        "image": "public (15) 1.png"
-    },
-    {
-        "id":18,
-        "name":"mouse",
-        "image": "public (16).webp"
-    }
+  {
+    "id": 1,
+    "name": "Almacenamiento",
+    "image": "public (7).webp",
+    "image2": "almacenamiento-1.jpg",
+    "image3": "almacenamiento-2.jpg",
+    "banner": "bannerAlmacenamiento.jpg",
+    "parrafo": "En Full Gamer, nos enorgullece ofrecer una amplia gama de soluciones de almacenamiento de disco sólido (SSD) y disco duro (HDD) para satisfacer tus necesidades de almacenamiento y rendimiento. Nos dedicamos a proporcionar productos de alta calidad que garantizan un rendimiento óptimo y confiabilid"
+  },
+  {
+    "id": 2,
+    "name": "Ram",
+    "image": "public (12).webp",
+    "image2": "ram-1.jpg",
+    "image3": "ram-2.jpg",
+    "banner": "bannerRam.jpg",
+    "parrafo": "En Full Gamer, entendemos la importancia crucial de la memoria RAM para un rendimiento informático sin problemas y eficiente. Ofrecemos una selección cuidadosamente curada de módulos de memoria RAM que elevarán la potencia de tu sistema a nuevos niveles. Descubre por qué nuestra memoria RAM es la opción ideal para usuarios exigentes y profesionales."
+  },
+  {
+    "id": 3,
+    "name": "CPU",
+    "image": "public (14).webp",
+    "image2": "cpuintell.jpg",
+    "image3": "cpuamd.jpg",
+    "banner": "bannerCPU.jpg",
+    "parrafo": "En Full Gamer, nos enorgullece ofrecer una amplia selección de unidades centrales de procesamiento (CPU) que llevan el rendimiento informático a nuevas alturas. Ya sea que seas un entusiasta de los videojuegos, un creador de contenido o un profesional que busca potencia de procesamiento, nuestras CPUs de última generación están diseñadas para cumplir con tus demandas."
+  },
+  {
+    "id": 4,
+    "name": "Motherboard",
+    "image": "public (18).webp",
+    "image2": "placamadreamgg.jpg",
+    "image3": "placamadreintell.jpg",
+    "banner": "bannerMadre.jpg",
+    "parrafo": "En Full Gamer, entendemos que el corazón de cualquier construcción de juegos o sistema de alta gama es su placa base. Nuestras motherboards están cuidadosamente seleccionadas para ofrecer el rendimiento, la estabilidad y la versatilidad que los verdaderos jugadores y entusiastas necesitan."
+  },
+  {
+    "id": 5,
+    "name": "cooling",
+    "image": "public (10).webp",
+    "image2": "cooler-cooler.jpg",
+    "image3": "cooler-refrigeracion.jpg",
+    "banner": "bannerCooling.jpg",
+    "parrafo": "En Full Gamer, sabemos que mantener la temperatura de tu sistema bajo control es esencial para un rendimiento óptimo. Nuestros sistemas de refrigeración están diseñados para ofrecer una disipación de calor eficiente, manteniendo tus componentes frescos incluso durante las sesiones de juego más intensas."
+  },
+  {
+    "id": 6,
+    "name": "monitor",
+    "image": "public (19).webp",
+    "image2": "monitor-curvo.jpg",
+    "image3": "monitor-plano.jpg",
+    "banner": "bannerMonitor.jpg",
+    "parrafo": "En Full Gamer, entendemos que cada detalle importa cuando se trata de juegos. Nuestra selección de monitores ha sido cuidadosamente elegida para proporcionar una experiencia de juego envolvente y visualmente impresionante. Desde la velocidad de respuesta hasta la calidad de la imagen, nuestros monitores están diseñados para satisfacer las necesidades de los verdaderos jugadores."
+  },
+  {
+    "id": 7,
+    "name": "accesorios",
+    "image": "public (23).webp",
+    "image2": "camara1.jpg",
+    "image3": "microfono1.jpg",
+    "image4": "silla1.jpg",
+    "image5": "parlante1.jpg",
+    "banner": "bannerAccesorios.jpg",
+    "parrafo": "En Full Gamer, no solo nos preocupamos por ofrecer componentes de hardware de alta calidad, sino que también nos dedicamos a brindarte una experiencia de juego completa. Explora nuestra selección de accesorios diseñados para mejorar tu espacio de juego y llevar tu experiencia a un nivel superior."
+  },
+  {
+    "id": 8,
+    "name": "notebook",
+    "image": "public (17).webp",
+    "image2": "notebook-gamer.jpg",
+    "image3": "notebook-ofice.jpg",
+    "banner": "bannerNote.jpg",
+    "parrafo": "En Full Gamer, sabemos que la pasión por los juegos no se detiene cuando estás en movimiento. Es por eso que ofrecemos una selección excepcional de notebooks diseñadas para satisfacer las necesidades de los jugadores serios que buscan rendimiento, portabilidad y estilo."
+  },
+  {
+    "id": 9,
+    "name": "gabinete",
+    "image": "public (13).webp",
+    "image2": "gabinete-gamer.jpg",
+    "image3": "gabinete-homer.jpg",
+    "banner": "bannerGabinete.jpg",
+    "parrafo": "En Full Gamer, entendemos que tu configuración de juego no es solo potencia, es también un reflejo de tu estilo. Nuestra selección de gabinetes no solo ofrece un espacio eficiente para tus componentes, sino que también añade un toque de estilo a tu estación de juego."
+  },
+  {
+    "id": 10,
+    "name": "perifericos",
+    "image": "public (21).webp",
+    "image2": "mouse.jpg",
+    "image3": "teclados.jpg",
+    "banner": "bannerPerifericos.jpg",
+    "parrafo": "En Full Gamer, sabemos que los periféricos adecuados son esenciales para maximizar tu rendimiento en los juegos. Nuestra selección de teclados y ratones no solo ofrecen funcionalidad de vanguardia, sino que también han sido diseñados para elevar tu experiencia de juego a nuevas alturas."
+  },
+  {
+    "id": 11,
+    "name": "Placa de video",
+    "image": "public (24).webp",
+    "image2": "placadevideo-nvidia.jpg",
+    "image3": "placadevideo-asus.jpg",
+    "banner": "bannerPlacaVideo.jpg",
+    "parrafo": "En Full Gamer, entendemos que la potencia gráfica es esencial para una experiencia de juego extraordinaria. Nuestra selección de tarjetas gráficas está diseñada para llevar tus juegos y aplicaciones visuales al siguiente nivel, ofreciendo un rendimiento excepcional y gráficos de alta calidad."
+  },
+  {
+    "id": 12,
+    "name": "fuente",
+    "image": "public (9).webp",
+    "image2": "fuente-at.jpg",
+    "image3": "fuente-atx.jpg",
+    "banner": "bannerFuente.jpg",
+    "parrafo": "En Full Gamer, entendemos que la potencia constante es esencial para un rendimiento óptimo en tus juegos. Nuestra selección de fuentes de alimentación está diseñada para proporcionar una energía confiable y eficiente, asegurando que tu sistema esté listo para enfrentar cualquier desafío."
+  }
 ]

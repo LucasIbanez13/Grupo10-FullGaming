@@ -16,6 +16,26 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
+      image2: {
+        type: Sequelize.STRING
+      },
+      image3: {
+        type: Sequelize.STRING
+      },
+      image4: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      image5: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      banner: {
+        type: Sequelize.STRING
+      },
+      parrafo: {
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
