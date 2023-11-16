@@ -73,7 +73,9 @@ module.exports = {
     },
     brand: (req, res) => {
         const marca = req.params.marca;
-        res.render(`brand${marca}`, { marca });
+        res.render(`brand${marca}`, {
+             marca 
+            });
     },
     razer: (req, res) => {
 
