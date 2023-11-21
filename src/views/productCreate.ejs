@@ -8,7 +8,7 @@
         <%- include("partials/header") %>
             <!-- <div class= "container col-md-8 my-5 text-center" > -->
                 <div class = "div_container">
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data" id="formProductCreate">
                     <div class="row" >
                         <div class="col-md-6">
                             <label for="category" class="form-label">Seleccione una categoría</label>
@@ -51,9 +51,16 @@
                         <div class="col-md-4">
                             <label for="stock" class="form-label">Stock</label>
                             <select class="form-select" id="stock" name="stock">
-                                <option value="si">Sí</option>
-                                <option value="no">No</option>
+                                <option value="" selected hidden>seleccione...</option>
+                                <% stock.forEach(item => { %>
+                                    <option value="<%= item.id %>"><%= item.available %></option>
+                                <% }) %>
                             </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="amount" class="form-label">Cantidad Stock</label>
+                            <input type="number" class="form-control <%= locals.errors && (errors.amount && 'is-invalid') %>" id="amount" name="amount">
+                            <small id="msgError-amount" class="ms-2 text-danger"><%= locals.errors && (errors.amount && errors.amount.msg) %></small>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -72,6 +79,7 @@
                             <input type="number" class="form-control" id="discount" name="discount">
                         </div>
                     </div>
+                    <small  id="msgError-empty"  class="ms-2 text-danger"></small>
                     <button type="submit" class="btn btn-danger float-end mt-4">Guardar</button>
                 </form>
             </div>

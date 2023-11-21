@@ -105,3 +105,30 @@ Limitar la interrupción de tareas concentradas mediante la implementación de e
 Dejar de postergar decisiones importantes, en su lugar, tomar medidas rápidas y efectivas para mantener el impulso del proyecto.
 Evitar la asignación de tareas sin una clara definición de los objetivos y expectativas, para evitar confusiones y malentendidos.
 Dejar de pasar por alto los comentarios y sugerencias de los miembros del equipo, asegurándose de abordarlos de manera adecuada.
+# RESTROSPECTIVA DEL SPRINT 7.
+## Comenzar a hacer:
+Organizar más reuniones frecuentes para revisar el progreso del proyecto.
+
+## Hacer más:
+
+Promover la colaboración entre los miembros del equipo para aprovechar al máximo las habilidades y conocimientos de cada uno.
+Realizar pruebas y revisiones más exhaustivas antes de completar una tarea o entregar un producto final.
+
+
+## Continuar haciendo:
+
+Mantener una actitud de apertura y respeto durante las reuniones, permitiendo que todos los miembros del equipo expresen sus opiniones y sugerencias.
+Celebrar los logros y reconocer el arduo trabajo de los miembros del equipo de manera regular.
+Seguir utilizando herramientas y metodologías que han demostrado ser efectivas en la gestión de proyectos.
+
+
+## Hacer menos:
+
+Reducir la dependencia de reuniones largas y centrarse en sesiones más concisas y enfocadas en los temas más importantes.
+Minimizar la duplicación de esfuerzos al asignar tareas y responsabilidades de manera más clara y eficiente.
+
+
+## Dejar de hacer:
+
+Dejar de postergar decisiones importantes, en su lugar, tomar medidas rápidas y efectivas para mantener el impulso del proyecto.
+Dejar de pasar por alto los comentarios y sugerencias de los miembros del equipo, asegurándose de abordarlos de manera adecuada.
