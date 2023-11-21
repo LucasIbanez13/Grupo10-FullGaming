@@ -32,19 +32,52 @@
     </div>
 </div>
 <script>
-    //document.addEventListener("DOMContentLoaded", function() {
-        const closeModalButtonLog = document.querySelector("#closeModalLog");
-        const email2Input = document.querySelector("#form-login input[name='email2']");
-        const pass2Input = document.querySelector("#form-login input[name='pass2']");
-        const errorMessages = Array.from(document.querySelectorAll("#form-login .error-message"));
+    document.addEventListener("DOMContentLoaded", function () {
+    const closeModalButtonLog = document.querySelector("#closeModalLog");
+    const email2Input = document.querySelector("#form-login input[name='email2']");
+    const pass2Input = document.querySelector("#form-login input[name='pass2']");
+    const errorMessages = Array.from(document.querySelectorAll("#form-login .error-message"));
 
-        closeModalButtonLog.addEventListener("click", function() {
-            email2Input.value = "";
-            pass2Input.value = "";
-            errorMessages.forEach(function(errorMessage) {
-                errorMessage.style.display = "none";
-            });
+    let typingTimer;
+    const doneTypingInterval = 500; 
+
+    closeModalButtonLog.addEventListener("click", function () {
+        email2Input.value = "";
+        pass2Input.value = "";
+        errorMessages.forEach(function (errorMessage) {
+            errorMessage.textContent = '';
         });
-    //});
+    });
+
+    // Validación del correo electrónico
+    email2Input.addEventListener('input', function () {
+        clearTimeout(typingTimer);
+
+        
+        typingTimer = setTimeout(function () {
+            validateEmail(email2Input, errorMessages[0]);
+        }, doneTypingInterval);
+    });
+});
+
+
+function validateEmail(input, errorMessage) {
+    const emailValue = input.value;
+
+    if (!isValidEmail(emailValue)) {
+        input.classList.add('error-input');
+        errorMessage.textContent = 'Por favor, ingresa un correo electrónico válido.';
+    } else {
+        input.classList.remove('error-input');
+        errorMessage.textContent = '';
+    }
+}
+
+function isValidEmail(value) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(value);
+}
+
+    
 </script>
 </div>
