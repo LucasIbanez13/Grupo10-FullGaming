@@ -23,7 +23,9 @@
                         <label form="recordar">Recordarme</label>
                     </div>
                     <div class="input-padre">
-                        <button type="submit" class="boton-login"><p>Login</p></button>
+                        <button type="submit" class="boton-login" id="loginButton" disabled>
+                            <p>Login</p>
+                        </button>
                     </div>
                     <a href="#register">No tengo cuenta</a>
                 </div>
@@ -33,51 +35,76 @@
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const closeModalButtonLog = document.querySelector("#closeModalLog");
-    const email2Input = document.querySelector("#form-login input[name='email2']");
-    const pass2Input = document.querySelector("#form-login input[name='pass2']");
-    const errorMessages = Array.from(document.querySelectorAll("#form-login .error-message"));
+        const closeModalButtonLog = document.querySelector("#closeModalLog");
+        const email2Input = document.querySelector("#form-login input[name='email2']");
+        const pass2Input = document.querySelector("#form-login input[name='pass2']");
+        const loginButton = document.querySelector("#loginButton");
+        const errorMessages = Array.from(document.querySelectorAll("#form-login .error-message"));
 
-    let typingTimer;
-    const doneTypingInterval = 500; 
+        let typingTimer;
+        const doneTypingInterval = 500;
 
-    closeModalButtonLog.addEventListener("click", function () {
-        email2Input.value = "";
-        pass2Input.value = "";
-        errorMessages.forEach(function (errorMessage) {
-            errorMessage.textContent = '';
+        closeModalButtonLog.addEventListener("click", function () {
+            resetLoginValidation();
         });
+
+        // Validación del correo electrónico
+        email2Input.addEventListener('input', function () {
+            clearTimeout(typingTimer);
+            
+            typingTimer = setTimeout(function () {
+                validateEmail(email2Input, errorMessages[0]);
+                checkLoginButtonState();
+            }, doneTypingInterval);
+        });
+
+        // Validación de la contraseña
+        pass2Input.addEventListener('input', function () {
+            checkLoginButtonState();
+        });
+
+        function resetLoginValidation() {
+            email2Input.value = "";
+            pass2Input.value = "";
+            errorMessages.forEach(function (errorMessage) {
+                errorMessage.textContent = '';
+            });
+            loginButton.disabled = true;
+            email2Input.classList.remove('error-input');
+        }
+
+        function checkLoginButtonState() {
+            if (isValidEmail(email2Input.value) && pass2Input.value.trim() !== '') {
+                loginButton.disabled = false;
+            } else {
+                loginButton.disabled = true;
+            }
+        }
     });
 
-    // Validación del correo electrónico
-    email2Input.addEventListener('input', function () {
-        clearTimeout(typingTimer);
+    function validateEmail(input, errorMessage) {
+        const emailValue = input.value;
 
-        
-        typingTimer = setTimeout(function () {
-            validateEmail(email2Input, errorMessages[0]);
-        }, doneTypingInterval);
-    });
-});
-
-
-function validateEmail(input, errorMessage) {
-    const emailValue = input.value;
-
-    if (!isValidEmail(emailValue)) {
-        input.classList.add('error-input');
-        errorMessage.textContent = 'Por favor, ingresa un correo electrónico válido.';
-    } else {
-        input.classList.remove('error-input');
-        errorMessage.textContent = '';
+        if (emailValue.trim() === '') {
+            // El campo está vacío, no hay mensaje de error
+            input.classList.remove('error-input');
+            errorMessage.textContent = '';
+        } else if (!isValidEmail(emailValue)) {
+            // El correo electrónico no es válido, mostrar mensaje de error
+            input.classList.add('error-input');
+            errorMessage.textContent = 'Por favor, ingresa un correo electrónico válido.';
+        } else {
+            // El correo electrónico es válido, no hay mensaje de error
+            input.classList.remove('error-input');
+            errorMessage.textContent = '';
+        }
     }
-}
 
-function isValidEmail(value) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(value);
-}
-
-    
+    function isValidEmail(value) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(value);
+    }
 </script>
+
+
 </div>

@@ -43,20 +43,29 @@
     </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const closeModalButton = document.querySelector("#closeModal");
     const nameInput = document.querySelector("input[name='name']");
     const emailInput = document.querySelector("input[name='email']");
-    const errorMessages = Array.from(document.querySelectorAll(".error-message"))
-           
+    const errorMessages = Array.from(document.querySelectorAll(".error-message"));
+    const loginEmailInput = document.querySelector("#form-login input[name='email2']");
+    
+    // Guardar el estado del mensaje de error
+    const emailErrorMessage = errorMessages[0];
+    const emailErrorMessageState = emailErrorMessage.style.display;
 
     closeModalButton.addEventListener("click", function() {
         nameInput.value = "";
         emailInput.value = "";
-        errorMessages.forEach(function(errorMessage) {
-            errorMessage.style.display = "none";
-        });
+
+        // Restablecer el valor del campo de correo electrónico
+        loginEmailInput.value = "";
+
+        // Restaurar el estado del mensaje de error al abrir el modal de login
+        emailErrorMessage.style.display = emailErrorMessageState;
     });
 });
+
 </script>
+
 </div>
