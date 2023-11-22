@@ -34,6 +34,14 @@
     cursor: pointer;
 }
 
+.errores {
+    color: red;
+    text-align: center;
+    background-color: rgba(1,1,1,0.1);
+    border-radius: 0 14px;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+}
 
 /*contenido*/
 
