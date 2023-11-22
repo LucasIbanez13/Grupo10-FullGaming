@@ -17,11 +17,15 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     productDetail : (req,res) => {
-        db.Product.findByPk(req.params.id)
-        .then(function(productos) {
+
+
+        Promise.all([
+            db.Product.findByPk(req.params.id),
+        ])
+        .then(function([productos]) {
             res.render('productDetail', {
                 productos,
-                toThousand
+                toThousand,
             });
         })
         .catch(error => console.log(error));

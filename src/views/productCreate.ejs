@@ -49,15 +49,6 @@
                             <small id="msgError-model" class="ms-2 text-danger"><%= locals.errors && (errors.model && errors.model.msg) %></small>
                         </div>
                         <div class="col-md-4">
-                            <label for="stock" class="form-label">Stock</label>
-                            <select class="form-select" id="stock" name="stock">
-                                <option value="" selected hidden>seleccione...</option>
-                                <% stock.forEach(item => { %>
-                                    <option value="<%= item.id %>"><%= item.available %></option>
-                                <% }) %>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
                             <label for="amount" class="form-label">Cantidad Stock</label>
                             <input type="number" class="form-control <%= locals.errors && (errors.amount && 'is-invalid') %>" id="amount" name="amount">
                             <small id="msgError-amount" class="ms-2 text-danger"><%= locals.errors && (errors.amount && errors.amount.msg) %></small>
