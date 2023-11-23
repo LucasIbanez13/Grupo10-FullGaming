@@ -21,7 +21,11 @@ module.exports = (sequelize, DataTypes) => {
       Product.belongsTo(models.Category,{
         as: "category",
         foreignKey : "categoryId"
-      })// define association here
+      });
+      Product.hasMany(models.Stock, {
+        as: 'stocks',
+        foreignKey: 'productId',
+      });
     }
   }
   Product.init({
@@ -29,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     model: DataTypes.STRING,
     description: DataTypes.TEXT,
     price: DataTypes.INTEGER,
+    amount: DataTypes.INTEGER,
     discount: DataTypes.INTEGER,
     image: DataTypes.STRING,
     brandId: DataTypes.INTEGER,    

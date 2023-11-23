@@ -7,9 +7,8 @@
     
             </div>
 
-            <form action="/search" method="GET" class="home-header-buscador">
-                <input type="text" name="keywords" placeholder="Buscar...">
-                <a href=""></a>
+            <form action="/search" method="GET" class="home-header-buscador" onsubmit="return validateForm()">
+                <input type="text" name="keywords" id="searchInput" placeholder="Buscar...">
             </form>
 
     <div class="fonta">
@@ -37,7 +36,7 @@
     </div>
     </div>
     <a href=""></a>
-
+    <script src="/js/validacionesbusqueda.js"></script>
 </header>
 
 

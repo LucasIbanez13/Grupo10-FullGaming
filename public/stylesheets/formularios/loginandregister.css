@@ -34,6 +34,20 @@
     cursor: pointer;
 }
 
+.errores {
+    
+color: red;
+    
+text-align: center;
+    
+background-color: rgba(1,1,1,0.1);
+    
+border-radius: 0 14px;
+    
+font-family: 'Josefin Sans';
+    
+font-weight: 400;
+}
 
 /*contenido*/
 
@@ -84,15 +98,22 @@
     color: #fff;
 }
 
-.boton-login p:hover {
-    transform: scale(1.5);
-}
 
 .boton-admin {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: blueviolet;
     border-radius: 5px;
+}
+
+#loginButton:disabled {
+    opacity: 0.3; 
+    
+}
+
+#loginButton:not(:disabled) p:hover {
+    transform: scale(1.5);
+    
 }
 
 

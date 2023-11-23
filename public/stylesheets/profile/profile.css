@@ -152,6 +152,18 @@
     left: 75%;
     padding: 8px;
 }
+
+
+
+  
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+
 @media (min-width: 480px) {
     .profile_box_form{
         margin: 10px 20px;
@@ -190,6 +202,13 @@
     }
     
 }
+
+
+
+  
+
+
+
 @media (min-width:1440px){
     .profile_box_form_boxOne{
         width: 370px;

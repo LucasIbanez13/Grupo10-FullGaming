@@ -73,6 +73,9 @@
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+.buscador {
+    border: none;
+}
   
 
   .home-header-buscador {

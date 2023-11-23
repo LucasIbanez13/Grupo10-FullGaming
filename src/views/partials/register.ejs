@@ -2,30 +2,30 @@
     <div class="modal">
         <a href="#" class="close-modal-button" id="closeModal"><i class="fa-solid fa-times"></i></a>
         <div class="form-container">
-            <form action="/users/register/?viewError=<%= locals?.view %>" method="POST">
+            <form class="register" action="/users/register/?viewError=<%= locals?.view %>" method="POST">
                 <div class="contenedor">
 
                     <div class="img-container"><img src="/img/logo2.png" alt=""></div>
                         <h3>registro</h3>
 
                         <div class="input-padre">
-                            <input class="input-style" type="text" name="name" placeholder="crea usuario" value="<%= locals.old && locals.old.name%>">
+                            <input class="input-style" id="formName" type="text" name="name" placeholder="crea usuario" value="<%= locals.old && locals.old.name%>">
                             <span style="color: red" class="error-message"><%= locals?.errorsRegister?.name?.msg %></span>
                         </div>
 
                     <div class="input-padre">
-                        <input class="input-style" type="email" name="email" placeholder="Ingrese su email" value="<%= locals.old && locals.old.email%>" >
+                        <input class="input-style" id="formEmail" type="email" name="email" placeholder="Ingrese su email" value="<%= locals.old && locals.old.email%>" >
                         <span style="color: red" class="error-message"><%= locals?.errorsRegister?.email?.msg %></span>
             
                     </div>
                     <div class="input-padre">
-                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
+                        <input class="input-style" id="formPass" type="password" name="pass" placeholder="Ingrese su contraseña">
                         <span style="color: red" class="error-message"><%= locals?.errorsRegister?.pass?.msg %></span>
             
                     </div>
 
                     <div class="input-padre">
-                        <input class="input-style" type="password" name="passz" placeholder="Repita su contrasena">
+                        <input class="input-style" id="formPass2" type="password" name="passz" placeholder="Repita su contrasena">
                         <span style="color: red" class="error-message"><%= locals?.errorsRegister?.passz?.msg %></span>
             
                     </div>
@@ -35,25 +35,37 @@
                         <button type="submit" class="boton-login">Registrate</button>
                     </div>
                 </div>
+                <div class="errores">
+                    <ul></ul>
+                </div>
             </form>      
         </div>
     </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const closeModalButton = document.querySelector("#closeModal");
     const nameInput = document.querySelector("input[name='name']");
     const emailInput = document.querySelector("input[name='email']");
-    const errorMessages = Array.from(document.querySelectorAll(".error-message"))
-           
+    const errorMessages = Array.from(document.querySelectorAll(".error-message"));
+    const loginEmailInput = document.querySelector("#form-login input[name='email2']");
+    
+    // Guardar el estado del mensaje de error
+    const emailErrorMessage = errorMessages[0];
+    const emailErrorMessageState = emailErrorMessage.style.display;
 
     closeModalButton.addEventListener("click", function() {
         nameInput.value = "";
         emailInput.value = "";
-        errorMessages.forEach(function(errorMessage) {
-            errorMessage.style.display = "none";
-        });
+
+        // Restablecer el valor del campo de correo electrónico
+        loginEmailInput.value = "";
+
+        // Restaurar el estado del mensaje de error al abrir el modal de login
+        emailErrorMessage.style.display = emailErrorMessageState;
     });
 });
+
 </script>
+
 </div>

@@ -23,6 +23,9 @@ module.exports = {
       price: {
         type: Sequelize.INTEGER.UNSIGNED
       },
+      amount: {
+        type: Sequelize.INTEGER.UNSIGNED
+      },
       discount: {
         type: Sequelize.INTEGER.UNSIGNED,
         defaultValue: 0

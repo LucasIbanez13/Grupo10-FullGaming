@@ -6,20 +6,18 @@ module.exports = {
     create : (req,res) => {
         Promise.all([
             db.Category.findAll({
-                order : ['name']
-            }),
-            db.Brand.findAll({
-                order : ['name']
-            })
-
-        ])
-        .then(function([categories,marca ]) {
-            res.render('productCreate', {
-
-                categories,
-                marca
-            });
-        })
-        .catch(error => console.log(error));  
-    }
+                order: ['name'], 
+              }),
+              db.Brand.findAll({
+                order: ['name'],
+              })
+            ])
+              .then(([categories, marca]) => {
+                res.render('productCreate', {
+                  categories,
+                  marca,
+                });
+              })
+              .catch(error => console.log(error));
+          }
 }

@@ -66,6 +66,7 @@ CREATE TABLE IF NOT EXISTS `full-gamer`.`products` (
   `model` VARCHAR(255) NULL,
   `description` TEXT NULL,
   `price` INT NULL,
+  `amount` INT NULL,
   `discount` INT NULL,
   `brandId` INT NULL,
   `imageId` INT NULL,
@@ -105,9 +106,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `full-gamer`.`stocks` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `avaliable` TINYINT NULL,
+  `avaliable` VARCHAR(255) NULL,
   `amount` INT NULL,
-  `productId` INT NULL,
+  `productId` INT NULL, 
   PRIMARY KEY (`id`),
   INDEX `fk_stock_product_idx` (`productId` ASC) VISIBLE,
   CONSTRAINT `fk_stock_product`
