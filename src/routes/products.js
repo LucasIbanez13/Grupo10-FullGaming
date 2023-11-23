@@ -1,12 +1,12 @@
 const express = require('express');
 const upload = require('../middlewares/upload');
-const {shoppingCart,productDetail,productEdit,productList,productMarc,update,productprueba} = require('../controllers/controllerProducts');
+const {shoppingCart,productDetail,productEdit,productList,productMarc,update} = require('../controllers/controllerProducts');
 const { remove } = require('../controllers/funciones/remove');
 const { create } = require('../controllers/funciones/create');
 const { productUpdate } = require('../controllers/funciones/productUpdate');
 const isAdmin = require('../middlewares/verify/verifyAdmin');
 
-
+const updateValidation = require('../validations/updateValidation');
 const router = express.Router();
 
 /* /products */
@@ -17,9 +17,9 @@ router.post('/productCreate',upload.single('image'),productUpdate)
 router.get('/productList/:id',productList)
 router.get('/productMarc/:marca',productMarc)
 router.get('/productEdit/:id/',isAdmin,productEdit)
-router.put('/update/:id',upload.single('image'),update)
+router.put('/update/:id',upload.single('image'),updateValidation,update)
 router.delete("/remove/:id/",remove);
-router.get("/prueba",productprueba);
+
 
 
 module.exports = router;

@@ -4,6 +4,7 @@
 <body class="create__body">
     <%- include('partials/header') %>
     <%- include('partials/header-nav') %>
+    
     <!----------------------------login-------------------------------------------------->
     <%- include("partials/login") %>
     
@@ -15,16 +16,28 @@
     <section class="create__main__section__creacion">
         <h3 class="create__main__section__creacion--title"><%= product.name %></h3>
         <form class="create__main__section__creacion__form" action="/products/update/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="errores">
+                <ul>
+
+                </ul>
+            </div>
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
+                <% if (errors && errors.name) { %>
+                    <small class="alert alert-danger is-invalid" id="msg-error-name" role="alert">
+                      <%= errors.name.msg %>
+                    </small>
+                    <% } else { %>
+                        <small id="msg-error-name" class="form-text is-valid"></small>
+                    <% } %>
             </div>
         <div class="create__main__section__creacion__contiene">
             <div class="createmainsectioncreacionformcategoria">
                 <label for="category">Seleccione Categoria</label>
                 <select class="createmainsectioncreacionformcategoria__items" id="category" name="category">
                     <% categories.forEach(category => { %>
-                        <option value="<%= category.id === categoryId && 'selected'%>" value ="<%= category.id %>"><%= category.name %></option>
+                        <option <%= category.id == categoryId ? 'selected' : '' %> value="<%= category.id %>"><%= category.name %></option>
                     <% }) %>
                 </select>
             </div>
@@ -34,24 +47,38 @@
                 <div class="col-md-6">
                     <label for="image" class="form-label">Agregar imagen</label>
                     <input class="form-control" type="file" id="image" name="image" value="<%= product.image %>">
-                    <img src="/img/<%= product.image  %>" alt="">
+                    <img class="imagen_producto"src="/img/<%= product.image  %>" alt="">
                 </div>
             </div>
            
             <div class="row">
                 <div class="col-md-4">
                     <label for="brand" class="form-label">Marcas</label>
-                    <select class="form-select" id="brand" name="brand">
+                    <select class="form-select is-valid" id="brand" name="brand">
                         <option value="" selected hidden>seleccione...</option>
                         <% brands.forEach(brand => { %>
-                            <option <%= brand.id === brandId && 'selected'  %>value="<%= brand.id %>"><%= brand.name %></option>
+                            <option <%= brand.id === brandId && 'selected' %> value="<%= brand.id %>"><%= brand.name %></option>
                         <% }) %>
                        
                     </select>
+                    <% if (errors && errors.brand) { %>
+                        <small class="alert alert-danger is-invalid" id="msg-error-brand" role="alert">
+                            <%= errors.brand.msg %>
+                        </small>
+                    <% } else { %>
+                        <small id="msg-error-brand" class="form-text is-valid"></small>
+                    <% } %>
                 </div>
                 <div class="col-md-4">
                     <label for="model" class="form-label">Modelo</label>
                     <input type="text" class="form-control" id="model" name="model" value="<%= product.model %>">
+                    <% if (errors && errors.model) { %>
+                        <small class="alert alert-danger is-invalid" id="msg-error-model" role="alert">
+                            <%= errors.model.msg %>
+                        </small>
+                    <% } else { %>
+                        <small id="msg-error-model" class="form-text is-valid"></small>
+                    <% } %>
                 </div>
                <!--  <div class="col-md-4">
                     <label for="stock" class="form-label">Stock</label>
@@ -64,6 +91,13 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Descripción</label>
                 <textarea class="form-control" id="description" rows="3" name="description" ><%= product.description %></textarea>
+                <% if (errors && errors.description) { %>
+                    <small class="alert alert-danger is-invalid" id="msg-error-description" role="alert">
+                        <%= errors.description.msg %>
+                    </small>
+                <% } else { %>
+                    <small id="msg-error-description" class="form-text is-valid"></small>
+                <% } %>
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -114,7 +148,7 @@
                     </select>
                 </div>
             </div> -->
-            <button type="submit" class="btn btn-danger float-end mt-4">Guardar</button>
+            <button type="submit"id="btn-submit" class="btn btn-danger float-end mt-4">Guardar</button>
         </form>
     </div>
     
@@ -122,6 +156,6 @@
 </main>    
 <%- include('partials/footer') %>
 
-
+<script src="/javascripts/validationUpdate.js"></script>
 </body>
 </html>

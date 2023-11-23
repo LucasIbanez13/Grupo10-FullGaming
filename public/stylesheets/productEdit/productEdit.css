@@ -53,5 +53,10 @@ h3{
 }
 
 @media (min-width: 1200px) {
-    .create__main form {width: 83%;}
+    .create__main form {width: 83%;};
+    .imagen_producto{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }

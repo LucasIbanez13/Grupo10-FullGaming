@@ -8,6 +8,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models')
 const{userRead}= require("./controllerHome");
 const category = require('../database/models/category');
+const {validationResult} = require('express-validator');
 
 
 
@@ -69,48 +70,71 @@ productList: (req, res) => {
     shoppingCart : (req,res) => {
         return res.render('shoppingCart')
     },
-    update: (req, res) => {
-        const productUp = req.params.id;
-        const { category, name, brand, model, description, price, discount } = req.body;
-    
-        db.Product.findByPk(productUp, {
-            include: ["images", "category","brand"]
-        })
-        .then((product) => {
-            if (product) {
-                
-               /*  req.files.image &&
-                    fs.existsSync(`./public/img/${product.image}`) &&
-                    fs.unlinkSync(`./public/img/${product.image}`);
-     */
-                db.Product.update({
+    update: async (req, res) => {
+         const errors = validationResult(req);
+
+        if (!errors.isEmpty()) { 
+            const productUp = req.params.id;
+
+            const [categories, product, brands] = await Promise.all([
+                db.Category.findAll({
+                    order: ['name']
+                }),
+                db.Product.findByPk(productUp, {
+                    include: ["images", "category", "brand"]
+                }),
+                db.Brand.findAll({
+                    order: ['name']
+                })
+            ]);
+
+            res.render('productEdit', {
+                product,
+                brands,
+                categories,
+                categoryId: product ? product.categoryId : null,
+                brandId: product ? product.brandId : null,
+                errors: errors.mapped()
+            });
+            }
+        try {      
+            const productUp = req.params.id;
+            const { category, name, brand, model, description, price, discount } = req.body;
+
+            const product = await db.Product.findByPk(productUp, {
+                include: ["images", "category", "brand"]
+            });
+           
+                 if (product) {
+                await db.Product.update({
                     category,
-                    /* image: req.file.filename, */
                     name: name.trim(),
                     brandId: product.brand,
                     model,
                     description: description.trim(),
                     price,
                     discount
-                },{
+                }, {
                     where: {
                         id: productUp
                     }
-                })
-                .then(() => {
-                    return res.redirect('/users/admin')
-                    
-                })
-                .catch((error) => console.log(error));
+                });
+
+                console.log('Producto actualizado con éxito');
+              
+               return res.redirect('/users/admin'); 
             } else {
                 
-                res.status(404).send("El producto no se encuentra en la base de datos");
+                throw new Error("Producto no encontrado");
             }
-        })
-        .catch((error) => console.log(error));
+         } catch (error) {
+            console.log(error);
+            
+        }
     },
-
+    
     productEdit: async (req, res) => {
+      
         try {
             const product = await db.Product.findByPk(req.params.id, {
                 include: ["images"]
@@ -122,22 +146,22 @@ productList: (req, res) => {
             const categories = await db.Category.findAll({
                 order: ['name']
             });
-
-            res.render('productEdit', {
+    
+            return res.render('productEdit', {
                 product,
                 brands,
                 categories,
                 productos,
-                categoryId: product.categoryId, 
-                brandId:product.brandId
+                categoryId: product ? product.categoryId : null,
+                brandId: product ? product.brandId : null,
+                errors: {}
             });
         } catch (error) {
-            console.log(error);            
+            console.log(error);
         }
-    },    
-
-
-    productprueba : (req,res) => {
-        return res.render("admin2")
     }
-}
+        
+    } 
+
+
+    
