@@ -6,6 +6,9 @@
     background-color: #231F20;
     color: white;
 }
+.profileInit {
+    height: 95%;
+}
 .profileInit_contenedor_email{
     width: 100%;
     overflow: hidden;
@@ -27,6 +30,10 @@
 .profileInit_contenedor_email{
     margin-top: 10px;
     margin-bottom: 30px;
+}
+.profileInit_contenedor_email p {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 3%;
 }
 /*buttons*/
 .profileInit_contenedor_contenedorButton_button{
@@ -64,18 +71,16 @@
     overflow: hidden;
 }
 @media (min-width: 480px) {
-    
+    .profileInit{
+    }
 }
 
 
 
 @media (min-width:1024px){
     .profileInit{
-        height: 600px;
-
     }
     .profileInit_contenedor{
-        height: 100%;
         border-radius: 0 10% 10% 0;
         width: 450px;
     }
@@ -137,9 +142,10 @@
 }
 @media (min-width:1024px){
     .profileInit{
-        height: 600px;
+
     }
     .profileInit_contenedor{
-        width: 450px;
+    height: 32em;
+    margin-top: 15px;
     }
 }
