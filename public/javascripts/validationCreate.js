@@ -2,6 +2,7 @@
 const $ = id => document.getElementById(id);
 
 window.onload = function() {
+
  /* Category */   
     $('category').addEventListener('focus', function(e){
         $('msgError-category').innerHTML = null
@@ -45,6 +46,27 @@ $('image').addEventListener('blur', function(e){
             break;
     }
 });
+
+/*Img previ*/
+   
+$('image').addEventListener('change', function (e) {
+    const fileInput = this;
+    const imagePreviewContainer = $('imagePreviewContainer');
+    const imagePreview = $('imagePreview');
+
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            imagePreview.src = e.target.result;
+            imagePreviewContainer.style.display = 'block';
+        };
+    
+        reader.readAsDataURL(fileInput.files[0]);
+    } else {
+        imagePreviewContainer.style.display = 'none';
+    }
+    })
 /* name */
 $('name').addEventListener('focus', function(e){
     $('msgError-name').innerHTML = null
@@ -102,7 +124,7 @@ $('model').addEventListener('blur', function(e){
 
     switch (true) {
         case !this.value.trim():
-            $('msgError-model').innerHTML = "El nombre es obligatorio"
+            $('msgError-model').innerHTML = "El modelo es obligatorio"
             this.classList.add('is-invalid')
             break;
         case this.value.trim().length < 3:
@@ -111,35 +133,6 @@ $('model').addEventListener('blur', function(e){
             break
         default:
             $('msgError-model').innerHTML = null;
-            this.classList.add('is-valid')
-            this.classList.remove('is-invalid')
-            break;
-    }
-});
-/* stock */
-$('stock').addEventListener('focus', function(e){
-    $('msgError-stock').innerHTML = null
-    this.classList.remove('is-invalid')
-    this.classList.remove('is-valid')
-})
-
-$('stock').addEventListener('blur', function(e){
-
-    switch (true) {
-        case !this.value.trim():
-            $('msgError-stock').innerHTML = "El nombre es obligatorio"
-            this.classList.add('is-invalid')
-            break;
-        case this.value.trim().length < 2:
-            $('msgError-stock').innerHTML = "Mínimo dos letras";
-            this.classList.add('is-invalid')
-            break
-        case !/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/.test(this.value.trim()):
-            $('msgError-stock').innerHTML = "Solo se permiten letras";
-            this.classList.add('is-invalid')
-            break
-        default:
-            $('msgError-stock').innerHTML = null;
             this.classList.add('is-valid')
             this.classList.remove('is-invalid')
             break;
