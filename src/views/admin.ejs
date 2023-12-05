@@ -51,18 +51,14 @@
                             <div class="imagen-admin"><img src="/img/<%= element.image %>" alt=""
                                     style="width: 70px; height: 65px;"></div>
                             <div><span>
-                                <% if (element.brandId === null) { %>
-                                   <p> no esta definida la marca</p>
-                                <% }else{ %>
-                                    <%= element.brandId%>
-                                <% } %>
+                                <%= element.brand ? element.brand.name : 'Desconocido' %>
                                 </span></div>
                             <div><span>$<%= element.price %></span></div>
                             <div class="imagen-admin"><span>
                                     <%= element.discount %>
                                 </span></div>
                             <div class="imagen-admin"><span>
-                                    <%= element.categories%>
+                                <%= element.category ? element.category.name : 'Desconocido' %>
                                 </span></div>
                           
 
