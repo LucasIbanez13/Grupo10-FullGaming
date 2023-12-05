@@ -5,7 +5,7 @@ window.onload = function () {
         e.preventDefault();
 
         validateName();
-        validateBrand();
+        /* validateBrand(); */
         validateModel();
         validateDescription();
     });
@@ -31,7 +31,7 @@ window.onload = function () {
         }
     }
 
-    function validateBrand() {
+    /* function validateBrand() {
         const campoBrand = $('brand');
         const brandError = $('msg-error-brand');
 
@@ -45,7 +45,7 @@ window.onload = function () {
                 campoBrand.classList.add('is-valid');
                 campoBrand.classList.remove('is-invalid');
                 break;
-        }
+        } */
     }
 
     function validateModel() {
@@ -89,4 +89,4 @@ window.onload = function () {
                 break;
         }
     }
-};
+;

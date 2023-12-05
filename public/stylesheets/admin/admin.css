@@ -45,9 +45,14 @@
     overflow: hidden;
 }
 
-.imagen-admin {
-    display: none
+.imagen-admin{
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold
 }
+    ;
 
 .admin-main-box-boxDos-section {
     display: flex;

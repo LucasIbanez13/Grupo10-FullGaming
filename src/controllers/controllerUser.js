@@ -87,12 +87,24 @@ module.exports = {
 
     admin : async (req, res) => {
         try {
-          const productos = await db.Product.findAll();
+          const [productos,categories,brands] = await Promise.all([
+            db.Product.findAll({
+            include : ["category","brand"]
+          }),
+          db.Category.findAll({
+            order:['name']
+          }),
+          db.Brand.findAll({
+            order : ['name']
+          })
+            ]);
           const users = await db.User.findAll();
           const roles = await db.Rol.findAll();
 
           return res.render("admin", {
             productos,
+            categories,
+            brands,
             users,
             toThousand,
             roles

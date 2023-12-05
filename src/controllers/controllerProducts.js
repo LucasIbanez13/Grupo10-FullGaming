@@ -77,7 +77,7 @@ productList: (req, res) => {
     update: async (req, res) => {
          const errors = validationResult(req);
 
-        if (!errors.isEmpty()) { 
+        if (!errors.isEmpty()){ 
             const productUp = req.params.id;
 
             const [categories, product, brands] = await Promise.all([
@@ -100,41 +100,43 @@ productList: (req, res) => {
                 brandId: product ? product.brandId : null,
                 errors: errors.mapped()
             });
-            }
-        try {      
-            const productUp = req.params.id;
-            const { category, name, brand, model, description, price, discount } = req.body;
-
-            const product = await db.Product.findByPk(productUp, {
-                include: ["images", "category", "brand"]
-            });
-           
-                 if (product) {
-                await db.Product.update({
-                    category,
-                    name: name.trim(),
-                    brandId: product.brand,
-                    model,
-                    description: description.trim(),
-                    price,
-                    discount
-                }, {
-                    where: {
-                        id: productUp
+            }else{
+                try {      
+                    const productUp = req.params.id;
+                    const { category, name, brand, model, description, price, discount } = req.body;
+        
+                    const product = await db.Product.findByPk(productUp, {
+                        include: ["images", "category", "brand"]
+                    });
+                   
+                         if (product) {
+                        await db.Product.update({
+                            category,
+                            name: name.trim(),
+                            brandId: product.brand.id,
+                            model,
+                            description: description.trim(),
+                            price,
+                            discount
+                        }, {
+                            where: {
+                                id: productUp
+                            }
+                        });
+        
+                        console.log('Producto actualizado con éxito');
+                      
+                       return res.redirect('/users/admin'); 
+                    } else {
+                        
+                        throw new Error("Producto no encontrado");
                     }
-                });
-
-                console.log('Producto actualizado con éxito');
-              
-               return res.redirect('/users/admin'); 
-            } else {
-                
-                throw new Error("Producto no encontrado");
+                 } catch (error) {
+                    console.log(error);  
+                    return res.status(500).send('Error interno del servidor');          
+                }
             }
-         } catch (error) {
-            console.log(error);
-            
-        }
+        
     },
     
     productEdit: async (req, res) => {

@@ -27,20 +27,20 @@
 
                 <div class="elementos-admin-padre">
                     <div class="nombre-admin">
-                        <p>NOMBRE</p>
+                        <p class="imagen-admin">NOMBRE</p>
                         <p class="imagen-admin">IMAGEN</p>
-                        <p>MARCA</p>
-                        <p>PRECIO</p>
+                        <p class="imagen-admin">MARCA</p>
+                        <p class="imagen-admin">PRECIO</p>
                         <p class="imagen-admin">DESCUENTO</p>
 
                         <p class="imagen-admin">CATEGORIA</p>
-                        <p>STOCK</p>
-                        <p>ACCION</p>
+                        
+                        <p class="imagen-admin">ACCION</p>
                     </div>
 
                     <% productos.forEach(element=> { %>
                         <div class="admin-main-box">
-
+                            <% console.log(element) %>
 
 
                             <div class="name-admin">
@@ -51,23 +51,20 @@
                             <div class="imagen-admin"><img src="/img/<%= element.image %>" alt=""
                                     style="width: 70px; height: 65px;"></div>
                             <div><span>
-                                    <%= element.brand %>
+                                <% if (element.brandId === null) { %>
+                                   <p> no esta definida la marca</p>
+                                <% }else{ %>
+                                    <%= element.brandId%>
+                                <% } %>
                                 </span></div>
-                            <div><span>$<%= toThousand(element.price) %></span></div>
+                            <div><span>$<%= element.price %></span></div>
                             <div class="imagen-admin"><span>
                                     <%= element.discount %>
                                 </span></div>
                             <div class="imagen-admin"><span>
-                                    <%= element.category %>
+                                    <%= element.categories%>
                                 </span></div>
-                            <div><span>
-                                    <%= element.stock %>
-                                </span></div>
-
-
-
-
-
+                          
 
                             <section class="admin-main-box-boxDos-section">
 
@@ -94,7 +91,7 @@
                                                 <h2>
                                                     <%= element.name %>
                                                 </h2>
-                                                <span>$<%= toThousand(element.price) %></span>
+                                                <span>$<%= element.price %></span>
                                             </div>
                                         </div>
                                         <h3>Ver producto?</h3>
@@ -118,7 +115,7 @@
                                                         <h2>
                                                             <%= element.name %>
                                                         </h2>
-                                                        <span>$<%= toThousand(element.price) %></span>
+                                                        <span>$<%= element.price%></span>
                                                     </div>
                                                 </div>
                                                 <h3>¿Estás seguro de eliminar este producto?</h3>
