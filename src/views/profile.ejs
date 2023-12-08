@@ -97,49 +97,15 @@
                                     <div class="profile_box_form_boxTwo_ciudad">
                                         <div class="profile_box_form_boxTwo_ciudad_province">
                                             <label for="provinces" class="form-label">Provincia</label>
-                                            <select class="form-select" id="provinces" name="provinces">
-                                                <option value="buenosAires">Buenos Aires</option>
-                                                <option value="catamarca">Catamarca</option>
-                                                <option value="chaco">Chaco</option>
-                                                <option value="chubut">Chubut</option>
-                                                <option value="cordoba">Córdoba</option>
-                                                <option value="corrientes">Corrientes</option>
-                                                <option value="entreRios">Entre Ríos</option>
-                                                <option value="formosa">Formosa</option>
-                                                <option value="jujuy">Jujuy</option>
-                                                <option value="laPampa">La Pampa</option>
-                                                <option value="laRioja">La Rioja</option>
-                                                <option value="mendoza">Mendoza</option>
-                                                <option value="misiones">Misiones</option>
-                                                <option value="neuquen">Neuquén</option>
-                                                <option value="rio Negro">Río Negro</option>
-                                                <option value="salta">Salta</option>
-                                                <option value="sanJuan">San Juan</option>
-                                                <option value="sanLuis">San Luis</option>
-                                                <option value="santaCruz">Santa Cruz</option>
-                                                <option value="santaFe">Santa Fe</option>
-                                                <option value="santiagoDelEstero">Santiago del Estero</option>
-                                                <option value="tierraDelFuego">Tierra del Fuego</option>
-                                                <option value="tucuman">Tucumán</option>
-                                            </select>
+                                                <select class="form-select" id="provinces" name="provinces">
+                                                    <option selected hidden>Elija la provincia...</option>
+                                                </select>
+                                            
                                         </div>
                                         <div class="profile_box_form_boxTwo_ciudad_location">
                                             <label for="location" class="form-label">Localidad</label>
-                                            <select class="form-select" id="location" name="location">
-                                                <option value="mouse">Mouse</option>
-                                                <option value="pc">Pc</option>
-                                                <option value="teclado">Teclado</option>
-                                                <option value="auriculares">Auriculares</option>
-                                                <option value="microfonos">Microfonos</option>
-                                                <option value="monitor">Monitor</option>
-                                                <option value="gabinete">Gabinete</option>
-                                                <option value="madre">Placa Madre</option>
-                                                <option value="procesador">Procesador</option>
-                                                <option value="ram">Ram</option>
-                                                <option value="coolers">Coolers</option>
-                                                <option value="almacenamiento">Almacenamiento</option>
-                                                <option value="video">Placa de video</option>
-                                                <option value="audio">Placa de audio</option>
+                                            <select class="form-select" id="location" name="location" disabled>
+                                                <option selected hidden>Elija la localidad...</option>
                                             </select>
                                         </div>
                                     </div>
@@ -150,6 +116,7 @@
                 </div>
 
                 <script src="../../javascripts/validationProfile.js"> </script>
+                <script src="\javascripts\profileApi.js"> </script>
     </body>
 
     <%- include('partials/footer') %>

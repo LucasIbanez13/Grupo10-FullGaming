@@ -2,6 +2,9 @@ const { hashSync } = require('bcryptjs');
 const db = require('../database/models')
 const {validationResult} =require("express-validator");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const API = 'https://apis.datos.gob.ar/georef/api';
+const fetch = require('node-fetch')
+
 
 module.exports = {
     register : (req,res) => {
