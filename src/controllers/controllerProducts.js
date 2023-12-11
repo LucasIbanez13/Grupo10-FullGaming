@@ -20,25 +20,30 @@ module.exports = {
     productDetail : (req,res) => {
 
 
-        Promise.all([
-            db.Product.findByPk(req.params.id),
-        ])
-        .then(function([productos]) {
+        let productosActual, productosRelacionados;
+
+    db.Product.findByPk(req.params.id)
+        .then(productoActual => {
+            productosActual = productoActual;
+
+            return db.Product.findAll({
+                where: {
+                    id: { [db.Sequelize.Op.ne]: req.params.id },
+                    categoryId: productoActual.categoryId,
+                }
+            });
+        })
+        .then(productos => {
+            productosRelacionados = productos;
+
             res.render('productDetail', {
-                productos,
+                productos: productosActual,
+                productosRelacionados,
                 toThousand,
             });
         })
         .catch(error => console.log(error));
-        
-        /*return res.render('productDetail',{
-            ...product,
-            products,
-            toThousand,
-            
-            
-        })*/
-    },
+},
 
 productList: (req, res) => {
     Promise.all([

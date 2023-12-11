@@ -97,6 +97,7 @@
                         <div class="detail_main_contents_content_boxTwo_cajas_caracte">
                             <div class="detail_main_contents_content_boxTwo_cajas_caracte_mayus"><p><%= productos.brand %></p></div>
                                 <p>Stock: <%= productos.amount %></p>
+                                <p>categoryId: <%= productos.categoryId %></p>
                             <p><%= productos.description %></p>
                         </div>
                     </div>
@@ -105,15 +106,39 @@
                     <div class="detail_main_contents_content_boxThree_carrusel">
                         
                         <div class="carrusel2">
+                            <div class="carousel-container">
+                                <h2>Productos Relacionados</h2>
 
-                           
+                                <div class="carousel-item2">
+                                    <% productosRelacionados.forEach(function(producto) { %>
+                                        
+                                            <div class="home-main-articulos4">
+                                                <a class="home-main-articulos-a4" href="/products/productDetail/<%= producto.id %>">
+                                                    <img src="/img/<%= producto.image %>" alt="">
+                                                    
+                                                    <div class="envio4"> <p class="envio-p4">envío gratis</p></div>
+                                                    <div class="carro-item4"><a class="carritoto4" href="/products/shoppingcart"><i class="fa-solid fa-cart-shopping"></i></a></div>
+                                                    <a class="mensaje-carrito4" href="/products/shoppingcart">Agregar al carrito</a>
+                                                    <p class="home-main-articulos-p4"><%= producto.name %></p>
+                                                    <span>$<%= toThousand(producto.price) %></span>
+                                                    <a class="mensaje-comprar4" href="/products/productDetail/<%= producto.id %>">Comprar ahora</a>
+                                                </a>
+                                            </div>
+                                        
+                                    <% }) %>
+                                </div>
+                                
+                            </div>
                         
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </main>
     <%- include('partials/footer') %>
+
 </body>
+
 </html>
