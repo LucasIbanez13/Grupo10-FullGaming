@@ -13,16 +13,22 @@
                 <a href="" class="">Mis compras</a>
             </div>
             <div class="profileInit_contenedor_contenedorButton_button_configuracion">
-                <a href="/users/profile/<%= profile.id %>" class="">Configuracion</a>
+                <a href="/users/profile/<%= profile.id %>" class=""></a>
+                <p>Configuracion</p>
             </div>
+            <a href="/users/logout" class="">
             <div class="profileInit_contenedor_contenedorButton_button_salir">
-                <a href="/users/logout" class="">Salir</a>
+                
+                <p>Salir</p>
+            </a>
             </div>
             
             <% if (profile.rolId === 1) { %>
+                <a href="/users/admin" class="">
                 <div class="profileInit_contenedor_contenedorButton_button_salir">
-                    <a href="/users/admin" class="">Admin</a>
+                <p>Admin</p>
                 </div>
+            </a>
             <% }else { %> 
                 <p></p> 
             <% } %>
