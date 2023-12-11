@@ -4,7 +4,8 @@ module.exports = {
     profileUpdate: (req, res) => {
         const profileId = req.params.id;
         
-    
+
+
         const updatedProfile = {
             image: req.file ? req.file.filename : 'auricular.png',
             name: req.body.name,
@@ -18,10 +19,11 @@ module.exports = {
             department: req.body.department,
             references: req.body.references,
             postalcode: req.body.postalcode,
-            provinces: req.body.provinces,
+            province: req.body.province,
             location: req.body.location
         };
-    
+        console.log(updatedProfile);
+
         const whereCondition = {
             id: profileId
         };

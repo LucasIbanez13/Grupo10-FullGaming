@@ -2,6 +2,7 @@ const $ = id => document.getElementById(id);
 const baseURL = 'https://apis.datos.gob.ar/georef/api';
 
 window.onload = async function(e){
+    
     try {
         const response = await fetch(`${baseURL}/provincias`)
         const result = await response.json();
@@ -12,7 +13,7 @@ window.onload = async function(e){
         });
 
     } catch (error) {
-        console.error(error)
+        console.error(error) 
     }
 
     $('province').addEventListener('change', async function(e){

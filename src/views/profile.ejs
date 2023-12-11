@@ -96,17 +96,19 @@
                                     </div>
                                     <div class="profile_box_form_boxTwo_ciudad">
                                         <div class="profile_box_form_boxTwo_ciudad_province">
-                                            <label for="provinces" class="form-label">Provincia</label>
-                                                <select class="form-select" id="provinces" name="provinces">
-                                                    <option selected hidden>Elija la provincia...</option>
-                                                </select>
-                                            
+                                            <label for="province" class="form-label">Provincia</label>
+                                            <select class="form-select" id="province" name="province">
+                                                <% if (profile.province) { %><option value="<%= profile.province %>" selected><%= profile.province %></option>
+                                                <% } else { %><option value="" selected hidden>Provincia...</option>
+                                                <% } %></select>
                                         </div>
+                                        
                                         <div class="profile_box_form_boxTwo_ciudad_location">
                                             <label for="location" class="form-label">Localidad</label>
                                             <select class="form-select" id="location" name="location" disabled>
-                                                <option selected hidden>Elija la localidad...</option>
-                                            </select>
+                                                <% if (profile.location) { %><option value="<%= profile.location %>" selected><%= profile.location %></option>
+                                                <% } else { %><option value="" selected hidden>Localidad...</option>
+                                                <% } %> </select>
                                         </div>
                                     </div>
                                     <button type="submit" class="profile_box_form_button">Guardar</button>

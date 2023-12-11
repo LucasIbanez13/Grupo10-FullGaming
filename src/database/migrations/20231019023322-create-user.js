@@ -49,6 +49,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true,
       },
+      location: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       streetHeight: {
         type: Sequelize.INTEGER,
         allowNull: true,

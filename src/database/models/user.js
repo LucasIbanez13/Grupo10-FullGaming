@@ -39,6 +39,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: true, // Puede ser nulo
     },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: true, // Puede ser nulo
+    },
     streetHeight: {
       type: DataTypes.INTEGER,
       allowNull: true, // Puede ser nulo
