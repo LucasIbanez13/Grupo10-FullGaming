@@ -4,7 +4,7 @@ const {validationResult} =require("express-validator");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const API = 'https://apis.datos.gob.ar/georef/api';
 const fetch = require('node-fetch') 
-
+const paginate = require('express-paginate')
 
 module.exports = {
     register : (req,res) => {
@@ -89,10 +89,13 @@ module.exports = {
     },
 
     admin : async (req, res) => {
+        const limit = parseInt(req.query.limit, 10) || 10;
         try {
           const [productos,categories,brands] = await Promise.all([
             db.Product.findAll({
-            include : ["category","brand"]
+            include : ["category","brand"],
+            limit: req.query.limit,
+            offset:req.skip
           }),
           db.Category.findAll({
             order:['name']
@@ -103,14 +106,28 @@ module.exports = {
             ]);
           const users = await db.User.findAll();
           const roles = await db.Rol.findAll();
-
+          const total = db.Product.count();
+          const pagesCount = Math.ceil(total / req.query.limit);
+          const currentPage = req.query.page;
+          const paginationObject = paginate.getArrayPages(req,{
+            startPage :3,
+            endPage:pagesCount,
+            currentPage,
+        })
+        const pages = paginationObject.pages;
+        console.log(paginate.getArrayPages())
           return res.render("admin", {
+            total,
+            pagesCount,
+            currentPage,
+            pages,
             productos,
             categories,
             brands,
             users,
             toThousand,
-            roles
+            roles,
+            limit:limit// revisa esto
             
           });
         }catch (error) {
