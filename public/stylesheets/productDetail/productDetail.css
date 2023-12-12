@@ -52,10 +52,10 @@
     display: flex;
 }
 .detail_main_contents_content_boxOne_product_precio_descuento h3{
-    font-size: 30px;
+    font-size: 1.5em;
 }
 .detail_main_contents_content_boxOne_product_precio_price h3{
-    font-size: 35px;
+    font-size: 1.5em;
 }
 .detail_main_contents_content_boxOne_product_cuotas{
     border-bottom: 1px solid black;
@@ -121,7 +121,26 @@
     gap: 10px;
     overflow: hidden; /* Oculta los elementos adicionales */
 }
+.discounted-price {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.discounted-price::before {
+    content: "";
+    position: absolute;
+    top: 47%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: red;
+    transform: rotate(-13deg);
+    transform-origin: 0 0;
 
+}
+.discount-label b {
+    color: red;
+}
 
 @media (min-width: 480px){
     .detail_main_contents_content {
