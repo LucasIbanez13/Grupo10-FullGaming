@@ -45,8 +45,8 @@ window.onload = function () {
                 campoBrand.classList.add('is-valid');
                 campoBrand.classList.remove('is-invalid');
                 break;
-        } */
-    }
+        }
+    } */
 
     function validateModel() {
         const campoModel = $('model');
@@ -89,4 +89,4 @@ window.onload = function () {
                 break;
         }
     }
-;
+};
