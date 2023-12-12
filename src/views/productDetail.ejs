@@ -36,19 +36,21 @@
                             <div class="detail_main_contents_content_boxOne_product_nombre_titulo">
                                 <h4><%= productos.name %></h4>
                             </div>
-                            <div class="detail_main_contents_content_boxOne_product_precio">
+                            <div class="detail_main_contents_content_boxOne_product_precio" id="productPrecio" data-discount="<%= productos.discount || 0 %>">
                                 <div class="detail_main_contents_content_boxOne_product_precio_descuento">
                                     <% if (productos.discount) { %>
-                                        <h3>$<%= toThousand(productos.price - (productos.price * productos.discount / 100)) %></h3>
-                                        <p><b><%= productos.discount %>% OFF</b></p>
-                                        
+                                        <h3 class="discounted-price">
+                                            <span class="original-price">
+                                                $<%= toThousand(productos.price) %>
+                                            </span>
+                                            $<%= toThousand(productos.price - (productos.price * productos.discount / 100)) %>
+                                        </h3>
+                                        <p class="discount-label"><b><%= productos.discount %>% OFF</b></p>
                                     <% } else { %>
-                                        <!-- Esto despues preguntar en un futuro, ya que la idea seria, si tiene descuento tachar ese precio y que se muestre el descuento abajo, pero si lo pongo ahora no me muestra el precio por eso lo pongo aqui  -->
-                                       $<%= toThousand(productos.price - (productos.price * productos.discount / 100)) %>
+                                        <h3>
+                                            $<%= toThousand(productos.price) %>
+                                        </h3>
                                     <% } %>
-                                </div>
-                                <div class="detail_main_contents_content_boxOne_product_precio_price">
-                                    <h3>$<%= toThousand(productos.price) %></h3>
                                 </div>
                             </div>
                             <div class="detail_main_contents_content_boxOne_product_cuotas">
@@ -137,6 +139,7 @@
         </div>
 
     </main>
+    <script src="/javascripts/productDetailFront.js"></script>
     <%- include('partials/footer') %>
 
 </body>
