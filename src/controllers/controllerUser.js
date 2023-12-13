@@ -92,7 +92,7 @@ module.exports = {
         const limit = parseInt(req.query.limit, 10) || 10;
         try {
           const [productos,categories,brands] = await Promise.all([
-            db.Product.findAll({
+            db.Product.findAndCountAll({
             include : ["category","brand"],
             limit: req.query.limit,
             offset:req.skip
@@ -106,22 +106,16 @@ module.exports = {
             ]);
           const users = await db.User.findAll();
           const roles = await db.Rol.findAll();
-          const total = db.Product.count();
-          const pagesCount = Math.ceil(total / req.query.limit);
+
+          const pagesCount = Math.ceil(productos.count / req.query.limit)
           const currentPage = req.query.page;
-          const paginationObject = paginate.getArrayPages(req,{
-            startPage :3,
-            endPage:pagesCount,
-            currentPage,
-        })
-        const pages = paginationObject.pages;
-        console.log(paginate.getArrayPages())
+          
           return res.render("admin", {
-            total,
             pagesCount,
             currentPage,
-            pages,
-            productos,
+            paginate,
+            pages: paginate.getArrayPages(req)(pagesCount, pagesCount, req.query.page),
+            productos : productos.rows,
             categories,
             brands,
             users,
