@@ -7,12 +7,14 @@
     transform: translateX(-50%);
     background-color: #231F20;
     color: #fff;
-    padding: 10px 7px 2px 7px;
+    padding: 8px;
     display: flex;
     justify-content: space-around;
-    z-index: 1;
-    border-radius: 30px;
+    align-items: center;
+    z-index: 200;
+    border-radius: 15px;
     margin-bottom: 10px;
+    border: 1px solid #250180;
 }
 
 .nav-bar a {
@@ -32,9 +34,8 @@
 }
 .logo-nav img{
     position: relative;
-    height: 50px;
-    left: 10px;
-    bottom: 15px;
+    height: 75px;
+    margin: -36px 0 0 0px;
 }
 
 
@@ -165,11 +166,10 @@
   
   /* Estilo para el círculo (solo cuando hay una imagen) */
   .user-avatar img {
-    
-    height: 28px;
-    width: 40px;
-    border-radius: 50%;
-    
+    height: 28px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 1px -9px -6px 0;
   }
   
 
