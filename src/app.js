@@ -15,7 +15,7 @@ const checkSessionErrorRegister = require("./middlewares/checkSessionErrorRegist
 const checkSessionErrorLogin = require("./middlewares/checkSessionErrorLogin");
 const cookieCheck = require('./middlewares/cookieCheck');
 const localsCheck = require('./middlewares/localsCheck');
-
+const paginate = require('express-paginate')
 
 var app = express();
 
@@ -38,7 +38,9 @@ app.use(cookieCheck);// antes de que haya una session levantada
 app.use(localsCheck);
 
 app.use(checkSessionErrorRegister);
-app.use(checkSessionErrorLogin)
+app.use(checkSessionErrorLogin);
+
+app.use(paginate.middleware(5,50))//middleware de la paginacion. El primer num(funciona como el limit de sql) es la cantidad minima por pagina, la segunda es el maximo
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
