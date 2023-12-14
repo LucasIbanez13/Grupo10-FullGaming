@@ -53,7 +53,7 @@
     {
         "id" : 11,
         "image" : "iconolg.png",
-        "name" : "samsung"
+        "name" : "lg"
     },
     {
         "id" : 12,
@@ -79,6 +79,11 @@
         "id" : 16,
         "image" : "iconocoolermaster.png",
         "name" : "cooler master"
+    },
+    {
+        "id" : 17,
+        "image" : "iconogigabyte.png",
+        "name" : "gigabyte"
     }
 
 ]
