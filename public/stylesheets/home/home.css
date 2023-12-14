@@ -346,7 +346,149 @@ border-radius:  0 10px 10px 10px;
     0 0 2px 2px #bebebe,
     0 0 20px 10px rgba(0, 0, 0, 0.1);
     }
+/*cosa nueva*/
+.home_box{
+    margin: auto;
+}
 
+/*
+
+*/
+
+
+
+
+.home_box_brand_razer_img img{
+    width: 100%;
+    height: 240px;
+    border-radius: 0.75rem;
+
+}
+.home_box_brand_caja img{
+    width: 100%;
+    height: 240px;
+    border-radius: 0.75rem;
+
+}
+.home_box_brand_razer {
+    position: relative;
+}
+
+.home_box_brand_corzair {
+    position: relative;
+
+}
+.home_box_brand_aorus {
+    position: relative;
+
+}
+.brand_title_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    width: 100%;
+}
+/*cosa nueva de categoria primera columna*/
+.home_box_category_one_uno_primera{
+    overflow: hidden;
+}
+.home_box_category_one_uno_primera img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_one_uno_segunda{
+    overflow: hidden;
+}
+.home_box_category_one_uno_segunda img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_one_uno_tercera{
+    overflow: hidden;
+}
+.home_box_category_one_uno_tercera img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_one_dos_primera{
+    overflow: hidden;
+}
+.home_box_category_one_dos_primera img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_one_dos_segunda{
+    overflow: hidden;
+}
+.home_box_category_one_dos_segunda img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_one_dos_tercera{
+    overflow: hidden;
+}
+.home_box_category_one_dos_tercera img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+/*cosa nueva de categoria segunda columna*/
+.home_box_category_two_primera_uno{
+    overflow: hidden;
+}
+.home_box_category_two_primera_uno img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_two_primera_dos{
+    overflow: hidden;
+}
+.home_box_category_two_primera_dos img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+
+}
+.home_box_category_two_primera_tres{
+    overflow: hidden;
+}
+.home_box_category_two_primera_tres img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_two_segunda_uno{
+    overflow: hidden;
+}
+.home_box_category_two_segunda_uno img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_two_segunda_dos{
+    overflow: hidden;
+}
+.home_box_category_two_segunda_dos img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.home_box_category_two_segunda_tres{
+    overflow: hidden;
+}
+.home_box_category_two_segunda_tres img{
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+}
 @media (min-width: 480px) {
 
     .padre-articulos {
@@ -395,6 +537,70 @@ border-radius:  0 10px 10px 10px;
         height: 700px;
         
     }
+    /*cosa neva*/
+    .home_box_brand{
+        display: flex;
+        justify-content: space-between;
+        height: 500px;
+    
+    }
+    .home_box_brand_caja{
+        display: flex;
+        flex-direction: column;
+    }
+    .home_box_brand_caja{
+        width: 49.3%;
+        height: 505px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .home_box_brand_razer {
+        position: relative;
+        width: 49.3%;
+    }
+    .home_box_brand_razer_img img{
+        width: 100%;
+        height: 500px;
+        border-radius: 0.75rem;
+    
+    }
+    /*cosa neva category*/
+    .home_box_category{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .home_box_category_one{
+        width: 49%;
+    }
+    .home_box_category_two{
+        width: 49%;
+    }
+    .home_box_category_one_uno_tercera img{
+        height: 300px;
+    }
+    .home_box_category_one_dos_tercera img{
+        height: 300px;
+    }
+    .home_box_category_two_primera_uno img{
+        height: 300px;
+    }
+    .home_box_category_two_segunda_uno img{
+        height: 300px;
+    }
+    .home_box_category_caja{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .home_box_category img{
+        margin-top: 20px;
+    }
+   
 }
 
 

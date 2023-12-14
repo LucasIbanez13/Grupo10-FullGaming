@@ -1,0 +1,67 @@
+.conditions_main{
+    padding: 0px 20px;
+    background-color: #FFFFFF;
+}
+
+.conditions_main_title h1{
+    font-size: 24px;
+    overflow: hidden;
+    padding-top: 10px;
+    color: #252525;
+}
+.conditions_main_box{
+    margin: 10px 0px;
+}
+.conditions_main_box_seguridad_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.conditions_main_box_terminos_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.conditions_main_box_boton_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.conditions_main_box_garantia_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.conditions_main_box_promo_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.conditions_main_box h3{
+    font-size: 25px;
+    color: #252525;
+}
+.conditions_main_box p{
+    color: #252525;
+}
+
+.conditions_main_box_seguridad{
+    border-bottom: 1px solid;
+}
+.conditions_main_box_terminos{
+    border-bottom: 1px solid;
+}
+.conditions_main_box_boton{
+    border-bottom: 1px solid;
+}
+.conditions_main_box_garantia{
+    border-bottom: 1px solid;
+}
+.conditions_main_box_promo{
+    border-bottom: 1px solid;
+}

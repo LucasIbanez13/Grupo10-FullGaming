@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
     display: none;
     justify-content: center;
     align-items: center;
@@ -12,46 +12,59 @@
 }
 
 .modal-overlay5:target {
-    display: flex
-    ;
+    display: flex;
 }
 
 .modal5 {
-    background-color: #fff;
+    background-color: rgba(171, 171, 171, 0.8);
+    border-radius: 15px 15px 0 0;
+    border: 2px solid #CBCBCB;
     padding: 10px 10px 0 0;
-    width: 800px;
+    width: 80%;
+    height: 23%;
     position: relative;
-    top: 207px;
-    left: 49.5%;
+    top: 242px;
+    left: 42%;
     transform: translate(-50%, -30%);
     overflow: hidden;
 }
 
 .modal-cel-padre {
     display: grid;
-    grid-template-columns: 30% 1fr; /* El primer div ocupa el 30%, el segundo el espacio restante */
+    /* grid-template-columns: 30% 1fr; */ /* El primer div ocupa el 30%, el segundo el espacio restante */
     grid-gap: 0; /* Elimina cualquier espacio entre las columnas */
 }
   
-.categorias-cel{ 
-    background-color: #F1F1F1; /* Puedes agregar estilos según tus necesidades */
-    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede el alto */   
+.categorias-cel{
+    background-color: rgba(171, 171, 171, 0.9); /* Puedes agregar estilos según tus necesidades */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede el alto */
+    border-radius: 0 0 10px 10px;
+    box-shadow: #250180 0px 0px 12px 1px;
+    margin: -3% 0px 11px 11px;
 }
 
 .categorias-cel-hijo {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Comienza desde la parte superior */
+    flex-direction: row;
+    justify-content: space-evenly; /* Comienza desde la parte superior */
     align-items: center;
     max-height: 100%; /* Limita la altura máxima del carrusel */
     overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede la altura máxima */
     margin-top: 10px;
-    gap: 10px;
+    /* gap: 10px; */
 }
 
-.categorias-cel-hijo a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+.categorias-cel-hijo a {display: flex;flex-direction: column;align-items: center;color: #250180;font-family: 'Josefin Sans', sans-serif;}
+
+.categorias-cel-hijo a i {
+    height: 25px;
+    color: #000;
+}
+#content-container {
+    position: absolute;
+    margin: 107px 0 0 10px;
+    box-shadow: #250180 0px -3px 12px 1px;
+    height: 77%;
+    width: 94%;
+    border-radius: 11px 11px 0 0;
 }

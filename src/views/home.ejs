@@ -17,9 +17,11 @@
     <%- include("partials/register", {view:"/#register"}) %>
     
     <!----------------------------nav-bar ------------------------------------------------->
+    <%- include("partials/modal-cel") %>
+   
     <%- include("partials/header-nav") %>
 
-    <%- include("partials/modal-cel") %>
+    
 
     <%- include("partials/banner-swipe") %>
     
@@ -39,7 +41,7 @@
         
 
             <section class="padre-marcas">
-                <h2>NUESTRAS MARCAS</h2>
+                <h2 id="marcas" >NUESTRAS MARCAS</h2>
                 <div class="padre-carrusel-marcas">
                     <div class="carrusel-marcas">
                         
@@ -53,30 +55,99 @@
 
 
         <section>
-            <h2>PRODUCTOS DESTACADOS</h2>
+            <h2 id="ofertas">PRODUCTOS DESTACADOS</h2>
         
         <%- include("partials/product") %>
 
         </section>
 
-
-        <div class="banner-2">
-            <img src="/img/banner2.jpg" alt="">
-            <div class="contenido">
-            <h3>arma tu pc</h3>
-            <p>con la ayuda de nuestros expertos vas a poder armar la pc de tus suenos</p>
-            <button>toma mi dinero</button>
-            </div>
-        </div>
-
-        <h2>LOS MAS VISTOS</h2>
+        
+        
+        <h2 id="productos">LOS MAS VISTOS</h2>
 
         <%- include("partials/carousel-home") %>
 
 
+        <div class="home_box">
+            <div class="home_box_brand">
+                <div class="home_box_brand_razer">
+                    <div class="home_box_brand_razer_img"><a href="/brandrazer"><img src="/brands/razer-700x394.jpg" alt=""></a></div>
+                    <div class="brand_title_container"><h3>Razer</h3></div>
+                </div>
 
+                    <div class="home_box_brand_caja">
+                        <div class="home_box_brand_corzair">
+                            <div class=""><a href="/brandcorzair"><img src="/brands/40695a8fd41accaa.jpg" alt=""></a></div>
+                            <div class="brand_title_container"><h3>Corzair</h3></div>
+                        </div>
+                        <div class="home_box_brand_aorus">
+                            <div><a href="/brandaorus"><img src="/brands/e59be922c09f18cc87e7efa55ceef101.jpg" alt=""></a></div>
+                            <div class="brand_title_container"><h3>Aorus</h3></div>
+                        </div>
+    
+                    </div>
+            </div>
+            <div class="home_box_category">
+                <div class="home_box_category_one">
+                    <div class="home_box_category_one_uno">
+                        <div class="home_box_category_one_uno_primera">
+                            <img src="/brands/razer/mousepad.avif" alt="">
+                        </div>
+                        <div class="home_box_category_caja">
+                            <div class="home_box_category_one_uno_segunda">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                            <div class="home_box_category_one_uno_tercera">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home_box_category_one_dos">
+                        <div class="home_box_category_one_dos_primera">
+                            <img src="/brands/razer/mousepad.avif" alt="">
+                        </div>
+                        <div class="home_box_category_caja">
+                            <div class="home_box_category_one_dos_segunda">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                            <div class="home_box_category_one_dos_tercera">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home_box_category_two">
+                    <div class="home_box_category_two_primera">
+                        <div class="home_box_category_two_primera_uno">
+                            <img src="/brands/razer/mousepad.avif" alt="">
+                        </div>
+                        <div class="home_box_category_caja">
+                            <div class="home_box_category_two_primera_dos">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                            <div class="home_box_category_two_primera_tres">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home_box_category_two_segunda">
+                        <div class="home_box_category_two_segunda_uno">
+                            <img src="/brands/razer/mousepad.avif" alt="">
+                        </div>
+                        <div class="home_box_category_caja">
+                            <div class="home_box_category_two_segunda_dos">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                            <div class="home_box_category_two_segunda_tres">
+                                <img src="/brands/razer/mousepad.avif" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section>
-            <h2>CATEGORIAS</h2>
+            <h2 id="categorias">CATEGORIAS</h2>
             
             <article class="padre-carrusel">
                 <!-- <div class="carrusel"-->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head") %>
+
+
+<body>
+    
+    <%- include("partials/header") %>
+     
+
+    <!----------------------------login-------------------------------------------------->
+    <%- include("partials/login", {viewError2:"/#modal"}) %>
+    
+    
+    <!--------------------------REGISTRO------------------------------------------------->
+    <%- include("partials/register", {view:"/#register"}) %>
+    
+    <!----------------------------nav-bar ------------------------------------------------->
+    <%- include("partials/header-nav") %>
+
+    
+
+    <main class="conditions_main">
+
+        <div class="conditions_main_title">
+            <h1>Avisos Legales / Promos&Financiaciones</h1>
+        </div>
+        <div class="conditions_main_box">
+            <div class="conditions_main_box_seguridad">
+                <div class="conditions_main_box_seguridad_title">
+                    <h3>Politicas de seguridad </h3>
+                    <button onclick="mostrarOcultarParrafo()"><i class="fa-solid fa-chevron-down"></i></button>
+
+                </div>
+                <div class="conditions_main_box_seguridad_parrafo" id="parrafoSeguridad">
+                    <p>In hac habitasse platea dictumst. Etiam placerat, leo id ultricies consectetur, ipsum diam porttitor orci, non venenatis odio nunc sed nibh. Aenean viverra nisi massa, ut laoreet mauris varius quis. Aliquam feugiat justo non dolor egestas euismod. Curabitur eget velit nisl. Phasellus convallis et nulla ac sodales. Curabitur sollicitudin lorem id ligula bibendum viverra. Pellentesque eu tellus eu nisi mattis pharetra sed ac nulla. Suspendisse mattis semper metus, in dictum dolor. Cras lobortis cursus augue vel cursus. Vestibulum laoreet condimentum est quis vestibulum. Donec ornare porttitor ipsum. Integer semper est mi, sit amet vulputate quam facilisis accumsan.</p>
+                </p>
+                </div>
+            </div>
+            <div class="conditions_main_box_terminos" >
+                <div class="conditions_main_box_terminos_title">
+                    <h3>Terminos y condiciones</h3>
+                    <button onclick="mostrarOcultarDivTerminos()"><i class="fa-solid fa-chevron-down"></i></button>
+                </div>
+                <div class="conditions_main_box_terminos_parrafo" id="divTerminos">
+                    <p>In hac habitasse platea dictumst. Etiam placerat, leo id ultricies consectetur, ipsum diam porttitor orci, non venenatis odio nunc sed nibh. Aenean viverra nisi massa, ut laoreet mauris varius quis. Aliquam feugiat justo non dolor egestas euismod. Curabitur eget velit nisl. Phasellus convallis et nulla ac sodales. Curabitur sollicitudin lorem id ligula bibendum viverra. Pellentesque eu tellus eu nisi mattis pharetra sed ac nulla. Suspendisse mattis semper metus, in dictum dolor. Cras lobortis cursus augue vel cursus. Vestibulum laoreet condimentum est quis vestibulum. Donec ornare porttitor ipsum. Integer semper est mi, sit amet vulputate quam facilisis accumsan.</p>
+                </p>                </div>
+            </div>
+            <div class="conditions_main_box_boton" >
+                <div class="conditions_main_box_boton_title">
+                    <h3>Boton de Arrepentimiento</h3>
+                    <button onclick="mostrarOcultarDivBoton()"><i class="fa-solid fa-chevron-down"></i></button>
+
+                </div>
+                <div class="conditions_main_box_boton_parrafo" id="divBoton">
+                    <p>In hac habitasse platea dictumst. Etiam placerat, leo id ultricies consectetur, ipsum diam porttitor orci, non venenatis odio nunc sed nibh. Aenean viverra nisi massa, ut laoreet mauris varius quis. Aliquam feugiat justo non dolor egestas euismod. Curabitur eget velit nisl. Phasellus convallis et nulla ac sodales. Curabitur sollicitudin lorem id ligula bibendum viverra. Pellentesque eu tellus eu nisi mattis pharetra sed ac nulla. Suspendisse mattis semper metus, in dictum dolor. Cras lobortis cursus augue vel cursus. Vestibulum laoreet condimentum est quis vestibulum. Donec ornare porttitor ipsum. Integer semper est mi, sit amet vulputate quam facilisis accumsan.</p>
+                </p>                </div>
+            </div>
+            <div class="conditions_main_box_garantia" >
+                <div class="conditions_main_box_garantia_title">
+                    <h3>Garantia</h3>
+                    <button onclick="mostrarOcultarDivGarantia()"><i class="fa-solid fa-chevron-down"></i></button>
+
+                </div>
+                <div class="conditions_main_box_garantia_parrafo" id="divGarantia">
+                    <p>In hac habitasse platea dictumst. Etiam placerat, leo id ultricies consectetur, ipsum diam porttitor orci, non venenatis odio nunc sed nibh. Aenean viverra nisi massa, ut laoreet mauris varius quis. Aliquam feugiat justo non dolor egestas euismod. Curabitur eget velit nisl. Phasellus convallis et nulla ac sodales. Curabitur sollicitudin lorem id ligula bibendum viverra. Pellentesque eu tellus eu nisi mattis pharetra sed ac nulla. Suspendisse mattis semper metus, in dictum dolor. Cras lobortis cursus augue vel cursus. Vestibulum laoreet condimentum est quis vestibulum. Donec ornare porttitor ipsum. Integer semper est mi, sit amet vulputate quam facilisis accumsan.</p>
+                </p>                </div>
+            </div>
+            <div class="conditions_main_box_promo" id="divPromo">
+                <div class="conditions_main_box_promo_title">
+                    <h3>Promos & Financiacion</h3>
+                    <button onclick="mostrarOcultarDivPromo()"><i class="fa-solid fa-chevron-down"></i></button>
+
+                </div>
+                <div class="conditions_main_box_parrafo">
+                    <p>In hac habitasse platea dictumst. Etiam placerat, leo id ultricies consectetur, ipsum diam porttitor orci, non venenatis odio nunc sed nibh. Aenean viverra nisi massa, ut laoreet mauris varius quis. Aliquam feugiat justo non dolor egestas euismod. Curabitur eget velit nisl. Phasellus convallis et nulla ac sodales. Curabitur sollicitudin lorem id ligula bibendum viverra. Pellentesque eu tellus eu nisi mattis pharetra sed ac nulla. Suspendisse mattis semper metus, in dictum dolor. Cras lobortis cursus augue vel cursus. Vestibulum laoreet condimentum est quis vestibulum. Donec ornare porttitor ipsum. Integer semper est mi, sit amet vulputate quam facilisis accumsan.</p>
+                </p>                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/javascripts/condiciones.js"></script>
+
+    <!----------------------------FOOTER-------------------------------------------------->
+    <%- include('partials/footer') %>
+</body>
+</html>

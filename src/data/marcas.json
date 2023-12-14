@@ -2,12 +2,12 @@
     {
         "id" : 1,
         "image" : "aorus.webp",
-        "name" : "gigabyte"
+        "name" : "aorus"
     },
     {
         "id" : 2,
         "image" : "razer.webp",
-        "name" : "amd"
+        "name" : "razer"
     },
     {
         "id" : 3,
@@ -39,4 +39,51 @@
         "image" : "intel.webp",
         "name" : "intel"
     }
+    ,
+    {
+        "id" : 9,
+        "image" : "wd.webp",
+        "name" : "western digital"
+    },
+    {
+        "id" : 10,
+        "image" : "iconosamsung.png",
+        "name" : "samsung"
+    },
+    {
+        "id" : 11,
+        "image" : "iconolg.png",
+        "name" : "lg"
+    },
+    {
+        "id" : 12,
+        "image" : "kingston.png",
+        "name" : "kingston"
+    },
+    {
+        "id" : 13,
+        "image" : "iconolenovo.png",
+        "name" : "lenovo"
+    },
+    {
+        "id" : 14,
+        "image" : "iconoasus.png",
+        "name" : "asus"
+    },
+    {
+        "id" : 15,
+        "image" : "icononvidia.png",
+        "name" : "nvidia"
+    },
+    {
+        "id" : 16,
+        "image" : "iconocoolermaster.png",
+        "name" : "cooler master"
+    },
+    {
+        "id" : 17,
+        "image" : "iconogigabyte.png",
+        "name" : "gigabyte"
+    }
+
 ]

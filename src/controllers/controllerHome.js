@@ -95,6 +95,9 @@ module.exports = {
             });
         })
         .catch(error => console.log(error));
+    },
+    condition: (req, res) => {
+            res.render('conditions');
     }
     
 }
