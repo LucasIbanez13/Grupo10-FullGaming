@@ -226,10 +226,8 @@
         display: flex;
     }
     .home-nav-header ul {
-        
-        justify-content: space-evenly;
-        
-        text-transform: none;
+        justify-content: space-evenly;
+        text-transform: none;
     }
     .home-nav-header ul li a {
         font-size: 12px;

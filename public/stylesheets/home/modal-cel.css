@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* background-color: rgba(0, 0, 0, 0.7); */
     display: none;
     justify-content: center;
     align-items: center;
@@ -16,14 +16,14 @@
 }
 
 .modal5 {
-    background-color: rgba(171, 171, 171, 0.5);
+    background-color: rgba(171, 171, 171, 0.8);
     border-radius: 15px 15px 0 0;
     border: 2px solid #CBCBCB;
     padding: 10px 10px 0 0;
     width: 80%;
-    height: 81%;
+    height: 23%;
     position: relative;
-    top: 147px;
+    top: 242px;
     left: 42%;
     transform: translate(-50%, -30%);
     overflow: hidden;
@@ -36,7 +36,7 @@
 }
   
 .categorias-cel{
-    background-color: rgba(171, 171, 171, 0.5); /* Puedes agregar estilos según tus necesidades */
+    background-color: rgba(171, 171, 171, 0.9); /* Puedes agregar estilos según tus necesidades */
     overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede el alto */
     border-radius: 0 0 10px 10px;
     box-shadow: #250180 0px 0px 12px 1px;

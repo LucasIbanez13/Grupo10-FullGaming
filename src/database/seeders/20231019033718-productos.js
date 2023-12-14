@@ -1,7 +1,7 @@
 'use strict';
 const productsJSON = require('../../data/items.json')
 
-const product = productsJSON.map(({  name, model, description, price, discount, brandId, image, categoryId, amount }) => {
+const product = productsJSON.map(({  name, model, description, price, discount, brand, image, category, amount }) => {
   return {
     name,
     model,
@@ -9,8 +9,8 @@ const product = productsJSON.map(({  name, model, description, price, discount, 
     price,
     discount,
     image,
-    brandId,    
-    categoryId,
+    brandId: brand,    
+    categoryId: category,
     amount,
     createdAt: new Date(),
     updatedAt: new Date()
