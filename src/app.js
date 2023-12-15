@@ -9,6 +9,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const productsRouter = require("./routes/products")
 const cartRouter = require("./routes/cart")
+const productsApisRoutes = require('./routes/apisRoutes/productsApisRoutes')
+const usersApisRoutes = require('./routes/apisRoutes/usersApisRoutes')
 const methodOverride = require("method-override");
 const session = require("express-session")
 const checkSessionErrorRegister = require("./middlewares/checkSessionErrorRegister");
@@ -46,6 +48,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/cart', cartRouter);
+app.use('/api/products',productsApisRoutes);
+app.use('/api/users',usersApisRoutes)
 
 
 

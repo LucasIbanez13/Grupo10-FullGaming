@@ -66,13 +66,31 @@ main aside {
     width: 100%;
      
 }
-
+.padre-carrusel {
+    overflow-x: auto;
+    width: 100%;
+     
+ }
+ 
+ .carrusel {
+     display: grid;
+     grid-template-columns: repeat(18, 1fr);
+     gap: 30px;
+     white-space: nowrap;
+ }
+ 
+ .carrusel-marcas:hover {
+     box-shadow:
+     0 0 2px 2px #bebebe,
+     0 0 20px 10px rgba(0, 0, 0, 0.1);
+     }
 .carrusel-marcas {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(18, 1fr);
     gap: 20px;
     white-space: nowrap;
     align-items: center;
+    max-width: 90vw;
 }
 
 .carrusel-marcas img {
@@ -315,6 +333,12 @@ border-radius:  0 10px 10px 10px;
 }
 
 .carrusel {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 30px;
+    white-space: nowrap;
+}
+.carruselMarca {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     gap: 30px;
