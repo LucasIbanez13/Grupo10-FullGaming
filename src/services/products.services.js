@@ -31,8 +31,34 @@ const getAllProducts = async(limit,offset) => {
     catch(error){
         console.log(error)
     }
+};
+
+const getproductDetail = async(productId) =>{
+    try{
+        const product = await db.Product.findByPk(productId,{
+            attributes : {
+                exclude : ['createdAt','updatedAt','categoryId','brandId']
+            },
+            include : [
+                {
+                    association : 'brand',
+                    attributes : ['id','name']
+                },
+                {
+                    association : 'category',
+                    attributes : ['id','name']
+                }
+            ] 
+        })
+        return {productId : product};
+
+    } catch(error){
+        console.log(error)
+    }
+
 }
 
 module.exports = {
-    getAllProducts
+    getAllProducts,
+    getproductDetail
 }

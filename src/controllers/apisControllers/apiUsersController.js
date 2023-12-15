@@ -1,14 +1,13 @@
-const db = require("../../database/models")
-const sequelize = db.sequelize;
-const { getAllProducts,getproductDetail } = require('../../services/products.services')
-const paginate = require('express-paginate');
 
-
+const db = require('../../database/models')
+const sequelize = db.sequelize
+const { getAllUsers, getUserDetail } = require('../../services/users.services')
+const paginate = require('express-paginate')
 
 module.exports = {
-    list: async(req,res) =>{
+    listUser : async(req,res) =>{
         try{
-            const {products,total} = await getAllProducts(req.query.limit,req.skip);
+            const {users,total} = await getAllUsers(req.query.limit,req.skip);
             const pagesCount = Math.ceil(total / req.query.limit);
             const currentPage = req.query.page;
             const pages = paginate.getArrayPages(req)(pagesCount,pagesCount,currentPage)
@@ -21,7 +20,7 @@ module.exports = {
                     currentPage,
                     pages
                 },
-                data : products
+                data : users
             })
     
         } catch (error){
@@ -30,23 +29,20 @@ module.exports = {
                 msg:error.message || "Ups, parece que hubo un error"
             })
         }
-},
-    detail : async(req,res) =>{
+    },
+    userDetail : async(req,res) =>{
         try{
-            const {productId} = await getproductDetail(req.params.id)
-
+            const {userId}= await getUserDetail(req.params.id)
             return res.status(200).json({
                 ok:true,
-                data : productId
+                data: userId
             })
-
         }
         catch(error){
-            return res.status (error.status|| 500).json({
-                ok : false,
-                msg: error.message || "Ups, no se no se encontraron detalles"
+            return res.status (error.status || 500).json ({
+                ok:false,
+                msg : error.message || "ups, parece que no hay detalle de usuarios :("
             })
         }
     }
-
 }
