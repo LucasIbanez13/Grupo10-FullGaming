@@ -392,12 +392,16 @@ border-radius:  0 10px 10px 10px;
 }
 /*cosa nueva de categoria primera columna*/
 .home_box_category_one_uno_primera{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .home_box_category_one_uno_primera img{
     height: 150px;
     width: 100%;
     border-radius: 0.75rem;
+}
+.home_box_category_one_uno_primera img:hover {
+    box-shadow: 0 0 3px 0px #423f3f, 0px 0px 11px 5px rgba(71, 1, 103, 0.552);
+    transform: scale(1.1);
 }
 .home_box_category_one_uno_segunda{
     overflow: hidden;
