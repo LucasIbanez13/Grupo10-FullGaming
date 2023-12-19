@@ -9,8 +9,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      values: {
-        type: Sequelize.BOOLEAN
+      name: {
+        type: Sequelize.STRING,
+        allowNull : false
       },
       createdAt: {
         allowNull: false,

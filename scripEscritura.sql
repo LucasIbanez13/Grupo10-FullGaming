@@ -52,7 +52,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `full-gamer`.`status` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `value` TINYINT NULL,
+  `name` VARCHAR(255) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -151,10 +151,16 @@ CREATE TABLE IF NOT EXISTS `full-gamer`.`carts` (
   `productId` INT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_carts_users_idx` (`userId` ASC) VISIBLE,
+  INDEX `fk_carts_orders_idx` (`orderId` ASC) VISIBLE,
   INDEX `fk_carst_products_idx` (`productId` ASC) VISIBLE,
   CONSTRAINT `fk_carts_users`
     FOREIGN KEY (`userId`)
     REFERENCES `full-gamer`.`users` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    CONSTRAINT `fk_carts_orders`
+    FOREIGN KEY (`orderId`)
+    REFERENCES `full-gamer`.`orders` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_carst_products`
@@ -178,7 +184,6 @@ CREATE TABLE IF NOT EXISTS `full-gamer`.`orders` (
   PRIMARY KEY (`id`),
   INDEX `fk_orders_status_idx` (`statusId` ASC) VISIBLE,
   INDEX `fk_orders_users_idx` (`userId` ASC) VISIBLE,
-  INDEX `fk_orders_carts_idx` (`cartsId` ASC) VISIBLE,
   CONSTRAINT `fk_orders_status`
     FOREIGN KEY (`statusId`)
     REFERENCES `full-gamer`.`status` (`id`)
@@ -187,11 +192,6 @@ CREATE TABLE IF NOT EXISTS `full-gamer`.`orders` (
   CONSTRAINT `fk_orders_users`
     FOREIGN KEY (`userId`)
     REFERENCES `full-gamer`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_orders_carts`
-    FOREIGN KEY (`cartsId`)
-    REFERENCES `full-gamer`.`carts` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

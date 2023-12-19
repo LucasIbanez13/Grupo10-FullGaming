@@ -24,6 +24,14 @@ module.exports = {
             }
         }
       },
+      orderId: {
+        type: Sequelize.INTEGER,      
+          references : {
+            model : {
+              tableName: 'Orders'
+            }
+        }
+      },
       productId: {
         type: Sequelize.INTEGER,
         references : {

@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
         as: 'stocks',
         foreignKey: 'productId',
       });
+      
     }
   }
   Product.init({

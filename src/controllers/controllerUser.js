@@ -46,7 +46,6 @@ module.exports = {
 
     
     processLogin: (req,res) => {
-
         const errors = validationResult(req);
         const {viewError2} = req.query
 
@@ -78,11 +77,63 @@ module.exports = {
                     remember !== undefined && res.cookie("fullgaming20", req.session.userLogin,{
                         maxAge : 1000 * 60 * 60 * 24 * 7
                     })
-                    return res.redirect("/#")
+                    /*return res.redirect("/#")*/
+                    /*para aqui lo muevo*/
+                     console.log("este es" + user.id)
+
+                     db.Order.findOne({
+                        where : {
+                            userId : user.id,
+                            statusId : 1,
+                        },
+                        include : [
+                            {
+                                association : 'carts',
+                                include: {
+                                    association : 'product',
+                                }
+                            }
+                        ],
+                    }).then(order => {
+                        if(order){
+                            req.session.cart = {
+                                orderId : order.id,
+                                products : order.carts.map(({ quantity, product: {id,name,image,price,discount}}) => {
+                                    return {
+                                        id,
+                                        name,
+                                        image,
+                                        price,
+                                        discount,
+                                        quantity,
+                                    }
+                                }),
+                                total : order.carts.map(cart => cart.product.price * cart.quantity).reduce((a,b) =>  a+b,0)
+                            }
+                            console.log(req.session.cart)
+                            return res.redirect("/#")
+                        } else {
+                            db.Order.create({
+                                total : 0,
+                                userId : user.id,
+                                statusId  : 1
+                            }).then(order => {
+                                req.session.cart = {
+                                    orderId : order.id,
+                                    total : 0,
+                                    products : []
+                                }
+                            })
+                            return res.redirect("/#")
+                        }
+    
+                    })
+
                 })
                 .catch (error => console.log(error))
-            
+                /*carrito*/
 
+                
             
 
         }
