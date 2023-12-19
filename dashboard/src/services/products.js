@@ -4,33 +4,6 @@ export const getProducts = async () => {
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`)
         const result = await response.json();
         console.log(result)
-
-        return result
-        
-    } catch (error) {
-        console.error
-    }
-}
-
-export const getSections = async() => {
-    try {
-
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/sections`)
-        const result = await response.json();
-
-        return result
-        
-    } catch (error) {
-        console.error
-    }
-}
-
-export const getBrands = async() => {
-    try {
-
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/brands`)
-        const result = await response.json();
-
         return result
         
     } catch (error) {
@@ -47,7 +20,7 @@ export const createProduct = async(data) => {
     
     try {
 
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/products`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`,{
             method: 'POST',
             body : formData,
          /*    headers : {
@@ -71,7 +44,7 @@ export const updateProduct = async(data, id) => {
            formData.append(key, data[key])
         }
 
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/products/${id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}`,{
             method: 'PUT',
             body : formData,
         })
@@ -87,7 +60,7 @@ export const updateProduct = async(data, id) => {
 export const deleteProduct = async(id) => {
     try {
 
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/products/${id}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products/${id}`,{
             method: 'DELETE'
         })
         const result = await response.json();

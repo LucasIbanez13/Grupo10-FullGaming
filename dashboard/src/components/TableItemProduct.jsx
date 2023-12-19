@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
 
-export const TableItemProduct = ({product : {id, name, price, discount, brand, section}, handleEditProduct, handleDeleteProduct}) => {
+export const TableItemProduct = ({product : {id, name, price, discount, brand,}, handleEditProduct, handleDeleteProduct}) => {
   return (
     <tr>
       <td>{name}</td>
       <td>{price}</td>
       <td>{discount}</td>
       <td>{brand?.name}</td>
-      <td>{section?.name}</td>
       <td>
         <div className="d-flex justify-content-around">
         <button className="btn btn-sm btn-primary mx-1">

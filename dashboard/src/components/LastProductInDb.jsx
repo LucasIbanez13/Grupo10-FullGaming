@@ -5,7 +5,7 @@ export const LastProductInDb = () => {
     <div className="card shadow mb-4">
       <div className="card-header py-3">
         <h5 className="m-0 font-weight-bold text-gray-800">
-          Last movie in Data Base
+          Producto con mas venta
         </h5>
       </div>
       <div className="card-body">
@@ -13,7 +13,7 @@ export const LastProductInDb = () => {
           <img
             className="img-fluid px-3 px-sm-4 mt-3 mb-4"
             width="100%"
-            src="/images/mandalorian.jpg"
+            src="/images/cooler-cooler.jpg"
             alt=" Star Wars - Mandalorian "
           />
         </div>

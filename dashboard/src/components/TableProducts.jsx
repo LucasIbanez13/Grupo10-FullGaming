@@ -61,7 +61,6 @@ export const TableProducts = ({
                 <th>Precio</th>
                 <th>Descuento</th>
                 <th>Marca</th>
-                <th>Sección</th>
                 <th>Acciones</th>
               </tr>
             </thead>
