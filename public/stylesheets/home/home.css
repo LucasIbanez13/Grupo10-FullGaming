@@ -58,7 +58,6 @@ main aside {
 .padre-marcas {
     background-color: #ffffff;
     padding-top: 10px;
-
 }
 
 .padre-carrusel-marcas {
@@ -90,7 +89,7 @@ main aside {
     gap: 20px;
     white-space: nowrap;
     align-items: center;
-    max-width: 90vw;
+    max-width: 70vw;
 }
 
 .carrusel-marcas img {
@@ -116,19 +115,13 @@ main aside {
 
 /*PRODUCTOS DESTACADOS*/
 
-main section h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-}
+main section h2 {text-align: center;font-family: 'Mooli';margin-top: 12px;}
 
 .padre-articulos {
-    margin: 4%;
+    margin: 2%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
-    
-
 }
 
 .home-main-articulos {
@@ -953,8 +946,6 @@ border-radius:  0 10px 10px 10px;
 
     .padre-articulos {
         gap: 25px;
-        
-    
     }
 
     .home-main-articulos img {
@@ -983,7 +974,6 @@ border-radius:  0 10px 10px 10px;
 
     .padre-articulos {
         grid-template-columns: repeat(4, 1fr);
-    
     }
 
     .banners img {
@@ -1006,7 +996,7 @@ border-radius:  0 10px 10px 10px;
       
     .home aside {
         display: flex;
-        width: 95%;
+        /* width: 95%; */
         margin: 0 auto;
     }
 

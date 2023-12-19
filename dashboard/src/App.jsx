@@ -1,13 +1,30 @@
+import { Outlet } from 'react-router-dom'
+import './assets/css/app.css'
+import { SideBar } from './components/SideBar'
+import { TopBar } from './components/TopBar'
+import { Footer } from './components/Footer'
 import { useState } from 'react'
-import './App.css'
+import { Col, Container, Row } from 'react-bootstrap'
 
 function App() {
-  const [] = useState(0)
+  const [show, setShow] = useState(-250);
 
   return (
-    <>
-    hola
-    </>
+    <Row>
+      <SideBar  show={show} setShow={setShow}/>
+      <Col sm={12}>
+      <TopBar setShow={setShow}/>
+      
+      </Col>
+      <Col sm={12}>
+      <Container>
+      <Outlet/>
+      </Container>
+      </Col>
+      <Col>
+      <Footer />
+      </Col>
+      </Row>
   )
 }
 
