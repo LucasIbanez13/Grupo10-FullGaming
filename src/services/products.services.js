@@ -9,6 +9,7 @@ const getAllProducts = async(limit,offset) => {
             attributes : {
                 exclude : ['createdAt','updatedAt','genreId','brandId']
             },
+            where : undefined,
             include : [
                 {
                     association : 'brand',

@@ -77,7 +77,21 @@ productList: (req, res) => {
     },
     
     shoppingCart : (req,res) => {
-        return res.render('shoppingCart')
+        Promise.all([
+            db.Brand.findAll(),
+            db.Category.findByPk (req.params.id),
+            db.Product.findAll({include: ["images"]}),
+            db.Image.findAll(),
+        ])
+        .then(function([marca, category, productos]) {
+            res.render('shoppingCart', {
+                productos,
+                marca, 
+                category,
+                toThousand,
+            });
+        })
+        .catch(error => console.log(error)); 
     },
     update: async (req, res) => {
         const errors = validationResult(req);

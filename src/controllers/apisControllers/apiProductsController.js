@@ -19,7 +19,7 @@ module.exports = {
                     total,
                     pagesCount,
                     currentPage,
-                    pages
+                    pages,
                 },
                 data : products
             })

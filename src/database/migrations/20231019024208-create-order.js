@@ -31,14 +31,6 @@ module.exports = {
           }
         }
       },
-      cartsId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName: 'Carts'
-          }
-        }
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
