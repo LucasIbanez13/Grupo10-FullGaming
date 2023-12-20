@@ -80,68 +80,49 @@ productList: (req, res) => {
         return res.render('shoppingCart')
     },
     update: async (req, res) => {
-         const errors = validationResult(req);
-
-        if (!errors.isEmpty()){ 
-            const productUp = req.params.id;
-
-            const [categories, product, brands] = await Promise.all([
-                db.Category.findAll({
-                    order: ['name']
-                }),
-                db.Product.findByPk(productUp, {
+        const errors = validationResult(req);
+    
+        if (!errors.isEmpty()) {
+            // Manejo de errores aquí
+        } else {
+            try {
+                const productId = req.params.id;
+                const { category, name, model, description, price, discount } = req.body;
+    
+                const product = await db.Product.findByPk(productId, {
                     include: ["images", "category", "brand"]
-                }),
-                db.Brand.findAll({
-                    order: ['name']
-                })
-            ]);
-
-            res.render('productEdit', {
-                product,
-                brands,
-                categories,
-                categoryId: product ? product.categoryId : null,
-                brandId: product ? product.brandId : null,
-                errors: errors.mapped()
-            });
-            }else{
-                try {      
-                    const productUp = req.params.id;
-                    const { category, name, brand, model, description, price, discount } = req.body;
-        
-                    const product = await db.Product.findByPk(productUp, {
-                        include: ["images", "category", "brand"]
+                });
+    
+                if (product) {
+                    
+    
+                    await db.Product.update({
+                        category,
+                        name,
+                        model,
+                        description,
+                        price,
+                        discount
+                    }, {
+                        where: {
+                            id: productId
+                        }
                     });
-                   
-                         if (product) {
-                        await db.Product.update({
-                            category,
-                            name: name.trim(),
-                            brandId: product.brand.id,
-                            model,
-                            description: description.trim(),
-                            price,
-                            discount
-                        }, {
-                            where: {
-                                id: productUp
-                            }
-                        });
-        
-                        console.log('Producto actualizado con éxito');
-                      
-                       return res.redirect('/users/admin'); 
-                    } else {
-                        
-                        throw new Error("Producto no encontrado");
-                    }
-                 } catch (error) {
-                    console.log(error);  
-                    return res.status(500).send('Error interno del servidor');          
+    
+                    console.log('Producto actualizado con éxito <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
+                    console.log(`${name} actualizado con éxito >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`);
+                    return res.redirect('/users/admin');
+                } else {
+                    console.log('Producto no encontrado para la actualización.');
+                    return res.status(404).send('Producto no encontrado para la actualización.');
                 }
+            } catch (error) {
+                console.log(error);
+                return res.status(500).send("Error al actualizar el producto: " + error.message);
+            } finally {
+                // Código a ejecutar siempre, si es necesario
             }
-        
+        }
     },
     
     productEdit: async (req, res) => {
@@ -160,9 +141,9 @@ productList: (req, res) => {
     
             return res.render('productEdit', {
                 product,
-                brands,
-                categories,
                 productos,
+                brands,
+                categories,                
                 categoryId: product ? product.categoryId : null,
                 brandId: product ? product.brandId : null,
                 errors: {}
