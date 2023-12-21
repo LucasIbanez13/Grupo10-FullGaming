@@ -3,13 +3,14 @@ export const getProducts = async () => {
 
         const response = await fetch(`${import.meta.env.VITE_API_URL}/api/products`)
         const result = await response.json();
-        console.log(result)
+        
         return result
         
     } catch (error) {
         console.error
     }
 }
+
 
 export const createProduct = async(data) => {
 

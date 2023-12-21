@@ -1,55 +1,36 @@
 import { Card, Table } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { TableItemProduct } from "./TableItemProduct";
-import ReactPaginate from "react-paginate";
+
 import { useState } from "react";
+import { Paginator } from "./Paginator";
+
+
 
 export const TableProducts = ({
   loading,
   products,
   handleDeleteProduct,
   handleEditProduct,
-  itemsPerPage
-}) => {
+  itemsPerPage,
 
-  const [itemOffset, setItemOffset] = useState(0);
+  
+}) => {
+  const [itemOffset] = useState(0);
 
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = products.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(products.length / itemsPerPage);
+ 
 
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % products.length;
    
-    setItemOffset(newOffset);
-  };
 
   return (
     <Card>
       <Card.Body>
         <div className="d-flex justify-content-between">
          
-          
-          <ReactPaginate
-            pageCount={pageCount}
-            breakLabel="..."
-            nextLabel=">"
-            previousLabel="<"
-            pageRangeDisplayed={4}
-            onPageChange={handlePageClick}
-            breakClassName="page-item"
-            breakLinkClassName="page-link"
-            marginPagesDisplayed={2}
-            containerClassName="pagination justify-content-center cursorPage"
-            pageClassName="page-item"
-            pageLinkClassName="page-link"
-            previousClassName="page-item"
-            previousLinkClassName="page-link"
-            nextClassName="page-item"
-            nextLinkClassName="page-link"
-            activeClassName="active"
-      
-          />
+          <Paginator/>
+
         </div>
         {loading ? (
           <p>cargando...</p>
@@ -72,6 +53,8 @@ export const TableProducts = ({
                   product={product}
                   handleEditProduct={handleEditProduct}
                   handleDeleteProduct={handleDeleteProduct}
+                 
+           
                 />
               ))}
             </tbody>
@@ -89,5 +72,6 @@ TableProducts.propTypes = {
   products: PropTypes.array,
   handleEditProduct: PropTypes.func,
   handleDeleteProduct: PropTypes.func,
-  itemsPerPage : PropTypes.number
+  itemsPerPage : PropTypes.number,
+ 
 };

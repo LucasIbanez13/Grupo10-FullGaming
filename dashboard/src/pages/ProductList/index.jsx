@@ -2,12 +2,17 @@ import { Col, Row } from "react-bootstrap";
 import { FormProduct } from "../../components/FormProduct";
 
 import { useEffect, useState } from "react";
-import { deleteProduct, getProducts } from "../../services/products";
+
 import { TableProducts } from "../../components/TableProducts";
+import { deleteProduct, getProducts } from "../../services/products";
+
 
 export const ProductsListPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setloading] = useState(true);
+
+ 
+
 
   const [formValues, setFormValues] = useState({
     id: null,
@@ -44,8 +49,9 @@ export const ProductsListPage = () => {
   useEffect(() => {
     async function fetchData() {
       const response = await getProducts();
-      setProducts(response.data);
+     setProducts(response.data);
       setloading(false);
+   
     }
     fetchData();
   }, []);

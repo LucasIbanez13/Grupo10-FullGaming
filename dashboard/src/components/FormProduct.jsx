@@ -107,7 +107,7 @@ export const FormProduct = ({
                 style={{ height: "100px" }}
               >
                 <img
-                  src={changeImage? URL.createObjectURL(formValues.image) : formValues.id ? formValues.image : "/images/producto-sin-imagen.png"}
+                  src={changeImage? URL.createObjectURL(formValues.image) : formValues.id ? formValues.image : "/images/sin-imagen.png"}
                   alt=""
                   height={150}
                   width={100}
@@ -153,6 +153,7 @@ export const FormProduct = ({
               value={formValues.price}
             />
           </Form.Group>
+       
           <Form.Group className="mb-3 col-12 col-md-6">
             <Form.Label>Descuento</Form.Label>
             <Form.Control
@@ -160,6 +161,25 @@ export const FormProduct = ({
               name="discount"
               onChange={handleInputChange}
               value={formValues.discount}
+            />
+            
+          </Form.Group>
+          <Form.Group className="mb-3 col-12 col-md-6">
+            <Form.Label>Stock</Form.Label>
+            <Form.Control
+              type="number"
+              name="Stock"
+              onChange={handleInputChange}
+              value={formValues.price}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3 col-12 col-md-6">
+            <Form.Label>Modelo</Form.Label>
+            <Form.Control
+              type="string"
+              name="price"
+              onChange={handleInputChange}
+              value={formValues.price}
             />
           </Form.Group>
           <Form.Group className="mb-3 col-12">
@@ -194,18 +214,18 @@ export const FormProduct = ({
             </Form.Select>
           </Form.Group>
           <Form.Group className="mb-3 col-12">
-            <Form.Label>Sección</Form.Label>
+            <Form.Label>Categoria</Form.Label>
             <Form.Select
               className={`form-control`}
-              name="sectionId"
+              name="CategoryId"
               onChange={handleInputChange}
             >
               <option hidden defaultValue>
-                Selecciona la sección...
+                Selecciona la Categoria...
               </option>
-              {data.sections &&
-                data.sections.map(({ id, name }) =>
-                  formValues.sectionId == id ? (
+              {data.category &&
+                data.category.map(({ id, name }) =>
+                  formValues.categoryId == id ? (
                     <option key={id} selected value={id}>
                       {name}
                     </option>
