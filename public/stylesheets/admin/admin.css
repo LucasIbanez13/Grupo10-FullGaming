@@ -2,34 +2,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('./../../img/fondo-admin.jpg');
     
 }
 
 .nombre-admin{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 5px;
     margin: 10px 0 20px 8px;
-
 }
 
-
+.profileInit_contenedor a {
+    color: #fff;
+}
 
 
 .elementos-admin-padre{
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(186, 186, 186, 0.8);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
 }
 
 .admin-main-box {
     display: flex;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-start; 
+    align-items: flex-start;
     gap: 5px;
     border-bottom: 1px solid #ccc;
     padding: 10px;
@@ -38,6 +39,7 @@
 .admin-main-box > div {
     flex-basis: 20%; 
     text-align: center; 
+    font-family: 'Mooli';
 }
 
 .name-admin {
@@ -103,40 +105,53 @@ tr td {
 
 .admin-header {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    background-color: #f0f0f0;
+    align-items: center;
+    width: 90%;
+    justify-content: space-evenly;
+    background-color: rgba(186, 186, 186, 0.4);
     padding: 10px;
     border-bottom: 1px solid #ccc;
     gap: 80px;
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 14px;
 }
 
 .admin-main-h1 {
     margin: 0;
     font-family: 'Mooli';
+    font-size: 29px;
 }
 
 .search-bar {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .search-bar input {
     padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-right: 5px; 
+    border-radius: 14px;
+    /* background-color: #ffffff6e; */
+    margin-right: 5px;
 }
 
-.search-button, .add-button {
+.search-button  {
     padding: 5px 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 50%;
     cursor: pointer;
 }
 
+.add-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
 
@@ -145,9 +160,7 @@ tr td {
 @media (min-width: 480px) {
     .nombre-admin{
         
-        font-size: 15px;
-        
-    
+font-size: 15px;
     }
     .imagen-admin {
         display: block;
@@ -169,9 +182,7 @@ tr td {
 @media (min-width: 1200px) {
     .nombre-admin{
         
-        font-size: 30px;
-        
-    
+font-size: 30px;
     }
     .elementos-admin-padre{
         width: 80%;

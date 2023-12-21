@@ -128,6 +128,7 @@ module.exports = {
 
         }
     },
+    
     destroy: async(req,res)=>{
         try {
             await db.Product.destroy({
@@ -149,5 +150,7 @@ module.exports = {
             });
           }
     }
+   
+    
 
 }

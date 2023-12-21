@@ -21,27 +21,30 @@
 
                 </ul>
             </div>
-            <div class="mb-3">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
-                <% if (errors && errors.name) { %>
-                    <small class="alert alert-danger is-invalid" id="msg-error-name" role="alert">
-                      <%= errors.name.msg %>
-                    </small>
-                    <% } else { %>
-                        <small id="msg-error-name" class="form-text is-valid"></small>
-                    <% } %>
-            </div>
-        <div class="create__main__section__creacion__contiene">
-            <div class="createmainsectioncreacionformcategoria">
-                <label for="category">Seleccione Categoria</label>
-                <select class="createmainsectioncreacionformcategoria__items" id="category" name="category">
-                    <% categories.forEach(category => { %>
-                        <option <%= category.id == categoryId ? 'selected' : '' %> value="<%= category.id %>"><%= category.name %></option>
-                    <% }) %>
-                </select>
-            </div>
+       <div class="primeraFila">
+
+        <div class="nombre_edit">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
+            <% if (errors && errors.name) { %>
+                <small class="alert alert-danger is-invalid" id="msg-error-name" role="alert">
+                  <%= errors.name.msg %>
+                </small>
+                <% } else { %>
+                    <small id="msg-error-name" class="form-text is-valid"></small>
+                <% } %>
         </div>
+    <div class="create__main__section__creacion__contiene">
+        <div class="createmainsectioncreacionformcategoria">
+            <label for="category">Seleccione Categoria</label>
+            <select class="createmainsectioncreacionformcategoria__items" id="category" name="category">
+                <% categories.forEach(category => { %>
+                    <option <%= category.id == categoryId ? 'selected' : '' %> value="<%= category.id %>"><%= category.name %></option>
+                <% }) %>
+            </select>
+        </div>
+    </div>
+       </div>    
         <div class="create__main__section__creacion__form__product">
             <div class="create__main__section__creacion__form__product__products">
                 <div class="col-md-6">
@@ -50,7 +53,7 @@
                     <img class="imagen_producto"src="/img/<%= product.image  %>" alt="">
                 </div>
             </div>
-           
+           <div class="fila-marcas">
             <div class="row">
                 <div class="col-md-4">
                     <label for="brand" class="form-label">Marcas</label>
@@ -88,6 +91,8 @@
                     </select>
                 </div> -->
             </div>
+           </div>
+            
             <div class="mb-3">
                 <label for="description" class="form-label">Descripción</label>
                 <textarea class="form-control" id="description" rows="3" name="description" ><%= product.description %></textarea>
@@ -109,46 +114,7 @@
                     <input type="number" class="form-control" id="discount" name="discount" value="<%= product.discount %>">
                 </div>
             </div>
-           <!--  <div class="row">
-                <div class="col-md-6">
-                    <label for="amountDues">Cantidad de Cuotas</label>
-                    <select class="form-select" id="amountDues" name="amountDues">
-                        <option value="1">1</option>
-                        <option value="3">3</option>
-                        <option value="6">6</option>
-                        <option value="12">12</option>
-                        <option value="24">24</option>
-                    </select>                        
-                </div>
-                <div class="col-md-6">
-                    <label for="cards">Tarjeta</label>
-                    <select class="form-select" id="cards" name="cards">
-                        <option value="visa">visa</option>
-                        <option value="cabal">cabal</option>
-                        <option value="naranja">naranja</option>
-                        <option value="argentcard">argentcard</option>
-                        <option value="americanExpress">american express</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="shipment" class="form-label">Envío gratis</label>
-                    <select class="form-select" id="shipment" name="shipment">
-                        <option value="no">No</option>
-                        <option value="si">Sí</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="location" class="form-label">Lugares de envío</label>
-                    <select class="form-select" id="location" name="location">
-                        <option value="caba">CABA</option>
-                        <option value="gba">GBA</option>
-                        <option value="interior">Interior</option>
-                    </select>
-                </div>
-            </div> -->
-            <button type="submit"id="btn-submit" class="btn btn-danger float-end mt-4">Guardar</button>
+            <button type="submit"id="btn-submit" class="btn btn-danger float-center mt-4">Guardar</button>
         </form>
     </div>
     

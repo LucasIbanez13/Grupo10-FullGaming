@@ -34,6 +34,8 @@ const getAllProducts = async(limit,offset) => {
     }
 };
 
+
+
 const getproductDetail = async(productId) =>{
     try{
         const product = await db.Product.findByPk(productId,{
