@@ -49,8 +49,24 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: true,
       },
+      location: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       streetHeight: {
         type: Sequelize.INTEGER,
+        allowNull: true,
+      },
+      postalcode: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      door: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
+      references: {
+        type: Sequelize.STRING,
         allowNull: true,
       },
       rolId: {
