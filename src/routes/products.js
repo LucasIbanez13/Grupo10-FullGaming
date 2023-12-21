@@ -22,7 +22,7 @@ router.post('/productCreate',validationsCreate,upload.single('image'),productUpd
 router.get('/productList/:id',productList)
 router.get('/productMarc/:marca',productMarc)
 router.get('/productEdit/:id/',isAdmin,productEdit)
-router.put('/update/:id'/*  upload.single('image') *//* , updateValidation */,update)
+router.put('/update/:id', upload.single('image') , updateValidation ,update)
 router.delete("/remove/:id/",remove);
 
 
