@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Status.init({
-    values: DataTypes.BOOLEAN
+    name: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Status',

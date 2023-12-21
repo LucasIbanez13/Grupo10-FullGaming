@@ -123,7 +123,7 @@
                                                     <a class="mensaje-carrito4" href="/products/shoppingcart">Agregar al carrito</a>
                                                     <p class="home-main-articulos-p4"><%= producto.name %></p>
                                                     <span>$<%= toThousand(producto.price) %></span>
-                                                    <a class="mensaje-comprar4" href="/products/productDetail/<%= producto.id %>">Comprar ahora</a>
+                                                    <button class="mensaje-comprar4" type="button"  onclick=" addItemToCart(1,'<%=producto.id%>')">Comprar ahora</button>
                                                 </a>
                                             </div>
                                         

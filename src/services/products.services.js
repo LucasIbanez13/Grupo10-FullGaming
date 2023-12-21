@@ -58,6 +58,9 @@ const getproductDetail = async(productId) =>{
     }
 
 }
+const createProduct = async(req,res)=>{
+
+}
 
 module.exports = {
     getAllProducts,

@@ -15,7 +15,7 @@
     <h2  class="create__main--title">Editar productos</h2>
     <section class="create__main__section__creacion">
         <h3 class="create__main__section__creacion--title"><%= product.name %></h3>
-        <form class="create__main__section__creacion__form" action="/products/update/<%=product.id %>?_method=patch" method="POST" enctype="multipart/form-data">
+        <form class="create__main__section__creacion__form" action="/products/update/<%=product.id %>?_method=put" method="POST" enctype="multipart/form-data" id= "formProductUpdate">
             <div class="errores">
                 <ul>
 
@@ -156,6 +156,6 @@
 </main>    
 <%- include('partials/footer') %>
 
-<script src="/javascripts/validationUpdate.js"></script>
+ <script src="/javascripts/validationUpdate.js"></script> 
 </body>
 </html>

@@ -1,7 +1,7 @@
 const {check}= require('express-validator');
 
 
-const validateImgFile = (value,{req})=>{
+ /*const validateImgFile = (value,{req})=>{
     if(!req.file){
         throw new Error('Debe tener un archivo Imagen')
     }
@@ -17,7 +17,7 @@ const validateImgFile = (value,{req})=>{
 }
 
 const imageValidation = check('image').custom(validateImgFile);
-
+ */
 module.exports= [
     check('name')
     .not()
@@ -32,7 +32,7 @@ module.exports= [
     .withMessage('Debe ingresar una descripcion')
     .isLength({min:20})
     .withMessage('Debe tener al menos 20 caracteres'),
-    imageValidation
+    /* imageValidation */
 
 ]
     
