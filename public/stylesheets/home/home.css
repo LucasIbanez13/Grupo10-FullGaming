@@ -45,6 +45,7 @@ main aside {
 
 .main-contenido {
     
+width: 80em;
 }
 
 
@@ -53,6 +54,7 @@ main aside {
 .padre-marcas h2 {
     text-align: center;
     font-size: 18px;
+    font-family: 'Josefin Sans';
 }
 
 .padre-marcas {
@@ -116,6 +118,10 @@ main aside {
 /*PRODUCTOS DESTACADOS*/
 
 main section h2 {text-align: center;font-family: 'Mooli';margin-top: 12px;}
+#productos{text-align: center;font-family: 'Mooli';margin-top: 12px;}
+#ofertas{text-align: center;font-family: 'Mooli';margin-top: 12px;}
+#categorias{text-align: center;font-family: 'Mooli';margin-top: 12px;}
+#esponsor{text-align: center;font-family: 'Mooli';margin-top: 12px;}
 
 .padre-articulos {
     margin: 2%;
@@ -376,16 +382,13 @@ border-radius:  0 10px 10px 10px;
 
 
 .home_box_brand_razer_img img{
-    width: 100%;
-    height: 240px;
-    border-radius: 0.75rem;
+
 
 }
 .home_box_brand_caja img{
-    width: 100%;
-    height: 240px;
+    width: 108%;
+    height: 183px;
     border-radius: 0.75rem;
-
 }
 .home_box_brand_razer {
     position: relative;
@@ -878,30 +881,44 @@ border-radius:  0 10px 10px 10px;
     .home_box_brand{
         display: flex;
         justify-content: space-between;
-        height: 500px;
-    
+        /* height: 500px; */
+        width: 90%;
+        margin: auto;
     }
     .home_box_brand_caja{
         display: flex;
         flex-direction: column;
     }
     .home_box_brand_caja{
-        width: 49.3%;
-        height: 505px;
         display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: row;
     }
     .home_box_brand_razer {
-        position: relative;
-        width: 49.3%;
     }
     .home_box_brand_razer_img img{
-        width: 100%;
-        height: 500px;
-        border-radius: 0.75rem;
-    
+        /* width: 67%; */
+        /* height: 183px; */
+        /* border-radius: 0.75rem; */
     }
+
+    .home_box_brand_razer_img img:hover{
+        box-shadow: 0 0 3px 0px #00ff1a, 0px 0px 11px 5px rgba(0, 255, 89, 0.552);
+    transform: scale(1.02);
+    }
+
+    .home_box_brand_corzair img:hover{
+        box-shadow: 0 0 3px 0px #5e5e5e, 0px 0px 11px 5px rgba(43, 43, 43, 0.552);
+    transform: scale(1.02);
+    }
+
+    .home_box_brand_aorus img:hover{
+        box-shadow: 0 0 3px 0px #ff8400, 0px 0px 11px 5px rgba(255, 136, 10, 0.879);
+    transform: scale(1.02);
+    }
+
+
     /*cosa neva category*/
     .home_box_category{
         display: flex;
@@ -1001,8 +1018,7 @@ border-radius:  0 10px 10px 10px;
     }
 
     .home aside img {
-        height: 70%;
+        height: 100%;
         width: 100%;
-
     }
 }

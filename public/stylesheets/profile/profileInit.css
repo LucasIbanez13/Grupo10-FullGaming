@@ -128,7 +128,8 @@
         border-radius: 15px 0 15px 0;
         margin: 10px auto;
         overflow: hidden;
-        transition: background-color 0.3s; 
+        color: #fff;
+        transition: background-color 0.3s;
     }
 
       

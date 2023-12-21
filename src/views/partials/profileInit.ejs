@@ -2,7 +2,12 @@
     <div class="profileInit_contenedor">
         
         <div class="profileInit_contenedor_image">
-            <img src="/img/<%= profile.image %>" class="" alt="...">
+            <% if (profile.image) { %>
+                <img src="/img/<%= profile.image %>" class="" alt="...">
+            <% } else { %>
+                <!-- Ruta de la imagen por defecto si no hay imagen en el perfil -->
+                <img src="/img/sin-imagen.png" class="" alt="...">
+            <% } %>
         </div>
 
         <div class="profileInit_contenedor_email">
@@ -16,12 +21,7 @@
                 <a href="/users/profile/<%= profile.id %>" class=""></a>
                 <p>Configuracion</p>
             </div>
-            <a href="/users/logout" class="">
-            <div class="profileInit_contenedor_contenedorButton_button_salir">
-                
-                <p>Salir</p>
-            </a>
-            </div>
+           
             
             <% if (profile.rolId === 1) { %>
                 <a href="/users/admin" class="">
@@ -29,10 +29,20 @@
                 <p>Admin</p>
                 </div>
             </a>
+            <a href="http://localhost:5173" class="">
+                <div class="profileInit_contenedor_contenedorButton_button_salir">
+                <p>Dashboard</p>
+                </div>
+            </a>
             <% }else { %> 
                 <p></p> 
             <% } %>
         </div>
-        
+        <a href="/users/logout" class="">
+            <div class="profileInit_contenedor_contenedorButton_button_salir">
+                
+                <p>Salir</p>
+            </a>
+            </div>
     </div>
 </div>
