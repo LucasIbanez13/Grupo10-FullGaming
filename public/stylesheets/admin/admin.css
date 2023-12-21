@@ -112,7 +112,8 @@ tr td {
 }
 
 .admin-main-h1 {
-    margin: 0; 
+    margin: 0;
+    font-family: 'Mooli';
 }
 
 .search-bar {

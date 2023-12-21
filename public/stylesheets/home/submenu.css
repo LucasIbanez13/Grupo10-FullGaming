@@ -8,12 +8,11 @@ height: 100%;
 .submenu--a {
 
 }
-.submenu--a h2{
-    text-align: center;
-    color: aliceblue;
-}
+
 
 .submenu--a p {
-    color: aqua;
+    color: rgb(94, 59, 234);
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
